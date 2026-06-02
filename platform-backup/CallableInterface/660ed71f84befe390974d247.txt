@@ -1,0 +1,36 @@
+{
+	"createdTime":1712248607464,
+	"deleted":true,
+	"description":"assadsada",
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"660ed71f84befe390974d247",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"$schema":"http://json-schema.org/draft-07/schema#"
+		}
+	},
+	"lcName":"tapasda",
+	"modifiedTime":1712248620641,
+	"name":"tapasda",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"$schema":"http://json-schema.org/draft-07/schema#"
+		}
+	},
+	"ownerUserId":188,
+	"standard":false,
+	"version":1
+}
