@@ -1,0 +1,48 @@
+{
+	"auths":[
+		{
+			"createdTime":1719496313096,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					},
+					"properties":{
+						"ecom":{
+							"type":"string",
+							"title":"ecom"
+						}
+					}
+				}
+			},
+			"name":"auth1",
+			"type":"TOKEN",
+			"updatedTime":1722525844117
+		}
+	],
+	"baseUrl":"http://test3.ecomexpress.in:9071/",
+	"createdTime":1719496177112,
+	"deleted":false,
+	"enabled":true,
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"667d6df12875fd7de977025f",
+	"lastModifiedBy":520,
+	"lcName":"ecom communication",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1722534385241,
+	"name":"Ecom Communication",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":12
+}
