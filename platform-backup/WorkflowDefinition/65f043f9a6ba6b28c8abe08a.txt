@@ -1,0 +1,49 @@
+{
+	"createdTime":1710244857343,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65f043f9a6ba6b28c8abe08a",
+	"lastModifiedBy":27,
+	"lcName":"neweeeeeeeeeeeéb",
+	"modifiedTime":1710393319731,
+	"name":"neweeeeeeeeeeeéb",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Se5Hc-1",
+			"id":"Se5Hc",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":27,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":5
+}
