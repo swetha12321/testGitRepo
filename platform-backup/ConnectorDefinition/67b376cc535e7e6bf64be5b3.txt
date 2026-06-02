@@ -1,0 +1,15 @@
+{
+	"createdTime":1739814604833,
+	"deleted":false,
+	"enabled":false,
+	"id":"67b376cc535e7e6bf64be5b3",
+	"lastModifiedBy":34,
+	"lcName":"openapi spec 2.0",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1739814604833,
+	"name":"OpenAPI Spec 2.0",
+	"ownerUserId":34,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
