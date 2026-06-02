@@ -1,0 +1,46 @@
+{
+	"createdTime":1720793009575,
+	"deleted":false,
+	"description":"sdasad",
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"669137b1b8990616dc23798b",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"asd":{
+					"type":"string",
+					"title":"Asd"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"saddsasda",
+	"modifiedTime":1721681273141,
+	"name":"saddsasda",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":520,
+	"projectId":48,
+	"standard":false,
+	"version":3
+}
