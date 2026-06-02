@@ -1,0 +1,41 @@
+{
+	"auths":[
+		{
+			"createdTime":1741259533897,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"Testing",
+			"type":"JWT",
+			"updatedTime":1741259533897
+		},
+		{
+			"createdTime":1741259608124,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"Testing Access Token",
+			"type":"TOKEN",
+			"updatedTime":1741259608124
+		}
+	],
+	"createdTime":1741259520770,
+	"deleted":false,
+	"enabled":false,
+	"id":"67c983005d76097579c2c659",
+	"lastModifiedBy":33658,
+	"lcName":"new custom connector",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1741259608126,
+	"name":"New Custom Connector",
+	"ownerUserId":33658,
+	"standard":false,
+	"standardApp":false,
+	"version":2
+}
