@@ -1,0 +1,29 @@
+{
+	"createdTime":1720708386862,
+	"deleted":false,
+	"description":"ssssa",
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"668fed226f46534d673315a9",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"testings",
+	"modifiedTime":1721681270711,
+	"name":"testings",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"ownerUserId":520,
+	"projectId":23,
+	"standard":false,
+	"version":2
+}
