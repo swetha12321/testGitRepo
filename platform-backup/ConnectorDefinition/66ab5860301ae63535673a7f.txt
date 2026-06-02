@@ -1,0 +1,15 @@
+{
+	"createdTime":1722505312292,
+	"deleted":false,
+	"enabled":false,
+	"id":"66ab5860301ae63535673a7f",
+	"lastModifiedBy":520,
+	"lcName":"test connecter",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1722505312292,
+	"name":"test connecter",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
