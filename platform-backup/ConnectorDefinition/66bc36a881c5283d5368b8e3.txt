@@ -1,0 +1,29 @@
+{
+	"auths":[
+		{
+			"createdTime":1723610816526,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"New_Connector_deploy_auth",
+			"type":"OAUTH",
+			"updatedTime":1723610816526
+		}
+	],
+	"createdTime":1723610955403,
+	"deleted":false,
+	"enabled":false,
+	"id":"66bc36a881c5283d5368b8e3",
+	"lastModifiedBy":522,
+	"lcName":"new_connector_deploy",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1735360644804,
+	"name":"New_Connector_deploy",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":846
+}
