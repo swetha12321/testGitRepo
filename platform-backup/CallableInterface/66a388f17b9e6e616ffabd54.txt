@@ -1,0 +1,51 @@
+{
+	"createdTime":1721993457082,
+	"deleted":false,
+	"description":"testing",
+	"id":"66a388f17b9e6e616ffabd54",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"test1":{
+					"type":"string",
+					"title":"Test 1"
+				},
+				"test2":{
+					"type":"string",
+					"title":"Test 2"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":520,
+	"lcName":"sray",
+	"modifiedTime":1722502869195,
+	"name":"sray",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"testr1":{
+					"type":"string",
+					"title":"Testr 1"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":520,
+	"standard":false,
+	"version":1
+}
