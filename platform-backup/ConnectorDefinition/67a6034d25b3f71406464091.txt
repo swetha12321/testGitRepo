@@ -1,0 +1,15 @@
+{
+	"createdTime":1738933069194,
+	"deleted":true,
+	"enabled":true,
+	"id":"67a6034d25b3f71406464091",
+	"lastModifiedBy":522,
+	"lcName":"new asana",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1739592276578,
+	"name":"new asana",
+	"ownerUserId":32,
+	"standard":false,
+	"standardApp":false,
+	"version":5
+}
