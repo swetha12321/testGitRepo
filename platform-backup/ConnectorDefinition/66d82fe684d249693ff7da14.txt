@@ -1,0 +1,29 @@
+{
+	"auths":[
+		{
+			"createdTime":1725564764185,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"testname",
+			"type":"JWT",
+			"updatedTime":1725564764185
+		}
+	],
+	"createdTime":1725444070190,
+	"deleted":false,
+	"enabled":true,
+	"id":"66d82fe684d249693ff7da14",
+	"lastModifiedBy":520,
+	"lcName":"dasda",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1725564764191,
+	"name":"dasda",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":2
+}
