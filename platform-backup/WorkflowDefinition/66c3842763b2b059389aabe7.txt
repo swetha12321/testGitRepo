@@ -1,0 +1,89 @@
+{
+	"appsUsed":[
+		"asana",
+		"amazon_s3"
+	],
+	"createdTime":1724089383845,
+	"deleted":false,
+	"deployedVersion":5,
+	"deploymentState":{
+		"deployedAt":1724352518939,
+		"deployedBy":12,
+		"deployedDefinitionId":"66c78806a455303ac02e1e79",
+		"status":"PAUSED",
+		"version":5,
+		"workflowVersion":31
+	},
+	"edges":[
+		{
+			"fromNodeId":"EqnLb",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"V742L",
+			"type":"next"
+		}
+	],
+	"id":"66c3842763b2b059389aabe7",
+	"lastModifiedBy":520,
+	"lcName":"zoho desk trigger test",
+	"modifiedTime":1728289418752,
+	"name":"zoho desk trigger test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"asana",
+				"resourceVersion":2051,
+				"connectionId":"6684ff1fbe21a52bf61f8984",
+				"resourceName":"asana_on_new_task"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DKBBp-1",
+			"id":"EqnLb",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Asana",
+			"title":"New task",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"amazon_s3",
+				"resourceVersion":1635,
+				"connectionId":"66c6d73a1274e37af2af9e3c",
+				"resourceName":"amazon_s3_create_bucket",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DKBBp-1",
+			"id":"V742L",
+			"index":0,
+			"inputs":{
+				"bucketName":"region-test-from-qa",
+				"region":"ap-south-1"
+			},
+			"skip":false,
+			"subTitle":"Amazon S3",
+			"title":"Create bucket",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":12,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":32
+}
