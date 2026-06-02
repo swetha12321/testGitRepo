@@ -1,0 +1,15 @@
+{
+	"createdTime":1734424104429,
+	"deleted":false,
+	"enabled":false,
+	"id":"67613628304e834739332d07",
+	"lastModifiedBy":1237,
+	"lcName":"effeef",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1734424104429,
+	"name":"effeef",
+	"ownerUserId":1237,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
