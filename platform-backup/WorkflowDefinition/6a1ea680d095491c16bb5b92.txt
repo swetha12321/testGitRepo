@@ -103,7 +103,7 @@
 	"id":"6a1ea680d095491c16bb5b92",
 	"lastModifiedBy":27,
 	"lcName":"repeatable-interface-fetch",
-	"modifiedTime":1780410532060,
+	"modifiedTime":1780410580815,
 	"name":"repeatable-interface-fetch",
 	"nodes":[
 		{
@@ -571,7 +571,7 @@
 							"property":"{{ n_UKhPq.outputs.offset }}",
 							"filter":{
 								"operator":"LT",
-								"value":"1000"
+								"value":"3000"
 							}
 						}
 					],
@@ -825,5 +825,5 @@
 		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":91
+	"version":92
 }
