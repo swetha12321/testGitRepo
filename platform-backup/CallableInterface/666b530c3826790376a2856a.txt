@@ -1,0 +1,28 @@
+{
+	"createdTime":1718309644343,
+	"deleted":false,
+	"description":"123",
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"666b530c3826790376a2856a",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"123",
+	"modifiedTime":1721681272062,
+	"name":"123",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"ownerUserId":602,
+	"standard":false,
+	"version":1
+}
