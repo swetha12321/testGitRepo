@@ -1,0 +1,18 @@
+{
+	"auths":[
+		
+	],
+	"createdTime":1723197285156,
+	"deleted":false,
+	"enabled":false,
+	"id":"66b5e765570b275cdd0ce32c",
+	"lastModifiedBy":520,
+	"lcName":"test2_check",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1723200741463,
+	"name":"test2_check",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":6
+}
