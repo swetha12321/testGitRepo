@@ -1,0 +1,53 @@
+{
+	"auths":[
+		{
+			"createdTime":1712753236490,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"schema":{
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					},
+					"type":"object",
+					"properties":{
+						"input_1":{
+							"type":"string",
+							"title":"Input 1"
+						}
+					},
+					"required":[
+						"input_1"
+					]
+				}
+			},
+			"name":"JWT authentication",
+			"type":"JWT",
+			"updatedTime":1712753991362
+		}
+	],
+	"createdTime":1712649625042,
+	"deleted":true,
+	"enabled":false,
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6614f59994e3e55b1bbb6ee1",
+	"lastModifiedBy":27,
+	"lcName":"test",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1713524060709,
+	"name":"test",
+	"ownerUserId":206,
+	"standard":false,
+	"standardApp":false,
+	"version":10
+}
