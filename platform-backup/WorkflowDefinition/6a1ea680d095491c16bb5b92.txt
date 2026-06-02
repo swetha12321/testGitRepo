@@ -103,7 +103,7 @@
 	"id":"6a1ea680d095491c16bb5b92",
 	"lastModifiedBy":27,
 	"lcName":"repeatable-interface-fetch",
-	"modifiedTime":1780410580815,
+	"modifiedTime":1780410778326,
 	"name":"repeatable-interface-fetch",
 	"nodes":[
 		{
@@ -146,7 +146,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_TMkbn-1",
 			"id":"n_UKhPq",
@@ -169,7 +169,7 @@
 				}
 			},
 			"inputs":{
-				"offset":20
+				"offset":0
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -199,7 +199,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_TMkbn-1",
 			"id":"n_N82mO",
@@ -472,7 +472,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_TMkbn-1",
 			"id":"n_SLvpk",
@@ -485,7 +485,7 @@
 				"translationsOption":"DEFAULT",
 				"page":{
 					"paginateBy":"OFFSET",
-					"limit":20,
+					"limit":1,
 					"offset":0
 				},
 				"numberOfRecordsToFetch":"MULTIPLE",
@@ -505,7 +505,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_TMkbn-1",
 			"id":"n_1A7f8",
@@ -546,7 +546,7 @@
 					"result":"{{ n_SLvpk.outputs.objects }}"
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Javascript",
 			"type":"ACTION"
@@ -559,7 +559,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_TMkbn-1",
 			"id":"n_NxT0c",
@@ -592,16 +592,34 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_NxT0c@_TMkbn-1@l",
 			"id":"n_DZBGZ",
 			"index":7,
 			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_name",
+							"filter":{
+								"operator":"CONTAINS",
+								"value":"Page 28"
+							}
+						}
+					],
+					"operator":"AND"
+				},
 				"shouldSearchInAnalyticsStore":false,
 				"object_type":"e_component",
 				"includeRoleMappings":false,
 				"includeCurrentUserPermissions":false,
+				"sortBy":[
+					{
+						"field":"cTm",
+						"order":"DESC"
+					}
+				],
 				"translationsOption":"DEFAULT",
 				"page":{
 					"paginateBy":"OFFSET",
@@ -825,5 +843,5 @@
 		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":92
+	"version":93
 }
