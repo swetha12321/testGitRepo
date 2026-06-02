@@ -1,0 +1,57 @@
+{
+	"auths":[
+		{
+			"createdTime":1712549581812,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"schema":{
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					},
+					"type":"object",
+					"properties":{
+						"user_token":{
+							"type":"string",
+							"title":"User Token"
+						},
+						"bot_token":{
+							"type":"string",
+							"title":"Bot Token"
+						}
+					},
+					"required":[
+						"bot_token"
+					]
+				}
+			},
+			"name":"Access Token",
+			"type":"TOKEN",
+			"updatedTime":1712549632660
+		}
+	],
+	"baseUrl":"https://api.slack.com/methods",
+	"createdTime":1712549567403,
+	"deleted":true,
+	"enabled":true,
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"66136ebf15102c31fe27f78d",
+	"lastModifiedBy":34,
+	"lcName":"slack-custom-02",
+	"modifiedTime":1714136269133,
+	"name":"Slack-Custom-02",
+	"ownerUserId":34,
+	"standard":false,
+	"standardApp":false,
+	"version":9
+}
