@@ -1,0 +1,110 @@
+{
+	"createdTime":1710313997710,
+	"deleted":true,
+	"deployedVersion":0,
+	"deploymentState":{
+		"deployedAt":1710314251469,
+		"deployedDefinitionId":"65f1530bcbbb164012637158",
+		"status":"DEPLOYED",
+		"version":0,
+		"workflowVersion":2
+	},
+	"edges":[
+		{
+			"fromNodeId":"yjfSB",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"lxRyW",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65f1520d99cbb2026dc30f32",
+	"lastModifiedBy":11,
+	"lcName":"okta_test",
+	"modifiedTime":1710394581522,
+	"name":"OKTA_TeST",
+	"nodes":[
+		{
+			"context":{
+				"appName":"amazon_sns",
+				"resourceVersion":3,
+				"connectionId":"65e8aef3885995611982d018",
+				"resourceName":"amazon_sns_on_event_received"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"yjfSB-1",
+			"id":"yjfSB",
+			"index":0,
+			"inputs":{
+				"format":"RAW"
+			},
+			"skip":false,
+			"title":"On Message Received",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"okta",
+				"resourceVersion":7,
+				"connectionId":"65e6fedbb6cf142a04a55056",
+				"resourceName":"okta_create_user",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"yjfSB-1",
+			"id":"lxRyW",
+			"index":0,
+			"inputs":{
+				"credentials":{
+					"password":{
+						"value":"Ayush123@"
+					},
+					"recovery_question":{
+						"question":"{{ yjfSB.outputs.Timestamp }}",
+						"answer":"{{ yjfSB.outputs.Signature }}"
+					},
+					"provider":{
+						"type":"OKTA",
+						"name":"OKTA"
+					}
+				},
+				"profile":{
+					"login":"{{ yjfSB.outputs.MessageId }}",
+					"firstName":"{{ yjfSB.outputs.MessageId }}",
+					"lastName":"{{ yjfSB.outputs.MessageId }}",
+					"email":"{{ yjfSB.outputs.MessageId }}",
+					"zipCode":""
+				}
+			},
+			"skip":false,
+			"subTitle":"Okta",
+			"title":"Create user",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":11,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":4
+}
