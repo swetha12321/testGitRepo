@@ -1,0 +1,40 @@
+{
+	"auths":[
+		{
+			"createdTime":1721308354398,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					}
+				}
+			},
+			"name":"ef",
+			"type":"TOKEN",
+			"updatedTime":1721308359913
+		}
+	],
+	"createdTime":1721308345151,
+	"deleted":false,
+	"enabled":true,
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"669914b9ea79b859f4201145",
+	"lastModifiedBy":-1,
+	"lcName":"newwd",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1721681181945,
+	"name":"newwd",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":8
+}
