@@ -1,0 +1,25 @@
+{
+	"createdTime":1720786872157,
+	"deleted":false,
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"66911fb8b8990616dc236c41",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"lastModifiedBy":-1,
+	"modifiedTime":1721681271893,
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"ownerUserId":520,
+	"standard":false,
+	"version":1
+}
