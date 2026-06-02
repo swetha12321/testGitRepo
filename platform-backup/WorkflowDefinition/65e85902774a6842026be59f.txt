@@ -1,0 +1,114 @@
+{
+	"createdTime":1709726669353,
+	"deleted":true,
+	"deployedVersion":7,
+	"deploymentState":{
+		"deployedAt":1709742314034,
+		"deployedDefinitionId":"65e898eac3d95d4ebf5f6d75",
+		"status":"PAUSED",
+		"version":7,
+		"workflowVersion":23
+	},
+	"edges":[
+		{
+			"fromNodeId":"UNAg8",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n7Iw2",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65e85902774a6842026be59f",
+	"lastModifiedBy":1,
+	"lcName":"service now test",
+	"modifiedTime":1709758002861,
+	"name":"Service now test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":6,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"UNAg8-1",
+			"id":"UNAg8",
+			"index":0,
+			"inputs":{
+				"request":{
+					"body":{
+						"type":"object",
+						"properties":{
+							"userId":{
+								"type":"string",
+								"title":"userId"
+							},
+							"name":{
+								"type":"string",
+								"title":"name"
+							}
+						}
+					}
+				},
+				"response":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"title":"Call Automation via API",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"servicenow",
+				"resourceVersion":2,
+				"connectionId":"65e8471c6a598e39b06a03a5",
+				"resourceName":"servicenow_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"UNAg8-1",
+			"id":"n7Iw2",
+			"index":0,
+			"inputs":{
+				"record":{
+					"error_message":"error_message 1",
+					"sl_no":"{{ UNAg8.outputs.body.userId }}",
+					"topic":"{{ UNAg8.outputs.body.name }}",
+					"user":"{{ UNAg8.outputs.body.userId }}",
+					"status":"{{ UNAg8.outputs.body.name }}"
+				},
+				"object":"x_1330348_unifya_0_error_log"
+			},
+			"skip":false,
+			"subTitle":"ServiceNow",
+			"title":"Create Record",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":1,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":24
+}
