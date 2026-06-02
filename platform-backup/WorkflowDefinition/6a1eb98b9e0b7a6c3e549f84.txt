@@ -9,14 +9,14 @@
 			"fromNodeId":"_V2VBh",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_9CErY",
+			"toNodeId":"n_ShFgP",
 			"type":"next"
 		}
 	],
 	"id":"6a1eb98b9e0b7a6c3e549f84",
-	"lastModifiedBy":195449,
+	"lastModifiedBy":195488,
 	"lcName":"hello",
-	"modifiedTime":1780398475967,
+	"modifiedTime":1780398943320,
 	"name":"hello",
 	"nodes":[
 		{
@@ -25,7 +25,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_V2VBh-1",
 			"id":"_V2VBh",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -34,18 +34,51 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":2307,
+				"resourceName":"custom_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_V2VBh-1",
-			"id":"_9CErY",
-			"index":0,
+			"id":"n_ShFgP",
+			"index":2,
+			"inputs":{
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"connectionType":"DIRECT",
+				"sslVerify":false,
+				"path":"/",
+				"responseSchema":{
+					"$ref":"#/definitions/entity|e_code_snippet|e_69f5bed72ad0b0791466c5b8",
+					"$comment":"sample"
+				},
+				"httpVersion":"HTTP_2",
+				"bodySchema":{
+					"$ref":"#/definitions/entity|e_code_snippet|e_69f5bed72ad0b0791466c5b8",
+					"$comment":"sample"
+				},
+				"responseContentType":"HEADER_BASED",
+				"followRedirects":"NORMAL",
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"certificateType":"CERT_STRING"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST request",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":195449,
+	"schemaReferences":[
+		"entity|e_code_snippet|e_69f5bed72ad0b0791466c5b8"
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -56,5 +89,5 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"version":1
 }
