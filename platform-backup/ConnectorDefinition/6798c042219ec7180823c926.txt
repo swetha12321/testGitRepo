@@ -1,0 +1,15 @@
+{
+	"createdTime":1738063938203,
+	"deleted":false,
+	"enabled":false,
+	"id":"6798c042219ec7180823c926",
+	"lastModifiedBy":678,
+	"lcName":"cdcs",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1738063938203,
+	"name":"cdcs",
+	"ownerUserId":678,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
