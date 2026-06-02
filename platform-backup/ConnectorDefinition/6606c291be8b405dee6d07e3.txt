@@ -1,0 +1,23 @@
+{
+	"createdTime":1711719057184,
+	"deleted":true,
+	"enabled":false,
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6606c291be8b405dee6d07e3",
+	"lcName":"to be deleted",
+	"modifiedTime":1711719080318,
+	"name":"To be deleted",
+	"ownerUserId":32,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
