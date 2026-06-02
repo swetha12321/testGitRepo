@@ -1,0 +1,3089 @@
+{
+	"columnCounts":273,
+	"createdTime":1719489129294,
+	"deleted":false,
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"667964552fff7f36f1965535",
+	"input":{
+		"type":"SCHEMA_AND_LAYOUT",
+		"dynamic":false,
+		"layout":{},
+		"schema":{
+			"type":"object",
+			"properties":{
+				"mp_expectedheadcountonsite":{
+					"description":"Expected headcount on-site",
+					"title":"mp_expectedheadcountonsite",
+					"type":"string"
+				},
+				"_msdyn_workordertype_value":{
+					"description":"Work order type ID value",
+					"title":"_msdyn_workordertype_value",
+					"type":"string"
+				},
+				"mp_microvertical":{
+					"description":"Micro-vertical",
+					"title":"mp_microvertical",
+					"type":"string"
+				},
+				"_originatingleadid_value":{
+					"description":"Originating lead ID value",
+					"title":"_originatingleadid_value",
+					"type":"string"
+				},
+				"mp_commonarchetypes":{
+					"description":"Common archetypes",
+					"title":"mp_commonarchetypes",
+					"type":"string"
+				},
+				"mp_towername":{
+					"description":"Tower name identifier",
+					"title":"mp_towername",
+					"type":"string"
+				},
+				"participatesinworkflow":{
+					"description":"Participates in workflow indicator",
+					"title":"participatesinworkflow",
+					"type":"string"
+				},
+				"statuscode":{
+					"description":"Status code",
+					"title":"statuscode",
+					"type":"string"
+				},
+				"_slaid_value":{
+					"description":"SLA ID value",
+					"title":"_slaid_value",
+					"type":"string"
+				},
+				"mp_practices":{
+					"description":"Practices identifier",
+					"title":"mp_practices",
+					"type":"string"
+				},
+				"mp_clouddeal":{
+					"description":"Cloud deal identifier",
+					"title":"mp_clouddeal",
+					"type":"string"
+				},
+				"_owningteam_value":{
+					"description":"Owning team ID value",
+					"title":"_owningteam_value",
+					"type":"string"
+				},
+				"mp_ratechange":{
+					"description":"Rate change identifier",
+					"title":"mp_ratechange",
+					"type":"string"
+				},
+				"mp_previousdealtype":{
+					"description":"Previous deal type",
+					"title":"mp_previousdealtype",
+					"type":"string"
+				},
+				"mp_cloudpartners":{
+					"description":"Cloud partners",
+					"title":"mp_cloudpartners",
+					"type":"string"
+				},
+				"_modifiedonbehalfby_value":{
+					"description":"Modified on behalf by ID value",
+					"title":"_modifiedonbehalfby_value",
+					"type":"string"
+				},
+				"mp_dealinmavenlink":{
+					"description":"Deal in Mavenlink indicator",
+					"title":"mp_dealinmavenlink",
+					"type":"string"
+				},
+				"mp_wondealdescriptionformigrationpurpose":{
+					"description":"Won deal description for migration purpose",
+					"title":"mp_wondealdescriptionformigrationpurpose",
+					"type":"string"
+				},
+				"mp_ispartnerstechnologyinvolved":{
+					"description":"Partners technology involved identifier",
+					"title":"mp_ispartnerstechnologyinvolved",
+					"type":"string"
+				},
+				"mp_aideal":{
+					"description":"AI deal identifier",
+					"title":"mp_aideal",
+					"type":"string"
+				},
+				"mp_portfoliocategorymigrationpurpose":{
+					"description":"Portfolio category for migration purpose",
+					"title":"mp_portfoliocategorymigrationpurpose",
+					"type":"string"
+				},
+				"_mp_salessupervisor_value":{
+					"description":"Sales supervisor ID value",
+					"title":"_mp_salessupervisor_value",
+					"type":"string"
+				},
+				"mp_expectedheadcountoffshore":{
+					"description":"Expected headcount offshore",
+					"title":"mp_expectedheadcountoffshore",
+					"type":"string"
+				},
+				"freightamount_base":{
+					"description":"Base freight amount",
+					"title":"freightamount_base",
+					"type":"string"
+				},
+				"opportunityratingcode":{
+					"description":"Opportunity rating code",
+					"title":"opportunityratingcode",
+					"type":"string"
+				},
+				"mp_overallblendedrate_base":{
+					"description":"Base overall blended rate",
+					"title":"mp_overallblendedrate_base",
+					"type":"string"
+				},
+				"stepid":{
+					"description":"Step ID",
+					"title":"stepid",
+					"type":"string"
+				},
+				"emailaddress":{
+					"description":"Email address",
+					"title":"emailaddress",
+					"type":"string"
+				},
+				"_mp_prrismprojectid_value":{
+					"description":"PRISM project ID value",
+					"title":"_mp_prrismprojectid_value",
+					"type":"string"
+				},
+				"msdyn_ordertype":{
+					"description":"Order type identifier",
+					"title":"msdyn_ordertype",
+					"type":"string"
+				},
+				"mp_mailtowernameflag":{
+					"description":"Mail tower name flag",
+					"title":"mp_mailtowernameflag",
+					"type":"string"
+				},
+				"mp_sourcechannel":{
+					"description":"Source channel identifier",
+					"title":"mp_sourcechannel",
+					"type":"string"
+				},
+				"customerpainpoints":{
+					"description":"Customer pain points",
+					"title":"customerpainpoints",
+					"type":"string"
+				},
+				"presentfinalproposal":{
+					"description":"Indicator for presenting final proposal",
+					"title":"presentfinalproposal",
+					"type":"string"
+				},
+				"lastonholdtime":{
+					"description":"Last on hold time",
+					"title":"lastonholdtime",
+					"type":"string"
+				},
+				"mp_blinkdealinlab":{
+					"description":"Blink deal in lab indicator",
+					"title":"mp_blinkdealinlab",
+					"type":"string"
+				},
+				"_contactid_value":{
+					"description":"Contact ID value",
+					"title":"_contactid_value",
+					"type":"string"
+				},
+				"mp_nearshoreblendedrate_base":{
+					"description":"Base nearshore blended rate",
+					"title":"mp_nearshoreblendedrate_base",
+					"type":"string"
+				},
+				"mp_contractperiodformigrationpurpose":{
+					"description":"Contract period for migration purpose",
+					"title":"mp_contractperiodformigrationpurpose",
+					"type":"string"
+				},
+				"mp_gtmtribe":{
+					"description":"GTM tribe identifier",
+					"title":"mp_gtmtribe",
+					"type":"string"
+				},
+				"_mp_opportunityteamonopportunityid_value":{
+					"description":"Opportunity team on opportunity ID value",
+					"title":"_mp_opportunityteamonopportunityid_value",
+					"type":"string"
+				},
+				"filedebrief":{
+					"description":"File debrief indicator",
+					"title":"filedebrief",
+					"type":"string"
+				},
+				"mp_q4rev":{
+					"description":"Q4 revenue",
+					"title":"mp_q4rev",
+					"type":"string"
+				},
+				"statecode":{
+					"description":"State code",
+					"title":"statecode",
+					"type":"string"
+				},
+				"mp_sownotext":{
+					"description":"SOW float text",
+					"title":"mp_sownotext",
+					"type":"string"
+				},
+				"msdyn_scorereasons":{
+					"description":"Score reasons",
+					"title":"msdyn_scorereasons",
+					"type":"string"
+				},
+				"_pricelevelid_value":{
+					"description":"Price level ID value",
+					"title":"_pricelevelid_value",
+					"type":"string"
+				},
+				"mp_contractdocumentattached":{
+					"description":"Contract document attached indicator",
+					"title":"mp_contractdocumentattached",
+					"type":"string"
+				},
+				"mp_modifieddatemigrated":{
+					"description":"Modified date migrated",
+					"title":"mp_modifieddatemigrated",
+					"type":"string"
+				},
+				"mp_commonarchetype":{
+					"description":"Common archetype",
+					"title":"mp_commonarchetype",
+					"type":"string"
+				},
+				"confirminterest":{
+					"description":"Indicator for confirming interest",
+					"title":"confirminterest",
+					"type":"string"
+				},
+				"mp_currentqtrforecaststatus":{
+					"description":"Current quarter forecast status",
+					"title":"mp_currentqtrforecaststatus",
+					"type":"string"
+				},
+				"overriddencreatedon":{
+					"description":"Overridden created on date",
+					"title":"overriddencreatedon",
+					"type":"string"
+				},
+				"mp_q1q4sum":{
+					"description":"Sum of Q1 to Q4",
+					"title":"mp_q1q4sum",
+					"type":"string"
+				},
+				"_owningbusinessunit_value":{
+					"description":"Owning business unit ID value",
+					"title":"_owningbusinessunit_value",
+					"type":"string"
+				},
+				"new_probabilitywith":{
+					"description":"New probability with",
+					"title":"new_probabilitywith",
+					"type":"string"
+				},
+				"mp_offshoregrossmargin":{
+					"description":"Offshore gross margin",
+					"title":"mp_offshoregrossmargin",
+					"type":"string"
+				},
+				"completeinternalreview":{
+					"description":"Complete internal review indicator",
+					"title":"completeinternalreview",
+					"type":"string"
+				},
+				"estimatedclosedate":{
+					"description":"Estimated close date",
+					"title":"estimatedclosedate",
+					"type":"string"
+				},
+				"completefinalproposal":{
+					"description":"Indicator for completing final proposal",
+					"title":"completefinalproposal",
+					"type":"string"
+				},
+				"_mp_gdalglobaldeliveryaccountleader_value":{
+					"description":"GDAL global delivery account leader ID value",
+					"title":"_mp_gdalglobaldeliveryaccountleader_value",
+					"type":"string"
+				},
+				"mp_salesstage":{
+					"description":"Sales stage",
+					"title":"mp_salesstage",
+					"type":"string"
+				},
+				"stepname":{
+					"description":"Current step name",
+					"title":"stepname",
+					"type":"string"
+				},
+				"mp_offshoreblendedrate_base":{
+					"description":"Base offshore blended rate",
+					"title":"mp_offshoreblendedrate_base",
+					"type":"string"
+				},
+				"mp_datalytyxinvolved":{
+					"description":"Datalytyx involved indicator",
+					"title":"mp_datalytyxinvolved",
+					"type":"string"
+				},
+				"schedulefollowup_prospect":{
+					"description":"Schedule follow-up (prospect)",
+					"title":"schedulefollowup_prospect",
+					"type":"string"
+				},
+				"resolvefeedback":{
+					"description":"Indicator for resolving feedback",
+					"title":"resolvefeedback",
+					"type":"string"
+				},
+				"mp_stageformigrationpurposeonly":{
+					"description":"Stage for migration purpose only",
+					"title":"mp_stageformigrationpurposeonly",
+					"type":"string"
+				},
+				"presentproposal":{
+					"description":"Present proposal indicator",
+					"title":"presentproposal",
+					"type":"string"
+				},
+				"mp_portfoliocategory":{
+					"description":"Portfolio category",
+					"title":"mp_portfoliocategory",
+					"type":"string"
+				},
+				"mp_contractperiodinmonthsdecimal":{
+					"description":"Contract period in months (decimal)",
+					"title":"mp_contractperiodinmonthsdecimal",
+					"type":"string"
+				},
+				"timeline":{
+					"description":"Timeline",
+					"title":"timeline",
+					"type":"string"
+				},
+				"mp_q1q4sum_base":{
+					"description":"Base sum of Q1 to Q4",
+					"title":"mp_q1q4sum_base",
+					"type":"string"
+				},
+				"onholdtime":{
+					"description":"On hold time",
+					"title":"onholdtime",
+					"type":"string"
+				},
+				"_ownerid_value":{
+					"description":"Owner ID value",
+					"title":"_ownerid_value",
+					"type":"string"
+				},
+				"mp_dealabr":{
+					"description":"Deal ABR",
+					"title":"mp_dealabr",
+					"type":"string"
+				},
+				"totallineitemdiscountamount":{
+					"description":"Total line item discount amount",
+					"title":"totallineitemdiscountamount",
+					"type":"string"
+				},
+				"mp_ownersmigrated":{
+					"description":"Owners migrated",
+					"title":"mp_ownersmigrated",
+					"type":"string"
+				},
+				"stageid":{
+					"description":"Stage ID",
+					"title":"stageid",
+					"type":"string"
+				},
+				"msdyn_similaropportunities":{
+					"description":"Similar opportunities",
+					"title":"msdyn_similaropportunities",
+					"type":"string"
+				},
+				"mp_archetype":{
+					"description":"Archetype",
+					"title":"mp_archetype",
+					"type":"string"
+				},
+				"mp_projecttype":{
+					"description":"Project type",
+					"title":"mp_projecttype",
+					"type":"string"
+				},
+				"mp_industry":{
+					"description":"Industry identifier",
+					"title":"mp_industry",
+					"type":"string"
+				},
+				"mp_ipstoolsframeworksengaged":{
+					"description":"IPS tools and frameworks engaged",
+					"title":"mp_ipstoolsframeworksengaged",
+					"type":"string"
+				},
+				"mp_todaysday":{
+					"description":"Today's day",
+					"title":"mp_todaysday",
+					"type":"string"
+				},
+				"developproposal":{
+					"description":"Develop proposal indicator",
+					"title":"developproposal",
+					"type":"string"
+				},
+				"evaluatefit":{
+					"description":"Evaluate fit indicator",
+					"title":"evaluatefit",
+					"type":"string"
+				},
+				"mp_maildealtypeflag":{
+					"description":"Mail deal type flag",
+					"title":"mp_maildealtypeflag",
+					"type":"string"
+				},
+				"estimatedvalue_base":{
+					"description":"Base estimated value",
+					"title":"estimatedvalue_base",
+					"type":"string"
+				},
+				"actualvalue":{
+					"description":"Actual value",
+					"title":"actualvalue",
+					"type":"string"
+				},
+				"qualificationcomments":{
+					"description":"Qualification comments",
+					"title":"qualificationcomments",
+					"type":"string"
+				},
+				"totaldiscountamount_base":{
+					"description":"Base total discount amount",
+					"title":"totaldiscountamount_base",
+					"type":"string"
+				},
+				"mp_projectlocation":{
+					"description":"Project location",
+					"title":"mp_projectlocation",
+					"type":"string"
+				},
+				"_mp_competitor_value":{
+					"description":"Competitor ID value",
+					"title":"_mp_competitor_value",
+					"type":"string"
+				},
+				"mp_salesstagecompletedon":{
+					"description":"Sales stage completed on date",
+					"title":"mp_salesstagecompletedon",
+					"type":"string"
+				},
+				"mp_onsiteblendedrate_base":{
+					"description":"Base onsite blended rate",
+					"title":"mp_onsiteblendedrate_base",
+					"type":"string"
+				},
+				"mp_sowdurationinmonths":{
+					"description":"SOW duration in months",
+					"title":"mp_sowdurationinmonths",
+					"type":"string"
+				},
+				"purchasetimeframe":{
+					"description":"Purchase timeframe",
+					"title":"purchasetimeframe",
+					"type":"string"
+				},
+				"totalamountlessfreight_base":{
+					"description":"Base amount excluding freight",
+					"title":"totalamountlessfreight_base",
+					"type":"string"
+				},
+				"importsequencefloat":{
+					"description":"Import sequence float",
+					"title":"importsequencefloat",
+					"type":"string"
+				},
+				"mp_cloudpartnersmigrationpurpose":{
+					"description":"Cloud partners migration purpose",
+					"title":"mp_cloudpartnersmigrationpurpose",
+					"type":"string"
+				},
+				"mp_gtmtribemigrated":{
+					"description":"GTM tribe migrated",
+					"title":"mp_gtmtribemigrated",
+					"type":"string"
+				},
+				"mp_contractperiodinmonths":{
+					"description":"Contract period in months",
+					"title":"mp_contractperiodinmonths",
+					"type":"string"
+				},
+				"need":{
+					"description":"Need",
+					"title":"need",
+					"type":"string"
+				},
+				"_mp_parentopportunity_value":{
+					"description":"Parent opportunity ID value",
+					"title":"_mp_parentopportunity_value",
+					"type":"string"
+				},
+				"mp_q3rev_base":{
+					"description":"Base Q3 revenue",
+					"title":"mp_q3rev_base",
+					"type":"string"
+				},
+				"PROJECT_ID_UI":{
+					"description":"Actual Project ID VISIBLE ON UI",
+					"title":"PROJECT_ID_UI",
+					"type":"string"
+				},
+				"currentsituation":{
+					"description":"Current situation",
+					"title":"currentsituation",
+					"type":"string"
+				},
+				"mp_ifyesprovideipstoolsframeworksnamessepar":{
+					"description":"If yes, provide IPS tools frameworks names separate",
+					"title":"mp_ifyesprovideipstoolsframeworksnamessepar",
+					"type":"string"
+				},
+				"totaltax":{
+					"description":"Total tax",
+					"title":"totaltax",
+					"type":"string"
+				},
+				"timezoneruleversionfloat":{
+					"description":"Time zone rule version float",
+					"title":"timezoneruleversionfloat",
+					"type":"string"
+				},
+				"_msdyn_opportunitykpiid_value":{
+					"description":"Opportunity KPI ID value",
+					"title":"_msdyn_opportunitykpiid_value",
+					"type":"string"
+				},
+				"mp_qualificationduedate":{
+					"description":"Qualification due date",
+					"title":"mp_qualificationduedate",
+					"type":"string"
+				},
+				"actualclosedate":{
+					"description":"Actual close date",
+					"title":"actualclosedate",
+					"type":"string"
+				},
+				"name":{
+					"description":"Name of the opportunity",
+					"title":"name",
+					"type":"string"
+				},
+				"mp_bidmanagerapproval":{
+					"description":"Bid manager approval identifier",
+					"title":"mp_bidmanagerapproval",
+					"type":"string"
+				},
+				"mp_practicesmigrated":{
+					"description":"Practices migrated",
+					"title":"mp_practicesmigrated",
+					"type":"string"
+				},
+				"mp_overallblendedrate":{
+					"description":"Overall blended rate",
+					"title":"mp_overallblendedrate",
+					"type":"string"
+				},
+				"captureproposalfeedback":{
+					"description":"Capture proposal feedback indicator",
+					"title":"captureproposalfeedback",
+					"type":"string"
+				},
+				"totallineitemamount":{
+					"description":"Total line item amount",
+					"title":"totallineitemamount",
+					"type":"string"
+				},
+				"budgetstatus":{
+					"description":"Budget status",
+					"title":"budgetstatus",
+					"type":"string"
+				},
+				"customerneed":{
+					"description":"Customer need",
+					"title":"customerneed",
+					"type":"string"
+				},
+				"_mp_revenuemodel_lookup_value":{
+					"description":"Revenue model lookup ID value",
+					"title":"_mp_revenuemodel_lookup_value",
+					"type":"string"
+				},
+				"skippricecalculation":{
+					"description":"Skip price calculation indicator",
+					"title":"skippricecalculation",
+					"type":"string"
+				},
+				"totallineitemamount_base":{
+					"description":"Base amount of total line item",
+					"title":"totallineitemamount_base",
+					"type":"string"
+				},
+				"exchangerate":{
+					"description":"Exchange rate",
+					"title":"exchangerate",
+					"type":"string"
+				},
+				"versionfloat":{
+					"description":"Record version float",
+					"title":"versionfloat",
+					"type":"string"
+				},
+				"_campaignid_value":{
+					"description":"Campaign ID value",
+					"title":"_campaignid_value",
+					"type":"string"
+				},
+				"mp_recordurl":{
+					"description":"URL to the record",
+					"title":"mp_recordurl",
+					"type":"string"
+				},
+				"description":{
+					"description":"Description",
+					"title":"description",
+					"type":"string"
+				},
+				"mp_portfoliocategorymigrated":{
+					"description":"Portfolio category migrated",
+					"title":"mp_portfoliocategorymigrated",
+					"type":"string"
+				},
+				"identifycompetitors":{
+					"description":"Indicator for identifying competitors",
+					"title":"identifycompetitors",
+					"type":"string"
+				},
+				"mp_bidmanagerapprovedby":{
+					"description":"Bid manager approved by",
+					"title":"mp_bidmanagerapprovedby",
+					"type":"string"
+				},
+				"totaldiscountamount":{
+					"description":"Total discount amount",
+					"title":"totaldiscountamount",
+					"type":"string"
+				},
+				"_createdby_value":{
+					"description":"Created by ID value",
+					"title":"_createdby_value",
+					"type":"string"
+				},
+				"totallineitemdiscountamount_base":{
+					"description":"Base amount of total line item discount",
+					"title":"totallineitemdiscountamount_base",
+					"type":"string"
+				},
+				"teamsfollowed":{
+					"description":"Teams followed",
+					"title":"teamsfollowed",
+					"type":"string"
+				},
+				"sendthankyounote":{
+					"description":"Indicator for sending thank you note",
+					"title":"sendthankyounote",
+					"type":"string"
+				},
+				"mp_lockstatus":{
+					"description":"Lock status",
+					"title":"mp_lockstatus",
+					"type":"string"
+				},
+				"mp_parentsowno":{
+					"description":"Parent SOW float",
+					"title":"mp_parentsowno",
+					"type":"string"
+				},
+				"_createdonbehalfby_value":{
+					"description":"Created on behalf by ID value",
+					"title":"_createdonbehalfby_value",
+					"type":"string"
+				},
+				"msdyn_opportunityscoretrend":{
+					"description":"Opportunity score trend",
+					"title":"msdyn_opportunityscoretrend",
+					"type":"string"
+				},
+				"_owninguser_value":{
+					"description":"Owning user ID value",
+					"title":"_owninguser_value",
+					"type":"string"
+				},
+				"mp_rowid":{
+					"description":"Row ID",
+					"title":"mp_rowid",
+					"type":"string"
+				},
+				"_mp_marketunit_value":{
+					"description":"Market unit ID value",
+					"title":"_mp_marketunit_value",
+					"type":"string"
+				},
+				"mp_mailflag":{
+					"description":"Mail flag",
+					"title":"mp_mailflag",
+					"type":"string"
+				},
+				"mp_salesstagechoice":{
+					"description":"Sales stage choice identifier",
+					"title":"mp_salesstagechoice",
+					"type":"string"
+				},
+				"opportunityid":{
+					"description":"unique id for Opportunity",
+					"title":"opportunityid",
+					"type":"string"
+				},
+				"mp_rmscreatedby":{
+					"description":"RMS created by",
+					"title":"mp_rmscreatedby",
+					"type":"string"
+				},
+				"mp_servicesinvolvedyn":{
+					"description":"Services involved (YN)",
+					"title":"mp_servicesinvolvedyn",
+					"type":"string"
+				},
+				"mp_salesstagemodifiedon":{
+					"description":"Sales stage modified date",
+					"title":"mp_salesstagemodifiedon",
+					"type":"string"
+				},
+				"mp_approvalrejectionreason":{
+					"description":"Approval rejection reason",
+					"title":"mp_approvalrejectionreason",
+					"type":"string"
+				},
+				"salesstage":{
+					"description":"Sales stage",
+					"title":"salesstage",
+					"type":"string"
+				},
+				"totaltax_base":{
+					"description":"Base total tax",
+					"title":"totaltax_base",
+					"type":"string"
+				},
+				"purchaseprocess":{
+					"description":"Purchase process",
+					"title":"purchaseprocess",
+					"type":"string"
+				},
+				"mp_gtmtribemigrationpurpose":{
+					"description":"GTM tribe migration purpose",
+					"title":"mp_gtmtribemigrationpurpose",
+					"type":"string"
+				},
+				"mp_opportunityapprovalmailattached":{
+					"description":"Opportunity approval mail attached indicator",
+					"title":"mp_opportunityapprovalmailattached",
+					"type":"string"
+				},
+				"mp_pricingteamapproval":{
+					"description":"Pricing team approval identifier",
+					"title":"mp_pricingteamapproval",
+					"type":"string"
+				},
+				"totalamountlessfreight":{
+					"description":"Amount excluding freight",
+					"title":"totalamountlessfreight",
+					"type":"string"
+				},
+				"closeprobability":{
+					"description":"Probability of closing the opportunity",
+					"title":"closeprobability",
+					"type":"string"
+				},
+				"mp_q1rev":{
+					"description":"Q1 revenue",
+					"title":"mp_q1rev",
+					"type":"string"
+				},
+				"new_opportunityidsfdc":{
+					"description":"New opportunity ID (SFDC)",
+					"title":"new_opportunityidsfdc",
+					"type":"string"
+				},
+				"initialcommunication":{
+					"description":"Initial communication",
+					"title":"initialcommunication",
+					"type":"string"
+				},
+				"mp_q1rev_base":{
+					"description":"Base Q1 revenue",
+					"title":"mp_q1rev_base",
+					"type":"string"
+				},
+				"_customerid_value":{
+					"description":"Customer ID value",
+					"title":"_customerid_value",
+					"type":"string"
+				},
+				"mp_blinkdealservicetype":{
+					"description":"Blink deal service type",
+					"title":"mp_blinkdealservicetype",
+					"type":"string"
+				},
+				"modifiedon":{
+					"description":"Modified on date",
+					"title":"modifiedon",
+					"type":"string"
+				},
+				"totalamount":{
+					"description":"Total amount",
+					"title":"totalamount",
+					"type":"string"
+				},
+				"schedulefollowup_qualify":{
+					"description":"Schedule follow-up (qualify)",
+					"title":"schedulefollowup_qualify",
+					"type":"string"
+				},
+				"identifypursuitteam":{
+					"description":"Indicator for identifying pursuit team",
+					"title":"identifypursuitteam",
+					"type":"string"
+				},
+				"_msdyn_segmentid_value":{
+					"description":"Segment ID value",
+					"title":"_msdyn_segmentid_value",
+					"type":"string"
+				},
+				"mp_listfinalistsenterseparatedby":{
+					"description":"List finalists (enter separated by)",
+					"title":"mp_listfinalistsenterseparatedby",
+					"type":"string"
+				},
+				"timespentbymeonemailandmeetings":{
+					"description":"Time spent by me on email and meetings",
+					"title":"timespentbymeonemailandmeetings",
+					"type":"string"
+				},
+				"mp_sowno":{
+					"description":"SOW number",
+					"title":"mp_sowno",
+					"type":"string"
+				},
+				"mp_dayssincelastupdated":{
+					"description":"Days since last update",
+					"title":"mp_dayssincelastupdated",
+					"type":"string"
+				},
+				"discountamount_base":{
+					"description":"Base discount amount",
+					"title":"discountamount_base",
+					"type":"string"
+				},
+				"mp_pricingapproveddate":{
+					"description":"Pricing approved date",
+					"title":"mp_pricingapproveddate",
+					"type":"string"
+				},
+				"prioritycode":{
+					"description":"Priority code",
+					"title":"prioritycode",
+					"type":"string"
+				},
+				"utcconversiontimezonecode":{
+					"description":"UTC conversion timezone code",
+					"title":"utcconversiontimezonecode",
+					"type":"string"
+				},
+				"msdyn_gdproptout":{
+					"description":"GDPR opt-out indicator",
+					"title":"msdyn_gdproptout",
+					"type":"string"
+				},
+				"decisionmaker":{
+					"description":"Decision maker indicator",
+					"title":"decisionmaker",
+					"type":"string"
+				},
+				"mp_completepricingteamapproval":{
+					"description":"Indicator for complete pricing team approval",
+					"title":"mp_completepricingteamapproval",
+					"type":"string"
+				},
+				"discountamount":{
+					"description":"Discount amount",
+					"title":"discountamount",
+					"type":"string"
+				},
+				"mp_subunit":{
+					"description":"Subunit",
+					"title":"mp_subunit",
+					"type":"string"
+				},
+				"PROJECT_ID":{
+					"description":"ID of the associated project",
+					"title":"PROJECT_ID",
+					"type":"string"
+				},
+				"mp_servicesinvolved":{
+					"description":"Services involved identifier",
+					"title":"mp_servicesinvolved",
+					"type":"string"
+				},
+				"scheduleproposalmeeting":{
+					"description":"Schedule proposal meeting",
+					"title":"scheduleproposalmeeting",
+					"type":"string"
+				},
+				"mp_practicesmigrationpurpose":{
+					"description":"Practices migration purpose",
+					"title":"mp_practicesmigrationpurpose",
+					"type":"string"
+				},
+				"mp_revenuemodel":{
+					"description":"Revenue model",
+					"title":"mp_revenuemodel",
+					"type":"string"
+				},
+				"msdyn_opportunitygrade":{
+					"description":"Opportunity grade",
+					"title":"msdyn_opportunitygrade",
+					"type":"string"
+				},
+				"mp_pricingapprovedby":{
+					"description":"Pricing approved by",
+					"title":"mp_pricingapprovedby",
+					"type":"string"
+				},
+				"mp_tagengagement":{
+					"description":"Tag engagement status or identifier",
+					"title":"mp_tagengagement",
+					"type":"string"
+				},
+				"createdon":{
+					"description":"Created on date",
+					"title":"createdon",
+					"type":"string"
+				},
+				"budgetamount_base":{
+					"description":"Base budget amount",
+					"title":"budgetamount_base",
+					"type":"string"
+				},
+				"pricingerrorcode":{
+					"description":"Pricing error code",
+					"title":"pricingerrorcode",
+					"type":"string"
+				},
+				"finaldecisiondate":{
+					"description":"Final decision date",
+					"title":"finaldecisiondate",
+					"type":"string"
+				},
+				"mp_expectedheadcountnearshore":{
+					"description":"Expected headcount nearshore",
+					"title":"mp_expectedheadcountnearshore",
+					"type":"string"
+				},
+				"mp_nearshoregrossmargin":{
+					"description":"Nearshore gross margin",
+					"title":"mp_nearshoregrossmargin",
+					"type":"string"
+				},
+				"_modifiedby_value":{
+					"description":"Modified by ID value",
+					"title":"_modifiedby_value",
+					"type":"string"
+				},
+				"processid":{
+					"description":"Process ID",
+					"title":"processid",
+					"type":"string"
+				},
+				"_msdyn_predictivescoreid_value":{
+					"description":"Predictive score ID value",
+					"title":"_msdyn_predictivescoreid_value",
+					"type":"string"
+				},
+				"_slainvokedid_value":{
+					"description":"SLA invoked ID value",
+					"title":"_slainvokedid_value",
+					"type":"string"
+				},
+				"mp_marginpercent":{
+					"description":"Margin percent",
+					"title":"mp_marginpercent",
+					"type":"string"
+				},
+				"mp_actualvalue_base":{
+					"description":"Base actual value",
+					"title":"mp_actualvalue_base",
+					"type":"string"
+				},
+				"mp_q4rev_base":{
+					"description":"Base Q4 revenue",
+					"title":"mp_q4rev_base",
+					"type":"string"
+				},
+				"budgetamount":{
+					"description":"Budget amount",
+					"title":"budgetamount",
+					"type":"string"
+				},
+				"mp_q2rev":{
+					"description":"Q2 revenue",
+					"title":"mp_q2rev",
+					"type":"string"
+				},
+				"mp_proactivenonproactive":{
+					"description":"Proactive/non-proactive indicator",
+					"title":"mp_proactivenonproactive",
+					"type":"string"
+				},
+				"discountpercentage":{
+					"description":"Discount percentage",
+					"title":"discountpercentage",
+					"type":"string"
+				},
+				"mp_rebadgingvendorconsolidation":{
+					"description":"Rebadging vendor consolidation identifier",
+					"title":"mp_rebadgingvendorconsolidation",
+					"type":"string"
+				},
+				"totalamount_base":{
+					"description":"Base total amount",
+					"title":"totalamount_base",
+					"type":"string"
+				},
+				"_mp_submarketunit_value":{
+					"description":"Submarket unit ID value",
+					"title":"_mp_submarketunit_value",
+					"type":"string"
+				},
+				"mp_dealgrossmargin":{
+					"description":"Deal gross margin",
+					"title":"mp_dealgrossmargin",
+					"type":"string"
+				},
+				"mp_blinkdealinmavenlink":{
+					"description":"Blink deal in Mavenlink indicator",
+					"title":"mp_blinkdealinmavenlink",
+					"type":"string"
+				},
+				"mp_rmsupdateddate":{
+					"description":"RMS updated date",
+					"title":"mp_rmsupdateddate",
+					"type":"string"
+				},
+				"mp_completebidmanagementapproval":{
+					"description":"Indicator for complete bid management approval",
+					"title":"mp_completebidmanagementapproval",
+					"type":"string"
+				},
+				"msdyn_forecastcategory":{
+					"description":"Forecast category identifier",
+					"title":"msdyn_forecastcategory",
+					"type":"string"
+				},
+				"pursuitdecision":{
+					"description":"Pursuit decision indicator",
+					"title":"pursuitdecision",
+					"type":"string"
+				},
+				"_mp_partyname_value":{
+					"description":"Party name ID value",
+					"title":"_mp_partyname_value",
+					"type":"string"
+				},
+				"mp_onsitegrossmargin":{
+					"description":"Onsite gross margin",
+					"title":"mp_onsitegrossmargin",
+					"type":"string"
+				},
+				"mp_mailrevenuemodelflag":{
+					"description":"Mail revenue model flag",
+					"title":"mp_mailrevenuemodelflag",
+					"type":"string"
+				},
+				"mp_dealservicetype":{
+					"description":"Deal service type",
+					"title":"mp_dealservicetype",
+					"type":"string"
+				},
+				"mp_dealwinningprobability":{
+					"description":"Deal winning probability",
+					"title":"mp_dealwinningprobability",
+					"type":"string"
+				},
+				"mp_grossmarginwith":{
+					"description":"Gross margin with",
+					"title":"mp_grossmarginwith",
+					"type":"string"
+				},
+				"mp_todaysdate":{
+					"description":"Today's date",
+					"title":"mp_todaysdate",
+					"type":"string"
+				},
+				"mp_dealtype":{
+					"description":"Deal type identifier",
+					"title":"mp_dealtype",
+					"type":"string"
+				},
+				"salesstagecode":{
+					"description":"Sales stage code",
+					"title":"salesstagecode",
+					"type":"string"
+				},
+				"mp_dealabr_base":{
+					"description":"Base deal ABR",
+					"title":"mp_dealabr_base",
+					"type":"string"
+				},
+				"isrevenuesystemcalculated":{
+					"description":"Indicator if revenue system is calculated",
+					"title":"isrevenuesystemcalculated",
+					"type":"string"
+				},
+				"_mp_salesleader_value":{
+					"description":"Sales leader ID value",
+					"title":"_mp_salesleader_value",
+					"type":"string"
+				},
+				"_parentaccountid_value":{
+					"description":"ID of the associated parent account",
+					"title":"_parentaccountid_value",
+					"type":"string"
+				},
+				"mp_channel":{
+					"description":"Channel identifier",
+					"title":"mp_channel",
+					"type":"string"
+				},
+				"proposedsolution":{
+					"description":"Proposed solution",
+					"title":"proposedsolution",
+					"type":"string"
+				},
+				"mp_pricingteamapprovedby":{
+					"description":"Pricing team approved by",
+					"title":"mp_pricingteamapprovedby",
+					"type":"string"
+				},
+				"mp_sowstartdate":{
+					"description":"SOW start date",
+					"title":"mp_sowstartdate",
+					"type":"string"
+				},
+				"mp_onsiteblendedrate":{
+					"description":"Onsite blended rate",
+					"title":"mp_onsiteblendedrate",
+					"type":"string"
+				},
+				"estimatedvalue":{
+					"description":"Estimated value",
+					"title":"estimatedvalue",
+					"type":"string"
+				},
+				"msdyn_scorehistory":{
+					"description":"Score history",
+					"title":"msdyn_scorehistory",
+					"type":"string"
+				},
+				"mp_ftecalculated":{
+					"description":"FTE calculated",
+					"title":"mp_ftecalculated",
+					"type":"string"
+				},
+				"mp_salesopsbidmgmtteamapprovedby":{
+					"description":"Sales Ops bid management team approved by",
+					"title":"mp_salesopsbidmgmtteamapprovedby",
+					"type":"string"
+				},
+				"mp_dealinlab":{
+					"description":"Deal in lab indicator",
+					"title":"mp_dealinlab",
+					"type":"string"
+				},
+				"mp_ifyesisapartnerstechnologynamesseparate":{
+					"description":"If yes, is a partner's technology name separate",
+					"title":"mp_ifyesisapartnerstechnologynamesseparate",
+					"type":"string"
+				},
+				"mp_tempfield":{
+					"description":"Temporary field",
+					"title":"mp_tempfield",
+					"type":"string"
+				},
+				"mp_bidapprovalrejectionreason":{
+					"description":"Bid approval rejection reason",
+					"title":"mp_bidapprovalrejectionreason",
+					"type":"string"
+				},
+				"mp_basedonmsaratecard":{
+					"description":"Based on MSA rate card identifier",
+					"title":"mp_basedonmsaratecard",
+					"type":"string"
+				},
+				"_parentcontactid_value":{
+					"description":"Parent contact ID value",
+					"title":"_parentcontactid_value",
+					"type":"string"
+				},
+				"mp_winningcompetitorformigrationpurpose":{
+					"description":"Winning competitor for migration purpose",
+					"title":"mp_winningcompetitorformigrationpurpose",
+					"type":"string"
+				},
+				"mp_bidmanagerapproveddate":{
+					"description":"Bid manager approved date",
+					"title":"mp_bidmanagerapproveddate",
+					"type":"string"
+				},
+				"mp_maildealtcvflag":{
+					"description":"Mail deal TCV flag",
+					"title":"mp_maildealtcvflag",
+					"type":"string"
+				},
+				"mp_opportunityid":{
+					"description":"Opportunity ID Visible in UI",
+					"title":"mp_opportunityid",
+					"type":"string"
+				},
+				"mp_sowenddate":{
+					"description":"SOW end date",
+					"title":"mp_sowenddate",
+					"type":"string"
+				},
+				"mp_actualvalue":{
+					"description":"Actual value",
+					"title":"mp_actualvalue",
+					"type":"string"
+				},
+				"mp_migratedrecordformigrationpurpose":{
+					"description":"Migrated record for migration purpose",
+					"title":"mp_migratedrecordformigrationpurpose",
+					"type":"string"
+				},
+				"mp_nearshoreblendedrate":{
+					"description":"Nearshore blended rate",
+					"title":"mp_nearshoreblendedrate",
+					"type":"string"
+				},
+				"msdyn_opportunityscore":{
+					"description":"Opportunity score",
+					"title":"msdyn_opportunityscore",
+					"type":"string"
+				},
+				"mp_tpapresentduringbid":{
+					"description":"TPA present during bid identifier",
+					"title":"mp_tpapresentduringbid",
+					"type":"string"
+				},
+				"actualvalue_base":{
+					"description":"Base actual value",
+					"title":"actualvalue_base",
+					"type":"string"
+				},
+				"freightamount":{
+					"description":"Freight amount",
+					"title":"freightamount",
+					"type":"string"
+				},
+				"mp_q3rev":{
+					"description":"Q3 revenue",
+					"title":"mp_q3rev",
+					"type":"string"
+				},
+				"mp_q2rev_base":{
+					"description":"Base Q2 revenue",
+					"title":"mp_q2rev_base",
+					"type":"string"
+				},
+				"identifycustomercontacts":{
+					"description":"Indicator for identifying customer contacts",
+					"title":"identifycustomercontacts",
+					"type":"string"
+				},
+				"mp_iftpapresentprovidename":{
+					"description":"If TPA present, provide name",
+					"title":"mp_iftpapresentprovidename",
+					"type":"string"
+				},
+				"_transactioncurrencyid_value":{
+					"description":"Transaction currency ID value",
+					"title":"_transactioncurrencyid_value",
+					"type":"string"
+				},
+				"traversedpath":{
+					"description":"Traversed path",
+					"title":"traversedpath",
+					"type":"string"
+				},
+				"mp_salesopsbidmgmtteamremarks":{
+					"description":"Sales Ops bid management team remarks",
+					"title":"mp_salesopsbidmgmtteamremarks",
+					"type":"string"
+				},
+				"mp_apiflag":{
+					"description":"API flag",
+					"title":"mp_apiflag",
+					"type":"string"
+				},
+				"mp_offshoreblendedrate":{
+					"description":"Offshore blended rate",
+					"title":"mp_offshoreblendedrate",
+					"type":"string"
+				},
+				"mp_dealapprovalmailattached":{
+					"description":"Indicator if deal approval mail is attached",
+					"title":"mp_dealapprovalmailattached",
+					"type":"string"
+				},
+				"mp_dealbusinessunit":{
+					"description":"Deal business unit",
+					"title":"mp_dealbusinessunit",
+					"type":"string"
+				},
+				"mp_cloudpresence":{
+					"description":"Cloud presence indicator",
+					"title":"mp_cloudpresence",
+					"type":"string"
+				},
+				"mp_blinkservicesinvolved":{
+					"description":"Blink services involved",
+					"title":"mp_blinkservicesinvolved",
+					"type":"string"
+				},
+				"mp_salesopsbidmgmtteamconfirmation":{
+					"description":"Sales Ops bid management team confirmation",
+					"title":"mp_salesopsbidmgmtteamconfirmation",
+					"type":"string"
+				},
+				"quotecomments":{
+					"description":"Quote comments",
+					"title":"quotecomments",
+					"type":"string"
+				}
+			}
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"opportunity",
+	"metadata":{
+		"auditable":false,
+		"autoGeneratedFields":[
+			
+		],
+		"cacheable":false,
+		"captureActivity":false,
+		"captureReferences":false,
+		"captureReporting":true,
+		"dateFields":[
+			
+		],
+		"deployable":false,
+		"encryptedFields":[
+			
+		],
+		"external":false,
+		"filterableFields":[
+			"mp_expectedheadcountonsite",
+			"_msdyn_workordertype_value",
+			"mp_microvertical",
+			"_originatingleadid_value",
+			"mp_commonarchetypes",
+			"mp_towername",
+			"participatesinworkflow",
+			"statuscode",
+			"_slaid_value",
+			"mp_practices",
+			"mp_clouddeal",
+			"_owningteam_value",
+			"mp_ratechange",
+			"mp_previousdealtype",
+			"mp_cloudpartners",
+			"_modifiedonbehalfby_value",
+			"mp_dealinmavenlink",
+			"mp_wondealdescriptionformigrationpurpose",
+			"mp_ispartnerstechnologyinvolved",
+			"mp_aideal",
+			"mp_portfoliocategorymigrationpurpose",
+			"_mp_salessupervisor_value",
+			"mp_expectedheadcountoffshore",
+			"freightamount_base",
+			"opportunityratingcode",
+			"mp_overallblendedrate_base",
+			"stepid",
+			"emailaddress",
+			"_mp_prrismprojectid_value",
+			"msdyn_ordertype",
+			"mp_mailtowernameflag",
+			"mp_sourcechannel",
+			"customerpainpoints",
+			"presentfinalproposal",
+			"lastonholdtime",
+			"mp_blinkdealinlab",
+			"_contactid_value",
+			"mp_nearshoreblendedrate_base",
+			"mp_contractperiodformigrationpurpose",
+			"mp_gtmtribe",
+			"_mp_opportunityteamonopportunityid_value",
+			"filedebrief",
+			"mp_q4rev",
+			"statecode",
+			"mp_sownotext",
+			"msdyn_scorereasons",
+			"_pricelevelid_value",
+			"mp_contractdocumentattached",
+			"mp_modifieddatemigrated",
+			"mp_commonarchetype",
+			"confirminterest",
+			"mp_currentqtrforecaststatus",
+			"overriddencreatedon",
+			"mp_q1q4sum",
+			"_owningbusinessunit_value",
+			"new_probabilitywith",
+			"mp_offshoregrossmargin",
+			"completeinternalreview",
+			"estimatedclosedate",
+			"completefinalproposal",
+			"_mp_gdalglobaldeliveryaccountleader_value",
+			"mp_salesstage",
+			"stepname",
+			"mp_offshoreblendedrate_base",
+			"mp_datalytyxinvolved",
+			"schedulefollowup_prospect",
+			"resolvefeedback",
+			"mp_stageformigrationpurposeonly",
+			"presentproposal",
+			"mp_portfoliocategory",
+			"mp_contractperiodinmonthsdecimal",
+			"timeline",
+			"mp_q1q4sum_base",
+			"onholdtime",
+			"_ownerid_value",
+			"mp_dealabr",
+			"totallineitemdiscountamount",
+			"mp_ownersmigrated",
+			"stageid",
+			"msdyn_similaropportunities",
+			"mp_archetype",
+			"mp_projecttype",
+			"mp_industry",
+			"mp_ipstoolsframeworksengaged",
+			"mp_todaysday",
+			"developproposal",
+			"evaluatefit",
+			"mp_maildealtypeflag",
+			"estimatedvalue_base",
+			"actualvalue",
+			"qualificationcomments",
+			"totaldiscountamount_base",
+			"mp_projectlocation",
+			"_mp_competitor_value",
+			"mp_salesstagecompletedon",
+			"mp_onsiteblendedrate_base",
+			"mp_sowdurationinmonths",
+			"purchasetimeframe",
+			"totalamountlessfreight_base",
+			"importsequencefloat",
+			"mp_cloudpartnersmigrationpurpose",
+			"mp_gtmtribemigrated",
+			"mp_contractperiodinmonths",
+			"need",
+			"_mp_parentopportunity_value",
+			"mp_q3rev_base",
+			"PROJECT_ID_UI",
+			"currentsituation",
+			"mp_ifyesprovideipstoolsframeworksnamessepar",
+			"totaltax",
+			"timezoneruleversionfloat",
+			"_msdyn_opportunitykpiid_value",
+			"mp_qualificationduedate",
+			"actualclosedate",
+			"name",
+			"mp_bidmanagerapproval",
+			"mp_practicesmigrated",
+			"mp_overallblendedrate",
+			"captureproposalfeedback",
+			"totallineitemamount",
+			"budgetstatus",
+			"customerneed",
+			"_mp_revenuemodel_lookup_value",
+			"skippricecalculation",
+			"totallineitemamount_base",
+			"exchangerate",
+			"versionfloat",
+			"_campaignid_value",
+			"mp_recordurl",
+			"description",
+			"mp_portfoliocategorymigrated",
+			"identifycompetitors",
+			"mp_bidmanagerapprovedby",
+			"totaldiscountamount",
+			"_createdby_value",
+			"totallineitemdiscountamount_base",
+			"teamsfollowed",
+			"sendthankyounote",
+			"mp_lockstatus",
+			"mp_parentsowno",
+			"_createdonbehalfby_value",
+			"msdyn_opportunityscoretrend",
+			"_owninguser_value",
+			"mp_rowid",
+			"_mp_marketunit_value",
+			"mp_mailflag",
+			"mp_salesstagechoice",
+			"opportunityid",
+			"mp_rmscreatedby",
+			"mp_servicesinvolvedyn",
+			"mp_salesstagemodifiedon",
+			"mp_approvalrejectionreason",
+			"salesstage",
+			"totaltax_base",
+			"purchaseprocess",
+			"mp_gtmtribemigrationpurpose",
+			"mp_opportunityapprovalmailattached",
+			"mp_pricingteamapproval",
+			"totalamountlessfreight",
+			"closeprobability",
+			"mp_q1rev",
+			"new_opportunityidsfdc",
+			"initialcommunication",
+			"mp_q1rev_base",
+			"_customerid_value",
+			"mp_blinkdealservicetype",
+			"modifiedon",
+			"totalamount",
+			"schedulefollowup_qualify",
+			"identifypursuitteam",
+			"_msdyn_segmentid_value",
+			"mp_listfinalistsenterseparatedby",
+			"timespentbymeonemailandmeetings",
+			"mp_sowno",
+			"mp_dayssincelastupdated",
+			"discountamount_base",
+			"mp_pricingapproveddate",
+			"prioritycode",
+			"utcconversiontimezonecode",
+			"msdyn_gdproptout",
+			"decisionmaker",
+			"mp_completepricingteamapproval",
+			"discountamount",
+			"mp_subunit",
+			"PROJECT_ID",
+			"mp_servicesinvolved",
+			"scheduleproposalmeeting",
+			"mp_practicesmigrationpurpose",
+			"mp_revenuemodel",
+			"msdyn_opportunitygrade",
+			"mp_pricingapprovedby",
+			"mp_tagengagement",
+			"createdon",
+			"budgetamount_base",
+			"pricingerrorcode",
+			"finaldecisiondate",
+			"mp_expectedheadcountnearshore",
+			"mp_nearshoregrossmargin",
+			"_modifiedby_value",
+			"processid",
+			"_msdyn_predictivescoreid_value",
+			"_slainvokedid_value",
+			"mp_marginpercent",
+			"mp_actualvalue_base",
+			"mp_q4rev_base",
+			"budgetamount",
+			"mp_q2rev",
+			"mp_proactivenonproactive",
+			"discountpercentage",
+			"mp_rebadgingvendorconsolidation",
+			"totalamount_base",
+			"_mp_submarketunit_value",
+			"mp_dealgrossmargin",
+			"mp_blinkdealinmavenlink",
+			"mp_rmsupdateddate",
+			"mp_completebidmanagementapproval",
+			"msdyn_forecastcategory",
+			"pursuitdecision",
+			"_mp_partyname_value",
+			"mp_onsitegrossmargin",
+			"mp_mailrevenuemodelflag",
+			"mp_dealservicetype",
+			"mp_dealwinningprobability",
+			"mp_grossmarginwith",
+			"mp_todaysdate",
+			"mp_dealtype",
+			"salesstagecode",
+			"mp_dealabr_base",
+			"isrevenuesystemcalculated",
+			"_mp_salesleader_value",
+			"_parentaccountid_value",
+			"mp_channel",
+			"proposedsolution",
+			"mp_pricingteamapprovedby",
+			"mp_sowstartdate",
+			"mp_onsiteblendedrate",
+			"estimatedvalue",
+			"msdyn_scorehistory",
+			"mp_ftecalculated",
+			"mp_salesopsbidmgmtteamapprovedby",
+			"mp_dealinlab",
+			"mp_ifyesisapartnerstechnologynamesseparate",
+			"mp_tempfield",
+			"mp_bidapprovalrejectionreason",
+			"mp_basedonmsaratecard",
+			"_parentcontactid_value",
+			"mp_winningcompetitorformigrationpurpose",
+			"mp_bidmanagerapproveddate",
+			"mp_maildealtcvflag",
+			"mp_opportunityid",
+			"mp_sowenddate",
+			"mp_actualvalue",
+			"mp_migratedrecordformigrationpurpose",
+			"mp_nearshoreblendedrate",
+			"msdyn_opportunityscore",
+			"mp_tpapresentduringbid",
+			"actualvalue_base",
+			"freightamount",
+			"mp_q3rev",
+			"mp_q2rev_base",
+			"identifycustomercontacts",
+			"mp_iftpapresentprovidename",
+			"_transactioncurrencyid_value",
+			"traversedpath",
+			"mp_salesopsbidmgmtteamremarks",
+			"mp_apiflag",
+			"mp_offshoreblendedrate",
+			"mp_dealapprovalmailattached",
+			"mp_dealbusinessunit",
+			"mp_cloudpresence",
+			"mp_blinkservicesinvolved",
+			"mp_salesopsbidmgmtteamconfirmation",
+			"quotecomments"
+		],
+		"hasTimeSeriesRecords":true,
+		"hashedFields":[
+			
+		],
+		"includeInDependency":false,
+		"nameField":"",
+		"primaryKeyField":"",
+		"scdType2Enabled":false,
+		"schemaValidationEnabled":true,
+		"searchableFields":[
+			
+		],
+		"sessionBackedStorageEnabled":false,
+		"skipConfigSyncIfModified":false,
+		"skipDeletedEntityBackup":false,
+		"skipIndexLimitValidation":false,
+		"skipPermissionCheckForAggregation":false,
+		"skipPermissionsFilter":false,
+		"skipRoutineLoad":false,
+		"skipVersionIncrementOnUpdate":false,
+		"supportsDistinctValues":false,
+		"supportsWebhook":false,
+		"syncFromSourceCustomer":false,
+		"translationsEnabled":false,
+		"useCachedEntityStoreForAutomations":false,
+		"userLevelEncryption":false,
+		"versioningEnabled":false
+	},
+	"modifiedTime":1721749471843,
+	"name":"opportunity",
+	"ownerUserId":1,
+	"packaged":false,
+	"schema":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"type":"object",
+			"properties":{
+				"mp_expectedheadcountonsite":{
+					"description":"Expected headcount on-site",
+					"title":"mp_expectedheadcountonsite",
+					"type":"string"
+				},
+				"_msdyn_workordertype_value":{
+					"description":"Work order type ID value",
+					"title":"_msdyn_workordertype_value",
+					"type":"string"
+				},
+				"mp_microvertical":{
+					"description":"Micro-vertical",
+					"title":"mp_microvertical",
+					"type":"string"
+				},
+				"_originatingleadid_value":{
+					"description":"Originating lead ID value",
+					"title":"_originatingleadid_value",
+					"type":"string"
+				},
+				"mp_commonarchetypes":{
+					"description":"Common archetypes",
+					"title":"mp_commonarchetypes",
+					"type":"string"
+				},
+				"mp_towername":{
+					"description":"Tower name identifier",
+					"title":"mp_towername",
+					"type":"string"
+				},
+				"participatesinworkflow":{
+					"description":"Participates in workflow indicator",
+					"title":"participatesinworkflow",
+					"type":"string"
+				},
+				"statuscode":{
+					"description":"Status code",
+					"title":"statuscode",
+					"type":"string"
+				},
+				"_slaid_value":{
+					"description":"SLA ID value",
+					"title":"_slaid_value",
+					"type":"string"
+				},
+				"mp_practices":{
+					"description":"Practices identifier",
+					"title":"mp_practices",
+					"type":"string"
+				},
+				"mp_clouddeal":{
+					"description":"Cloud deal identifier",
+					"title":"mp_clouddeal",
+					"type":"string"
+				},
+				"_owningteam_value":{
+					"description":"Owning team ID value",
+					"title":"_owningteam_value",
+					"type":"string"
+				},
+				"mp_ratechange":{
+					"description":"Rate change identifier",
+					"title":"mp_ratechange",
+					"type":"string"
+				},
+				"mp_previousdealtype":{
+					"description":"Previous deal type",
+					"title":"mp_previousdealtype",
+					"type":"string"
+				},
+				"mp_cloudpartners":{
+					"description":"Cloud partners",
+					"title":"mp_cloudpartners",
+					"type":"string"
+				},
+				"_modifiedonbehalfby_value":{
+					"description":"Modified on behalf by ID value",
+					"title":"_modifiedonbehalfby_value",
+					"type":"string"
+				},
+				"mp_dealinmavenlink":{
+					"description":"Deal in Mavenlink indicator",
+					"title":"mp_dealinmavenlink",
+					"type":"string"
+				},
+				"mp_wondealdescriptionformigrationpurpose":{
+					"description":"Won deal description for migration purpose",
+					"title":"mp_wondealdescriptionformigrationpurpose",
+					"type":"string"
+				},
+				"mp_ispartnerstechnologyinvolved":{
+					"description":"Partners technology involved identifier",
+					"title":"mp_ispartnerstechnologyinvolved",
+					"type":"string"
+				},
+				"mp_aideal":{
+					"description":"AI deal identifier",
+					"title":"mp_aideal",
+					"type":"string"
+				},
+				"mp_portfoliocategorymigrationpurpose":{
+					"description":"Portfolio category for migration purpose",
+					"title":"mp_portfoliocategorymigrationpurpose",
+					"type":"string"
+				},
+				"_mp_salessupervisor_value":{
+					"description":"Sales supervisor ID value",
+					"title":"_mp_salessupervisor_value",
+					"type":"string"
+				},
+				"mp_expectedheadcountoffshore":{
+					"description":"Expected headcount offshore",
+					"title":"mp_expectedheadcountoffshore",
+					"type":"string"
+				},
+				"freightamount_base":{
+					"description":"Base freight amount",
+					"title":"freightamount_base",
+					"type":"string"
+				},
+				"opportunityratingcode":{
+					"description":"Opportunity rating code",
+					"title":"opportunityratingcode",
+					"type":"string"
+				},
+				"mp_overallblendedrate_base":{
+					"description":"Base overall blended rate",
+					"title":"mp_overallblendedrate_base",
+					"type":"string"
+				},
+				"stepid":{
+					"description":"Step ID",
+					"title":"stepid",
+					"type":"string"
+				},
+				"emailaddress":{
+					"description":"Email address",
+					"title":"emailaddress",
+					"type":"string"
+				},
+				"_mp_prrismprojectid_value":{
+					"description":"PRISM project ID value",
+					"title":"_mp_prrismprojectid_value",
+					"type":"string"
+				},
+				"msdyn_ordertype":{
+					"description":"Order type identifier",
+					"title":"msdyn_ordertype",
+					"type":"string"
+				},
+				"mp_mailtowernameflag":{
+					"description":"Mail tower name flag",
+					"title":"mp_mailtowernameflag",
+					"type":"string"
+				},
+				"mp_sourcechannel":{
+					"description":"Source channel identifier",
+					"title":"mp_sourcechannel",
+					"type":"string"
+				},
+				"customerpainpoints":{
+					"description":"Customer pain points",
+					"title":"customerpainpoints",
+					"type":"string"
+				},
+				"presentfinalproposal":{
+					"description":"Indicator for presenting final proposal",
+					"title":"presentfinalproposal",
+					"type":"string"
+				},
+				"lastonholdtime":{
+					"description":"Last on hold time",
+					"title":"lastonholdtime",
+					"type":"string"
+				},
+				"mp_blinkdealinlab":{
+					"description":"Blink deal in lab indicator",
+					"title":"mp_blinkdealinlab",
+					"type":"string"
+				},
+				"_contactid_value":{
+					"description":"Contact ID value",
+					"title":"_contactid_value",
+					"type":"string"
+				},
+				"mp_nearshoreblendedrate_base":{
+					"description":"Base nearshore blended rate",
+					"title":"mp_nearshoreblendedrate_base",
+					"type":"string"
+				},
+				"mp_contractperiodformigrationpurpose":{
+					"description":"Contract period for migration purpose",
+					"title":"mp_contractperiodformigrationpurpose",
+					"type":"string"
+				},
+				"mp_gtmtribe":{
+					"description":"GTM tribe identifier",
+					"title":"mp_gtmtribe",
+					"type":"string"
+				},
+				"_mp_opportunityteamonopportunityid_value":{
+					"description":"Opportunity team on opportunity ID value",
+					"title":"_mp_opportunityteamonopportunityid_value",
+					"type":"string"
+				},
+				"filedebrief":{
+					"description":"File debrief indicator",
+					"title":"filedebrief",
+					"type":"string"
+				},
+				"mp_q4rev":{
+					"description":"Q4 revenue",
+					"title":"mp_q4rev",
+					"type":"string"
+				},
+				"statecode":{
+					"description":"State code",
+					"title":"statecode",
+					"type":"string"
+				},
+				"mp_sownotext":{
+					"description":"SOW float text",
+					"title":"mp_sownotext",
+					"type":"string"
+				},
+				"msdyn_scorereasons":{
+					"description":"Score reasons",
+					"title":"msdyn_scorereasons",
+					"type":"string"
+				},
+				"_pricelevelid_value":{
+					"description":"Price level ID value",
+					"title":"_pricelevelid_value",
+					"type":"string"
+				},
+				"mp_contractdocumentattached":{
+					"description":"Contract document attached indicator",
+					"title":"mp_contractdocumentattached",
+					"type":"string"
+				},
+				"mp_modifieddatemigrated":{
+					"description":"Modified date migrated",
+					"title":"mp_modifieddatemigrated",
+					"type":"string"
+				},
+				"mp_commonarchetype":{
+					"description":"Common archetype",
+					"title":"mp_commonarchetype",
+					"type":"string"
+				},
+				"confirminterest":{
+					"description":"Indicator for confirming interest",
+					"title":"confirminterest",
+					"type":"string"
+				},
+				"mp_currentqtrforecaststatus":{
+					"description":"Current quarter forecast status",
+					"title":"mp_currentqtrforecaststatus",
+					"type":"string"
+				},
+				"overriddencreatedon":{
+					"description":"Overridden created on date",
+					"title":"overriddencreatedon",
+					"type":"string"
+				},
+				"mp_q1q4sum":{
+					"description":"Sum of Q1 to Q4",
+					"title":"mp_q1q4sum",
+					"type":"string"
+				},
+				"_owningbusinessunit_value":{
+					"description":"Owning business unit ID value",
+					"title":"_owningbusinessunit_value",
+					"type":"string"
+				},
+				"new_probabilitywith":{
+					"description":"New probability with",
+					"title":"new_probabilitywith",
+					"type":"string"
+				},
+				"mp_offshoregrossmargin":{
+					"description":"Offshore gross margin",
+					"title":"mp_offshoregrossmargin",
+					"type":"string"
+				},
+				"completeinternalreview":{
+					"description":"Complete internal review indicator",
+					"title":"completeinternalreview",
+					"type":"string"
+				},
+				"estimatedclosedate":{
+					"description":"Estimated close date",
+					"title":"estimatedclosedate",
+					"type":"string"
+				},
+				"completefinalproposal":{
+					"description":"Indicator for completing final proposal",
+					"title":"completefinalproposal",
+					"type":"string"
+				},
+				"_mp_gdalglobaldeliveryaccountleader_value":{
+					"description":"GDAL global delivery account leader ID value",
+					"title":"_mp_gdalglobaldeliveryaccountleader_value",
+					"type":"string"
+				},
+				"mp_salesstage":{
+					"description":"Sales stage",
+					"title":"mp_salesstage",
+					"type":"string"
+				},
+				"stepname":{
+					"description":"Current step name",
+					"title":"stepname",
+					"type":"string"
+				},
+				"mp_offshoreblendedrate_base":{
+					"description":"Base offshore blended rate",
+					"title":"mp_offshoreblendedrate_base",
+					"type":"string"
+				},
+				"mp_datalytyxinvolved":{
+					"description":"Datalytyx involved indicator",
+					"title":"mp_datalytyxinvolved",
+					"type":"string"
+				},
+				"schedulefollowup_prospect":{
+					"description":"Schedule follow-up (prospect)",
+					"title":"schedulefollowup_prospect",
+					"type":"string"
+				},
+				"resolvefeedback":{
+					"description":"Indicator for resolving feedback",
+					"title":"resolvefeedback",
+					"type":"string"
+				},
+				"mp_stageformigrationpurposeonly":{
+					"description":"Stage for migration purpose only",
+					"title":"mp_stageformigrationpurposeonly",
+					"type":"string"
+				},
+				"presentproposal":{
+					"description":"Present proposal indicator",
+					"title":"presentproposal",
+					"type":"string"
+				},
+				"mp_portfoliocategory":{
+					"description":"Portfolio category",
+					"title":"mp_portfoliocategory",
+					"type":"string"
+				},
+				"mp_contractperiodinmonthsdecimal":{
+					"description":"Contract period in months (decimal)",
+					"title":"mp_contractperiodinmonthsdecimal",
+					"type":"string"
+				},
+				"timeline":{
+					"description":"Timeline",
+					"title":"timeline",
+					"type":"string"
+				},
+				"mp_q1q4sum_base":{
+					"description":"Base sum of Q1 to Q4",
+					"title":"mp_q1q4sum_base",
+					"type":"string"
+				},
+				"onholdtime":{
+					"description":"On hold time",
+					"title":"onholdtime",
+					"type":"string"
+				},
+				"_ownerid_value":{
+					"description":"Owner ID value",
+					"title":"_ownerid_value",
+					"type":"string"
+				},
+				"mp_dealabr":{
+					"description":"Deal ABR",
+					"title":"mp_dealabr",
+					"type":"string"
+				},
+				"totallineitemdiscountamount":{
+					"description":"Total line item discount amount",
+					"title":"totallineitemdiscountamount",
+					"type":"string"
+				},
+				"mp_ownersmigrated":{
+					"description":"Owners migrated",
+					"title":"mp_ownersmigrated",
+					"type":"string"
+				},
+				"stageid":{
+					"description":"Stage ID",
+					"title":"stageid",
+					"type":"string"
+				},
+				"msdyn_similaropportunities":{
+					"description":"Similar opportunities",
+					"title":"msdyn_similaropportunities",
+					"type":"string"
+				},
+				"mp_archetype":{
+					"description":"Archetype",
+					"title":"mp_archetype",
+					"type":"string"
+				},
+				"mp_projecttype":{
+					"description":"Project type",
+					"title":"mp_projecttype",
+					"type":"string"
+				},
+				"mp_industry":{
+					"description":"Industry identifier",
+					"title":"mp_industry",
+					"type":"string"
+				},
+				"mp_ipstoolsframeworksengaged":{
+					"description":"IPS tools and frameworks engaged",
+					"title":"mp_ipstoolsframeworksengaged",
+					"type":"string"
+				},
+				"mp_todaysday":{
+					"description":"Today's day",
+					"title":"mp_todaysday",
+					"type":"string"
+				},
+				"developproposal":{
+					"description":"Develop proposal indicator",
+					"title":"developproposal",
+					"type":"string"
+				},
+				"evaluatefit":{
+					"description":"Evaluate fit indicator",
+					"title":"evaluatefit",
+					"type":"string"
+				},
+				"mp_maildealtypeflag":{
+					"description":"Mail deal type flag",
+					"title":"mp_maildealtypeflag",
+					"type":"string"
+				},
+				"estimatedvalue_base":{
+					"description":"Base estimated value",
+					"title":"estimatedvalue_base",
+					"type":"string"
+				},
+				"actualvalue":{
+					"description":"Actual value",
+					"title":"actualvalue",
+					"type":"string"
+				},
+				"qualificationcomments":{
+					"description":"Qualification comments",
+					"title":"qualificationcomments",
+					"type":"string"
+				},
+				"totaldiscountamount_base":{
+					"description":"Base total discount amount",
+					"title":"totaldiscountamount_base",
+					"type":"string"
+				},
+				"mp_projectlocation":{
+					"description":"Project location",
+					"title":"mp_projectlocation",
+					"type":"string"
+				},
+				"_mp_competitor_value":{
+					"description":"Competitor ID value",
+					"title":"_mp_competitor_value",
+					"type":"string"
+				},
+				"mp_salesstagecompletedon":{
+					"description":"Sales stage completed on date",
+					"title":"mp_salesstagecompletedon",
+					"type":"string"
+				},
+				"mp_onsiteblendedrate_base":{
+					"description":"Base onsite blended rate",
+					"title":"mp_onsiteblendedrate_base",
+					"type":"string"
+				},
+				"mp_sowdurationinmonths":{
+					"description":"SOW duration in months",
+					"title":"mp_sowdurationinmonths",
+					"type":"string"
+				},
+				"purchasetimeframe":{
+					"description":"Purchase timeframe",
+					"title":"purchasetimeframe",
+					"type":"string"
+				},
+				"totalamountlessfreight_base":{
+					"description":"Base amount excluding freight",
+					"title":"totalamountlessfreight_base",
+					"type":"string"
+				},
+				"importsequencefloat":{
+					"description":"Import sequence float",
+					"title":"importsequencefloat",
+					"type":"string"
+				},
+				"mp_cloudpartnersmigrationpurpose":{
+					"description":"Cloud partners migration purpose",
+					"title":"mp_cloudpartnersmigrationpurpose",
+					"type":"string"
+				},
+				"mp_gtmtribemigrated":{
+					"description":"GTM tribe migrated",
+					"title":"mp_gtmtribemigrated",
+					"type":"string"
+				},
+				"mp_contractperiodinmonths":{
+					"description":"Contract period in months",
+					"title":"mp_contractperiodinmonths",
+					"type":"string"
+				},
+				"need":{
+					"description":"Need",
+					"title":"need",
+					"type":"string"
+				},
+				"_mp_parentopportunity_value":{
+					"description":"Parent opportunity ID value",
+					"title":"_mp_parentopportunity_value",
+					"type":"string"
+				},
+				"mp_q3rev_base":{
+					"description":"Base Q3 revenue",
+					"title":"mp_q3rev_base",
+					"type":"string"
+				},
+				"PROJECT_ID_UI":{
+					"description":"Actual Project ID VISIBLE ON UI",
+					"title":"PROJECT_ID_UI",
+					"type":"string"
+				},
+				"currentsituation":{
+					"description":"Current situation",
+					"title":"currentsituation",
+					"type":"string"
+				},
+				"mp_ifyesprovideipstoolsframeworksnamessepar":{
+					"description":"If yes, provide IPS tools frameworks names separate",
+					"title":"mp_ifyesprovideipstoolsframeworksnamessepar",
+					"type":"string"
+				},
+				"totaltax":{
+					"description":"Total tax",
+					"title":"totaltax",
+					"type":"string"
+				},
+				"timezoneruleversionfloat":{
+					"description":"Time zone rule version float",
+					"title":"timezoneruleversionfloat",
+					"type":"string"
+				},
+				"_msdyn_opportunitykpiid_value":{
+					"description":"Opportunity KPI ID value",
+					"title":"_msdyn_opportunitykpiid_value",
+					"type":"string"
+				},
+				"mp_qualificationduedate":{
+					"description":"Qualification due date",
+					"title":"mp_qualificationduedate",
+					"type":"string"
+				},
+				"actualclosedate":{
+					"description":"Actual close date",
+					"title":"actualclosedate",
+					"type":"string"
+				},
+				"name":{
+					"description":"Name of the opportunity",
+					"title":"name",
+					"type":"string"
+				},
+				"mp_bidmanagerapproval":{
+					"description":"Bid manager approval identifier",
+					"title":"mp_bidmanagerapproval",
+					"type":"string"
+				},
+				"mp_practicesmigrated":{
+					"description":"Practices migrated",
+					"title":"mp_practicesmigrated",
+					"type":"string"
+				},
+				"mp_overallblendedrate":{
+					"description":"Overall blended rate",
+					"title":"mp_overallblendedrate",
+					"type":"string"
+				},
+				"captureproposalfeedback":{
+					"description":"Capture proposal feedback indicator",
+					"title":"captureproposalfeedback",
+					"type":"string"
+				},
+				"totallineitemamount":{
+					"description":"Total line item amount",
+					"title":"totallineitemamount",
+					"type":"string"
+				},
+				"budgetstatus":{
+					"description":"Budget status",
+					"title":"budgetstatus",
+					"type":"string"
+				},
+				"customerneed":{
+					"description":"Customer need",
+					"title":"customerneed",
+					"type":"string"
+				},
+				"_mp_revenuemodel_lookup_value":{
+					"description":"Revenue model lookup ID value",
+					"title":"_mp_revenuemodel_lookup_value",
+					"type":"string"
+				},
+				"skippricecalculation":{
+					"description":"Skip price calculation indicator",
+					"title":"skippricecalculation",
+					"type":"string"
+				},
+				"totallineitemamount_base":{
+					"description":"Base amount of total line item",
+					"title":"totallineitemamount_base",
+					"type":"string"
+				},
+				"exchangerate":{
+					"description":"Exchange rate",
+					"title":"exchangerate",
+					"type":"string"
+				},
+				"versionfloat":{
+					"description":"Record version float",
+					"title":"versionfloat",
+					"type":"string"
+				},
+				"_campaignid_value":{
+					"description":"Campaign ID value",
+					"title":"_campaignid_value",
+					"type":"string"
+				},
+				"mp_recordurl":{
+					"description":"URL to the record",
+					"title":"mp_recordurl",
+					"type":"string"
+				},
+				"description":{
+					"description":"Description",
+					"title":"description",
+					"type":"string"
+				},
+				"mp_portfoliocategorymigrated":{
+					"description":"Portfolio category migrated",
+					"title":"mp_portfoliocategorymigrated",
+					"type":"string"
+				},
+				"identifycompetitors":{
+					"description":"Indicator for identifying competitors",
+					"title":"identifycompetitors",
+					"type":"string"
+				},
+				"mp_bidmanagerapprovedby":{
+					"description":"Bid manager approved by",
+					"title":"mp_bidmanagerapprovedby",
+					"type":"string"
+				},
+				"totaldiscountamount":{
+					"description":"Total discount amount",
+					"title":"totaldiscountamount",
+					"type":"string"
+				},
+				"_createdby_value":{
+					"description":"Created by ID value",
+					"title":"_createdby_value",
+					"type":"string"
+				},
+				"totallineitemdiscountamount_base":{
+					"description":"Base amount of total line item discount",
+					"title":"totallineitemdiscountamount_base",
+					"type":"string"
+				},
+				"teamsfollowed":{
+					"description":"Teams followed",
+					"title":"teamsfollowed",
+					"type":"string"
+				},
+				"sendthankyounote":{
+					"description":"Indicator for sending thank you note",
+					"title":"sendthankyounote",
+					"type":"string"
+				},
+				"mp_lockstatus":{
+					"description":"Lock status",
+					"title":"mp_lockstatus",
+					"type":"string"
+				},
+				"mp_parentsowno":{
+					"description":"Parent SOW float",
+					"title":"mp_parentsowno",
+					"type":"string"
+				},
+				"_createdonbehalfby_value":{
+					"description":"Created on behalf by ID value",
+					"title":"_createdonbehalfby_value",
+					"type":"string"
+				},
+				"msdyn_opportunityscoretrend":{
+					"description":"Opportunity score trend",
+					"title":"msdyn_opportunityscoretrend",
+					"type":"string"
+				},
+				"_owninguser_value":{
+					"description":"Owning user ID value",
+					"title":"_owninguser_value",
+					"type":"string"
+				},
+				"mp_rowid":{
+					"description":"Row ID",
+					"title":"mp_rowid",
+					"type":"string"
+				},
+				"_mp_marketunit_value":{
+					"description":"Market unit ID value",
+					"title":"_mp_marketunit_value",
+					"type":"string"
+				},
+				"mp_mailflag":{
+					"description":"Mail flag",
+					"title":"mp_mailflag",
+					"type":"string"
+				},
+				"mp_salesstagechoice":{
+					"description":"Sales stage choice identifier",
+					"title":"mp_salesstagechoice",
+					"type":"string"
+				},
+				"opportunityid":{
+					"description":"unique id for Opportunity",
+					"title":"opportunityid",
+					"type":"string"
+				},
+				"mp_rmscreatedby":{
+					"description":"RMS created by",
+					"title":"mp_rmscreatedby",
+					"type":"string"
+				},
+				"mp_servicesinvolvedyn":{
+					"description":"Services involved (YN)",
+					"title":"mp_servicesinvolvedyn",
+					"type":"string"
+				},
+				"mp_salesstagemodifiedon":{
+					"description":"Sales stage modified date",
+					"title":"mp_salesstagemodifiedon",
+					"type":"string"
+				},
+				"mp_approvalrejectionreason":{
+					"description":"Approval rejection reason",
+					"title":"mp_approvalrejectionreason",
+					"type":"string"
+				},
+				"salesstage":{
+					"description":"Sales stage",
+					"title":"salesstage",
+					"type":"string"
+				},
+				"totaltax_base":{
+					"description":"Base total tax",
+					"title":"totaltax_base",
+					"type":"string"
+				},
+				"purchaseprocess":{
+					"description":"Purchase process",
+					"title":"purchaseprocess",
+					"type":"string"
+				},
+				"mp_gtmtribemigrationpurpose":{
+					"description":"GTM tribe migration purpose",
+					"title":"mp_gtmtribemigrationpurpose",
+					"type":"string"
+				},
+				"mp_opportunityapprovalmailattached":{
+					"description":"Opportunity approval mail attached indicator",
+					"title":"mp_opportunityapprovalmailattached",
+					"type":"string"
+				},
+				"mp_pricingteamapproval":{
+					"description":"Pricing team approval identifier",
+					"title":"mp_pricingteamapproval",
+					"type":"string"
+				},
+				"totalamountlessfreight":{
+					"description":"Amount excluding freight",
+					"title":"totalamountlessfreight",
+					"type":"string"
+				},
+				"closeprobability":{
+					"description":"Probability of closing the opportunity",
+					"title":"closeprobability",
+					"type":"string"
+				},
+				"mp_q1rev":{
+					"description":"Q1 revenue",
+					"title":"mp_q1rev",
+					"type":"string"
+				},
+				"new_opportunityidsfdc":{
+					"description":"New opportunity ID (SFDC)",
+					"title":"new_opportunityidsfdc",
+					"type":"string"
+				},
+				"initialcommunication":{
+					"description":"Initial communication",
+					"title":"initialcommunication",
+					"type":"string"
+				},
+				"mp_q1rev_base":{
+					"description":"Base Q1 revenue",
+					"title":"mp_q1rev_base",
+					"type":"string"
+				},
+				"_customerid_value":{
+					"description":"Customer ID value",
+					"title":"_customerid_value",
+					"type":"string"
+				},
+				"mp_blinkdealservicetype":{
+					"description":"Blink deal service type",
+					"title":"mp_blinkdealservicetype",
+					"type":"string"
+				},
+				"modifiedon":{
+					"description":"Modified on date",
+					"title":"modifiedon",
+					"type":"string"
+				},
+				"totalamount":{
+					"description":"Total amount",
+					"title":"totalamount",
+					"type":"string"
+				},
+				"schedulefollowup_qualify":{
+					"description":"Schedule follow-up (qualify)",
+					"title":"schedulefollowup_qualify",
+					"type":"string"
+				},
+				"identifypursuitteam":{
+					"description":"Indicator for identifying pursuit team",
+					"title":"identifypursuitteam",
+					"type":"string"
+				},
+				"_msdyn_segmentid_value":{
+					"description":"Segment ID value",
+					"title":"_msdyn_segmentid_value",
+					"type":"string"
+				},
+				"mp_listfinalistsenterseparatedby":{
+					"description":"List finalists (enter separated by)",
+					"title":"mp_listfinalistsenterseparatedby",
+					"type":"string"
+				},
+				"timespentbymeonemailandmeetings":{
+					"description":"Time spent by me on email and meetings",
+					"title":"timespentbymeonemailandmeetings",
+					"type":"string"
+				},
+				"mp_sowno":{
+					"description":"SOW number",
+					"title":"mp_sowno",
+					"type":"string"
+				},
+				"mp_dayssincelastupdated":{
+					"description":"Days since last update",
+					"title":"mp_dayssincelastupdated",
+					"type":"string"
+				},
+				"discountamount_base":{
+					"description":"Base discount amount",
+					"title":"discountamount_base",
+					"type":"string"
+				},
+				"mp_pricingapproveddate":{
+					"description":"Pricing approved date",
+					"title":"mp_pricingapproveddate",
+					"type":"string"
+				},
+				"prioritycode":{
+					"description":"Priority code",
+					"title":"prioritycode",
+					"type":"string"
+				},
+				"utcconversiontimezonecode":{
+					"description":"UTC conversion timezone code",
+					"title":"utcconversiontimezonecode",
+					"type":"string"
+				},
+				"msdyn_gdproptout":{
+					"description":"GDPR opt-out indicator",
+					"title":"msdyn_gdproptout",
+					"type":"string"
+				},
+				"decisionmaker":{
+					"description":"Decision maker indicator",
+					"title":"decisionmaker",
+					"type":"string"
+				},
+				"mp_completepricingteamapproval":{
+					"description":"Indicator for complete pricing team approval",
+					"title":"mp_completepricingteamapproval",
+					"type":"string"
+				},
+				"discountamount":{
+					"description":"Discount amount",
+					"title":"discountamount",
+					"type":"string"
+				},
+				"mp_subunit":{
+					"description":"Subunit",
+					"title":"mp_subunit",
+					"type":"string"
+				},
+				"PROJECT_ID":{
+					"description":"ID of the associated project",
+					"title":"PROJECT_ID",
+					"type":"string"
+				},
+				"mp_servicesinvolved":{
+					"description":"Services involved identifier",
+					"title":"mp_servicesinvolved",
+					"type":"string"
+				},
+				"scheduleproposalmeeting":{
+					"description":"Schedule proposal meeting",
+					"title":"scheduleproposalmeeting",
+					"type":"string"
+				},
+				"mp_practicesmigrationpurpose":{
+					"description":"Practices migration purpose",
+					"title":"mp_practicesmigrationpurpose",
+					"type":"string"
+				},
+				"mp_revenuemodel":{
+					"description":"Revenue model",
+					"title":"mp_revenuemodel",
+					"type":"string"
+				},
+				"msdyn_opportunitygrade":{
+					"description":"Opportunity grade",
+					"title":"msdyn_opportunitygrade",
+					"type":"string"
+				},
+				"mp_pricingapprovedby":{
+					"description":"Pricing approved by",
+					"title":"mp_pricingapprovedby",
+					"type":"string"
+				},
+				"mp_tagengagement":{
+					"description":"Tag engagement status or identifier",
+					"title":"mp_tagengagement",
+					"type":"string"
+				},
+				"createdon":{
+					"description":"Created on date",
+					"title":"createdon",
+					"type":"string"
+				},
+				"budgetamount_base":{
+					"description":"Base budget amount",
+					"title":"budgetamount_base",
+					"type":"string"
+				},
+				"pricingerrorcode":{
+					"description":"Pricing error code",
+					"title":"pricingerrorcode",
+					"type":"string"
+				},
+				"finaldecisiondate":{
+					"description":"Final decision date",
+					"title":"finaldecisiondate",
+					"type":"string"
+				},
+				"mp_expectedheadcountnearshore":{
+					"description":"Expected headcount nearshore",
+					"title":"mp_expectedheadcountnearshore",
+					"type":"string"
+				},
+				"mp_nearshoregrossmargin":{
+					"description":"Nearshore gross margin",
+					"title":"mp_nearshoregrossmargin",
+					"type":"string"
+				},
+				"_modifiedby_value":{
+					"description":"Modified by ID value",
+					"title":"_modifiedby_value",
+					"type":"string"
+				},
+				"processid":{
+					"description":"Process ID",
+					"title":"processid",
+					"type":"string"
+				},
+				"_msdyn_predictivescoreid_value":{
+					"description":"Predictive score ID value",
+					"title":"_msdyn_predictivescoreid_value",
+					"type":"string"
+				},
+				"_slainvokedid_value":{
+					"description":"SLA invoked ID value",
+					"title":"_slainvokedid_value",
+					"type":"string"
+				},
+				"mp_marginpercent":{
+					"description":"Margin percent",
+					"title":"mp_marginpercent",
+					"type":"string"
+				},
+				"mp_actualvalue_base":{
+					"description":"Base actual value",
+					"title":"mp_actualvalue_base",
+					"type":"string"
+				},
+				"mp_q4rev_base":{
+					"description":"Base Q4 revenue",
+					"title":"mp_q4rev_base",
+					"type":"string"
+				},
+				"budgetamount":{
+					"description":"Budget amount",
+					"title":"budgetamount",
+					"type":"string"
+				},
+				"mp_q2rev":{
+					"description":"Q2 revenue",
+					"title":"mp_q2rev",
+					"type":"string"
+				},
+				"mp_proactivenonproactive":{
+					"description":"Proactive/non-proactive indicator",
+					"title":"mp_proactivenonproactive",
+					"type":"string"
+				},
+				"discountpercentage":{
+					"description":"Discount percentage",
+					"title":"discountpercentage",
+					"type":"string"
+				},
+				"mp_rebadgingvendorconsolidation":{
+					"description":"Rebadging vendor consolidation identifier",
+					"title":"mp_rebadgingvendorconsolidation",
+					"type":"string"
+				},
+				"totalamount_base":{
+					"description":"Base total amount",
+					"title":"totalamount_base",
+					"type":"string"
+				},
+				"_mp_submarketunit_value":{
+					"description":"Submarket unit ID value",
+					"title":"_mp_submarketunit_value",
+					"type":"string"
+				},
+				"mp_dealgrossmargin":{
+					"description":"Deal gross margin",
+					"title":"mp_dealgrossmargin",
+					"type":"string"
+				},
+				"mp_blinkdealinmavenlink":{
+					"description":"Blink deal in Mavenlink indicator",
+					"title":"mp_blinkdealinmavenlink",
+					"type":"string"
+				},
+				"mp_rmsupdateddate":{
+					"description":"RMS updated date",
+					"title":"mp_rmsupdateddate",
+					"type":"string"
+				},
+				"mp_completebidmanagementapproval":{
+					"description":"Indicator for complete bid management approval",
+					"title":"mp_completebidmanagementapproval",
+					"type":"string"
+				},
+				"msdyn_forecastcategory":{
+					"description":"Forecast category identifier",
+					"title":"msdyn_forecastcategory",
+					"type":"string"
+				},
+				"pursuitdecision":{
+					"description":"Pursuit decision indicator",
+					"title":"pursuitdecision",
+					"type":"string"
+				},
+				"_mp_partyname_value":{
+					"description":"Party name ID value",
+					"title":"_mp_partyname_value",
+					"type":"string"
+				},
+				"mp_onsitegrossmargin":{
+					"description":"Onsite gross margin",
+					"title":"mp_onsitegrossmargin",
+					"type":"string"
+				},
+				"mp_mailrevenuemodelflag":{
+					"description":"Mail revenue model flag",
+					"title":"mp_mailrevenuemodelflag",
+					"type":"string"
+				},
+				"mp_dealservicetype":{
+					"description":"Deal service type",
+					"title":"mp_dealservicetype",
+					"type":"string"
+				},
+				"mp_dealwinningprobability":{
+					"description":"Deal winning probability",
+					"title":"mp_dealwinningprobability",
+					"type":"string"
+				},
+				"mp_grossmarginwith":{
+					"description":"Gross margin with",
+					"title":"mp_grossmarginwith",
+					"type":"string"
+				},
+				"mp_todaysdate":{
+					"description":"Today's date",
+					"title":"mp_todaysdate",
+					"type":"string"
+				},
+				"mp_dealtype":{
+					"description":"Deal type identifier",
+					"title":"mp_dealtype",
+					"type":"string"
+				},
+				"salesstagecode":{
+					"description":"Sales stage code",
+					"title":"salesstagecode",
+					"type":"string"
+				},
+				"mp_dealabr_base":{
+					"description":"Base deal ABR",
+					"title":"mp_dealabr_base",
+					"type":"string"
+				},
+				"isrevenuesystemcalculated":{
+					"description":"Indicator if revenue system is calculated",
+					"title":"isrevenuesystemcalculated",
+					"type":"string"
+				},
+				"_mp_salesleader_value":{
+					"description":"Sales leader ID value",
+					"title":"_mp_salesleader_value",
+					"type":"string"
+				},
+				"_parentaccountid_value":{
+					"description":"ID of the associated parent account",
+					"title":"_parentaccountid_value",
+					"type":"string"
+				},
+				"mp_channel":{
+					"description":"Channel identifier",
+					"title":"mp_channel",
+					"type":"string"
+				},
+				"proposedsolution":{
+					"description":"Proposed solution",
+					"title":"proposedsolution",
+					"type":"string"
+				},
+				"mp_pricingteamapprovedby":{
+					"description":"Pricing team approved by",
+					"title":"mp_pricingteamapprovedby",
+					"type":"string"
+				},
+				"mp_sowstartdate":{
+					"description":"SOW start date",
+					"title":"mp_sowstartdate",
+					"type":"string"
+				},
+				"mp_onsiteblendedrate":{
+					"description":"Onsite blended rate",
+					"title":"mp_onsiteblendedrate",
+					"type":"string"
+				},
+				"estimatedvalue":{
+					"description":"Estimated value",
+					"title":"estimatedvalue",
+					"type":"string"
+				},
+				"msdyn_scorehistory":{
+					"description":"Score history",
+					"title":"msdyn_scorehistory",
+					"type":"string"
+				},
+				"mp_ftecalculated":{
+					"description":"FTE calculated",
+					"title":"mp_ftecalculated",
+					"type":"string"
+				},
+				"mp_salesopsbidmgmtteamapprovedby":{
+					"description":"Sales Ops bid management team approved by",
+					"title":"mp_salesopsbidmgmtteamapprovedby",
+					"type":"string"
+				},
+				"mp_dealinlab":{
+					"description":"Deal in lab indicator",
+					"title":"mp_dealinlab",
+					"type":"string"
+				},
+				"mp_ifyesisapartnerstechnologynamesseparate":{
+					"description":"If yes, is a partner's technology name separate",
+					"title":"mp_ifyesisapartnerstechnologynamesseparate",
+					"type":"string"
+				},
+				"mp_tempfield":{
+					"description":"Temporary field",
+					"title":"mp_tempfield",
+					"type":"string"
+				},
+				"mp_bidapprovalrejectionreason":{
+					"description":"Bid approval rejection reason",
+					"title":"mp_bidapprovalrejectionreason",
+					"type":"string"
+				},
+				"mp_basedonmsaratecard":{
+					"description":"Based on MSA rate card identifier",
+					"title":"mp_basedonmsaratecard",
+					"type":"string"
+				},
+				"_parentcontactid_value":{
+					"description":"Parent contact ID value",
+					"title":"_parentcontactid_value",
+					"type":"string"
+				},
+				"mp_winningcompetitorformigrationpurpose":{
+					"description":"Winning competitor for migration purpose",
+					"title":"mp_winningcompetitorformigrationpurpose",
+					"type":"string"
+				},
+				"mp_bidmanagerapproveddate":{
+					"description":"Bid manager approved date",
+					"title":"mp_bidmanagerapproveddate",
+					"type":"string"
+				},
+				"mp_maildealtcvflag":{
+					"description":"Mail deal TCV flag",
+					"title":"mp_maildealtcvflag",
+					"type":"string"
+				},
+				"mp_opportunityid":{
+					"description":"Opportunity ID Visible in UI",
+					"title":"mp_opportunityid",
+					"type":"string"
+				},
+				"mp_sowenddate":{
+					"description":"SOW end date",
+					"title":"mp_sowenddate",
+					"type":"string"
+				},
+				"mp_actualvalue":{
+					"description":"Actual value",
+					"title":"mp_actualvalue",
+					"type":"string"
+				},
+				"mp_migratedrecordformigrationpurpose":{
+					"description":"Migrated record for migration purpose",
+					"title":"mp_migratedrecordformigrationpurpose",
+					"type":"string"
+				},
+				"mp_nearshoreblendedrate":{
+					"description":"Nearshore blended rate",
+					"title":"mp_nearshoreblendedrate",
+					"type":"string"
+				},
+				"msdyn_opportunityscore":{
+					"description":"Opportunity score",
+					"title":"msdyn_opportunityscore",
+					"type":"string"
+				},
+				"mp_tpapresentduringbid":{
+					"description":"TPA present during bid identifier",
+					"title":"mp_tpapresentduringbid",
+					"type":"string"
+				},
+				"actualvalue_base":{
+					"description":"Base actual value",
+					"title":"actualvalue_base",
+					"type":"string"
+				},
+				"freightamount":{
+					"description":"Freight amount",
+					"title":"freightamount",
+					"type":"string"
+				},
+				"mp_q3rev":{
+					"description":"Q3 revenue",
+					"title":"mp_q3rev",
+					"type":"string"
+				},
+				"mp_q2rev_base":{
+					"description":"Base Q2 revenue",
+					"title":"mp_q2rev_base",
+					"type":"string"
+				},
+				"identifycustomercontacts":{
+					"description":"Indicator for identifying customer contacts",
+					"title":"identifycustomercontacts",
+					"type":"string"
+				},
+				"mp_iftpapresentprovidename":{
+					"description":"If TPA present, provide name",
+					"title":"mp_iftpapresentprovidename",
+					"type":"string"
+				},
+				"_transactioncurrencyid_value":{
+					"description":"Transaction currency ID value",
+					"title":"_transactioncurrencyid_value",
+					"type":"string"
+				},
+				"traversedpath":{
+					"description":"Traversed path",
+					"title":"traversedpath",
+					"type":"string"
+				},
+				"mp_salesopsbidmgmtteamremarks":{
+					"description":"Sales Ops bid management team remarks",
+					"title":"mp_salesopsbidmgmtteamremarks",
+					"type":"string"
+				},
+				"mp_apiflag":{
+					"description":"API flag",
+					"title":"mp_apiflag",
+					"type":"string"
+				},
+				"mp_offshoreblendedrate":{
+					"description":"Offshore blended rate",
+					"title":"mp_offshoreblendedrate",
+					"type":"string"
+				},
+				"mp_dealapprovalmailattached":{
+					"description":"Indicator if deal approval mail is attached",
+					"title":"mp_dealapprovalmailattached",
+					"type":"string"
+				},
+				"mp_dealbusinessunit":{
+					"description":"Deal business unit",
+					"title":"mp_dealbusinessunit",
+					"type":"string"
+				},
+				"mp_cloudpresence":{
+					"description":"Cloud presence indicator",
+					"title":"mp_cloudpresence",
+					"type":"string"
+				},
+				"mp_blinkservicesinvolved":{
+					"description":"Blink services involved",
+					"title":"mp_blinkservicesinvolved",
+					"type":"string"
+				},
+				"mp_salesopsbidmgmtteamconfirmation":{
+					"description":"Sales Ops bid management team confirmation",
+					"title":"mp_salesopsbidmgmtteamconfirmation",
+					"type":"string"
+				},
+				"quotecomments":{
+					"description":"Quote comments",
+					"title":"quotecomments",
+					"type":"string"
+				}
+			}
+		}
+	},
+	"standard":false,
+	"unifiedEntityModelId":"6672f525c6a0012284497bf8",
+	"version":5
+}
