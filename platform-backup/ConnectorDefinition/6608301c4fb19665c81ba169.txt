@@ -1,0 +1,38 @@
+{
+	"auths":[
+		{
+			"createdTime":1711812943649,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"let there be TOKEN connections",
+			"type":"JWT",
+			"updatedTime":1711812943649
+		}
+	],
+	"createdTime":1711812636161,
+	"deleted":true,
+	"enabled":false,
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6608301c4fb19665c81ba169",
+	"lastModifiedBy":34,
+	"lcName":"let there be custom connectors update",
+	"modifiedTime":1714473729894,
+	"name":"let there be custom connectors update",
+	"ownerUserId":174,
+	"standard":false,
+	"standardApp":false,
+	"version":11
+}
