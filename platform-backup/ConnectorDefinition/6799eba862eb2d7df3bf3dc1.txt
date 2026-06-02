@@ -1,0 +1,29 @@
+{
+	"auths":[
+		{
+			"createdTime":1738217419006,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"wef",
+			"type":"TOKEN",
+			"updatedTime":1738217419006
+		}
+	],
+	"createdTime":1738140584081,
+	"deleted":false,
+	"enabled":false,
+	"id":"6799eba862eb2d7df3bf3dc1",
+	"lastModifiedBy":520,
+	"lcName":"hvhj",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1738217419008,
+	"name":"hvhj",
+	"ownerUserId":45512,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
