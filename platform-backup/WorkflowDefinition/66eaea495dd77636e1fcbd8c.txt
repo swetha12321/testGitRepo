@@ -1,0 +1,67 @@
+{
+	"appsUsed":[
+		"asana"
+	],
+	"createdTime":1726671433004,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1726671474018,
+		"deployedBy":12,
+		"deployedDefinitionId":"66eaea705dd77636e1fcbd9e",
+		"status":"PAUSED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		
+	],
+	"id":"66eaea495dd77636e1fcbd8c",
+	"lastModifiedBy":520,
+	"lcName":"test asana",
+	"modifiedTime":1728289397871,
+	"name":"test asana",
+	"nodes":[
+		{
+			"context":{
+				"appName":"asana",
+				"resourceVersion":2436,
+				"connectionId":"66eaaac22e09111847de5b8d",
+				"resourceName":"asana_on_new_section"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"tOvgS-1",
+			"id":"94lY6",
+			"index":0,
+			"inputs":{
+				"project":"1207212334745313",
+				"actions":[
+					"changed",
+					"removed",
+					"added"
+				],
+				"object":"section"
+			},
+			"skip":false,
+			"subTitle":"Asana",
+			"title":"New section",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":12,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
