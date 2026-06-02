@@ -1,0 +1,21 @@
+{
+	"baseUrl":"https://google.serper.dev/search",
+	"createdTime":1719484077879,
+	"deleted":false,
+	"enabled":false,
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"667d3ead5a5b86069d52cc9f",
+	"lastModifiedBy":-1,
+	"lcName":"serpernew",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1721681185641,
+	"name":"serperNew",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
