@@ -80,9 +80,9 @@
 		}
 	],
 	"id":"6a1ed9d8d65aef1ebf87bec8",
-	"lastModifiedBy":199598,
+	"lastModifiedBy":199599,
 	"lcName":"(copy)[git] filter pr assets by real diff (copy)",
-	"modifiedTime":1780414590700,
+	"modifiedTime":1780418046755,
 	"name":"(copy)[git] Filter PR assets by real diff (copy)",
 	"nodes":[
 		{
@@ -163,13 +163,13 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_TURwu-1",
 			"id":"n_jXoYy",
 			"index":2,
 			"inputs":{
-				"automationId":"6a1eace3ff37d216af51ccbd",
+				"automationId":"6a1f0585ebe1c452c3c9df7e",
 				"runtimeConnections":{},
 				"synchronous":true,
 				"version":"-1",
@@ -506,7 +506,6 @@
 				"ua:list_type":"OBJECT"
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -766,5 +765,5 @@
 		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":5
+	"version":6
 }
