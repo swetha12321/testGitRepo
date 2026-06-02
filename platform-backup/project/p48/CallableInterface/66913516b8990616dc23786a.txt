@@ -1,0 +1,47 @@
+{
+	"createdTime":1720792342750,
+	"deleted":false,
+	"description":"WERWRW",
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"66913516b8990616dc23786a",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"asd":{
+					"type":"string",
+					"title":"sadasd",
+					"default":"asd"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"dewe",
+	"modifiedTime":1721681273057,
+	"name":"DEWE",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":520,
+	"projectId":48,
+	"standard":false,
+	"version":6
+}
