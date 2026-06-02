@@ -1,0 +1,28 @@
+{
+	"createdTime":1718715063446,
+	"deleted":false,
+	"description":"test desc",
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"667182b766321e11fdc02bf0",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"test",
+	"modifiedTime":1721681273666,
+	"name":"test",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"ownerUserId":657,
+	"standard":false,
+	"version":1
+}
