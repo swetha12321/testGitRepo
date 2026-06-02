@@ -1,0 +1,16 @@
+{
+	"createdTime":1727688390983,
+	"deleted":false,
+	"description":"sadffd",
+	"enabled":true,
+	"id":"66fa6ec6491e4a23a059c6f1",
+	"lastModifiedBy":520,
+	"lcName":"testpublish",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1727688394691,
+	"name":"testPublish",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
