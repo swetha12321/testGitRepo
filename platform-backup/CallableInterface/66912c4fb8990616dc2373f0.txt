@@ -1,0 +1,28 @@
+{
+	"createdTime":1720790095300,
+	"deleted":false,
+	"description":"hjgjfjfj",
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"66912c4fb8990616dc2373f0",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"gdfg",
+	"modifiedTime":1721681273134,
+	"name":"gdfg",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"ownerUserId":520,
+	"standard":false,
+	"version":1
+}
