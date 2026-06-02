@@ -1,0 +1,41 @@
+{
+	"createdTime":1727775706587,
+	"deleted":false,
+	"description":"lmnkbjv ",
+	"id":"66fbc3da400ca5750f12544a",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"ASDF574635":{
+					"type":"string",
+					"title":"m ",
+					"default":"n "
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":520,
+	"lcName":";mlnkbj",
+	"modifiedTime":1727775706587,
+	"name":";mlnkbj",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":520,
+	"standard":false,
+	"version":0
+}
