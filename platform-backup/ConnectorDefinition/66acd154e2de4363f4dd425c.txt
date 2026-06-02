@@ -1,0 +1,29 @@
+{
+	"auths":[
+		{
+			"createdTime":1722601821706,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"gjhj",
+			"type":"OAUTH",
+			"updatedTime":1722601821706
+		}
+	],
+	"createdTime":1722601812299,
+	"deleted":false,
+	"enabled":false,
+	"id":"66acd154e2de4363f4dd425c",
+	"lastModifiedBy":174,
+	"lcName":"ggg",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1722601821708,
+	"name":"ggg",
+	"ownerUserId":174,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
