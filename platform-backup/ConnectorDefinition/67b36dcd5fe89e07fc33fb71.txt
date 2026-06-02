@@ -1,0 +1,15 @@
+{
+	"createdTime":1739812301682,
+	"deleted":false,
+	"enabled":false,
+	"id":"67b36dcd5fe89e07fc33fb71",
+	"lastModifiedBy":34,
+	"lcName":"nsdl",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1739812301682,
+	"name":"NSDL",
+	"ownerUserId":34,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
