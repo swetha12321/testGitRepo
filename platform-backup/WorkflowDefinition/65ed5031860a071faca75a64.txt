@@ -1,0 +1,79 @@
+{
+	"createdTime":1710051377023,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"dNJpW",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"imio7",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65ed5031860a071faca75a64",
+	"lastModifiedBy":5,
+	"lcName":"update cache",
+	"modifiedTime":1710145302797,
+	"name":"update cache",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":10,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"dNJpW-1",
+			"id":"dNJpW",
+			"index":0,
+			"skip":false,
+			"title":"Call Automation via API",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"endpoints_by_unifyapps",
+				"resourceVersion":1,
+				"resourceName":"endpoints_by_unifyapps_update_node_cache",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"dNJpW-1",
+			"id":"imio7",
+			"index":0,
+			"inputs":{
+				"endpoint_id":"65e8bd20f99f2f3defed0c33",
+				"node_id":"aPR8y"
+			},
+			"skip":false,
+			"subTitle":"Endpoints by UnifyApps",
+			"title":"Update Node Cache",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":5,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
