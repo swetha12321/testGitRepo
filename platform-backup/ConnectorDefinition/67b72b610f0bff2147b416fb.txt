@@ -1,0 +1,15 @@
+{
+	"createdTime":1740057441070,
+	"deleted":false,
+	"enabled":true,
+	"id":"67b72b610f0bff2147b416fb",
+	"lastModifiedBy":1866,
+	"lcName":"inventory",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1740506741138,
+	"name":"Inventory",
+	"ownerUserId":1866,
+	"standard":false,
+	"standardApp":false,
+	"version":3
+}
