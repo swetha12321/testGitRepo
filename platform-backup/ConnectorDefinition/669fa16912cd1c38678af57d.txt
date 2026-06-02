@@ -1,0 +1,17 @@
+{
+	"baseUrl":"http://169.254.169.254/",
+	"createdTime":1721737577031,
+	"deleted":false,
+	"description":"testing ssrf",
+	"enabled":true,
+	"id":"669fa16912cd1c38678af57d",
+	"lastModifiedBy":20249,
+	"lcName":"vishnu vardhan testing",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1737879196159,
+	"name":"vishnu vardhan testing",
+	"ownerUserId":722,
+	"standard":false,
+	"standardApp":false,
+	"version":3
+}
