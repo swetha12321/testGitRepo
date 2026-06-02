@@ -1,0 +1,33 @@
+{
+	"createdTime":1736639337728,
+	"deleted":false,
+	"description":"otAyeP",
+	"id":"6783036944ce135db1da5c2f",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":854,
+	"lcName":"otayep",
+	"modifiedTime":1736639337728,
+	"name":"otAyeP",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"amF2YXNjcmlwdDovKjwvc2NyaXB0PjxpbWcvb25lcnJvcj0nLS8iLy0vIG9ubW91c2VvdmVyPTEvLS9bYCovW10vWyhuZXcoSW1hZ2UpKS5zcmM9KC87LysvcWE0eXJmOWo2NDNnZzRycWZ6a2UyM3NrZmJsNDkyeHVvaW1hOTZ3d2tsWDsub2FzdGlmeS5jb20vKS5yZXBsYWNlKC8uOy9nLFtdKV0vLydzcmM9Pg==",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":854,
+	"standard":false,
+	"version":0
+}
