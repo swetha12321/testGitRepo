@@ -1,0 +1,52 @@
+{
+	"auths":[
+		{
+			"createdTime":1718706617800,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					}
+				}
+			},
+			"name":"authentication checking",
+			"type":"TOKEN",
+			"updatedTime":1718706625230
+		},
+		{
+			"createdTime":1718713122368,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"asdasda",
+			"type":"OAUTH",
+			"updatedTime":1718713122368
+		}
+	],
+	"createdTime":1718706594735,
+	"deleted":false,
+	"enabled":true,
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"667161a2915a25613ddb98f4",
+	"lastModifiedBy":-1,
+	"lcName":"headerstest",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1721681184252,
+	"name":"headersTest",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":7
+}
