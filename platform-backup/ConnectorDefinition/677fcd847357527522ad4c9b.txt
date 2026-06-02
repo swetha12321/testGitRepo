@@ -1,0 +1,29 @@
+{
+	"auths":[
+		{
+			"createdTime":1736428946338,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"randomconnector2",
+			"type":"OAUTH",
+			"updatedTime":1736428946338
+		}
+	],
+	"createdTime":1736428932617,
+	"deleted":true,
+	"enabled":false,
+	"id":"677fcd847357527522ad4c9b",
+	"lastModifiedBy":520,
+	"lcName":"random connector",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1736428972500,
+	"name":"random connector",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":2
+}
