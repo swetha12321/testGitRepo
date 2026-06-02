@@ -1,0 +1,40 @@
+{
+	"auths":[
+		{
+			"createdTime":1718716348355,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					}
+				}
+			},
+			"name":"baseauth",
+			"type":"BASIC",
+			"updatedTime":1718716357734
+		}
+	],
+	"createdTime":1718716339150,
+	"deleted":false,
+	"enabled":true,
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"667187b38c48fb5a957dbb20",
+	"lastModifiedBy":-1,
+	"lcName":"customac3",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1721681184876,
+	"name":"customac3",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":11
+}
