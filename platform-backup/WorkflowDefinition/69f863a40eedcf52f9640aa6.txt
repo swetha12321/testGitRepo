@@ -130,13 +130,6 @@
 			"fromNodeId":"n_6dSlY",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_YxT25",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_YxT25",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_VG7pp",
 			"type":"next"
 		},
@@ -212,20 +205,19 @@
 			"fromNodeId":"n_ce2Y1",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_rgl7p",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_yN9iP",
-			"name":"loopback",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_rgl7p",
+			"toNodeId":"n_bTato",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"n_jW7cn",
 			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_bTato",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_bTato",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_rgl7p",
@@ -322,6 +314,14 @@
 			"type":"next"
 		},
 		{
+			"fromNodeId":"n_yN9iP",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_rgl7p",
+			"type":"next"
+		},
+		{
 			"fromNodeId":"n_rgl7p",
 			"priority":0,
 			"skip":false,
@@ -347,7 +347,7 @@
 	"id":"69f863a40eedcf52f9640aa6",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation",
-	"modifiedTime":1780398725806,
+	"modifiedTime":1780398770414,
 	"name":"credit-calculation",
 	"nodes":[
 		{
@@ -1899,61 +1899,6 @@
 		},
 		{
 			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":1598,
-				"resourceName":"variable_by_unifyapps_create_variables",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_kFM9R@_XucEf-1@l",
-			"id":"n_YxT25",
-			"index":18,
-			"inputSchema":{
-				"type":"SCHEMA_AND_LAYOUT",
-				"dynamic":false,
-				"layout":{},
-				"schema":{
-					"additionalProperties":false,
-					"type":"object",
-					"properties":{
-						"start_epoch":{
-							"type":"integer",
-							"title":"Start Epoch"
-						}
-					},
-					"required":[
-						"start_epoch"
-					]
-				}
-			},
-			"inputs":{
-				"start_epoch":"{{ n_aPkKC.outputs.result.start_epoch }}"
-			},
-			"outputSchema":{
-				"dynamic":false,
-				"schema":{
-					"additionalProperties":false,
-					"type":"object",
-					"properties":{
-						"start_epoch":{
-							"type":"integer",
-							"title":"Start Epoch"
-						}
-					},
-					"required":[
-						"start_epoch"
-					]
-				}
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Create variables",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"utility_by_unifyapps",
 				"resourceVersion":5469,
 				"resourceName":"utility_by_unifyapps_filter_list",
@@ -1964,7 +1909,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_VG7pp",
-			"index":19,
+			"index":18,
 			"inputs":{
 				"filter":{
 					"filters":[
@@ -2010,7 +1955,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_2ReQu",
-			"index":20,
+			"index":19,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -2142,7 +2087,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_XVw5O",
-			"index":21,
+			"index":20,
 			"inputs":{
 				"filters":[
 					{
@@ -2172,7 +2117,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_XVw5O@n_kFM9R@_XucEf-1@l@y",
 			"id":"n_rMVAa",
-			"index":22,
+			"index":21,
 			"inputs":{
 				"variables":[
 					{
@@ -2205,7 +2150,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_naJmI",
-			"index":23,
+			"index":22,
 			"inputs":{
 				"filters":[
 					{
@@ -2235,7 +2180,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_naJmI@n_kFM9R@_XucEf-1@l@y",
 			"id":"n_NIXaO",
-			"index":24,
+			"index":23,
 			"inputs":{
 				"variables":[
 					{
@@ -2271,7 +2216,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_jW7cn",
-			"index":25,
+			"index":24,
 			"inputs":{
 				"filters":[
 					{
@@ -2301,7 +2246,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_jW7cn@n_kFM9R@_XucEf-1@l@y",
 			"id":"n_ce2Y1",
-			"index":26,
+			"index":25,
 			"inputs":{
 				"variables":[
 					{
@@ -2320,6 +2265,66 @@
 			"skip":false,
 			"subTitle":"Variable by UnifyApps",
 			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":1597,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_kFM9R@_XucEf-1@l",
+			"id":"n_bTato",
+			"index":26,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"hasMore":{
+							"type":"boolean",
+							"title":"Has More"
+						},
+						"page":{
+							"type":"integer",
+							"title":"Page"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"hasMore":true,
+				"page":0
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"hasMore":{
+							"type":"boolean",
+							"title":"Has More"
+						},
+						"page":{
+							"type":"integer",
+							"title":"Page"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
 			"type":"ACTION"
 		},
 		{
@@ -2884,5 +2889,5 @@
 	"tags":[
 		"Revolut"
 	],
-	"version":478
+	"version":480
 }
