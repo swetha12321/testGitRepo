@@ -1,0 +1,93 @@
+{
+	"appsUsed":[
+		"microsoft_entra_id"
+	],
+	"createdTime":1780297848399,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1780297968860,
+		"deployedBy":199767,
+		"deployedDefinitionId":"6a1d30f0a8cfc81d83fa8bd5",
+		"deploymentTag":"v1",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_q2PGG",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_xPIxZ",
+			"type":"next"
+		}
+	],
+	"id":"6a1d3078a8cfc81d83fa8804",
+	"lastModifiedBy":199767,
+	"lcName":"param timeout",
+	"modifiedTime":1780414477952,
+	"name":"param timeout",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":903,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_wHhTd-1",
+			"id":"n_q2PGG",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"microsoft_entra_id",
+				"resourceVersion":9865,
+				"connectionId":"69fdcc385b0883375d24c7b8",
+				"resourceName":"microsoft_entra_id_add_or_remove_licence",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_wHhTd-1",
+			"id":"n_xPIxZ",
+			"index":2,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Microsoft Entra ID",
+			"title":"Add or remove user license",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":199767,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":8
+}
