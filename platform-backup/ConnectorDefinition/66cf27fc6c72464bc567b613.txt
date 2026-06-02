@@ -1,0 +1,15 @@
+{
+	"createdTime":1724852220245,
+	"deleted":true,
+	"enabled":false,
+	"id":"66cf27fc6c72464bc567b613",
+	"lastModifiedBy":520,
+	"lcName":"test222",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1724852253290,
+	"name":"test222",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
