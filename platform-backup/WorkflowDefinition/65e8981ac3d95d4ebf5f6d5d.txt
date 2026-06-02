@@ -1,0 +1,49 @@
+{
+	"createdTime":1709742106737,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65e8981ac3d95d4ebf5f6d5d",
+	"lastModifiedBy":3,
+	"lcName":"untitled",
+	"modifiedTime":1709742106737,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"amazon-sns"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"QT4rt-1",
+			"id":"QT4rt",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":3,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":0
+}
