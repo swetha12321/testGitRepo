@@ -1,0 +1,29 @@
+{
+	"auths":[
+		{
+			"createdTime":1726035500578,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"test",
+			"type":"OAUTH",
+			"updatedTime":1726035500578
+		}
+	],
+	"createdTime":1726035088520,
+	"deleted":false,
+	"enabled":false,
+	"id":"66e134904ef8845baba683c9",
+	"lastModifiedBy":520,
+	"lcName":"jhgf",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1726035500581,
+	"name":"jhgf",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
