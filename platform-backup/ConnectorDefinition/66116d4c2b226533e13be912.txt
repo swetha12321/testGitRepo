@@ -1,0 +1,62 @@
+{
+	"auths":[
+		{
+			"createdTime":1712418145906,
+			"description":"service account based login",
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"schema":{
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					},
+					"type":"object",
+					"properties":{
+						"private_key":{
+							"type":"string",
+							"title":"Private Key"
+						},
+						"service_account_email":{
+							"type":"string",
+							"title":"Service Account Email"
+						},
+						"user_email":{
+							"type":"string",
+							"title":"User Email"
+						}
+					},
+					"required":[
+						"user_email"
+					]
+				}
+			},
+			"name":"Service Account",
+			"type":"JWT",
+			"updatedTime":1712734427035
+		}
+	],
+	"createdTime":1712418124323,
+	"deleted":true,
+	"description":"sample desc",
+	"enabled":true,
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"66116d4c2b226533e13be912",
+	"lastModifiedBy":232,
+	"lcName":"google sheets_custom",
+	"modifiedTime":1714141064983,
+	"name":"Google Sheets_Custom",
+	"ownerUserId":34,
+	"standard":false,
+	"standardApp":false,
+	"version":22
+}
