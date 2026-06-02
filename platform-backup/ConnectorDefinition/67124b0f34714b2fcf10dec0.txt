@@ -1,0 +1,15 @@
+{
+	"createdTime":1729252111021,
+	"deleted":false,
+	"enabled":true,
+	"id":"67124b0f34714b2fcf10dec0",
+	"lastModifiedBy":17233,
+	"lcName":"testing leads dnd",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1729252156129,
+	"name":"testing leads DND",
+	"ownerUserId":17233,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
