@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		"shopify"
+	],
+	"createdTime":1709894541600,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65eaeb8dd44ed33d46c0fbc2",
+	"lastModifiedBy":27,
+	"lcName":"saumya 123123",
+	"modifiedTime":1710145336705,
+	"name":"saumya 123123",
+	"nodes":[
+		{
+			"context":{
+				"appName":"shopify",
+				"resourceVersion":16,
+				"connectionId":"65b9c572a4c1bf29b72cd401",
+				"resourceName":"shopify_on_order_create"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"YoLY7-1",
+			"id":"YoLY7",
+			"index":0,
+			"inputs":{
+				"triggerInputCondition":{
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"Order Created",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":27,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":3
+}
