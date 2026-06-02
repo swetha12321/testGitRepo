@@ -1,0 +1,15 @@
+{
+	"createdTime":1729674359127,
+	"deleted":false,
+	"enabled":false,
+	"id":"6718bc77bc9e6e77ef545beb",
+	"lastModifiedBy":5,
+	"lcName":"asasass",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1729674359127,
+	"name":"asasass",
+	"ownerUserId":5,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
