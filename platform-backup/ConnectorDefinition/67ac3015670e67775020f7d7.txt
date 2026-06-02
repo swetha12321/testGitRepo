@@ -1,0 +1,35 @@
+{
+	"auths":[
+		{
+			"createdTime":1739606822188,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					}
+				}
+			},
+			"name":"temp1",
+			"type":"TOKEN",
+			"updatedTime":1739607049241
+		}
+	],
+	"createdTime":1739339186088,
+	"deleted":false,
+	"enabled":true,
+	"id":"67ac3015670e67775020f7d7",
+	"lastModifiedBy":687,
+	"lcName":"hytgrfed",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1739607055035,
+	"name":"hytgrfed",
+	"ownerUserId":0,
+	"standard":false,
+	"standardApp":false,
+	"version":7
+}
