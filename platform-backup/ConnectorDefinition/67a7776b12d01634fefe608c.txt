@@ -1,0 +1,44 @@
+{
+	"auths":[
+		{
+			"createdTime":1739028340727,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					},
+					"properties":{
+						"newOne":{
+							"type":"string",
+							"title":"New One"
+						}
+					},
+					"required":[
+						"newOne"
+					]
+				}
+			},
+			"name":"testNew One",
+			"type":"TOKEN",
+			"updatedTime":1739028421320
+		}
+	],
+	"createdTime":1739028331588,
+	"deleted":false,
+	"enabled":true,
+	"id":"67a7776b12d01634fefe608c",
+	"lastModifiedBy":4130,
+	"lcName":"new connector sdk",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1739028705242,
+	"name":"New Connector SDK",
+	"ownerUserId":4130,
+	"standard":false,
+	"standardApp":false,
+	"version":8
+}
