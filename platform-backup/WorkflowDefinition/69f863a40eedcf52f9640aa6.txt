@@ -4,14 +4,14 @@
 	],
 	"createdTime":1777886116411,
 	"deleted":false,
-	"deployedVersion":100,
+	"deployedVersion":103,
 	"deploymentState":{
-		"deployedAt":1780395340318,
+		"deployedAt":1780400113870,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a1ead4ccbac1626738623be",
+		"deployedDefinitionId":"6a1ebff18d07d36c8a3ca4bc",
 		"status":"DEPLOYED",
-		"version":100,
-		"workflowVersion":463
+		"version":103,
+		"workflowVersion":485
 	},
 	"edges":[
 		{
@@ -72,13 +72,6 @@
 		},
 		{
 			"fromNodeId":"n_Vs0A3",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_aEaZE",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_aEaZE",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_kFM9R",
@@ -142,64 +135,25 @@
 		},
 		{
 			"fromNodeId":"n_2ReQu",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_XVw5O",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_XVw5O",
-			"name":"yes",
+			"name":"success",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_rMVAa",
-			"type":"if"
+			"type":"next"
 		},
 		{
 			"fromNodeId":"n_rMVAa",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_naJmI",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_XVw5O",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_naJmI",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_naJmI",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_NIXaO",
-			"type":"if"
+			"type":"next"
 		},
 		{
 			"fromNodeId":"n_NIXaO",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_jW7cn",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_naJmI",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_jW7cn",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_jW7cn",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_ce2Y1",
-			"type":"if"
+			"type":"next"
 		},
 		{
 			"fromNodeId":"n_ce2Y1",
@@ -209,12 +163,12 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_jW7cn",
-			"name":"no",
+			"fromNodeId":"n_2ReQu",
+			"name":"error",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_bTato",
-			"type":"next"
+			"type":"error"
 		},
 		{
 			"fromNodeId":"n_bTato",
@@ -241,73 +195,25 @@
 			"fromNodeId":"n_aEPZW",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_uyzVU",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_uyzVU",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_zohEF",
-			"type":"if"
+			"type":"next"
 		},
 		{
 			"fromNodeId":"n_zohEF",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_VkQya",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_uyzVU",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_VkQya",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_VkQya",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_8t3Bu",
-			"type":"if"
+			"type":"next"
 		},
 		{
 			"fromNodeId":"n_8t3Bu",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_G2Ugu",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_VkQya",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_G2Ugu",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_G2Ugu",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_VobTj",
-			"type":"if"
+			"type":"next"
 		},
 		{
 			"fromNodeId":"n_VobTj",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_yN9iP",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_G2Ugu",
-			"name":"no",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_yN9iP",
@@ -323,6 +229,75 @@
 		},
 		{
 			"fromNodeId":"n_rgl7p",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_WBi7P",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_WBi7P",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_CcKuc",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_CcKuc",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_E2hgC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_WBi7P",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_E2hgC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_E2hgC",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_JdUAz",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_JdUAz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_vGtWK",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_E2hgC",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_vGtWK",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_vGtWK",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_yBAdM",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_yBAdM",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_NAklR",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_vGtWK",
+			"name":"no",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_NAklR",
@@ -347,7 +322,7 @@
 	"id":"69f863a40eedcf52f9640aa6",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation",
-	"modifiedTime":1780398770414,
+	"modifiedTime":1780410972974,
 	"name":"credit-calculation",
 	"nodes":[
 		{
@@ -1233,29 +1208,6 @@
 		},
 		{
 			"context":{
-				"appName":"callables",
-				"resourceVersion":3827,
-				"resourceName":"callables_return_to_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_XucEf-1",
-			"id":"n_aEaZE",
-			"index":10,
-			"inputs":{
-				"result":{
-					"success":"True"
-				}
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Respond to automation",
-			"type":"STOP"
-		},
-		{
-			"context":{
 				"appName":"loop",
 				"resourceVersion":945,
 				"resourceName":"loop_for_each",
@@ -1266,7 +1218,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_XucEf-1",
 			"id":"n_kFM9R",
-			"index":11,
+			"index":10,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ n_HCRE2.outputs.parameters }}",
@@ -1289,7 +1241,7 @@
 			"fallbackMode":"CONTINUE",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_Npjdv",
-			"index":12,
+			"index":11,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -1394,7 +1346,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_qBg1l",
-			"index":13,
+			"index":12,
 			"inputs":{
 				"loop":"n_kFM9R",
 				"conditions":{
@@ -1429,7 +1381,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_Jtypi",
-			"index":14,
+			"index":13,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -1579,7 +1531,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_aPkKC",
-			"index":15,
+			"index":14,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -1627,7 +1579,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_MIMzF",
-			"index":16,
+			"index":15,
 			"inputs":{
 				"projections":[
 					{
@@ -1750,7 +1702,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_6dSlY",
-			"index":17,
+			"index":16,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -1909,7 +1861,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_VG7pp",
-			"index":18,
+			"index":17,
 			"inputs":{
 				"filter":{
 					"filters":[
@@ -1952,10 +1904,10 @@
 			},
 			"debug":false,
 			"dirty":false,
-			"fallbackMode":"STOP",
+			"fallbackMode":"MANUAL",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_2ReQu",
-			"index":19,
+			"index":18,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -2070,40 +2022,64 @@
 					}
 				}
 			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"maxLeaseTimeUnit":"SECONDS",
+					"maxWaitDurationUnit":"SECONDS"
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"MANUAL",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				},
+				"timeoutConfig":{
+					"enabled":false
+				}
+			},
 			"skip":false,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":858,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_kFM9R@_XucEf-1@l",
-			"id":"n_XVw5O",
-			"index":20,
-			"inputs":{
-				"filters":[
-					{
-						"property":"{{ n_kFM9R.outputs.item.applicationNodeExecutionPerCredit }}",
-						"filter":{
-							"operator":"GT",
-							"value":"0"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
 		},
 		{
 			"context":{
@@ -2115,9 +2091,9 @@
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_XVw5O@n_kFM9R@_XucEf-1@l@y",
+			"groupId":"n_2ReQu@n_kFM9R@_XucEf-1@l@success",
 			"id":"n_rMVAa",
-			"index":21,
+			"index":19,
 			"inputs":{
 				"variables":[
 					{
@@ -2128,8 +2104,7 @@
 						"source":"{{ n_Jtypi.outputs.applicationNodeExecutionFail }}"
 					},
 					{
-						"source":"{{ n_Jtypi.outputs.totalCredsApp }}",
-						"value":"={{ n_2ReQu.outputs.result.nodeExecutionCount.applicationNodes }}/{{ n_kFM9R.outputs.item.applicationNodeExecutionPerCredit }}+{{ n_Jtypi.outputs.totalCredsApp }}"
+						"source":"{{ n_Jtypi.outputs.totalCredsApp }}"
 					}
 				]
 			},
@@ -2137,36 +2112,6 @@
 			"subTitle":"Variable by UnifyApps",
 			"title":"Update variables",
 			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":858,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_kFM9R@_XucEf-1@l",
-			"id":"n_naJmI",
-			"index":22,
-			"inputs":{
-				"filters":[
-					{
-						"property":"{{ n_kFM9R.outputs.item.internalNodeExecutionPerCredit }}",
-						"filter":{
-							"operator":"GT",
-							"value":"0"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
 		},
 		{
 			"context":{
@@ -2178,9 +2123,9 @@
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_naJmI@n_kFM9R@_XucEf-1@l@y",
+			"groupId":"n_2ReQu@n_kFM9R@_XucEf-1@l@success",
 			"id":"n_NIXaO",
-			"index":23,
+			"index":20,
 			"inputs":{
 				"variables":[
 					{
@@ -2194,8 +2139,7 @@
 						"source":""
 					},
 					{
-						"source":"{{ n_Jtypi.outputs.totalCredsInternal }}",
-						"value":"={{ n_2ReQu.outputs.result.nodeExecutionCount.internalNodes }}/{{ n_kFM9R.outputs.item.internalNodeExecutionPerCredit }}+{{ n_Jtypi.outputs.totalCredsInternal }}"
+						"source":"{{ n_Jtypi.outputs.totalCredsInternal }}"
 					}
 				]
 			},
@@ -2203,36 +2147,6 @@
 			"subTitle":"Variable by UnifyApps",
 			"title":"Update variables",
 			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":858,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_kFM9R@_XucEf-1@l",
-			"id":"n_jW7cn",
-			"index":24,
-			"inputs":{
-				"filters":[
-					{
-						"property":"{{ n_kFM9R.outputs.item.helperNodeExecutionPerCredit }}",
-						"filter":{
-							"operator":"GT",
-							"value":"0"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
 		},
 		{
 			"context":{
@@ -2244,9 +2158,9 @@
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_jW7cn@n_kFM9R@_XucEf-1@l@y",
+			"groupId":"n_2ReQu@n_kFM9R@_XucEf-1@l@success",
 			"id":"n_ce2Y1",
-			"index":25,
+			"index":21,
 			"inputs":{
 				"variables":[
 					{
@@ -2257,8 +2171,7 @@
 						"value":"={{ n_2ReQu.outputs.result.nodeExecutionCount.helperNodes }}+{{ n_Jtypi.outputs.helperNodeExecutionSuccess }}"
 					},
 					{
-						"source":"{{ n_Jtypi.outputs.totalCredsHelper }}",
-						"value":"={{ n_2ReQu.outputs.result.nodeExecutionCount.helperNodes }}/{{ n_kFM9R.outputs.item.helperNodeExecutionPerCredit }}+{{ n_Jtypi.outputs.totalCredsHelper }}"
+						"source":"{{ n_Jtypi.outputs.totalCredsHelper }}"
 					}
 				]
 			},
@@ -2279,7 +2192,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_bTato",
-			"index":26,
+			"index":22,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2339,7 +2252,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_rgl7p",
-			"index":27,
+			"index":23,
 			"inputs":{
 				"condition":{
 					"filters":[
@@ -2379,7 +2292,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_rgl7p@n_kFM9R@_XucEf-1@l@l",
 			"id":"n_YU1pM",
-			"index":28,
+			"index":24,
 			"inputs":{
 				"projections":[
 					{
@@ -2442,7 +2355,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_rgl7p@n_kFM9R@_XucEf-1@l@l",
 			"id":"n_aEPZW",
-			"index":29,
+			"index":25,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -2550,21 +2463,129 @@
 		},
 		{
 			"context":{
-				"appName":"if_else",
-				"resourceVersion":858,
-				"resourceName":"if_else_condition",
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":1527,
+				"resourceName":"variable_by_unifyapps_update_variables",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_rgl7p@n_kFM9R@_XucEf-1@l@l",
-			"id":"n_uyzVU",
+			"id":"n_zohEF",
+			"index":26,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_Jtypi.outputs.applicationNodeExecutionSuccess }}",
+						"value":"={{ n_aEPZW.outputs.result.nodeExecutionCount.applicationNodes }}+{{ n_Jtypi.outputs.applicationNodeExecutionSuccess }}"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":1527,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_rgl7p@n_kFM9R@_XucEf-1@l@l",
+			"id":"n_8t3Bu",
+			"index":27,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_Jtypi.outputs.internalNodeExecutionSuccess }}",
+						"value":"={{ n_aEPZW.outputs.result.nodeExecutionCount.internalNodes }}+{{ n_Jtypi.outputs.internalNodeExecutionSuccess }}"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":1527,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_rgl7p@n_kFM9R@_XucEf-1@l@l",
+			"id":"n_VobTj",
+			"index":28,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_Jtypi.outputs.helperNodeExecutionSuccess }}",
+						"value":"={{ n_aEPZW.outputs.result.nodeExecutionCount.helperNodes }}+{{ n_Jtypi.outputs.helperNodeExecutionSuccess }}"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":1526,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_rgl7p@n_kFM9R@_XucEf-1@l@l",
+			"id":"n_yN9iP",
+			"index":29,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_bTato.outputs.hasMore }}",
+						"value":"{{ n_YU1pM.outputs.hasMore }}"
+					},
+					{
+						"source":"{{ n_bTato.outputs.page }}",
+						"value":"={{ n_bTato.outputs.page }}+1000"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":866,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_kFM9R@_XucEf-1@l",
+			"id":"n_WBi7P",
 			"index":30,
 			"inputs":{
 				"filters":[
 					{
-						"property":"{{ n_kFM9R.outputs.item.applicationNodeExecutionPerCredit }}",
+						"property":"{{ n_kFM9R.outputs.item.helperNodeExecutionPerCredit }}",
 						"filter":{
 							"operator":"GT",
 							"value":"0"
@@ -2581,25 +2602,21 @@
 		{
 			"context":{
 				"appName":"variable_by_unifyapps",
-				"resourceVersion":1527,
+				"resourceVersion":1534,
 				"resourceName":"variable_by_unifyapps_update_variables",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_uyzVU@n_rgl7p@n_kFM9R@_XucEf-1@l@l@y",
-			"id":"n_zohEF",
+			"groupId":"n_WBi7P@n_kFM9R@_XucEf-1@l@y",
+			"id":"n_CcKuc",
 			"index":31,
 			"inputs":{
 				"variables":[
 					{
-						"source":"{{ n_Jtypi.outputs.applicationNodeExecutionSuccess }}",
-						"value":"={{ n_aEPZW.outputs.result.nodeExecutionCount.applicationNodes }}+{{ n_Jtypi.outputs.applicationNodeExecutionSuccess }}"
-					},
-					{
-						"source":"{{ n_Jtypi.outputs.totalCredsApp }}",
-						"value":"={{ n_aEPZW.outputs.result.nodeExecutionCount.applicationNodes }}/{{ n_kFM9R.outputs.item.applicationNodeExecutionPerCredit }}+{{ n_Jtypi.outputs.totalCredsApp }}"
+						"source":"{{ n_Jtypi.outputs.totalCredsHelper }}",
+						"value":"={{ n_Jtypi.outputs.helperNodeExecutionSuccess }}/{{ n_kFM9R.outputs.item.helperNodeExecutionPerCredit }}"
 					}
 				]
 			},
@@ -2611,15 +2628,15 @@
 		{
 			"context":{
 				"appName":"if_else",
-				"resourceVersion":858,
+				"resourceVersion":866,
 				"resourceName":"if_else_condition",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_rgl7p@n_kFM9R@_XucEf-1@l@l",
-			"id":"n_VkQya",
+			"groupId":"n_kFM9R@_XucEf-1@l",
+			"id":"n_E2hgC",
 			"index":32,
 			"inputs":{
 				"filters":[
@@ -2641,25 +2658,21 @@
 		{
 			"context":{
 				"appName":"variable_by_unifyapps",
-				"resourceVersion":1527,
+				"resourceVersion":1534,
 				"resourceName":"variable_by_unifyapps_update_variables",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_VkQya@n_rgl7p@n_kFM9R@_XucEf-1@l@l@y",
-			"id":"n_8t3Bu",
+			"groupId":"n_E2hgC@n_kFM9R@_XucEf-1@l@y",
+			"id":"n_JdUAz",
 			"index":33,
 			"inputs":{
 				"variables":[
 					{
-						"source":"{{ n_Jtypi.outputs.internalNodeExecutionSuccess }}",
-						"value":"={{ n_aEPZW.outputs.result.nodeExecutionCount.internalNodes }}+{{ n_Jtypi.outputs.internalNodeExecutionSuccess }}"
-					},
-					{
 						"source":"{{ n_Jtypi.outputs.totalCredsInternal }}",
-						"value":"={{ n_aEPZW.outputs.result.nodeExecutionCount.internalNodes }}/{{ n_kFM9R.outputs.item.internalNodeExecutionPerCredit }}+{{ n_Jtypi.outputs.totalCredsInternal }}"
+						"value":"={{ n_Jtypi.outputs.internalNodeExecutionSuccess }}/{{ n_kFM9R.outputs.item.internalNodeExecutionPerCredit }}"
 					}
 				]
 			},
@@ -2671,20 +2684,20 @@
 		{
 			"context":{
 				"appName":"if_else",
-				"resourceVersion":858,
+				"resourceVersion":866,
 				"resourceName":"if_else_condition",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_rgl7p@n_kFM9R@_XucEf-1@l@l",
-			"id":"n_G2Ugu",
+			"groupId":"n_kFM9R@_XucEf-1@l",
+			"id":"n_vGtWK",
 			"index":34,
 			"inputs":{
 				"filters":[
 					{
-						"property":"{{ n_kFM9R.outputs.item.helperNodeExecutionPerCredit }}",
+						"property":"{{ n_kFM9R.outputs.item.applicationNodeExecutionPerCredit }}",
 						"filter":{
 							"operator":"GT",
 							"value":"0"
@@ -2701,55 +2714,21 @@
 		{
 			"context":{
 				"appName":"variable_by_unifyapps",
-				"resourceVersion":1527,
+				"resourceVersion":1534,
 				"resourceName":"variable_by_unifyapps_update_variables",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_G2Ugu@n_rgl7p@n_kFM9R@_XucEf-1@l@l@y",
-			"id":"n_VobTj",
+			"groupId":"n_vGtWK@n_kFM9R@_XucEf-1@l@y",
+			"id":"n_yBAdM",
 			"index":35,
 			"inputs":{
 				"variables":[
 					{
-						"source":"{{ n_Jtypi.outputs.helperNodeExecutionSuccess }}",
-						"value":"={{ n_aEPZW.outputs.result.nodeExecutionCount.helperNodes }}+{{ n_Jtypi.outputs.helperNodeExecutionSuccess }}"
-					},
-					{
 						"source":"{{ n_Jtypi.outputs.totalCredsHelper }}",
-						"value":"={{ n_aEPZW.outputs.result.nodeExecutionCount.helperNodes }}/{{ n_kFM9R.outputs.item.helperNodeExecutionPerCredit }}+{{ n_Jtypi.outputs.totalCredsHelper }}"
-					}
-				]
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Update variables",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":1526,
-				"resourceName":"variable_by_unifyapps_update_variables",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_rgl7p@n_kFM9R@_XucEf-1@l@l",
-			"id":"n_yN9iP",
-			"index":36,
-			"inputs":{
-				"variables":[
-					{
-						"source":"{{ n_bTato.outputs.hasMore }}",
-						"value":"{{ n_YU1pM.outputs.hasMore }}"
-					},
-					{
-						"source":"{{ n_bTato.outputs.page }}",
-						"value":"={{ n_bTato.outputs.page }}+1000"
+						"value":"={{ n_Jtypi.outputs.applicationNodeExecutionSuccess }}/{{ n_kFM9R.outputs.item.applicationNodeExecutionPerCredit }}"
 					}
 				]
 			},
@@ -2808,7 +2787,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_NAklR",
-			"index":37,
+			"index":36,
 			"inputs":{
 				"useRawPayload":false,
 				"writeThroughSessionVariables":false,
@@ -2860,7 +2839,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_XucEf-1",
 			"id":"n_GokFy",
-			"index":38,
+			"index":37,
 			"inputs":{
 				"result":{
 					"success":"True"
@@ -2889,5 +2868,5 @@
 	"tags":[
 		"Revolut"
 	],
-	"version":480
+	"version":501
 }
