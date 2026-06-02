@@ -1,0 +1,49 @@
+{
+	"auths":[
+		{
+			"createdTime":1740990796779,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					},
+					"properties":{
+						"username":{
+							"type":"string",
+							"title":"Username"
+						},
+						"password":{
+							"type":"string",
+							"title":"Password"
+						}
+					},
+					"required":[
+						"username",
+						"password"
+					]
+				}
+			},
+			"name":"Sarthak's auth",
+			"type":"BASIC",
+			"updatedTime":1740996001461
+		}
+	],
+	"createdTime":1740990380087,
+	"deleted":false,
+	"enabled":true,
+	"id":"67c567acb545407b2faad08b",
+	"lastModifiedBy":687,
+	"lcName":"leave request",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1741153155292,
+	"name":"Leave Request",
+	"ownerUserId":3952,
+	"standard":false,
+	"standardApp":false,
+	"version":15
+}
