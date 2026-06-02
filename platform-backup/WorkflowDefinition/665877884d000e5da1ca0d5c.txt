@@ -1,0 +1,69 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1717073800432,
+	"deleted":true,
+	"description":"This flow is triggered when the user ask queries regarding Banking or specific to HDFC Bank. When there is no other individual journey present for this.",
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"665877884d000e5da1ca0d5c",
+	"lastModifiedBy":206,
+	"lcName":"[hdfc v3] faqs and other banking related queries",
+	"modifiedTime":1717074255316,
+	"name":"[HDFC V3] FAQs and other Banking related queries",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":34,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"eqLC1-1",
+			"id":"eqLC1",
+			"index":0,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"",
+							"filter":{
+								"operator":"EQUAL",
+								"value":""
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":206,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":3
+}
