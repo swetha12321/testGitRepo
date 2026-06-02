@@ -1,0 +1,49 @@
+{
+	"createdTime":1710311266000,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65f1476278ab050c2a27dbad",
+	"lastModifiedBy":13,
+	"lcName":"untitled",
+	"modifiedTime":1710325411257,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"salesforce"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"X25Io-1",
+			"id":"X25Io",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":13,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
