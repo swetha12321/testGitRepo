@@ -1,0 +1,33 @@
+{
+	"createdTime":1716560282419,
+	"deleted":true,
+	"description":"test2",
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6650a19a8b54547bb2832b6a",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"lastModifiedBy":289,
+	"lcName":"test10/4",
+	"modifiedTime":1716560290881,
+	"name":"test10/4",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"ownerUserId":289,
+	"standard":false,
+	"version":1
+}
