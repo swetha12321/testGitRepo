@@ -1,0 +1,37 @@
+{
+	"auths":[
+		{
+			"createdTime":1737032086453,
+			"description":"this is auth",
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					}
+				}
+			},
+			"name":"auth",
+			"type":"CUSTOM",
+			"updatedTime":1737032105141
+		}
+	],
+	"createdTime":1737031921255,
+	"deleted":false,
+	"description":"hbsd",
+	"enabled":false,
+	"id":"678900f1cebad479835ba852",
+	"lastModifiedBy":520,
+	"lcName":"temp",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1737032105142,
+	"name":"temp",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":2
+}
