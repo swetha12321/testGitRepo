@@ -1,0 +1,33 @@
+{
+	"createdTime":1722147631513,
+	"deleted":false,
+	"description":"`{{3*3}}`",
+	"id":"66a5e32f873bc65fcea839e4",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":722,
+	"lcName":"`{{3*3}}`",
+	"modifiedTime":1722237082025,
+	"name":"`{{3*3}}`",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":722,
+	"standard":false,
+	"version":2
+}
