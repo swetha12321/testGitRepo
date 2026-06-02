@@ -1,0 +1,44 @@
+{
+	"auths":[
+		{
+			"createdTime":1734194280865,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					},
+					"properties":{
+						"X_API_KEY":{
+							"type":"string",
+							"title":"X API KEY"
+						}
+					},
+					"required":[
+						"X_API_KEY"
+					]
+				}
+			},
+			"name":"X_API_KEY",
+			"type":"TOKEN",
+			"updatedTime":1734194298340
+		}
+	],
+	"createdTime":1734194256194,
+	"deleted":true,
+	"enabled":false,
+	"id":"675db450d5425361cfbc1eba",
+	"lastModifiedBy":520,
+	"lcName":"swagger",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1734194455518,
+	"name":"Swagger",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":3
+}
