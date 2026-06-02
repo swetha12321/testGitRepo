@@ -96,12 +96,19 @@
 			"skip":false,
 			"toNodeId":"n_1bHuP",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_1bHuP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_xW5K9",
+			"type":"next"
 		}
 	],
 	"id":"6a1eadb045c56357764d85b7",
 	"lastModifiedBy":46209,
 	"lcName":"testbaladanaor - new",
-	"modifiedTime":1780407105893,
+	"modifiedTime":1780407145517,
 	"name":"testBaladanaOR - NEW",
 	"nodes":[
 		{
@@ -1027,7 +1034,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_U2IZs-1",
 			"id":"n_lB21a",
@@ -1050,7 +1057,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_lB21a@_U2IZs-1@l",
 			"id":"n_PQLbc",
@@ -1075,7 +1082,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_U2IZs-1",
 			"id":"n_x9FnD",
@@ -1098,7 +1105,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_U2IZs-1",
 			"id":"n_1bHuP",
@@ -1113,6 +1120,27 @@
 			"skip":false,
 			"subTitle":"OR Solver by UnifyApps",
 			"title":"Add Objective Term",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"ortools_by_unifyapps",
+				"resourceVersion":1017,
+				"resourceName":"ortools_by_unifyapps_solve",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_U2IZs-1",
+			"id":"n_xW5K9",
+			"index":14,
+			"inputs":{
+				"solverId":"{{ n_75m4f.outputs.solverId }}"
+			},
+			"skip":false,
+			"subTitle":"OR Solver by UnifyApps",
+			"title":"Solve",
 			"type":"ACTION"
 		}
 	],
@@ -1130,5 +1158,5 @@
 		}
 	},
 	"standard":false,
-	"version":15
+	"version":16
 }
