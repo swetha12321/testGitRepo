@@ -1,0 +1,59 @@
+{
+	"appsUsed":[
+		"asana"
+	],
+	"createdTime":1724353365226,
+	"deleted":false,
+	"deployedVersion":3,
+	"deploymentState":{
+		"deployedAt":1724390265755,
+		"deployedBy":12,
+		"deployedDefinitionId":"66c81b73a455303ac02e3af5",
+		"status":"PAUSED",
+		"version":3,
+		"workflowVersion":3
+	},
+	"edges":[
+		
+	],
+	"id":"66c78b55a455303ac02e1f40",
+	"lastModifiedBy":520,
+	"lcName":"trigger_test",
+	"modifiedTime":1728289415702,
+	"name":"trigger_test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"asana",
+				"resourceVersion":2051,
+				"connectionId":"6684ff1fbe21a52bf61f8984",
+				"resourceName":"asana_on_new_task"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"A2Vfo-1",
+			"id":"cMv1J",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Asana",
+			"title":"New task",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":12,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":7
+}
