@@ -1,0 +1,77 @@
+{
+	"appsUsed":[
+		"amazon_sns"
+	],
+	"createdTime":1709750711923,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65e8b91ea65a3c35d0f06208",
+	"lastModifiedBy":6,
+	"lcName":"test sns",
+	"modifiedTime":1709755102851,
+	"name":"test sns",
+	"nodes":[
+		{
+			"context":{
+				"appName":"amazon_sns",
+				"resourceVersion":2,
+				"connectionId":"65e8aef3885995611982d018",
+				"resourceName":"amazon_sns_on_new_message"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ZlBT8-1",
+			"id":"ZlBT8",
+			"index":0,
+			"inputs":{
+				"message_attributes_schema":{
+					"type":"object",
+					"properties":{
+						"t1":{
+							"type":"string",
+							"title":"t1"
+						}
+					}
+				},
+				"message_schema":{
+					"type":"object",
+					"properties":{
+						"t2":{
+							"type":"string",
+							"title":"t2"
+						}
+					}
+				},
+				"format":"JSON",
+				"topic":"abc"
+			},
+			"skip":false,
+			"title":"On Message Received",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":6,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
