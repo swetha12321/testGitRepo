@@ -1,0 +1,47 @@
+{
+	"createdTime":1726607595124,
+	"deleted":false,
+	"description":"adasdadad",
+	"id":"66e9f0eba10e63393eff0472",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"input_1":{
+					"type":"string",
+					"title":"Input 1"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":520,
+	"lcName":"sdadadad",
+	"modifiedTime":1726607595124,
+	"name":"sdadadad",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"result_1":{
+					"type":"string",
+					"title":"Result 1"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":520,
+	"standard":false,
+	"version":0
+}
