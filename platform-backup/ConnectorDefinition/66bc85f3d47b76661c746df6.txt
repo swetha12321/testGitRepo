@@ -1,0 +1,29 @@
+{
+	"auths":[
+		{
+			"createdTime":1723631098775,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"a",
+			"type":"BASIC",
+			"updatedTime":1723631098775
+		}
+	],
+	"createdTime":1723631091063,
+	"deleted":false,
+	"enabled":false,
+	"id":"66bc85f3d47b76661c746df6",
+	"lastModifiedBy":520,
+	"lcName":"ft-test",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1723631098777,
+	"name":"ft-test",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
