@@ -1,0 +1,30 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780399260597,
+	"deleted":false,
+	"edges":[
+		
+	],
+	"id":"6a1ebc9c8d07d36c8a3c3666",
+	"lastModifiedBy":175325,
+	"lcName":"changesetlocal1780399260516jodqbabtpy",
+	"modifiedTime":1780399260597,
+	"name":"changeSetLocal1780399260516jodQBaBTPy",
+	"nodes":[
+		
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
