@@ -1,0 +1,49 @@
+{
+	"auths":[
+		{
+			"createdTime":1721359884854,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					},
+					"properties":{
+						"token":{
+							"type":"string",
+							"title":"Token"
+						}
+					},
+					"required":[
+						"token"
+					]
+				}
+			},
+			"name":"access token",
+			"type":"TOKEN",
+			"updatedTime":1721359889055
+		}
+	],
+	"createdTime":1721359876603,
+	"deleted":false,
+	"enabled":false,
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"6699de046ee2501020a4cd58",
+	"lastModifiedBy":-1,
+	"lcName":"new connector_internal",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1721681181945,
+	"name":"new connector_internal",
+	"ownerUserId":2705,
+	"standard":false,
+	"standardApp":false,
+	"version":3
+}
