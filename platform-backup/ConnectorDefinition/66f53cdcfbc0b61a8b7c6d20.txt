@@ -1,0 +1,15 @@
+{
+	"createdTime":1727347932574,
+	"deleted":false,
+	"enabled":true,
+	"id":"66f53cdcfbc0b61a8b7c6d20",
+	"lastModifiedBy":520,
+	"lcName":"graphqltest",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1727686933676,
+	"name":"graphqlTest",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":9
+}
