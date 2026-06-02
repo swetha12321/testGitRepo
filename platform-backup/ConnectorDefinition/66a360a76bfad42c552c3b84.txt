@@ -1,0 +1,18 @@
+{
+	"auths":[
+		
+	],
+	"createdTime":1721983143665,
+	"deleted":false,
+	"enabled":true,
+	"id":"66a360a76bfad42c552c3b84",
+	"lastModifiedBy":520,
+	"lcName":"policy bazaar retry",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1721983546974,
+	"name":"Policy Bazaar retry",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":4
+}
