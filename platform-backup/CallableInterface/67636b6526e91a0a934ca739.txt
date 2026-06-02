@@ -1,0 +1,33 @@
+{
+	"createdTime":1734617571246,
+	"deleted":false,
+	"description":"BpeKHIliGC",
+	"id":"67636b6526e91a0a934ca739",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":854,
+	"lcName":"ovubnduwob",
+	"modifiedTime":1735627787390,
+	"name":"oVUbNDuwOb",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":520,
+	"standard":false,
+	"version":2
+}
