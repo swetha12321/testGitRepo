@@ -1,0 +1,44 @@
+{
+	"auths":[
+		{
+			"createdTime":1731659970302,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					},
+					"properties":{
+						"Token":{
+							"type":"string",
+							"title":"Token"
+						}
+					},
+					"required":[
+						"Token"
+					]
+				}
+			},
+			"name":"Access Token",
+			"type":"TOKEN",
+			"updatedTime":1731668623935
+		}
+	],
+	"createdTime":1731654071269,
+	"deleted":false,
+	"enabled":true,
+	"id":"6736f1b7633fd529e0ac12c6",
+	"lastModifiedBy":520,
+	"lcName":"totalexpert",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1731675478983,
+	"name":"TotalExpert",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":66
+}
