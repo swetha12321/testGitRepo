@@ -1,0 +1,16 @@
+{
+	"createdTime":1731392070453,
+	"deleted":false,
+	"description":"sdfgh",
+	"enabled":false,
+	"id":"6732f246ac2dc3291b87cce4",
+	"lastModifiedBy":520,
+	"lcName":"sdfgh",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1731392070453,
+	"name":"sdfgh",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
