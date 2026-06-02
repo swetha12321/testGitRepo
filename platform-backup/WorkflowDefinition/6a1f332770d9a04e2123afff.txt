@@ -1,0 +1,640 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780429607892,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_vznYQ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_rZtmk",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_rZtmk",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_sYR1r",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_sYR1r",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_GGkBQ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_GGkBQ",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_fEcgI",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_GGkBQ",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_3OYVu",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_3OYVu",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_stGSq",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_fEcgI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_CnYx7",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_stGSq",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_CnYx7",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_CnYx7",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_deZwv",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_deZwv",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Pqqj7",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Pqqj7",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_VEZGD",
+			"type":"next"
+		}
+	],
+	"id":"6a1f332770d9a04e2123afff",
+	"lastModifiedBy":35286,
+	"lcName":"on user create | ensure bucket",
+	"modifiedTime":1780429607892,
+	"name":"on user create | ensure bucket",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3851,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_5Kv4L-1",
+			"id":"n_vznYQ",
+			"index":1,
+			"inputs":{
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"userId"
+					],
+					"properties":{
+						"userId":{
+							"type":"string",
+							"title":"User Id"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":3018,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_5Kv4L-1",
+			"id":"n_rZtmk",
+			"index":2,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"userBasedKey":{
+							"type":"string",
+							"title":"User Based Key"
+						},
+						"fallbackKey":{
+							"type":"string",
+							"title":"Fallback Key"
+						},
+						"bucketSize":{
+							"type":"number",
+							"title":"Bucket Size"
+						},
+						"config":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Config"
+						}
+					},
+					"required":[
+						"userBasedKey",
+						"fallbackKey",
+						"bucketSize",
+						"config"
+					]
+				}
+			},
+			"inputs":{
+				"userBasedKey":"USER_BASED_ENCRYPTION:USER_BASED_ENCRYPTION:{{ __RUN__.outputs.customerId }}",
+				"fallbackKey":"USER_BASED_ENCRYPTION:USER_BASED_ENCRYPTION:0"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"userBasedKey":{
+							"type":"string",
+							"title":"User Based Key"
+						},
+						"fallbackKey":{
+							"type":"string",
+							"title":"Fallback Key"
+						},
+						"bucketSize":{
+							"type":"number",
+							"title":"Bucket Size"
+						},
+						"config":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Config"
+						}
+					},
+					"required":[
+						"userBasedKey",
+						"fallbackKey",
+						"bucketSize",
+						"config"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":2610,
+				"resourceName":"custom_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_5Kv4L-1",
+			"id":"_sYR1r",
+			"index":3,
+			"inputs":{
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"httpMethod":"GET",
+				"connectionType":"DIRECT",
+				"sslVerify":false,
+				"path":"/resource-config/{{ n_rZtmk.outputs.userBasedKey }}",
+				"baseUrl":"http://internal-global-svc.unifyapps.svc.cluster.local:80/internal",
+				"httpVersion":"HTTP_2",
+				"bodySchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"mongoOperationDTO"
+					],
+					"properties":{
+						"mongoOperationDTO":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Mongo Operation DTO"
+						}
+					}
+				},
+				"responseContentType":"application/json",
+				"followRedirects":"NORMAL",
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"certificateType":"CERT_STRING"
+			},
+			"skip":false,
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":146,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_5Kv4L-1",
+			"id":"n_GGkBQ",
+			"index":4,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ _sYR1r.outputs.result }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":3016,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_GGkBQ@_5Kv4L-1@y",
+			"id":"n_fEcgI",
+			"index":5,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_rZtmk.outputs.bucketSize }}",
+						"value":"{{ _sYR1r.outputs.result.providerConfig.bucketSize }}"
+					},
+					{
+						"source":"{{ n_rZtmk.outputs.config }}",
+						"value":"{{ _sYR1r.outputs.result }}"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":2610,
+				"resourceName":"custom_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_GGkBQ@_5Kv4L-1@n",
+			"id":"_3OYVu",
+			"index":6,
+			"inputs":{
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"httpMethod":"GET",
+				"connectionType":"DIRECT",
+				"sslVerify":false,
+				"path":"/resource-config/{{ n_rZtmk.outputs.userBasedKey }}",
+				"baseUrl":"http://internal-global-svc.unifyapps.svc.cluster.local:80/internal",
+				"httpVersion":"HTTP_2",
+				"bodySchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"mongoOperationDTO"
+					],
+					"properties":{
+						"mongoOperationDTO":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Mongo Operation DTO"
+						}
+					}
+				},
+				"responseContentType":"application/json",
+				"followRedirects":"NORMAL",
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"certificateType":"CERT_STRING"
+			},
+			"skip":false,
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":3016,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_GGkBQ@_5Kv4L-1@n",
+			"id":"_stGSq",
+			"index":7,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_rZtmk.outputs.bucketSize }}",
+						"value":"{{ _3OYVu.outputs.resultproviderConfig.bucketSize }}"
+					},
+					{
+						"source":"{{ n_rZtmk.outputs.config }}",
+						"value":"{{ _3OYVu.outputs.result }}"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_5Kv4L-1",
+			"id":"n_CnYx7",
+			"index":8,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"mongoOperationDTO"
+					],
+					"properties":{
+						"mongoOperationDTO":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Mongo Operation DTO"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"userId",
+						"bucketSize"
+					],
+					"properties":{
+						"userId":{
+							"type":"number",
+							"title":"User Id"
+						},
+						"bucketSize":{
+							"type":"number",
+							"title":"Bucket Size"
+						}
+					}
+				},
+				"code":"  def userId = binding.getVariable('userId');\n  def size = binding.getVariable('bucketSize')\n  long  bucketNumber = userId.intdiv(size)              \n  String bucketStart  = String.valueOf(bucketNumber * size)      \n  String bucketEnd    = String.valueOf((bucketNumber + 1) * size)\n  def query = [\n      'd'  : false,\n      '_id': ['$gte': bucketStart, '$lt': bucketEnd]\n  ]\n  def mongoOperationDTO = [\n      resourceType  : 'USER_CUSTOMER',\n      collectionName: 'User',\n      query         : query,\n      projections   : ['_id': 1],\n      sort          : ['_id': 1],\n      limit         : 1\n  ]\n\n  def payload = [mongoOperationDTO: mongoOperationDTO]\n  return payload\n",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"userId":"{{ __USER__.outputs.id }}",
+					"bucketSize":"{{ n_rZtmk.outputs.bucketSize }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":2610,
+				"resourceName":"custom_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_5Kv4L-1",
+			"id":"n_deZwv",
+			"index":9,
+			"inputs":{
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"httpMethod":"POST",
+				"body":{
+					"resourceType":"{{ n_CnYx7.outputs.result.mongoOperationDTO.resourceType }}",
+					"collectionName":"{{ n_CnYx7.outputs.result.mongoOperationDTO.collectionName }}",
+					"query":"{{ n_CnYx7.outputs.result.mongoOperationDTO.query }}",
+					"projections":"{{ n_CnYx7.outputs.result.mongoOperationDTO.projections }}",
+					"sort":"{{ n_CnYx7.outputs.result.mongoOperationDTO.sort }}",
+					"limit":"{{ n_CnYx7.outputs.result.mongoOperationDTO.limit }}"
+				},
+				"connectionType":"DIRECT",
+				"sslVerify":false,
+				"path":"/mongo-internal/find/{{ __RUN__.outputs.customerId }}",
+				"baseUrl":"http://internal-global-svc.unifyapps.svc.cluster.local:80/internal",
+				"httpVersion":"HTTP_2",
+				"bodySchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"resourceType":{
+							"type":"string",
+							"title":"resourceType"
+						},
+						"collectionName":{
+							"type":"string",
+							"title":"collectionName"
+						},
+						"query":{
+							"type":"object",
+							"properties":{},
+							"title":"query",
+							"additionalProperties":false,
+							"required":[]
+						},
+						"projections":{
+							"type":"object",
+							"properties":{},
+							"title":"projections",
+							"additionalProperties":false,
+							"required":[]
+						},
+						"sort":{
+							"type":"object",
+							"properties":{},
+							"title":"sort",
+							"additionalProperties":false,
+							"required":[]
+						},
+						"limit":{
+							"type":"integer",
+							"title":"limit"
+						}
+					}
+				},
+				"responseContentType":"application/json",
+				"followRedirects":"NORMAL",
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"certificateType":"CERT_STRING"
+			},
+			"skip":false,
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":2990,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_5Kv4L-1",
+			"id":"n_Pqqj7",
+			"index":10,
+			"inputs":{
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"firstUserId",
+						"config",
+						"currentUserId"
+					],
+					"properties":{
+						"firstUserId":{
+							"type":"number",
+							"title":"First User Id"
+						},
+						"config":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Config"
+						},
+						"currentUserId":{
+							"type":"string",
+							"title":"Current User Id"
+						}
+					}
+				},
+				"code":"import com.unifyapps.infra.crypto.config.UserBasedEncryptionConfig\nimport com.unifyapps.infra.crypto.providers.unifyapps.UnifyAppsUserBasedCryptoConfig\nimport com.unifyapps.infra.crypto.EncryptionProviderFactory\nimport com.unifyapps.infra.vault.VaultTemplate\nimport com.unifyapps.infra.vault.VaultTemplateFactory\nimport com.unifyapps.infra.vault.VaultResourceType\nimport com.unifyapps.infra.utils.JsonUtils\nimport com.unifyapps.infra.utils.StringUtils\nimport com.unifyapps.infra.utils.ThreadUtils\nimport com.unifyapps.infra.utils.context.UserContext\nimport com.unifyapps.infra.utils.exceptions.UserVisibleException\nimport io.quarkus.arc.Arc\n\nimport java.util.function.Supplier\n\n// ---------------- inputs ----------------\nUserBasedEncryptionConfig config = binding.getVariable('config') as UserBasedEncryptionConfig\nlong currentUserId = binding.getVariable('currentUserId') as long\nlong firstUserId   = binding.getVariable('firstUserId')   as long   // first user of this bucket\n\n// ---------------- derive settings from the config (same as the provider) ----------------\nlong customerId = config.getCustomerId()\nUnifyAppsUserBasedCryptoConfig providerConfig =\n        JsonUtils.fromMap(config.getProviderConfig(), UnifyAppsUserBasedCryptoConfig.class)\n\nint    bucketSize   = providerConfig.getBucketSize()\nString bucketPrefix = providerConfig.getSecretProviderBucketPrefix()\nint    maxRetries   = providerConfig.getMaxFetchSecreteRetries()\nString resourceType = StringUtils.isBlank(providerConfig.getVaultResourceType())\n        ? 'USER_CRYPTO'                                   // provider's VAULT_RESOURCE_TYPE_DEFAULT\n        : providerConfig.getVaultResourceType()\n\n// ---------------- beans ----------------\nEncryptionProviderFactory encryptionProviderFactory = Arc.container().instance(EncryptionProviderFactory.class).get()\nVaultTemplateFactory      vaultTemplateFactory      = Arc.container().instance(VaultTemplateFactory.class).get()\n\nlong   bucketNumber = currentUserId.intdiv(bucketSize)\nString secretName   = \"$bucketPrefix/$customerId/$bucketNumber\"   // == provider's getSecreteName(...)\nString userIdStr    = String.valueOf(currentUserId)\n\ndef result = UserContext.getInContext(UserContext.createContext(customerId, currentUserId), {\n    VaultTemplate vault = vaultTemplateFactory.getVaultTemplate(customerId, { -> resourceType } as VaultResourceType)\n\n    // ---- fetch bucket WITH RETRIES (mirrors loadBucketWithRetries; AWS may return ResourceNotFound transiently) ----\n    Map<String, String> bucket = null\n    int retries = 0\n    while (retries++ < maxRetries) {\n        String bucketJson = vault.read(secretName, String.class)\n        if (bucketJson != null && !bucketJson.isBlank()) {\n            try {\n                bucket = new HashMap<String, String>(JsonUtils.fromJson(bucketJson, Map.class))\n                break\n            } catch (Exception ignore) {\n                // unparseable payload -> treat as miss and retry\n            }\n        }\n        ThreadUtils.sleepSilently(1000L)\n    }\n\n    // ---- bucket still not found after all retries ----\n    if (bucket == null) {\n        if (currentUserId == firstUserId) {\n            // first user of the bucket -> allowed to CREATE it\n            byte[] dataKey = encryptionProviderFactory.getProvider(customerId).generateDataKey()\n            String value   = java.util.Base64.getEncoder().encodeToString(dataKey)\n            Map<String, String> created = new HashMap<String, String>()\n            created.put(userIdStr, value)\n            vault.write(secretName, created)   // createSecret (secret didn't exist yet)\n            return [status: 'CREATED_BUCKET', bucket: bucketNumber, secret: secretName, userId: currentUserId]\n        }\n        // NOT the first user and the bucket is genuinely missing -> surface it (don't create)\n        throw new UserVisibleException(\n                \"\"\"could not load bucket: customer=$customerId user=$currentUserId \\\n  bucket=$bucketNumber not found after $maxRetries retries \\\n  (first user=$firstUserId must be bucketed first)\"\"\".toString())\n\n    }\n\n    // ---- bucket exists ----\n    if (bucket.get(userIdStr) != null) {\n        return [status: 'ALREADY_PRESENT', bucket: bucketNumber, secret: secretName]\n    }\n\n    // add this user's key to the existing bucket (update)\n    byte[] dataKey = encryptionProviderFactory.getProvider(customerId).generateDataKey()\n    String value   = java.util.Base64.getEncoder().encodeToString(dataKey)\n    bucket.put(userIdStr, value)\n    vault.write(secretName, bucket)   // putSecretValue (update existing)\n    return [status: 'ADDED_TO_EXISTING', bucket: bucketNumber, secret: secretName, userId: currentUserId]\n} as Supplier)\n\nreturn result\n\n",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"firstUserId":"{{ n_deZwv.outputs.result[0]._id }}",
+					"config":"{{ n_rZtmk.outputs.config }}",
+					"currentUserId":"{{ n_vznYQ.outputs.userId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3867,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_5Kv4L-1",
+			"id":"n_VEZGD",
+			"index":11,
+			"inputs":{
+				"result":"200"
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":35286,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":17
+}
