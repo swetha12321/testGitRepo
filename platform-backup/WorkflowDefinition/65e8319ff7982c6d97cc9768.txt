@@ -1,0 +1,49 @@
+{
+	"createdTime":1709724608570,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65e8319ff7982c6d97cc9768",
+	"lastModifiedBy":11,
+	"lcName":"untitled",
+	"modifiedTime":1709724608570,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"amazon-sns"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"R8oCT-1",
+			"id":"R8oCT",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":11,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
