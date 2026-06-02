@@ -1,0 +1,33 @@
+{
+	"createdTime":1724145111154,
+	"deleted":false,
+	"description":"a",
+	"id":"66c45dd7488ef200abb51460",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":520,
+	"lcName":"ft-test",
+	"modifiedTime":1724145111154,
+	"name":"ft-test",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":520,
+	"standard":false,
+	"version":0
+}
