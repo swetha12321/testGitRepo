@@ -1,0 +1,35 @@
+{
+	"auths":[
+		{
+			"createdTime":1736690124638,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					}
+				}
+			},
+			"name":"Basic",
+			"type":"BASIC",
+			"updatedTime":1736690532116
+		}
+	],
+	"createdTime":1736685839536,
+	"deleted":false,
+	"enabled":true,
+	"id":"6783b90fcc5a865fb9d0e6c8",
+	"lastModifiedBy":520,
+	"lcName":"polling",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1738003670676,
+	"name":"Polling",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":8
+}
