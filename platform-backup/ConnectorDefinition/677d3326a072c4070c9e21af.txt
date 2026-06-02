@@ -1,0 +1,18 @@
+{
+	"auths":[
+		
+	],
+	"createdTime":1736258342840,
+	"deleted":true,
+	"enabled":true,
+	"id":"677d3326a072c4070c9e21af",
+	"lastModifiedBy":520,
+	"lcName":"fff",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1736258407394,
+	"name":"fff",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":5
+}
