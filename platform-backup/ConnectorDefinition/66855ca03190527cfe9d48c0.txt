@@ -1,0 +1,20 @@
+{
+	"createdTime":1720016032389,
+	"deleted":false,
+	"enabled":false,
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"66855ca03190527cfe9d48c0",
+	"lastModifiedBy":-1,
+	"lcName":"ddd",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1721681186188,
+	"name":"ddd",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
