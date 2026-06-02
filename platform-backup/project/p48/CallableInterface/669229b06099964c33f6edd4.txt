@@ -1,0 +1,39 @@
+{
+	"createdTime":1720854960800,
+	"deleted":false,
+	"description":"akma13jul10",
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"669229b06099964c33f6edd4",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"akma13jul10",
+	"modifiedTime":1721681273139,
+	"name":"akma13jul10",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":520,
+	"projectId":48,
+	"standard":false,
+	"version":1
+}
