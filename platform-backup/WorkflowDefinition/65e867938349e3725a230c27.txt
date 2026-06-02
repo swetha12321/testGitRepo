@@ -1,0 +1,49 @@
+{
+	"createdTime":1709729683320,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65e867938349e3725a230c27",
+	"lastModifiedBy":34,
+	"lcName":"untitled",
+	"modifiedTime":1709729683320,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"XdtZy-1",
+			"id":"XdtZy",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":34,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":0
+}
