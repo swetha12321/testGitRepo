@@ -1,0 +1,29 @@
+{
+	"auths":[
+		{
+			"createdTime":1731643394591,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"s",
+			"type":"TOKEN",
+			"updatedTime":1731643394591
+		}
+	],
+	"createdTime":1731623237191,
+	"deleted":false,
+	"enabled":false,
+	"id":"6736794533ee3e1f3ce771f6",
+	"lastModifiedBy":520,
+	"lcName":"sdk_settings",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1731643394598,
+	"name":"SDK_settings",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
