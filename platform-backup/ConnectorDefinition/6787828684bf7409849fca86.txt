@@ -1,0 +1,29 @@
+{
+	"auths":[
+		{
+			"createdTime":1736939400605,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"job",
+			"type":"JWT",
+			"updatedTime":1736939400605
+		}
+	],
+	"createdTime":1736934022691,
+	"deleted":false,
+	"enabled":false,
+	"id":"6787828684bf7409849fca86",
+	"lastModifiedBy":520,
+	"lcName":"example1501",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1736939400606,
+	"name":"example1501",
+	"ownerUserId":46030,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
