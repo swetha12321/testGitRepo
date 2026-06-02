@@ -1,0 +1,29 @@
+{
+	"auths":[
+		{
+			"createdTime":1737554587466,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"Recharge Token Access",
+			"type":"TOKEN",
+			"updatedTime":1737554587466
+		}
+	],
+	"createdTime":1737554577107,
+	"deleted":true,
+	"enabled":false,
+	"id":"6790fa91f7dcd605c56ba1d0",
+	"lastModifiedBy":47186,
+	"lcName":"etlsqa_recharge",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1737554615719,
+	"name":"ETLSQA_Recharge",
+	"ownerUserId":47186,
+	"standard":false,
+	"standardApp":false,
+	"version":2
+}
