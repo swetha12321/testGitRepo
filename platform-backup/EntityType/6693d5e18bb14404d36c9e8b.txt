@@ -1,0 +1,927 @@
+{
+	"columnCounts":85,
+	"createdTime":1720964600400,
+	"deleted":true,
+	"id":"6693d5e18bb14404d36c9e8b",
+	"input":{
+		"type":"SCHEMA_AND_LAYOUT",
+		"dynamic":false,
+		"layout":{},
+		"schema":{
+			"type":"object",
+			"properties":{
+				"ETF_Employer_Contribution":{
+					"title":"ETF_Employer_Contribution",
+					"type":"string",
+					"description":"The employer's contribution to the ETF."
+				},
+				"Living_Allowance":{
+					"title":"Living_Allowance",
+					"type":"string",
+					"description":"The living allowance offered to the candidate."
+				},
+				"Base_Salary":{
+					"title":"Base_Salary",
+					"type":"string",
+					"description":"The base salary offered to the candidate."
+				},
+				"Offer_Recruiter_Id":{
+					"title":"Offer_Recruiter_Id",
+					"type":"string",
+					"description":"The unique identifier for the recruiter who made the offer."
+				},
+				"Basic_Salary":{
+					"title":"Basic_Salary",
+					"type":"string",
+					"description":"The basic salary offered to the candidate."
+				},
+				"Base_Salary_Monthly":{
+					"title":"Base_Salary_Monthly",
+					"type":"string",
+					"description":"The base salary offered to the candidate on a monthly basis."
+				},
+				"Actual_DOJ":{
+					"title":"Actual_DOJ",
+					"type":"string",
+					"description":"The actual date of joining for the candidate."
+				},
+				"Variable_Pay_Component_IND_LKA":{
+					"title":"Variable_Pay_Component_IND_LKA",
+					"type":"string",
+					"description":"The variable pay component for India and Sri Lanka."
+				},
+				"TD_Bonus":{
+					"title":"TD_Bonus",
+					"type":"string",
+					"description":"The TD bonus offered to the candidate."
+				},
+				"Skill_Bonus":{
+					"title":"Skill_Bonus",
+					"type":"string",
+					"description":"The skill bonus offered to the candidate."
+				},
+				"Longevity_Bonus_for_Service_Desk_or_ITO_SD_Retention_Bonus":{
+					"title":"Longevity_Bonus_for_Service_Desk_or_ITO_SD_Retention_Bonus",
+					"type":"string",
+					"description":"The longevity bonus for service desk or ITO SD retention bonus offered to the candidate."
+				},
+				"Latest_Offer_Creation_Date_IST":{
+					"title":"Latest_Offer_Creation_Date_IST",
+					"type":"string",
+					"description":"The date and time when the latest offer was created."
+				},
+				"Variable_pay":{
+					"title":"Variable_pay",
+					"type":"string",
+					"description":"The variable pay component of the salary."
+				},
+				"PFR_For_Level_10":{
+					"title":"PFR_For_Level_10",
+					"type":"string",
+					"description":"The PFR for level 10 offered to the candidate."
+				},
+				"Sub_Source":{
+					"title":"Sub_Source",
+					"type":"string",
+					"description":"A sub-category of the source from which the candidate was sourced."
+				},
+				"Retention_Bonus_PM":{
+					"title":"Retention_Bonus_PM",
+					"type":"string",
+					"description":"The retention bonus for project managers offered to the candidate."
+				},
+				"House_rental_Allowance":{
+					"title":"House_rental_Allowance",
+					"type":"string",
+					"description":"The house rental allowance offered to the candidate."
+				},
+				"EPF_Employer_Contribution":{
+					"title":"EPF_Employer_Contribution",
+					"type":"string",
+					"description":"The employer's contribution to the EPF."
+				},
+				"First_Offer_Release_Date_IST":{
+					"title":"First_Offer_Release_Date_IST",
+					"type":"string",
+					"description":"The date and time when the first offer was released."
+				},
+				"Provident_Fund":{
+					"title":"Provident_Fund",
+					"type":"string",
+					"description":"The provident fund contribution offered to the candidate."
+				},
+				"Retention_Bonus_FLP":{
+					"title":"Retention_Bonus_FLP",
+					"type":"string",
+					"description":"The retention bonus for FLP offered to the candidate."
+				},
+				"Meal_Transport_Allowance_Reimbursement":{
+					"title":"Meal_Transport_Allowance_Reimbursement",
+					"type":"string",
+					"description":"The meal or transport allowance reimbursement offered to the candidate."
+				},
+				"Variable_Pay_Component":{
+					"title":"Variable_Pay_Component",
+					"type":"string",
+					"description":"The variable pay component offered to the candidate."
+				},
+				"Candidate_ID":{
+					"title":"Candidate_ID",
+					"type":"string",
+					"description":"A unique identifier for each candidate."
+				},
+				"Total_Fixed_Cash":{
+					"title":"Total_Fixed_Cash",
+					"type":"string",
+					"description":"The total fixed cash compensation offered to the candidate."
+				},
+				"Current_Sub_Status":{
+					"title":"Current_Sub_Status",
+					"type":"string",
+					"description":"The current sub-status of the candidate in the recruitment process."
+				},
+				"Grade":{
+					"title":"Grade",
+					"type":"string",
+					"description":"The grade or level of the job within the organization."
+				},
+				"BPM_ID":{
+					"title":"BPM_ID",
+					"type":"string",
+					"description":"A unique identifier for the business process management."
+				},
+				"Conveyance_Allowance":{
+					"title":"Conveyance_Allowance",
+					"type":"string",
+					"description":"The conveyance allowance offered to the candidate."
+				},
+				"Ex_Gratia_Bonus":{
+					"title":"Ex_Gratia_Bonus",
+					"type":"string",
+					"description":"The ex-gratia bonus offered to the candidate."
+				},
+				"Reject_Reason":{
+					"title":"Reject_Reason",
+					"type":"string",
+					"description":"The reason for the candidate's rejection."
+				},
+				"Base_Salary_Hourly":{
+					"title":"Base_Salary_Hourly",
+					"type":"string",
+					"description":"The base salary offered to the candidate on an hourly basis."
+				},
+				"Offer_Currency":{
+					"title":"Offer_Currency",
+					"type":"string",
+					"description":"The currency in which the offer is made."
+				},
+				"Domestic_Medical_Entitlement":{
+					"title":"Domestic_Medical_Entitlement",
+					"type":"string",
+					"description":"The domestic medical entitlement offered to the candidate."
+				},
+				"Business_Unit":{
+					"title":"Business_Unit",
+					"type":"string",
+					"description":"The business unit associated with the job."
+				},
+				"Food_Allowance":{
+					"title":"Food_Allowance",
+					"type":"string",
+					"description":"The food allowance offered to the candidate."
+				},
+				"Notice_Period_Buy_Out":{
+					"title":"Notice_Period_Buy_Out",
+					"type":"string",
+					"description":"The notice period buy-out offered to the candidate."
+				},
+				"PFR_for_Level_12":{
+					"title":"PFR_for_Level_12",
+					"type":"string",
+					"description":"The PFR for level 12 offered to the candidate."
+				},
+				"PFR_for_Level_11":{
+					"title":"PFR_for_Level_11",
+					"type":"string",
+					"description":"The PFR for level 11 offered to the candidate."
+				},
+				"Performance_Incentive":{
+					"title":"Performance_Incentive",
+					"type":"string",
+					"description":"The performance incentive offered to the candidate."
+				},
+				"Vendor_Name":{
+					"title":"Vendor_Name",
+					"type":"string",
+					"description":"The name of the vendor who provided the candidate."
+				},
+				"Offer_Frequency":{
+					"title":"Offer_Frequency",
+					"type":"string",
+					"description":"The frequency of the offered compensation (e.g., annually, monthly)."
+				},
+				"Transport_Allowance_Reimbursement":{
+					"title":"Transport_Allowance_Reimbursement",
+					"type":"string",
+					"description":"The transport allowance or reimbursement offered to the candidate."
+				},
+				"Location_Code":{
+					"title":"Location_Code",
+					"type":"string",
+					"description":"The code representing the job's location."
+				},
+				"BMBQ":{
+					"title":"BMBQ",
+					"type":"string",
+					"description":"Billing Multiple and Billing Quadrant details in JSON format."
+				},
+				"Transportation_Allowance":{
+					"title":"Transportation_Allowance",
+					"type":"string",
+					"description":"The transportation allowance offered to the candidate."
+				},
+				"Sales_Incentive":{
+					"title":"Sales_Incentive",
+					"type":"string",
+					"description":"The sales incentive offered to the candidate."
+				},
+				"Step":{
+					"title":"Step",
+					"type":"string",
+					"description":"The step or level within the grade."
+				},
+				"Source_By":{
+					"title":"Source_By",
+					"type":"string",
+					"description":"The person who sourced the candidate."
+				},
+				"Source":{
+					"title":"Source",
+					"type":"string",
+					"description":"The source from which the candidate was sourced."
+				},
+				"Cost_To_Company":{
+					"title":"Cost_To_Company",
+					"type":"string",
+					"description":"The total cost to company including all components."
+				},
+				"Productivity_Bonus":{
+					"title":"Productivity_Bonus",
+					"type":"string",
+					"description":"The productivity bonus offered to the candidate."
+				},
+				"Full_Name":{
+					"title":"Full_Name",
+					"type":"string",
+					"description":"The full name of the candidate."
+				},
+				"City_Compensatory_Allowance":{
+					"title":"City_Compensatory_Allowance",
+					"type":"string",
+					"description":"The city compensatory allowance offered to the candidate."
+				},
+				"RHJOBID":{
+					"title":"RHJOBID",
+					"type":"string",
+					"description":"A unique identifier for the job within the RH system."
+				},
+				"Service_Line":{
+					"title":"Service_Line",
+					"type":"string",
+					"description":"The service line under which the job falls."
+				},
+				"Current_Status":{
+					"title":"Current_Status",
+					"type":"string",
+					"description":"The current status of the candidate in the recruitment process."
+				},
+				"Accommodation_Allowance":{
+					"title":"Accommodation_Allowance",
+					"type":"string",
+					"description":"The accommodation allowance offered to the candidate."
+				},
+				"Entity_Name":{
+					"title":"Entity_Name",
+					"type":"string",
+					"description":"The name of the entity."
+				},
+				"City_Compensatory_Salary":{
+					"title":"City_Compensatory_Salary",
+					"type":"string",
+					"description":"The city compensatory salary offered to the candidate."
+				},
+				"Account_OR_Client":{
+					"title":"Account_OR_Client",
+					"type":"string",
+					"description":"The specific client or account associated with the job."
+				},
+				"Relocation":{
+					"title":"Relocation",
+					"type":"string",
+					"description":"The relocation assistance offered to the candidate."
+				},
+				"Target_Cash_Compensation":{
+					"title":"Target_Cash_Compensation",
+					"type":"string",
+					"description":"The target cash compensation offered to the candidate."
+				},
+				"Latest_Offer_Accepted_Date_IST":{
+					"title":"Latest_Offer_Accepted_Date_IST",
+					"type":"string",
+					"description":"The date and time when the latest offer was accepted."
+				},
+				"Medical_Insurance_Premium":{
+					"title":"Medical_Insurance_Premium",
+					"type":"string",
+					"description":"The medical insurance premium offered to the candidate."
+				},
+				"Vendor_ID":{
+					"title":"Vendor_ID",
+					"type":"string",
+					"description":"A unique identifier for the vendor."
+				},
+				"Offer_Recruiter":{
+					"title":"Offer_Recruiter",
+					"type":"string",
+					"description":"The name of the recruiter who made the offer."
+				},
+				"Longevity_Bonus_USA":{
+					"title":"Longevity_Bonus_USA",
+					"type":"string",
+					"description":"The longevity bonus offered to the candidate in the USA."
+				},
+				"Leave_Travel_Assistance":{
+					"title":"Leave_Travel_Assistance",
+					"type":"string",
+					"description":"The leave travel assistance offered to the candidate."
+				},
+				"Supplementary_Allowance":{
+					"title":"Supplementary_Allowance",
+					"type":"string",
+					"description":"The supplementary allowance offered to the candidate."
+				},
+				"Job_Title":{
+					"title":"Job_Title",
+					"type":"string",
+					"description":"The title of the job."
+				},
+				"Client_Group":{
+					"title":"Client_Group",
+					"type":"string",
+					"description":"The group of clients associated with the job."
+				},
+				"Job_City":{
+					"title":"Job_City",
+					"type":"string",
+					"description":"The city where the job is located."
+				},
+				"Base":{
+					"title":"Base",
+					"type":"string",
+					"description":"The base component of the salary."
+				},
+				"Offered_CTC":{
+					"title":"Offered_CTC",
+					"type":"string",
+					"description":"The total cost to company offered to the candidate."
+				},
+				"PFR_Level_10_and_above":{
+					"title":"PFR_Level_10_and_above",
+					"type":"string",
+					"description":"The PFR level 10 and above offered to the candidate."
+				},
+				"Joining_Bonus":{
+					"title":"Joining_Bonus",
+					"type":"string",
+					"description":"The joining bonus offered to the candidate."
+				},
+				"Tentative_DOJ":{
+					"title":"Tentative_DOJ",
+					"type":"string",
+					"description":"The tentative date of joining for the candidate."
+				},
+				"Operating_Unit":{
+					"title":"Operating_Unit",
+					"type":"string",
+					"description":"The operating unit within the organization."
+				},
+				"EmpNo":{
+					"title":"EmpNo",
+					"type":"string",
+					"description":"Unique employee identification number"
+				},
+				"Casual_Loading":{
+					"title":"Casual_Loading",
+					"type":"string",
+					"description":"The casual loading offered to the candidate."
+				},
+				"Fixed_Allowances":{
+					"title":"Fixed_Allowances",
+					"type":"string",
+					"description":"The fixed allowances offered to the candidate."
+				},
+				"Base_Salary_Daily":{
+					"title":"Base_Salary_Daily",
+					"type":"string",
+					"description":"The base salary offered to the candidate on a daily basis."
+				},
+				"Special_Allowance":{
+					"title":"Special_Allowance",
+					"type":"string",
+					"description":"The special allowance offered to the candidate."
+				},
+				"Total_Remuneration":{
+					"title":"Total_Remuneration",
+					"type":"string",
+					"description":"The total remuneration offered to the candidate."
+				}
+			}
+		}
+	},
+	"lastModifiedBy":520,
+	"lcName":"entity4",
+	"metadata":{
+		"auditable":false,
+		"autoGeneratedFields":[
+			
+		],
+		"cacheable":false,
+		"captureActivity":false,
+		"captureReferences":false,
+		"captureReporting":true,
+		"dateFields":[
+			
+		],
+		"deployable":false,
+		"encryptedFields":[
+			
+		],
+		"external":false,
+		"hasTimeSeriesRecords":true,
+		"hashedFields":[
+			
+		],
+		"includeInDependency":false,
+		"nameField":"",
+		"primaryKeyField":"",
+		"propertiesFieldPrefix":"",
+		"scdType2Enabled":false,
+		"schemaValidationEnabled":false,
+		"sessionBackedStorageEnabled":false,
+		"skipConfigSyncIfModified":false,
+		"skipDeletedEntityBackup":false,
+		"skipIndexLimitValidation":false,
+		"skipPermissionCheckForAggregation":false,
+		"skipPermissionsFilter":false,
+		"skipRoutineLoad":false,
+		"skipVersionIncrementOnUpdate":false,
+		"supportsDistinctValues":false,
+		"supportsWebhook":false,
+		"syncFromSourceCustomer":false,
+		"translationsEnabled":false,
+		"useCachedEntityStoreForAutomations":false,
+		"userLevelEncryption":false,
+		"versioningEnabled":false
+	},
+	"modifiedTime":1720978610049,
+	"name":"entity4",
+	"ownerUserId":520,
+	"packaged":false,
+	"schema":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"type":"object",
+			"properties":{
+				"ETF_Employer_Contribution":{
+					"title":"ETF_Employer_Contribution",
+					"type":"string",
+					"description":"The employer's contribution to the ETF."
+				},
+				"Living_Allowance":{
+					"title":"Living_Allowance",
+					"type":"string",
+					"description":"The living allowance offered to the candidate."
+				},
+				"Base_Salary":{
+					"title":"Base_Salary",
+					"type":"string",
+					"description":"The base salary offered to the candidate."
+				},
+				"Offer_Recruiter_Id":{
+					"title":"Offer_Recruiter_Id",
+					"type":"string",
+					"description":"The unique identifier for the recruiter who made the offer."
+				},
+				"Basic_Salary":{
+					"title":"Basic_Salary",
+					"type":"string",
+					"description":"The basic salary offered to the candidate."
+				},
+				"Base_Salary_Monthly":{
+					"title":"Base_Salary_Monthly",
+					"type":"string",
+					"description":"The base salary offered to the candidate on a monthly basis."
+				},
+				"Actual_DOJ":{
+					"title":"Actual_DOJ",
+					"type":"string",
+					"description":"The actual date of joining for the candidate."
+				},
+				"Variable_Pay_Component_IND_LKA":{
+					"title":"Variable_Pay_Component_IND_LKA",
+					"type":"string",
+					"description":"The variable pay component for India and Sri Lanka."
+				},
+				"TD_Bonus":{
+					"title":"TD_Bonus",
+					"type":"string",
+					"description":"The TD bonus offered to the candidate."
+				},
+				"Skill_Bonus":{
+					"title":"Skill_Bonus",
+					"type":"string",
+					"description":"The skill bonus offered to the candidate."
+				},
+				"Longevity_Bonus_for_Service_Desk_or_ITO_SD_Retention_Bonus":{
+					"title":"Longevity_Bonus_for_Service_Desk_or_ITO_SD_Retention_Bonus",
+					"type":"string",
+					"description":"The longevity bonus for service desk or ITO SD retention bonus offered to the candidate."
+				},
+				"Latest_Offer_Creation_Date_IST":{
+					"title":"Latest_Offer_Creation_Date_IST",
+					"type":"string",
+					"description":"The date and time when the latest offer was created."
+				},
+				"Variable_pay":{
+					"title":"Variable_pay",
+					"type":"string",
+					"description":"The variable pay component of the salary."
+				},
+				"PFR_For_Level_10":{
+					"title":"PFR_For_Level_10",
+					"type":"string",
+					"description":"The PFR for level 10 offered to the candidate."
+				},
+				"Sub_Source":{
+					"title":"Sub_Source",
+					"type":"string",
+					"description":"A sub-category of the source from which the candidate was sourced."
+				},
+				"Retention_Bonus_PM":{
+					"title":"Retention_Bonus_PM",
+					"type":"string",
+					"description":"The retention bonus for project managers offered to the candidate."
+				},
+				"House_rental_Allowance":{
+					"title":"House_rental_Allowance",
+					"type":"string",
+					"description":"The house rental allowance offered to the candidate."
+				},
+				"EPF_Employer_Contribution":{
+					"title":"EPF_Employer_Contribution",
+					"type":"string",
+					"description":"The employer's contribution to the EPF."
+				},
+				"First_Offer_Release_Date_IST":{
+					"title":"First_Offer_Release_Date_IST",
+					"type":"string",
+					"description":"The date and time when the first offer was released."
+				},
+				"Provident_Fund":{
+					"title":"Provident_Fund",
+					"type":"string",
+					"description":"The provident fund contribution offered to the candidate."
+				},
+				"Retention_Bonus_FLP":{
+					"title":"Retention_Bonus_FLP",
+					"type":"string",
+					"description":"The retention bonus for FLP offered to the candidate."
+				},
+				"Meal_Transport_Allowance_Reimbursement":{
+					"title":"Meal_Transport_Allowance_Reimbursement",
+					"type":"string",
+					"description":"The meal or transport allowance reimbursement offered to the candidate."
+				},
+				"Variable_Pay_Component":{
+					"title":"Variable_Pay_Component",
+					"type":"string",
+					"description":"The variable pay component offered to the candidate."
+				},
+				"Candidate_ID":{
+					"title":"Candidate_ID",
+					"type":"string",
+					"description":"A unique identifier for each candidate."
+				},
+				"Total_Fixed_Cash":{
+					"title":"Total_Fixed_Cash",
+					"type":"string",
+					"description":"The total fixed cash compensation offered to the candidate."
+				},
+				"Current_Sub_Status":{
+					"title":"Current_Sub_Status",
+					"type":"string",
+					"description":"The current sub-status of the candidate in the recruitment process."
+				},
+				"Grade":{
+					"title":"Grade",
+					"type":"string",
+					"description":"The grade or level of the job within the organization."
+				},
+				"BPM_ID":{
+					"title":"BPM_ID",
+					"type":"string",
+					"description":"A unique identifier for the business process management."
+				},
+				"Conveyance_Allowance":{
+					"title":"Conveyance_Allowance",
+					"type":"string",
+					"description":"The conveyance allowance offered to the candidate."
+				},
+				"Ex_Gratia_Bonus":{
+					"title":"Ex_Gratia_Bonus",
+					"type":"string",
+					"description":"The ex-gratia bonus offered to the candidate."
+				},
+				"Reject_Reason":{
+					"title":"Reject_Reason",
+					"type":"string",
+					"description":"The reason for the candidate's rejection."
+				},
+				"Base_Salary_Hourly":{
+					"title":"Base_Salary_Hourly",
+					"type":"string",
+					"description":"The base salary offered to the candidate on an hourly basis."
+				},
+				"Offer_Currency":{
+					"title":"Offer_Currency",
+					"type":"string",
+					"description":"The currency in which the offer is made."
+				},
+				"Domestic_Medical_Entitlement":{
+					"title":"Domestic_Medical_Entitlement",
+					"type":"string",
+					"description":"The domestic medical entitlement offered to the candidate."
+				},
+				"Business_Unit":{
+					"title":"Business_Unit",
+					"type":"string",
+					"description":"The business unit associated with the job."
+				},
+				"Food_Allowance":{
+					"title":"Food_Allowance",
+					"type":"string",
+					"description":"The food allowance offered to the candidate."
+				},
+				"Notice_Period_Buy_Out":{
+					"title":"Notice_Period_Buy_Out",
+					"type":"string",
+					"description":"The notice period buy-out offered to the candidate."
+				},
+				"PFR_for_Level_12":{
+					"title":"PFR_for_Level_12",
+					"type":"string",
+					"description":"The PFR for level 12 offered to the candidate."
+				},
+				"PFR_for_Level_11":{
+					"title":"PFR_for_Level_11",
+					"type":"string",
+					"description":"The PFR for level 11 offered to the candidate."
+				},
+				"Performance_Incentive":{
+					"title":"Performance_Incentive",
+					"type":"string",
+					"description":"The performance incentive offered to the candidate."
+				},
+				"Vendor_Name":{
+					"title":"Vendor_Name",
+					"type":"string",
+					"description":"The name of the vendor who provided the candidate."
+				},
+				"Offer_Frequency":{
+					"title":"Offer_Frequency",
+					"type":"string",
+					"description":"The frequency of the offered compensation (e.g., annually, monthly)."
+				},
+				"Transport_Allowance_Reimbursement":{
+					"title":"Transport_Allowance_Reimbursement",
+					"type":"string",
+					"description":"The transport allowance or reimbursement offered to the candidate."
+				},
+				"Location_Code":{
+					"title":"Location_Code",
+					"type":"string",
+					"description":"The code representing the job's location."
+				},
+				"BMBQ":{
+					"title":"BMBQ",
+					"type":"string",
+					"description":"Billing Multiple and Billing Quadrant details in JSON format."
+				},
+				"Transportation_Allowance":{
+					"title":"Transportation_Allowance",
+					"type":"string",
+					"description":"The transportation allowance offered to the candidate."
+				},
+				"Sales_Incentive":{
+					"title":"Sales_Incentive",
+					"type":"string",
+					"description":"The sales incentive offered to the candidate."
+				},
+				"Step":{
+					"title":"Step",
+					"type":"string",
+					"description":"The step or level within the grade."
+				},
+				"Source_By":{
+					"title":"Source_By",
+					"type":"string",
+					"description":"The person who sourced the candidate."
+				},
+				"Source":{
+					"title":"Source",
+					"type":"string",
+					"description":"The source from which the candidate was sourced."
+				},
+				"Cost_To_Company":{
+					"title":"Cost_To_Company",
+					"type":"string",
+					"description":"The total cost to company including all components."
+				},
+				"Productivity_Bonus":{
+					"title":"Productivity_Bonus",
+					"type":"string",
+					"description":"The productivity bonus offered to the candidate."
+				},
+				"Full_Name":{
+					"title":"Full_Name",
+					"type":"string",
+					"description":"The full name of the candidate."
+				},
+				"City_Compensatory_Allowance":{
+					"title":"City_Compensatory_Allowance",
+					"type":"string",
+					"description":"The city compensatory allowance offered to the candidate."
+				},
+				"RHJOBID":{
+					"title":"RHJOBID",
+					"type":"string",
+					"description":"A unique identifier for the job within the RH system."
+				},
+				"Service_Line":{
+					"title":"Service_Line",
+					"type":"string",
+					"description":"The service line under which the job falls."
+				},
+				"Current_Status":{
+					"title":"Current_Status",
+					"type":"string",
+					"description":"The current status of the candidate in the recruitment process."
+				},
+				"Accommodation_Allowance":{
+					"title":"Accommodation_Allowance",
+					"type":"string",
+					"description":"The accommodation allowance offered to the candidate."
+				},
+				"Entity_Name":{
+					"title":"Entity_Name",
+					"type":"string",
+					"description":"The name of the entity."
+				},
+				"City_Compensatory_Salary":{
+					"title":"City_Compensatory_Salary",
+					"type":"string",
+					"description":"The city compensatory salary offered to the candidate."
+				},
+				"Account_OR_Client":{
+					"title":"Account_OR_Client",
+					"type":"string",
+					"description":"The specific client or account associated with the job."
+				},
+				"Relocation":{
+					"title":"Relocation",
+					"type":"string",
+					"description":"The relocation assistance offered to the candidate."
+				},
+				"Target_Cash_Compensation":{
+					"title":"Target_Cash_Compensation",
+					"type":"string",
+					"description":"The target cash compensation offered to the candidate."
+				},
+				"Latest_Offer_Accepted_Date_IST":{
+					"title":"Latest_Offer_Accepted_Date_IST",
+					"type":"string",
+					"description":"The date and time when the latest offer was accepted."
+				},
+				"Medical_Insurance_Premium":{
+					"title":"Medical_Insurance_Premium",
+					"type":"string",
+					"description":"The medical insurance premium offered to the candidate."
+				},
+				"Vendor_ID":{
+					"title":"Vendor_ID",
+					"type":"string",
+					"description":"A unique identifier for the vendor."
+				},
+				"Offer_Recruiter":{
+					"title":"Offer_Recruiter",
+					"type":"string",
+					"description":"The name of the recruiter who made the offer."
+				},
+				"Longevity_Bonus_USA":{
+					"title":"Longevity_Bonus_USA",
+					"type":"string",
+					"description":"The longevity bonus offered to the candidate in the USA."
+				},
+				"Leave_Travel_Assistance":{
+					"title":"Leave_Travel_Assistance",
+					"type":"string",
+					"description":"The leave travel assistance offered to the candidate."
+				},
+				"Supplementary_Allowance":{
+					"title":"Supplementary_Allowance",
+					"type":"string",
+					"description":"The supplementary allowance offered to the candidate."
+				},
+				"Job_Title":{
+					"title":"Job_Title",
+					"type":"string",
+					"description":"The title of the job."
+				},
+				"Client_Group":{
+					"title":"Client_Group",
+					"type":"string",
+					"description":"The group of clients associated with the job."
+				},
+				"Job_City":{
+					"title":"Job_City",
+					"type":"string",
+					"description":"The city where the job is located."
+				},
+				"Base":{
+					"title":"Base",
+					"type":"string",
+					"description":"The base component of the salary."
+				},
+				"Offered_CTC":{
+					"title":"Offered_CTC",
+					"type":"string",
+					"description":"The total cost to company offered to the candidate."
+				},
+				"PFR_Level_10_and_above":{
+					"title":"PFR_Level_10_and_above",
+					"type":"string",
+					"description":"The PFR level 10 and above offered to the candidate."
+				},
+				"Joining_Bonus":{
+					"title":"Joining_Bonus",
+					"type":"string",
+					"description":"The joining bonus offered to the candidate."
+				},
+				"Tentative_DOJ":{
+					"title":"Tentative_DOJ",
+					"type":"string",
+					"description":"The tentative date of joining for the candidate."
+				},
+				"Operating_Unit":{
+					"title":"Operating_Unit",
+					"type":"string",
+					"description":"The operating unit within the organization."
+				},
+				"EmpNo":{
+					"title":"EmpNo",
+					"type":"string",
+					"description":"Unique employee identification number"
+				},
+				"Casual_Loading":{
+					"title":"Casual_Loading",
+					"type":"string",
+					"description":"The casual loading offered to the candidate."
+				},
+				"Fixed_Allowances":{
+					"title":"Fixed_Allowances",
+					"type":"string",
+					"description":"The fixed allowances offered to the candidate."
+				},
+				"Base_Salary_Daily":{
+					"title":"Base_Salary_Daily",
+					"type":"string",
+					"description":"The base salary offered to the candidate on a daily basis."
+				},
+				"Special_Allowance":{
+					"title":"Special_Allowance",
+					"type":"string",
+					"description":"The special allowance offered to the candidate."
+				},
+				"Total_Remuneration":{
+					"title":"Total_Remuneration",
+					"type":"string",
+					"description":"The total remuneration offered to the candidate."
+				}
+			}
+		}
+	},
+	"standard":false,
+	"unifiedEntityModelId":"6693d5d08bb14404d36c9e8a",
+	"version":3
+}
