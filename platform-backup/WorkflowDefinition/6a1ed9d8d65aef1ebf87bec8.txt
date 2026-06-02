@@ -4,6 +4,15 @@
 	],
 	"createdTime":1780406744129,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1780414590699,
+		"deployedBy":199598,
+		"deployedDefinitionId":"6a1ef87ea098c85f99106182",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":5
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_J6uPZ",
@@ -71,9 +80,9 @@
 		}
 	],
 	"id":"6a1ed9d8d65aef1ebf87bec8",
-	"lastModifiedBy":199599,
+	"lastModifiedBy":199598,
 	"lcName":"(copy)[git] filter pr assets by real diff (copy)",
-	"modifiedTime":1780407066498,
+	"modifiedTime":1780414590700,
 	"name":"(copy)[git] Filter PR assets by real diff (copy)",
 	"nodes":[
 		{
@@ -497,6 +506,7 @@
 				"ua:list_type":"OBJECT"
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
