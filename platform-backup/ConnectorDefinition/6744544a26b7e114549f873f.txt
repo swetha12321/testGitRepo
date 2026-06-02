@@ -1,0 +1,16 @@
+{
+	"createdTime":1732531274852,
+	"deleted":false,
+	"description":"Dummy Connector",
+	"enabled":false,
+	"id":"6744544a26b7e114549f873f",
+	"lastModifiedBy":520,
+	"lcName":"testnew",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1732531274852,
+	"name":"testNew",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
