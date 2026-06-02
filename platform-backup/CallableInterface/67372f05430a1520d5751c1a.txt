@@ -1,0 +1,33 @@
+{
+	"createdTime":1731669765977,
+	"deleted":true,
+	"description":"rear",
+	"id":"67372f05430a1520d5751c1a",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":520,
+	"lcName":"rear",
+	"modifiedTime":1731669781318,
+	"name":"rear",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":520,
+	"standard":false,
+	"version":1
+}
