@@ -1,0 +1,16 @@
+{
+	"createdTime":1718709792644,
+	"deleted":true,
+	"description":"qq",
+	"enabled":false,
+	"id":"66716e208c48fb5a957dbb05",
+	"lastModifiedBy":520,
+	"lcName":"h1",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1718709808623,
+	"name":"h1",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
