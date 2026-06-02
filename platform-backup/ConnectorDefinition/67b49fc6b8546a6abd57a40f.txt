@@ -1,0 +1,30 @@
+{
+	"auths":[
+		{
+			"createdTime":1739890661547,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"sdvv",
+			"type":"BASIC",
+			"updatedTime":1739890661547
+		}
+	],
+	"baseUrl":"https://www.google.com",
+	"createdTime":1739890630645,
+	"deleted":false,
+	"enabled":true,
+	"id":"67b49fc6b8546a6abd57a40f",
+	"lastModifiedBy":49915,
+	"lcName":"test",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1739890661550,
+	"name":"test",
+	"ownerUserId":49915,
+	"standard":false,
+	"standardApp":false,
+	"version":2
+}
