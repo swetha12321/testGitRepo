@@ -1,0 +1,33 @@
+{
+	"createdTime":1721970586919,
+	"deleted":false,
+	"description":"Default",
+	"id":"66a32f9a7b9e6e616ffa9487",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":520,
+	"lcName":"hr employee onboarding",
+	"modifiedTime":1721970586919,
+	"name":"HR Employee Onboarding",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":520,
+	"standard":false,
+	"version":0
+}
