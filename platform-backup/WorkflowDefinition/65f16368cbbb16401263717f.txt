@@ -1,0 +1,49 @@
+{
+	"createdTime":1710318440249,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65f16368cbbb16401263717f",
+	"lastModifiedBy":3,
+	"lcName":"untitled",
+	"modifiedTime":1710325342114,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"bamboohr"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"cWLNR-1",
+			"id":"cWLNR",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":3,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
