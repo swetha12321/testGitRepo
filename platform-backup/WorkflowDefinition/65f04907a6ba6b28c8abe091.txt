@@ -1,0 +1,49 @@
+{
+	"createdTime":1710246151829,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65f04907a6ba6b28c8abe091",
+	"lastModifiedBy":3,
+	"lcName":"untitled",
+	"modifiedTime":1710393323121,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"gmail"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"OTwpw-1",
+			"id":"OTwpw",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":3,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
