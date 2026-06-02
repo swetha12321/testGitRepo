@@ -1,0 +1,17 @@
+{
+	"baseUrl":"https://slack.com/api",
+	"createdTime":1731410319682,
+	"deleted":false,
+	"description":"sample ",
+	"enabled":false,
+	"id":"6733398fadefc0799932c650",
+	"lastModifiedBy":520,
+	"lcName":"asana _new",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1731410319682,
+	"name":"asana _new",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
