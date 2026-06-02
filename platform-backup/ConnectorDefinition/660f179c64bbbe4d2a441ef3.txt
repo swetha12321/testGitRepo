@@ -1,0 +1,52 @@
+{
+	"auths":[
+		{
+			"createdTime":1712265126432,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"schema":{
+					"properties":{
+						"serviceAccount":{
+							"type":"string",
+							"title":"Service Account"
+						},
+						"privateKey":{
+							"type":"string",
+							"title":"PrivateKey"
+						},
+						"userEmail":{
+							"type":"string",
+							"title":"User Email"
+						}
+					}
+				}
+			},
+			"name":"JWT",
+			"type":"JWT",
+			"updatedTime":1712297596453
+		}
+	],
+	"createdTime":1712265116961,
+	"deleted":true,
+	"enabled":true,
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"660f179c64bbbe4d2a441ef3",
+	"lastModifiedBy":34,
+	"lcName":"jwttest",
+	"modifiedTime":1714136301666,
+	"name":"JWTTest",
+	"ownerUserId":174,
+	"standard":false,
+	"standardApp":false,
+	"version":11
+}
