@@ -1,0 +1,15 @@
+{
+	"createdTime":1731046067705,
+	"deleted":false,
+	"enabled":false,
+	"id":"672daab33f5a15635092578b",
+	"lastModifiedBy":520,
+	"lcName":"google",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1731046067705,
+	"name":"Google",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
