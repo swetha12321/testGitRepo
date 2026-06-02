@@ -1,0 +1,15 @@
+{
+	"createdTime":1740990307132,
+	"deleted":true,
+	"enabled":false,
+	"id":"67c56763b545407b2faad084",
+	"lastModifiedBy":3952,
+	"lcName":"create leave request",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1740990368155,
+	"name":"Create Leave request",
+	"ownerUserId":3952,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
