@@ -4,6 +4,15 @@
 	],
 	"createdTime":1780417925800,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1780417997801,
+		"deployedBy":199599,
+		"deployedDefinitionId":"6a1f05cdbe0cac4e9dfbac54",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_UzL5t",
@@ -105,10 +114,23 @@
 			"type":"next"
 		}
 	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalIds":[
+					"199963"
+				],
+				"principalType":"USER"
+			}
+		]
+	},
 	"id":"6a1f0585ebe1c452c3c9df7e",
 	"lastModifiedBy":199599,
 	"lcName":"[git] (copy2)fetch modified files in a given pr (updated) (copy)",
-	"modifiedTime":1780417982233,
+	"modifiedTime":1780420506878,
 	"name":"[git] (copy2)Fetch modified files in a given PR (updated) (copy)",
 	"nodes":[
 		{
@@ -469,6 +491,7 @@
 				"ua:list_type":"OBJECT"
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -539,7 +562,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_bcCHY-1",
 			"id":"n_CWCYc",
@@ -767,6 +790,7 @@
 				"ua:list_type":"STRING"
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -1237,7 +1261,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_bcCHY-1",
 			"id":"n_btWhm",
@@ -1273,5 +1297,5 @@
 		}
 	},
 	"standard":false,
-	"version":1
+	"version":4
 }
