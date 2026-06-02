@@ -60,7 +60,7 @@
 	"id":"6a1ed9f2d65aef1ebf87bf42",
 	"lastModifiedBy":199599,
 	"lcName":"(copy)[git] fetch diff and check if real change is present (copy)",
-	"modifiedTime":1780407203062,
+	"modifiedTime":1780407213101,
 	"name":"(copy)[git] Fetch diff and check if real change is present (copy)",
 	"nodes":[
 		{
@@ -246,7 +246,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_zPAEF@_TURwu-1@l",
 			"id":"n_iEMf3",
@@ -436,15 +436,10 @@
 		
 	],
 	"settings":{
-		"enableNodeLevelLogging":false,
+		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
-		"enableVariableLogging":false,
-		"route":{
-			"default":false,
-			"headerValueTierMap":{},
-			"tierName":"global"
-		}
+		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":1
+	"version":2
 }
