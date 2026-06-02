@@ -1,0 +1,33 @@
+{
+	"createdTime":1721971097646,
+	"deleted":false,
+	"description":"Default",
+	"id":"66a331997b9e6e616ffa94c6",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":520,
+	"lcName":"user invoice tracker",
+	"modifiedTime":1721971097646,
+	"name":"User Invoice Tracker",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":520,
+	"standard":false,
+	"version":0
+}
