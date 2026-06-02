@@ -1,0 +1,17 @@
+{
+	"baseUrl":"https://test.com",
+	"createdTime":1725621824490,
+	"deleted":true,
+	"description":"test",
+	"enabled":false,
+	"id":"66dae6407cb88f60b6babcc0",
+	"lastModifiedBy":520,
+	"lcName":"test",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1725621839382,
+	"name":"test",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
