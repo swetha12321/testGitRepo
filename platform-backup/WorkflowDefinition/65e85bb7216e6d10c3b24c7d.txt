@@ -1,0 +1,55 @@
+{
+	"createdTime":1709728574842,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65e85bb7216e6d10c3b24c7d",
+	"lastModifiedBy":6,
+	"lcName":"test application",
+	"modifiedTime":1709728574842,
+	"name":"Test Application",
+	"nodes":[
+		{
+			"context":{
+				"appName":"salesforce",
+				"resourceVersion":0,
+				"connectionId":"65e85de86a598e39b06a03aa",
+				"resourceName":"salesforce_on_new_record"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"zvu0b-1",
+			"id":"zvu0b",
+			"index":0,
+			"inputs":{
+				"objectId":"AIApplicationConfig"
+			},
+			"skip":false,
+			"title":"Record created",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":6,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":7
+}
