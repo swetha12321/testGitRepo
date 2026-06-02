@@ -1,0 +1,45 @@
+{
+	"auths":[
+		{
+			"createdTime":1712257804499,
+			"description":"Let there be access token auth",
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"schema":{
+					"properties":{
+						"accessToken":{
+							"type":"string",
+							"title":"Access Token"
+						}
+					}
+				}
+			},
+			"name":"Access Token Auth",
+			"type":"TOKEN",
+			"updatedTime":1712258510020
+		}
+	],
+	"createdTime":1712257787029,
+	"deleted":true,
+	"enabled":true,
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"660efafbe3d84a061397e5ff",
+	"lastModifiedBy":174,
+	"lcName":"indiapostclone",
+	"modifiedTime":1712267488238,
+	"name":"IndiaPostClone",
+	"ownerUserId":174,
+	"standard":false,
+	"standardApp":false,
+	"version":11
+}
