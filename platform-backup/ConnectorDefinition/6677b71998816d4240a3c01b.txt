@@ -1,0 +1,21 @@
+{
+	"createdTime":1719121689662,
+	"deleted":false,
+	"description":"dsa",
+	"enabled":false,
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"6677b71998816d4240a3c01b",
+	"lastModifiedBy":-1,
+	"lcName":"dsa",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1721681185631,
+	"name":"dsa",
+	"ownerUserId":21,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
