@@ -1,0 +1,15 @@
+{
+	"createdTime":1730099754739,
+	"deleted":false,
+	"enabled":false,
+	"id":"671f3a2a0fb53359b8a6caf8",
+	"lastModifiedBy":520,
+	"lcName":"ifhkdsvf",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1730099754739,
+	"name":"ifhkdsvf",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
