@@ -1,0 +1,15 @@
+{
+	"createdTime":1723554557885,
+	"deleted":false,
+	"enabled":false,
+	"id":"66bb5afdbdf1872e48182906",
+	"lastModifiedBy":520,
+	"lcName":"mail",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1723554557885,
+	"name":"Mail",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
