@@ -1,0 +1,78 @@
+{
+	"createdTime":1710139785524,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"tVtG1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Rt5Tk",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65eea989217d7a54afd85540",
+	"lastModifiedBy":3,
+	"lcName":"dev 1.0",
+	"modifiedTime":1710145138641,
+	"name":"dev 1.0",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":15,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"tVtG1-1",
+			"id":"tVtG1",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"title":"Call Automation via API",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"bluedart",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"tVtG1-1",
+			"id":"Rt5Tk",
+			"index":0,
+			"skip":false,
+			"subTitle":"Blue Dart",
+			"title":"Select an action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":3,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":6
+}
