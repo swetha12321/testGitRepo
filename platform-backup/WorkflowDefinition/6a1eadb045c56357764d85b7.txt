@@ -103,12 +103,33 @@
 			"skip":false,
 			"toNodeId":"n_xW5K9",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_xW5K9",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_F6cZF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_F6cZF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ecF0O",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ecF0O",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_iXD01",
+			"type":"next"
 		}
 	],
 	"id":"6a1eadb045c56357764d85b7",
 	"lastModifiedBy":46209,
 	"lcName":"testbaladanaor - new",
-	"modifiedTime":1780407145517,
+	"modifiedTime":1780407596400,
 	"name":"testBaladanaOR - NEW",
 	"nodes":[
 		{
@@ -1142,6 +1163,155 @@
 			"subTitle":"OR Solver by UnifyApps",
 			"title":"Solve",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":8654,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_U2IZs-1",
+			"id":"n_F6cZF",
+			"index":15,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_solverId",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ n_75m4f.outputs.solverId }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"shouldSearchInAnalyticsStore":false,
+				"object_type":"e_solver_response",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"translationsOption":"DEFAULT",
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":20
+				},
+				"numberOfRecordsToFetch":"SINGLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.jobs.items",
+					"root.parameters.machines.items"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":2308,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_U2IZs-1",
+			"id":"n_ecF0O",
+			"index":16,
+			"inputs":{
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"solution":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Solution"
+						},
+						"intervalSolutions":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Interval Solutions"
+						},
+						"jobs":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Jobs"
+						},
+						"machines":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Machines"
+						},
+						"objectiveValue":{
+							"type":"integer",
+							"title":"Objective Value"
+						},
+						"solverStatus":{
+							"type":"integer",
+							"title":"Solver Status"
+						}
+					}
+				},
+				"code":"// Convert CP-SAT interval solutions + scalar values into a human-readable\n// production plan, grouped by machine.\ndef sol  = solution          ?: [:]\ndef ivs  = intervalSolutions ?: [:]\n// Stage to machine index\ndef stageToMachineIdx = [0, 1, 2]\ndef machineById = [:]\nmachines.each { m -> machineById[m.idx as int] = m.id }\ndef planIntervals = []\n// Production intervals\njobs.each { job ->\n  int j = job.j as int\n  String productId = job.product as String\n  Number activeVal = (sol['active_' + j] ?: 0) as Number\n  boolean active = activeVal.doubleValue() >= 0.5\n  Number qVal = (sol['q_' + j] ?: 0) as Number\n  for (int s = 0; s < 3; s++) {\n    String key = 'prodInt_' + j + '_' + s\n    def iv = ivs[key]\n    if (iv == null) continue\n    long start  = (iv.start as Number).longValue()\n    long size   = (iv.size  as Number).longValue()\n    long endVal = (iv.end   as Number).longValue()\n    if (!active || size <= 0) continue\n    planIntervals << [\n      machine    : machineById[stageToMachineIdx[s]],\n      activity   : 'RUN',\n      job        : ('j' + j),\n      product    : productId,\n      stage      : ('stage_' + s),\n      start_min  : start,\n      end_min    : endVal,\n      size_min   : size,\n      volume_L   : qVal.intValue()\n    ]\n  }\n}\n// CIP intervals\nmachines.each { m ->\n  int mi = m.idx as int\n  for (int k = 0; k < 2; k++) {\n    String key = 'cipInt_' + mi + '_' + k\n    def iv = ivs[key]\n    if (iv == null) continue\n    boolean present = iv.present as boolean\n    if (!present) continue\n    long start  = (iv.start as Number).longValue()\n    long endVal = (iv.end   as Number).longValue()\n    planIntervals << [\n      machine   : m.id,\n      activity  : 'CIP',\n      job       : null,\n      product   : null,\n      stage     : null,\n      start_min : start,\n      end_min   : endVal,\n      size_min  : 30,\n      volume_L  : 0\n    ]\n  }\n}\n// Group by machine and sort\ndef timelineByMachine = [:]\nmachines.each { m -> timelineByMachine[m.id] = [] }\nplanIntervals.each { row -> timelineByMachine[row.machine] << row }\ntimelineByMachine.each { mid, list -> list.sort { it.start_min as long } }\nlong makespan = (sol['makespan'] ?: 0L) as long\nreturn [\n  plan_intervals:      planIntervals.sort { [it.machine, it.start_min as long] },\n  timeline_by_machine: timelineByMachine,\n  makespan_minutes:    makespan,\n  objective_value:     objectiveValue,\n  solver_status:       solverStatus\n  ]\n",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"solution":"{{ n_F6cZF.outputs.properties.solution }}",
+					"intervalSolutions":"{{ n_F6cZF.outputs.properties.intervalSolution }}",
+					"objectiveValue":"{{ n_xW5K9.outputs.objectiveValue }}",
+					"solverStatus":"{{ n_xW5K9.outputs.status }}",
+					"jobs":{
+						"source":"{{ n_ZMvxi.outputs.result.job_index }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_ZMvxi.outputs.result.job_index[0] }}"
+					},
+					"machines":{
+						"source":"{{ n_ZMvxi.outputs.result.machines }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_ZMvxi.outputs.result.machines[0] }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_U2IZs-1",
+			"id":"n_iXD01",
+			"index":17,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":46209,
@@ -1158,5 +1328,5 @@
 		}
 	},
 	"standard":false,
-	"version":16
+	"version":17
 }
