@@ -1,0 +1,69 @@
+{
+	"createdTime":1726823010991,
+	"deleted":false,
+	"description":"AI Request Transformer",
+	"id":"__ua__ai_request_transformer_interface",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"model":{
+					"type":"string",
+					"title":"Model"
+				},
+				"prompt":{
+					"type":"string",
+					"title":"Prompt"
+				},
+				"requestBody":{
+					"type":"object",
+					"properties":{},
+					"additionalProperties":false,
+					"title":"RequestBody"
+				},
+				"policyConfig":{
+					"type":"object",
+					"properties":{},
+					"additionalProperties":false,
+					"title":"Policy Config"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":520,
+	"lcName":"ai request transformer",
+	"modifiedTime":1726828411671,
+	"name":"AI Request Transformer",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"body":{
+					"type":"object",
+					"properties":{},
+					"additionalProperties":false,
+					"title":"Body"
+				},
+				"valid":{
+					"type":"boolean",
+					"title":"valid"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":520,
+	"standard":false,
+	"version":5
+}
