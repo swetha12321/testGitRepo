@@ -1,0 +1,16 @@
+{
+	"baseUrl":"https://api-platform-global.ext-alb.uat.unifyapps.com",
+	"createdTime":1740996464833,
+	"deleted":false,
+	"enabled":false,
+	"id":"67c57f70b545407b2faadca1",
+	"lastModifiedBy":569,
+	"lcName":"test-connector-kris2",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1740996464833,
+	"name":"test-connector-kris2",
+	"ownerUserId":569,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
