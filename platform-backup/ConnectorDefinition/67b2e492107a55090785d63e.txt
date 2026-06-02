@@ -1,0 +1,15 @@
+{
+	"createdTime":1739777170783,
+	"deleted":true,
+	"enabled":false,
+	"id":"67b2e492107a55090785d63e",
+	"lastModifiedBy":504,
+	"lcName":"hs-test",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1739779364969,
+	"name":"hs-test",
+	"ownerUserId":504,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
