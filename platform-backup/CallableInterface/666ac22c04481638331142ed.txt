@@ -1,0 +1,49 @@
+{
+	"createdTime":1732350967710,
+	"deleted":false,
+	"description":"call a automation with interface as trigger",
+	"id":"666ac22c04481638331142ed",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"type":"object",
+			"properties":{
+				"Product_ID":{
+					"type":"string",
+					"title":"Product ID"
+				},
+				"Product_Name":{
+					"type":"string",
+					"title":"Product Name"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":520,
+	"lcName":"callable interface",
+	"modifiedTime":1732350970367,
+	"name":"callable Interface",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"type":"object",
+			"properties":{
+				"Product_Name":{
+					"type":"string",
+					"title":"Product Name"
+				},
+				"Product_ID":{
+					"type":"string",
+					"title":"Product ID"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":520,
+	"standard":false,
+	"version":3
+}
