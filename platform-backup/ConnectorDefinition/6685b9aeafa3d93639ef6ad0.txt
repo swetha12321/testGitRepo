@@ -1,0 +1,21 @@
+{
+	"createdTime":1720039854500,
+	"deleted":false,
+	"description":"test",
+	"enabled":false,
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"6685b9aeafa3d93639ef6ad0",
+	"lastModifiedBy":-1,
+	"lcName":"test",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1721681185853,
+	"name":"test",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
