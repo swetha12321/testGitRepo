@@ -4,14 +4,14 @@
 	],
 	"createdTime":1777886116411,
 	"deleted":false,
-	"deployedVersion":103,
+	"deployedVersion":104,
 	"deploymentState":{
-		"deployedAt":1780400113870,
+		"deployedAt":1780410979195,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a1ebff18d07d36c8a3ca4bc",
+		"deployedDefinitionId":"6a1eea62d65aef1ebf87dae7",
 		"status":"DEPLOYED",
-		"version":103,
-		"workflowVersion":485
+		"version":104,
+		"workflowVersion":501
 	},
 	"edges":[
 		{
@@ -322,7 +322,7 @@
 	"id":"69f863a40eedcf52f9640aa6",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation",
-	"modifiedTime":1780410972974,
+	"modifiedTime":1780410979196,
 	"name":"credit-calculation",
 	"nodes":[
 		{
@@ -1457,6 +1457,7 @@
 				"totalCredsApp":0
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -2218,6 +2219,7 @@
 				"page":0
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
