@@ -1,0 +1,29 @@
+{
+	"createdTime":1720710713122,
+	"deleted":false,
+	"description":"kasks",
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"668ff63919575256476aad94",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"aklsmlkas",
+	"modifiedTime":1721681273983,
+	"name":"aklsmlkas",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"ownerUserId":520,
+	"projectId":28,
+	"standard":false,
+	"version":1
+}
