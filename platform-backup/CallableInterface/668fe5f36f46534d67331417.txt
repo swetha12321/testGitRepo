@@ -1,0 +1,28 @@
+{
+	"createdTime":1720706547254,
+	"deleted":false,
+	"description":"asasass",
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"668fe5f36f46534d67331417",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"asasass",
+	"modifiedTime":1721681274016,
+	"name":"asasass",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"ownerUserId":520,
+	"standard":false,
+	"version":1
+}
