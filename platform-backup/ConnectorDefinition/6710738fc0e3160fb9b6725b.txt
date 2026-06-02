@@ -1,0 +1,35 @@
+{
+	"auths":[
+		{
+			"createdTime":1729131415499,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					}
+				}
+			},
+			"name":"Three",
+			"type":"BASIC",
+			"updatedTime":1729131435072
+		}
+	],
+	"createdTime":1729131852703,
+	"deleted":false,
+	"enabled":false,
+	"id":"6710738fc0e3160fb9b6725b",
+	"lastModifiedBy":522,
+	"lcName":"dnt_delete_connector_three",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1735360644812,
+	"name":"DNT_Delete_Connector_three",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":625
+}
