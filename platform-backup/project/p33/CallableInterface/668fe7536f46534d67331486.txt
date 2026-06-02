@@ -1,0 +1,29 @@
+{
+	"createdTime":1720706899570,
+	"deleted":false,
+	"description":"akma3",
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"668fe7536f46534d67331486",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"akma3",
+	"modifiedTime":1721681270988,
+	"name":"akma3",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"ownerUserId":520,
+	"projectId":33,
+	"standard":false,
+	"version":2
+}
