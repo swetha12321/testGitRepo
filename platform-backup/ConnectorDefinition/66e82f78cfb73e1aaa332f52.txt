@@ -1,0 +1,30 @@
+{
+	"auths":[
+		{
+			"createdTime":1731473349965,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"rest",
+			"type":"JWT",
+			"updatedTime":1731473349965
+		}
+	],
+	"baseUrl":"https://iris.qa.dhei.telekom.de/auth/realms/cit2/protocol/openid-connect/token",
+	"createdTime":1730143443419,
+	"deleted":false,
+	"enabled":true,
+	"id":"66e82f78cfb73e1aaa332f52",
+	"lastModifiedBy":1237,
+	"lcName":"token_fetch_cit2",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1731473349970,
+	"name":"Token_Fetch_CIT2",
+	"ownerUserId":34,
+	"standard":false,
+	"standardApp":false,
+	"version":25
+}
