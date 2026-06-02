@@ -4,6 +4,15 @@
 	],
 	"createdTime":1780406770475,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1780414596731,
+		"deployedBy":199598,
+		"deployedDefinitionId":"6a1ef8844d11e04a5d4e2bc1",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
 	"edges":[
 		{
 			"fromNodeId":"_jdqYk",
@@ -58,9 +67,9 @@
 		}
 	],
 	"id":"6a1ed9f2d65aef1ebf87bf42",
-	"lastModifiedBy":199599,
+	"lastModifiedBy":199598,
 	"lcName":"(copy)[git] fetch diff and check if real change is present (copy)",
-	"modifiedTime":1780407213101,
+	"modifiedTime":1780414596732,
 	"name":"(copy)[git] Fetch diff and check if real change is present (copy)",
 	"nodes":[
 		{
