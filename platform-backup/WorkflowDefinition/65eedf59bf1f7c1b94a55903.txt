@@ -1,0 +1,67 @@
+{
+	"createdTime":1710153561188,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65eedf59bf1f7c1b94a55903",
+	"lastModifiedBy":27,
+	"lcName":"saumya building new feat 6",
+	"modifiedTime":1710393360741,
+	"name":"saumya building new feat 6",
+	"nodes":[
+		{
+			"context":{
+				"appName":"shopify",
+				"resourceVersion":14,
+				"connectionId":"65bbad91d2119b6337bc9926",
+				"resourceName":"shopify_on_order_update"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"mzjL4-1",
+			"id":"mzjL4",
+			"index":0,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"{{ mzjL4.outputs.admin_graphql_api_id }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"2"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"subTitle":"Shopified",
+			"title":"Order Updated",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":27,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":10
+}
