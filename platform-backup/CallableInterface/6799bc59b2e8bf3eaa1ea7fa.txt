@@ -1,0 +1,33 @@
+{
+	"createdTime":1738128473117,
+	"deleted":false,
+	"description":"test",
+	"id":"6799bc59b2e8bf3eaa1ea7fa",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":45513,
+	"lcName":"dhruv test",
+	"modifiedTime":1738156575785,
+	"name":"dhruv test",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":45512,
+	"standard":false,
+	"version":1
+}
