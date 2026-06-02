@@ -1,0 +1,15 @@
+{
+	"createdTime":1727799431673,
+	"deleted":true,
+	"enabled":false,
+	"id":"66fc2087794c681aaeadaf6e",
+	"lastModifiedBy":635,
+	"lcName":"ai",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1727799488003,
+	"name":"ai",
+	"ownerUserId":635,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
