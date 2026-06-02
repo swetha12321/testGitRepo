@@ -1,0 +1,29 @@
+{
+	"auths":[
+		{
+			"createdTime":1736145198729,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"test",
+			"type":"CUSTOM",
+			"updatedTime":1736145198729
+		}
+	],
+	"createdTime":1736145016177,
+	"deleted":true,
+	"enabled":false,
+	"id":"677b787819a328399968dcb1",
+	"lastModifiedBy":520,
+	"lcName":"end-to-end-test",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1736145244253,
+	"name":"end-to-end-test",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":2
+}
