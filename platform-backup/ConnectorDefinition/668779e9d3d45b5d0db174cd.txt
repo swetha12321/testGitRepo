@@ -1,0 +1,44 @@
+{
+	"auths":[
+		{
+			"createdTime":1720154619482,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					},
+					"properties":{
+						"bot_token":{
+							"type":"string",
+							"title":"Bot Token"
+						}
+					},
+					"required":[
+						"bot_token"
+					]
+				}
+			},
+			"name":"abcdefgh",
+			"type":"TOKEN",
+			"updatedTime":1720154686193
+		}
+	],
+	"createdTime":1720154601933,
+	"deleted":true,
+	"enabled":true,
+	"id":"668779e9d3d45b5d0db174cd",
+	"lastModifiedBy":426,
+	"lcName":"abcdefgh",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1720155392893,
+	"name":"abcdefgh",
+	"ownerUserId":426,
+	"standard":false,
+	"standardApp":false,
+	"version":8
+}
