@@ -1,0 +1,15 @@
+{
+	"createdTime":1729154685574,
+	"deleted":false,
+	"enabled":false,
+	"id":"6710ce7de595044777beb5ed",
+	"lastModifiedBy":520,
+	"lcName":"custt",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1729154685574,
+	"name":"custt",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
