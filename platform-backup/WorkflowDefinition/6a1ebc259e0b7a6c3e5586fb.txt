@@ -108,7 +108,7 @@
 	"id":"6a1ebc259e0b7a6c3e5586fb",
 	"lastModifiedBy":199599,
 	"lcName":"(copy2)[git] fetch modified files in a given pr (updated) (copy)",
-	"modifiedTime":1780399141117,
+	"modifiedTime":1780399258775,
 	"name":"(copy2)[git] Fetch modified files in a given PR (updated) (copy)",
 	"nodes":[
 		{
@@ -469,7 +469,6 @@
 				"ua:list_type":"OBJECT"
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -768,7 +767,6 @@
 				"ua:list_type":"STRING"
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -1239,14 +1237,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_bcCHY-1",
 			"id":"n_btWhm",
 			"index":14,
 			"inputs":{
 				"result":{
-					"headSha":"=IF(ISBLANK({{ n_97ODX.outputs.merge_commit_sha }}), {{ n_97ODX.outputs.head.sha }}, {{ n_97ODX.outputs.merge_commit_sha }})",
+					"headSha":" {{ n_97ODX.outputs.head.sha }}",
 					"baseSha":"{{ n_97ODX.outputs.base.sha }}",
 					"assetDetails":{
 						"source":"{{ n_VADwF.outputs.result.assetDetails }}",
@@ -1275,5 +1273,5 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"version":1
 }
