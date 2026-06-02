@@ -1,0 +1,52 @@
+{
+	"createdTime":1709727948242,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65e8548afadd436243e07bf7",
+	"lastModifiedBy":19,
+	"lcName":"untitled",
+	"modifiedTime":1709727948242,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"salesforce",
+				"resourceVersion":0,
+				"resourceName":"salesforce_on_new_record"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"y7WVp-1",
+			"id":"y7WVp",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"title":"Record created",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":19,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
