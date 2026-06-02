@@ -1,0 +1,33 @@
+{
+	"createdTime":1736635097293,
+	"deleted":false,
+	"description":"otAyeP",
+	"id":"6782f2d944ce135db1da472f",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":854,
+	"lcName":"eval(compile('for x in range(1):\\n import time\\n time.sleep(20)','a','single'))",
+	"modifiedTime":1736635097293,
+	"name":"eval(compile('for x in range(1):\\n import time\\n time.sleep(20)','a','single'))",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":854,
+	"standard":false,
+	"version":0
+}
