@@ -1,0 +1,15 @@
+{
+	"createdTime":1729834922305,
+	"deleted":false,
+	"enabled":false,
+	"id":"671b2faabf5bb9392791e64b",
+	"lastModifiedBy":1866,
+	"lcName":"resr",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1729834922305,
+	"name":"resr",
+	"ownerUserId":1866,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
