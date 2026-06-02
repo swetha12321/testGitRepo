@@ -1,0 +1,29 @@
+{
+	"auths":[
+		{
+			"createdTime":1722523700972,
+			"description":"assasasa",
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{}
+			},
+			"name":"sasasa",
+			"type":"TOKEN",
+			"updatedTime":1722524430056
+		}
+	],
+	"createdTime":1722336299065,
+	"deleted":false,
+	"enabled":true,
+	"id":"66a8c42b2cffb267d99a7c58",
+	"lastModifiedBy":520,
+	"lcName":"testing zendesk",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1722524430057,
+	"name":"testing zendesk",
+	"ownerUserId":533,
+	"standard":false,
+	"standardApp":false,
+	"version":6
+}
