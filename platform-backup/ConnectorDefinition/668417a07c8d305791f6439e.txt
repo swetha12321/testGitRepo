@@ -1,0 +1,21 @@
+{
+	"baseUrl":"https://169.254.169.254/latest/",
+	"createdTime":1719932832400,
+	"deleted":false,
+	"enabled":true,
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"668417a07c8d305791f6439e",
+	"lastModifiedBy":722,
+	"lcName":"reddy",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1721740974640,
+	"name":"reddy",
+	"ownerUserId":722,
+	"standard":false,
+	"standardApp":false,
+	"version":30
+}
