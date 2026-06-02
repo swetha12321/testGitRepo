@@ -1,0 +1,36 @@
+{
+	"auths":[
+		{
+			"createdTime":1775675360740,
+			"grantType":"client_credentials",
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					}
+				}
+			},
+			"name":"client_Creds",
+			"type":"OAUTH",
+			"updatedTime":1776148695795
+		}
+	],
+	"createdTime":1775675338446,
+	"deleted":false,
+	"enabled":true,
+	"id":"69d6a7ca255044208b1b4ac9",
+	"lastModifiedBy":191639,
+	"lcName":"auth_test3",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1776148695801,
+	"name":"auth_test3",
+	"ownerUserId":196465,
+	"standard":false,
+	"standardApp":false,
+	"version":7
+}
