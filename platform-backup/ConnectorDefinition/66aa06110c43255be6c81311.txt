@@ -1,0 +1,16 @@
+{
+	"createdTime":1722418705971,
+	"deleted":false,
+	"description":"wefg",
+	"enabled":false,
+	"id":"66aa06110c43255be6c81311",
+	"lastModifiedBy":520,
+	"lcName":"profile",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1722418705971,
+	"name":"Profile",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
