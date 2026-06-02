@@ -1,0 +1,81 @@
+{
+	"createdTime":1710102273723,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65ee1701dc39373e3c120fdb",
+	"lastModifiedBy":27,
+	"lcName":"saumya test",
+	"modifiedTime":1710145479639,
+	"name":"saumya test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":15,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"BmdNA-1",
+			"id":"BmdNA",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json",
+					"pathParams":{
+						"properties":{
+							"tenant_id":{
+								"type":"string",
+								"title":"tenant_id"
+							},
+							"fixed_ip":{
+								"type":"string",
+								"title":"fixed_ip"
+							}
+						},
+						"type":"object"
+					},
+					"body":{
+						"type":"object",
+						"properties":{}
+					}
+				},
+				"response":[
+					{
+						"status":"200",
+						"contentType":"application/json",
+						"name":"200o",
+						"description":"200 response"
+					}
+				]
+			},
+			"skip":false,
+			"title":"Call Automation via API",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":27,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":12
+}
