@@ -1,0 +1,25 @@
+{
+	"createdTime":1713365837495,
+	"deleted":true,
+	"enabled":true,
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"661fe34dfa620905fa11bb0c",
+	"lastModifiedBy":5,
+	"lcName":"api t-mobile ",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1714301851853,
+	"name":"API t-mobile ",
+	"ownerUserId":32,
+	"standard":false,
+	"standardApp":false,
+	"version":3
+}
