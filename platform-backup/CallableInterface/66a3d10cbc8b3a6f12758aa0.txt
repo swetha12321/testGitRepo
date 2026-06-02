@@ -1,0 +1,23 @@
+{
+	"createdTime":1722065244312,
+	"deleted":false,
+	"description":"yBKvQyodNV",
+	"id":"66a3d10cbc8b3a6f12758aa0",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"lastModifiedBy":520,
+	"lcName":"yiwrqtewcw",
+	"modifiedTime":1722065244312,
+	"name":"yiWRqteWcW",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"ownerUserId":520,
+	"standard":false,
+	"version":1
+}
