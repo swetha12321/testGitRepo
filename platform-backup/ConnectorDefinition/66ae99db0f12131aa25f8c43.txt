@@ -1,0 +1,29 @@
+{
+	"auths":[
+		{
+			"createdTime":1722928990280,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"kasjdn",
+			"type":"TOKEN",
+			"updatedTime":1722928990280
+		}
+	],
+	"createdTime":1722718683511,
+	"deleted":false,
+	"enabled":false,
+	"id":"66ae99db0f12131aa25f8c43",
+	"lastModifiedBy":520,
+	"lcName":"asd",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1722928990289,
+	"name":"asd",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":5
+}
