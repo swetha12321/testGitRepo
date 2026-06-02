@@ -1,0 +1,35 @@
+{
+	"auths":[
+		{
+			"createdTime":1736063969575,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					}
+				}
+			},
+			"name":"custom oauth",
+			"type":"OAUTH",
+			"updatedTime":1736064069641
+		}
+	],
+	"createdTime":1736063960307,
+	"deleted":false,
+	"enabled":false,
+	"id":"677a3bd8f34bd1369e1abeb5",
+	"lastModifiedBy":520,
+	"lcName":"samplw",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1736064069642,
+	"name":"samplw",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":2
+}
