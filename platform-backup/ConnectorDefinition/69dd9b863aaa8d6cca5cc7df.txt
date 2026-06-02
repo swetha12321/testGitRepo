@@ -1,0 +1,15 @@
+{
+	"createdTime":1776130950724,
+	"deleted":true,
+	"enabled":false,
+	"id":"69dd9b863aaa8d6cca5cc7df",
+	"lastModifiedBy":175325,
+	"lcName":"changesetqa2shopifyimppost1776130947795",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1776135200280,
+	"name":"changeSetQA2shopifyimppost1776130947795",
+	"ownerUserId":175325,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
