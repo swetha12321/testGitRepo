@@ -1,0 +1,24 @@
+{
+	"createdTime":1712831397682,
+	"deleted":true,
+	"enabled":true,
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6617bba5586cfc2c4c42af78",
+	"lastModifiedBy":34,
+	"lcName":"let there be custom connectors",
+	"modifiedTime":1714473723239,
+	"name":"let there be custom connectors",
+	"ownerUserId":174,
+	"standard":false,
+	"standardApp":false,
+	"version":2
+}
