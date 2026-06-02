@@ -1,0 +1,30 @@
+{
+	"auths":[
+		{
+			"createdTime":1775715776836,
+			"grantType":"password",
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{}
+			},
+			"name":"sns ",
+			"type":"OAUTH",
+			"updatedTime":1775715865368
+		}
+	],
+	"createdTime":1775715766105,
+	"deleted":false,
+	"enabled":true,
+	"id":"69d745b616d6771702fdb44d",
+	"lastModifiedBy":39714,
+	"lcName":"testing dnd",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1776168793945,
+	"name":"testing dnd",
+	"ownerUserId":39712,
+	"standard":false,
+	"standardApp":false,
+	"version":28
+}
