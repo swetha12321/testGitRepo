@@ -1,0 +1,33 @@
+{
+	"createdTime":1721971019544,
+	"deleted":false,
+	"description":"Default",
+	"id":"66a3314b7b9e6e616ffa94c4",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":520,
+	"lcName":"job application screening analytics",
+	"modifiedTime":1721971019544,
+	"name":"Job Application Screening Analytics",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":520,
+	"standard":false,
+	"version":0
+}
