@@ -1,0 +1,450 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780406770475,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_jdqYk",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_psGig",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_psGig",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_iEMf3",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_iEMf3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_LP15i",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_LP15i",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Xej7r",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Xej7r",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_5nu4i",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_5nu4i",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_qqDUQ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Xej7r",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_qqDUQ",
+			"type":"next"
+		}
+	],
+	"id":"6a1ed9f2d65aef1ebf87bf42",
+	"lastModifiedBy":199599,
+	"lcName":"(copy)[git] fetch diff and check if real change is present (copy)",
+	"modifiedTime":1780407203062,
+	"name":"(copy)[git] Fetch diff and check if real change is present (copy)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_zPAEF@_TURwu-1@l",
+			"id":"_jdqYk",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"assetId":{
+							"type":"string",
+							"title":"Asset Id"
+						},
+						"isRealChange":{
+							"type":"boolean",
+							"title":"Is Real Change"
+						},
+						"graphDiffCount":{
+							"type":"integer",
+							"title":"Graph Diff Count"
+						},
+						"settingsDiffCount":{
+							"type":"integer",
+							"title":"Settings Diff Count"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"baseSha":{
+							"type":"string",
+							"title":"Base Sha"
+						},
+						"headSha":{
+							"type":"string",
+							"title":"Head Sha"
+						},
+						"assetId":{
+							"type":"string",
+							"title":"Asset Id"
+						},
+						"assetClass":{
+							"type":"string",
+							"title":"Asset Class"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":2027,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_zPAEF@_TURwu-1@l",
+			"id":"n_psGig",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"workflowId":{
+							"type":"string",
+							"title":"Workflow Id"
+						},
+						"entityTypeId":{
+							"type":"string",
+							"title":"Entity Type Id"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"assetClass":{
+							"type":"string",
+							"title":"Asset Class"
+						},
+						"assetId":{
+							"type":"string",
+							"title":"Asset Id"
+						}
+					}
+				},
+				"code":"def cls = binding.hasVariable('assetClass') ? assetClass : ''\ndef id = binding.hasVariable('assetId') ? assetId : ''                                                        \nif (cls == 'WORKFLOW_DEFINITION') {\n    return [workflowId: id, entityTypeId: '']\n} \nelse if (cls == 'ENTITY_TYPE') {\n    return [workflowId: '', entityTypeId: id]                  \n}\n\nreturn [workflowId: '', entityTypeId: '']",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"assetClass":"{{ _jdqYk.outputs.assetClass }}",
+					"assetId":"{{ _jdqYk.outputs.assetId }}"
+				}
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"maxLeaseTimeUnit":"SECONDS",
+					"maxWaitDurationUnit":"SECONDS"
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Resolve git diff params",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3812,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_zPAEF@_TURwu-1@l",
+			"id":"n_iEMf3",
+			"index":3,
+			"inputs":{
+				"automationId":"6a1ed9bca098c85f990f79c5",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"baseSha":"{{ _jdqYk.outputs.baseSha }}",
+					"headSha":"{{ _jdqYk.outputs.headSha }}",
+					"workflowId":"{{ n_psGig.outputs.result.workflowId }}",
+					"entityTypeId":"{{ n_psGig.outputs.result.entityTypeId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":2023,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_zPAEF@_TURwu-1@l",
+			"id":"n_LP15i",
+			"index":4,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"graphDiffCount":{
+							"type":"integer",
+							"title":"Graph Diff Count"
+						},
+						"settingsDiffCount":{
+							"type":"integer",
+							"title":"Settings Diff Count"
+						},
+						"hasRealDiff":{
+							"type":"boolean",
+							"title":"Has Real Diff"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"oldFile":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Old File"
+						},
+						"newFile":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"New File"
+						},
+						"assetClass":{
+							"type":"string",
+							"title":"Asset Class"
+						}
+					}
+				},
+				"code":"import groovy.transform.Field\n                                                                                                                                                                                              \n  @Field static final List NODE_FIELDS = [                                                                                                                                                    \n      'context','errorSchema','fallbackMode','groupId','id',\n      'inputs','options','subTitle','title','type','trigger','skip'                                                                                                                           \n  ]                                                                                                                                                                                           \n                                                                                                                                                                                              \n  @Field static final List WORKFLOW_SETTINGS_PATHS = [                                                                                                                                        \n      'route.tierName','route.headerKey','route.headerValueTierMap',\n      'enableRunLogging','enableVariableLogging','enableNodeLevelLogging',                                                                                                                    \n      'nodeLogLevel','workflowTimeoutInMillis',                                                                                                                                               \n      'circuitBreakerConfiguration','telemetryConfig'                                                                                                                                         \n  ]                                                                                                                                                                                           \n                                                                                                                                                                                              \n  @Field static final List WORKFLOW_TOP_PATHS = ['runtimeConnectionAppNames']                                                                                                                 \n                              \n  def isFalsy(v) {                                                                                                                                                                            \n      if (v == null) return true\n      if (v instanceof Boolean) return !v                                                                                                                                                     \n      if (v instanceof String) return v.length() == 0\n      if (v instanceof Number) return v == 0                                                                                                                                                  \n      if (v instanceof Collection) return v.isEmpty()\n      if (v instanceof Map) return v.isEmpty()                                                                                                                                                \n      return false                                                                                                                                                                            \n  }\n                                                                                                                                                                                              \n  def partial(node) {         \n      if (!(node instanceof Map)) return [:]\n      def out = [:]                                                                                                                                                                           \n      NODE_FIELDS.each { k ->\n          def v = node[k]                                                                                                                                                                     \n          if (isFalsy(v)) return\n          if (k == 'context' && v instanceof Map) {                                                                                                                                           \n              def ctx = [:]                                                                                                                                                                   \n              v.each { ck, cv -> if (!isFalsy(cv)) ctx[ck] = cv }\n              if (!ctx.isEmpty()) out[k] = ctx                                                                                                                                                \n          } else {                                                                                                                                                                            \n              out[k] = v                                                                                                                                                                      \n          }                                                                                                                                                                                   \n      }                       \n      return out\n  }\n\n  def getPath(obj, path) {                                                                                                                                                                    \n      def cur = obj\n      for (p in path.tokenize('.')) {                                                                                                                                                         \n          if (!(cur instanceof Map)) return null\n          cur = cur[p]                                                                                                                                                                        \n      }\n      return cur                                                                                                                                                                              \n  }                           \n\n  // Recursive schema diff — counts paths where JSON Schema differs                                                                                                                           \n  def countSchemaDiffs(oldS, newS) {\n      if (!(oldS instanceof Map) && !(newS instanceof Map)) return 0                                                                                                                          \n      int count = 0           \n      def oldProps = (oldS?.properties ?: [:]) as Map                                                                                                                                         \n      def newProps = (newS?.properties ?: [:]) as Map\n                                                                                                                                                                                              \n      newProps.each { key, newProp ->\n          def oldProp = oldProps[key]                                                                                                                                                         \n          if (oldProp == null) {\n              count++  // added field                                                                                                                                                         \n          } else if (oldProp != newProp) {\n              // recurse for nested schemas, else count as modified                                                                                                                           \n              if ((oldProp instanceof Map && oldProp.properties) ||                                                                                                                           \n                  (newProp instanceof Map && newProp.properties)) {                                                                                                                           \n                  count += countSchemaDiffs(oldProp, newProp)                                                                                                                                 \n              } else {        \n                  count++  // modified leaf                                                                                                                                                   \n              }               \n          }\n      }                                                                                                                                                                                       \n      oldProps.each { key, oldProp ->\n          if (!newProps.containsKey(key)) count++  // deleted field                                                                                                                           \n      }                                                                                                                                                                                       \n      return count\n  }                                                                                                                                                                                           \n                              \n  def cls = binding.hasVariable('assetClass') ? assetClass : 'WORKFLOW_DEFINITION'                                                                                                            \n  def oldF = binding.hasVariable('oldFile') ? oldFile : [:]\n  def newF = binding.hasVariable('newFile') ? newFile : [:]                                                                                                                                   \n                              \n  int graphDiffCount = 0                                                                                                                                                                      \n  int settingsDiffCount = 0   \n                                                                                                                                                                                              \n  if (cls == 'WORKFLOW_DEFINITION') {                                                                                                                                                         \n      // Workflows have deployedAssets.LAST_DEPLOYED wrapper\n      def oldDeployed = oldF?.deployedAssets?.LAST_DEPLOYED ?: [:]                                                                                                                            \n      def newDeployed = newF?.deployedAssets?.LAST_DEPLOYED ?: [:]\n                                                                                                                                                                                              \n      def oldNodes = ((oldDeployed?.nodes ?: []) as List).collectEntries { [(it.id): it] }                                                                                                    \n      def newNodes = ((newDeployed?.nodes ?: []) as List).collectEntries { [(it.id): it] }                                                                                                    \n      int added = 0, deleted = 0, updated = 0                                                                                                                                                 \n      newNodes.each { id, n ->                                                                                                                                                                \n          if (!oldNodes.containsKey(id)) added++                                                                                                                                              \n          else if (partial(n) != partial(oldNodes[id])) updated++                                                                                                                             \n      }                                                                                                                                                                                       \n      oldNodes.each { id, n ->\n          if (!newNodes.containsKey(id)) deleted++                                                                                                                                            \n      }                       \n      graphDiffCount = added + deleted + updated\n                                                                                                                                                                                              \n      def oldSettings = oldDeployed?.settings ?: [:]\n      def newSettings = newDeployed?.settings ?: [:]                                                                                                                                          \n      int aS = 0, dS = 0, mS = 0                                                                                                                                                              \n      WORKFLOW_SETTINGS_PATHS.each { path ->\n          def o = getPath(oldSettings, path)                                                                                                                                                  \n          def n = getPath(newSettings, path)\n          boolean hO = o != null, hN = n != null                                                                                                                                              \n          if (!hO && hN) aS++                                                                                                                                                                 \n          else if (hO && !hN) dS++\n          else if (hO && hN && o != n) mS++                                                                                                                                                   \n      }                       \n      WORKFLOW_TOP_PATHS.each { path ->                                                                                                                                                       \n          def o = getPath(oldDeployed, path)\n          def n = getPath(newDeployed, path)                                                                                                                                                  \n          boolean hO = o != null, hN = n != null                                                                                                                                              \n          if (!hO && hN) aS++\n          else if (hO && !hN) dS++                                                                                                                                                            \n          else if (hO && hN && o != n) mS++\n      }                                                                                                                                                                                       \n      settingsDiffCount = aS + dS + mS\n                                                                                                                                                                                              \n  } else if (cls == 'ENTITY_TYPE') {\n      // Entity types are FLAT — no deployedAssets wrapper\n                                                                                                                                                                                              \n      // Schema diff at oldF.input.schema                                                                                                                                                     \n      def oldSchema = (oldF?.input instanceof Map) ? oldF.input.schema : [:]                                                                                                                  \n      def newSchema = (newF?.input instanceof Map) ? newF.input.schema : [:]                                                                                                                  \n      graphDiffCount = countSchemaDiffs(oldSchema, newSchema)\n                                                                                                                                                                                              \n      // Metadata diff — all keys at oldF.metadata\n      def oldMeta = (oldF?.metadata ?: [:]) as Map                                                                                                                                            \n      def newMeta = (newF?.metadata ?: [:]) as Map                                                                                                                                            \n  \n      int aM = 0, dM = 0, mM = 0                                                                                                                                                              \n      def allKeys = (oldMeta.keySet() + newMeta.keySet()) as Set\n      allKeys.each { key ->                                                                                                                                                                   \n          def o = oldMeta[key]\n          def n = newMeta[key]                                                                                                                                                                \n          boolean hO = o != null, hN = n != null                                                                                                                                              \n          if (!hO && hN) aM++\n          else if (hO && !hN) dM++                                                                                                                                                            \n          else if (hO && hN && o != n) mM++\n      }                                                                                                                                                                                       \n      settingsDiffCount = aM + dM + mM\n  }                                                                                                                                                                                           \n                              \n  return [\n      graphDiffCount   : graphDiffCount,\n      settingsDiffCount: settingsDiffCount,\n      hasRealDiff      : (graphDiffCount + settingsDiffCount) > 0                                                                                                                             \n  ]",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"oldFile":"{{ n_iEMf3.outputs.oldFile }}",
+					"newFile":"{{ n_iEMf3.outputs.newFile }}",
+					"assetClass":"{{ _jdqYk.outputs.assetClass }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":857,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_zPAEF@_TURwu-1@l",
+			"id":"n_Xej7r",
+			"index":5,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_LP15i.outputs.result.hasRealDiff }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"true"
+						}
+					},
+					{
+						"property":"{{ n_LP15i.outputs.result.graphDiffCount }}",
+						"filter":{
+							"operator":"GT",
+							"value":"0"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_Xej7r@n_zPAEF@_TURwu-1@l@y",
+			"id":"n_5nu4i",
+			"index":6,
+			"inputs":{
+				"result":{
+					"assetId":"{{ _jdqYk.outputs.assetId }}",
+					"isRealChange":true,
+					"graphDiffCount":"{{ n_LP15i.outputs.result.graphDiffCount }}",
+					"settingsDiffCount":"{{ n_LP15i.outputs.result.settingsDiffCount }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_zPAEF@_TURwu-1@l",
+			"id":"_qqDUQ",
+			"index":7,
+			"inputs":{
+				"result":{
+					"assetId":"{{ n_5nu4i.outputs.assetId }}",
+					"isRealChange":false,
+					"graphDiffCount":"{{ n_LP15i.outputs.result.graphDiffCount }}",
+					"settingsDiffCount":"{{ n_LP15i.outputs.result.settingsDiffCount }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":199599,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":false,
+		"enableRunLogging":true,
+		"enableVariableLogging":false,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":1
+}
