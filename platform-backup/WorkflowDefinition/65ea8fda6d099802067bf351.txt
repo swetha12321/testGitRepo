@@ -1,0 +1,55 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1709871066279,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65ea8fda6d099802067bf351",
+	"lastModifiedBy":5,
+	"lcName":"untitled",
+	"modifiedTime":1709874538101,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"87vHo-1",
+			"id":"87vHo",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":5,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":4
+}
