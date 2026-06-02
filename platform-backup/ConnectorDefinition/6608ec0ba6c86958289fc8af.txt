@@ -1,0 +1,23 @@
+{
+	"createdTime":1711860747182,
+	"deleted":true,
+	"enabled":false,
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6608ec0ba6c86958289fc8af",
+	"lcName":"redirect me?",
+	"modifiedTime":1711860785561,
+	"name":"Redirect me?",
+	"ownerUserId":32,
+	"standard":false,
+	"standardApp":false,
+	"version":1
+}
