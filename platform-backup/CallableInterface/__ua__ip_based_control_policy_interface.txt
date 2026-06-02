@@ -1,0 +1,62 @@
+{
+	"createdTime":1733575062682,
+	"deleted":true,
+	"description":"Implement this to control IP Based validation of incoming requests",
+	"id":"__ua__ip_based_control_policy_interface",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"policyConfig":{
+					"type":"object",
+					"properties":{},
+					"additionalProperties":false,
+					"title":"Policy Config"
+				},
+				"requestBody":{
+					"type":"object",
+					"properties":{},
+					"additionalProperties":false,
+					"title":"Request Body"
+				}
+			},
+			"required":[
+				"policyConfig",
+				"requestBody"
+			]
+		}
+	},
+	"lastModifiedBy":311,
+	"lcName":"ip allowlist policy interface",
+	"modifiedTime":1733575806826,
+	"name":"IP Allowlist Policy Interface",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"body":{
+					"type":"object",
+					"properties":{},
+					"additionalProperties":false,
+					"title":"Body"
+				}
+			},
+			"required":[
+				"body"
+			]
+		}
+	},
+	"ownerUserId":311,
+	"standard":false,
+	"version":1
+}
