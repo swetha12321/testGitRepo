@@ -1,0 +1,15 @@
+{
+	"createdTime":1729870789734,
+	"deleted":false,
+	"enabled":true,
+	"id":"671bbbc5c1349215ecd2fbf6",
+	"lastModifiedBy":520,
+	"lcName":"webhook",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1729876226731,
+	"name":"webhook",
+	"ownerUserId":1866,
+	"standard":false,
+	"standardApp":false,
+	"version":6
+}
