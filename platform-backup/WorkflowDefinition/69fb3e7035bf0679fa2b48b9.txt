@@ -4,14 +4,14 @@
 	],
 	"createdTime":1778073200128,
 	"deleted":false,
-	"deployedVersion":31,
+	"deployedVersion":53,
 	"deploymentState":{
-		"deployedAt":1780396155600,
+		"deployedAt":1780417662161,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a1eb07b45c56357764dc92d",
+		"deployedDefinitionId":"6a1f047eebe1c452c3c9db64",
 		"status":"DEPLOYED",
-		"version":31,
-		"workflowVersion":166
+		"version":53,
+		"workflowVersion":207
 	},
 	"edges":[
 		{
@@ -100,6 +100,13 @@
 			"type":"if"
 		},
 		{
+			"fromNodeId":"n_jX0tB",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_XI2J2",
+			"type":"next"
+		},
+		{
 			"fromNodeId":"n_INlXu",
 			"name":"no",
 			"priority":0,
@@ -108,7 +115,7 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_jX0tB",
+			"fromNodeId":"n_XI2J2",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_GV9K8",
@@ -154,7 +161,7 @@
 	"id":"69fb3e7035bf0679fa2b48b9",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-parent",
-	"modifiedTime":1780397863416,
+	"modifiedTime":1780418002530,
 	"name":"credit-calculation-parent",
 	"nodes":[
 		{
@@ -275,7 +282,6 @@
 				"page":0
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -474,7 +480,7 @@
 				"includeTotalHits":true,
 				"page":{
 					"offset":"{{ n_bTato.outputs.page }}",
-					"limit":40
+					"limit":10
 				},
 				"timeFilter":{
 					"timeField":"END_TIME",
@@ -726,7 +732,6 @@
 				"ua:list_type":"STRING"
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -773,13 +778,13 @@
 						"includePercentageChange":false
 					},
 					{
-						"name":"ID",
-						"aggregationFunction":"COUNT",
+						"name":"DEPLOYED_WORKFLOW_VERSION",
+						"aggregationFunction":"GROUP",
 						"includePercentageChange":false
 					},
 					{
-						"name":"DEPLOYED_WORKFLOW_VERSION",
-						"aggregationFunction":"GROUP",
+						"name":"ID",
+						"aggregationFunction":"COUNT",
 						"includePercentageChange":false
 					}
 				],
@@ -791,25 +796,6 @@
 								"operator":"IN",
 								"value":"{{ n_3zOkb.outputs.items }}"
 							}
-						},
-						{
-							"filters":[
-								{
-									"property":"STATUS",
-									"filter":{
-										"operator":"EQUAL",
-										"value":"COMPLETED"
-									}
-								},
-								{
-									"property":"STATUS",
-									"filter":{
-										"operator":"EQUAL",
-										"value":"FAILED"
-									}
-								}
-							],
-							"operator":"OR"
 						}
 					],
 					"operator":"AND"
@@ -817,7 +803,7 @@
 				"entityType":"WORKFLOW_EXECUTION",
 				"includeTotalHits":true,
 				"page":{
-					"limit":500
+					"limit":1000
 				},
 				"sorts":[
 					{
@@ -994,8 +980,8 @@
 		{
 			"context":{
 				"appName":"callables",
-				"resourceVersion":4073,
-				"resourceName":"callables_call_automation_async",
+				"resourceVersion":4136,
+				"resourceName":"callables_call_automation",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -1004,6 +990,109 @@
 			"groupId":"n_INlXu@n_5a67w@_KzyGt-1@l@y",
 			"id":"n_jX0tB",
 			"index":13,
+			"inputs":{
+				"automationId":"69f863a40eedcf52f9640aa6",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"version":"-1",
+				"parameters":{
+					"customer_id":"{{ n_JGp28.outputs.properties.customer_id }}",
+					"date":"{{ n_OXi8s.outputs.date }}",
+					"parameters":{
+						"source":"{{ n_wZ3Nh.outputs.result }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"automationId":"{{ n_wZ3Nh.outputs.result[0].workflowId }}",
+							"total_success":"{{ n_wZ3Nh.outputs.result[0].successCount }}",
+							"total_fail":"{{ n_wZ3Nh.outputs.result[0].failedCount }}",
+							"deployed_versions":{
+								"source":"{{ n_wZ3Nh.outputs.result[0].deploymentIds }}",
+								"ua:type":"mappedArray",
+								"items":"{{ n_wZ3Nh.outputs.result[0].deploymentIds[0] }}"
+							},
+							"backTrack":"{{ n_OXi8s.outputs.backtrack }}",
+							"applicationNodeExecutionPerCredit":"{{ n_JGp28.outputs.properties.modules.automation.nodeCategories.application.numberOfExecutionPerCredit }}",
+							"internalNodeExecutionPerCredit":"{{ n_JGp28.outputs.properties.modules.automation.nodeCategories.internal.numberOfExecutionPerCredit }}",
+							"helperNodeExecutionPerCredit":"{{ n_JGp28.outputs.properties.modules.automation.nodeCategories.helper.numberOfExecutionPerCredit }}"
+						}
+					}
+				}
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"maxLeaseTimeUnit":"SECONDS",
+					"maxWaitDurationUnit":"SECONDS"
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"duration":"1",
+					"enabled":true,
+					"threshold":"20",
+					"unit":"MINUTES",
+					"waitForNextWindow":true
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"CONTINUE",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				},
+				"timeoutConfig":{
+					"enabled":false
+				}
+			},
+			"skip":true,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":4073,
+				"resourceName":"callables_call_automation_async",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"CONTINUE",
+			"groupId":"n_INlXu@n_5a67w@_KzyGt-1@l@y",
+			"id":"n_XI2J2",
+			"index":14,
 			"inputs":{
 				"automationId":"69f863a40eedcf52f9640aa6",
 				"runtimeConnections":{},
@@ -1068,7 +1157,7 @@
 				"rateLimitConfig":{
 					"duration":"1",
 					"enabled":true,
-					"threshold":"10",
+					"threshold":"60",
 					"unit":"MINUTES",
 					"waitForNextWindow":true
 				},
@@ -1105,7 +1194,7 @@
 			"fallbackMode":"CONTINUE",
 			"groupId":"n_INlXu@n_5a67w@_KzyGt-1@l@n",
 			"id":"n_V7Ca8",
-			"index":14,
+			"index":15,
 			"inputs":{
 				"automationId":"69f863a40eedcf52f9640aa6",
 				"runtimeConnections":{},
@@ -1207,7 +1296,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_5a67w@_KzyGt-1@l",
 			"id":"n_GV9K8",
-			"index":15,
+			"index":16,
 			"inputs":{
 				"variables":[
 					{
@@ -1216,7 +1305,7 @@
 					},
 					{
 						"source":"{{ n_bTato.outputs.page }}",
-						"value":"={{ n_bTato.outputs.page }}+40"
+						"value":"={{ n_bTato.outputs.page }}+10"
 					}
 				]
 			},
@@ -1237,7 +1326,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_3cSug",
-			"index":16,
+			"index":17,
 			"inputs":{
 				"variables":[
 					{
@@ -1267,7 +1356,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_aqKnm",
-			"index":17,
+			"index":18,
 			"inputs":{
 				"result":{
 					"completed":"true"
@@ -1287,7 +1376,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_fBO9h",
-			"index":18,
+			"index":19,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -1308,5 +1397,5 @@
 		}
 	},
 	"standard":false,
-	"version":168
+	"version":208
 }
