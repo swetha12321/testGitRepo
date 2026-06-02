@@ -1,0 +1,78 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1712747727823,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"661674cfb5eab83e69332179",
+	"lastModifiedBy":15,
+	"lcName":"gslides test",
+	"modifiedTime":1712748782458,
+	"name":"gSlides test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":62,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"sGOdm-1",
+			"id":"sGOdm",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				},
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"",
+							"filter":{
+								"operator":"EQUAL",
+								"value":""
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"response":[
+					{
+						"status":"200",
+						"contentType":"application/json",
+						"name":"test"
+					}
+				]
+			},
+			"skip":false,
+			"title":"Call Automation via API",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":15,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
