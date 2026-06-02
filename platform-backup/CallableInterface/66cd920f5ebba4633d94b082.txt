@@ -1,0 +1,60 @@
+{
+	"createdTime":1724748303762,
+	"deleted":false,
+	"description":"Lovekesh Collect Slot",
+	"id":"66cd920f5ebba4633d94b082",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"additionalProperties":false,
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"type":"object",
+			"properties":{
+				"datatype":{
+					"type":"string",
+					"title":"datatype"
+				},
+				"name":{
+					"type":"string",
+					"title":"name"
+				},
+				"description":{
+					"type":"string",
+					"title":"description"
+				}
+			}
+		}
+	},
+	"lastModifiedBy":311,
+	"lcName":"lovekesh collect slot",
+	"modifiedTime":1724748303762,
+	"name":"Lovekesh Collect Slot",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"additionalProperties":false,
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"type":"object",
+			"properties":{
+				"value":{
+					"type":"object",
+					"properties":{},
+					"additionalProperties":false,
+					"title":"value"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":311,
+	"standard":false,
+	"version":0
+}
