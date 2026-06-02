@@ -1,0 +1,15 @@
+{
+	"createdTime":1733119761414,
+	"deleted":false,
+	"enabled":false,
+	"id":"674d4f11a825237b0b7870d6",
+	"lastModifiedBy":520,
+	"lcName":"abhc",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1733119761414,
+	"name":"abhc",
+	"ownerUserId":520,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
