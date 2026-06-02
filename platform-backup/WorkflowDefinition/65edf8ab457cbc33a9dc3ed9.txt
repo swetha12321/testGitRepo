@@ -1,0 +1,78 @@
+{
+	"createdTime":1710094507021,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"a3QUs",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"M8HWn",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65edf8ab457cbc33a9dc3ed9",
+	"lastModifiedBy":23,
+	"lcName":"test builder validations",
+	"modifiedTime":1710145405215,
+	"name":"test builder validations",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":15,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"a3QUs-1",
+			"id":"a3QUs",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"title":"Call Automation via API",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"indiapost",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"a3QUs-1",
+			"id":"M8HWn",
+			"index":0,
+			"skip":false,
+			"subTitle":"India Post",
+			"title":"Select an action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":23,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
