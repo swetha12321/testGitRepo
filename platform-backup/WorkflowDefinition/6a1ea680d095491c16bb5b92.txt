@@ -103,7 +103,7 @@
 	"id":"6a1ea680d095491c16bb5b92",
 	"lastModifiedBy":27,
 	"lcName":"repeatable-interface-fetch",
-	"modifiedTime":1780411003189,
+	"modifiedTime":1780411027940,
 	"name":"repeatable-interface-fetch",
 	"nodes":[
 		{
@@ -559,7 +559,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_TMkbn-1",
 			"id":"n_NxT0c",
@@ -571,7 +571,7 @@
 							"property":"{{ n_UKhPq.outputs.offset }}",
 							"filter":{
 								"operator":"LT",
-								"value":"3000"
+								"value":"30"
 							}
 						}
 					],
@@ -648,7 +648,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_NxT0c@_TMkbn-1@l",
 			"id":"n_eczRj",
@@ -843,5 +843,5 @@
 		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":95
+	"version":96
 }
