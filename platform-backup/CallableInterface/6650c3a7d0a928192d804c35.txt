@@ -1,0 +1,33 @@
+{
+	"createdTime":1716568999066,
+	"deleted":true,
+	"description":"abc desc",
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6650c3a7d0a928192d804c35",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"lastModifiedBy":289,
+	"lcName":"abcjkdsf",
+	"modifiedTime":1716569016500,
+	"name":"abcjkdsf",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"ownerUserId":289,
+	"standard":false,
+	"version":2
+}
