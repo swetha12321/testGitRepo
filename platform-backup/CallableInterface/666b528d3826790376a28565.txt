@@ -1,0 +1,54 @@
+{
+	"createdTime":1718309517045,
+	"deleted":false,
+	"description":"rbac",
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"666b528d3826790376a28565",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"type":"object",
+			"properties":{
+				"field_01":{
+					"type":"string",
+					"title":"Field 01"
+				},
+				"field_02":{
+					"type":"string",
+					"title":"Field 02"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"rbac validation",
+	"modifiedTime":1721681271704,
+	"name":"rbac validation",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"type":"object",
+			"properties":{
+				"res_01":{
+					"type":"string",
+					"title":"Res 01"
+				},
+				"res_02":{
+					"type":"string",
+					"title":"Res 02"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":34,
+	"standard":false,
+	"version":1
+}
