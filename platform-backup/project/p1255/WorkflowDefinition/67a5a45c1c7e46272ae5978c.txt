@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		"encharge"
+	],
+	"createdTime":1738908764963,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1738909900146,
+		"deployedBy":43502,
+		"deployedDefinitionId":"67a5a8cb1c7e46272ae59be0",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"edges":[
+		
+	],
+	"id":"67a5a45c1c7e46272ae5978c",
+	"lastModifiedBy":0,
+	"lcName":"encharge_tagged",
+	"modifiedTime":1780493847309,
+	"name":"ENCHARGE_TAGGED",
+	"nodes":[
+		{
+			"context":{
+				"appName":"encharge",
+				"resourceVersion":21,
+				"connectionId":"67a3037bd0ecfa768db1e9cc",
+				"resourceName":"encharge_on_tag_person"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"A3fqV-1",
+			"id":"HlLoz",
+			"index":0,
+			"inputs":{
+				"tag":"tourist"
+			},
+			"skip":false,
+			"subTitle":"Encharge",
+			"title":"Tag added to person",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":43502,
+	"projectId":1255,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":4
+}
