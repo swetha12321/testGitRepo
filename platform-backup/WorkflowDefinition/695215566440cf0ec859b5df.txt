@@ -1,0 +1,116 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1766987094636,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1766987753327,
+		"deployedBy":1234,
+		"deployedDefinitionId":"695217e91489633239d25c3c",
+		"status":"PAUSED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_KSloX",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_AB0W8",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"VIEW_RUNS",
+					"V"
+				],
+				"principalIds":[
+					"194345"
+				],
+				"principalType":"USER"
+			}
+		]
+	},
+	"id":"695215566440cf0ec859b5df",
+	"lastModifiedBy":-1,
+	"lcName":"on new connection",
+	"modifiedTime":1780492411313,
+	"name":"on new connection",
+	"nodes":[
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":980,
+				"resourceName":"standard_entities_on_connection_create"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_AihDs-1",
+			"id":"n_KSloX",
+			"index":1,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"On connection create",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":4864,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_AihDs-1",
+			"id":"n_AB0W8",
+			"index":2,
+			"inputs":{
+				"useRawPayload":false,
+				"writeThroughSessionVariables":false,
+				"object_type":"new_connection_trigger",
+				"skipIfBlank":false,
+				"record":{
+					"id":"{{ n_KSloX.outputs.id }}",
+					"name":"{{ n_KSloX.outputs.name }}",
+					"appName":"{{ n_KSloX.outputs.appName }}",
+					"active":"{{ n_KSloX.outputs.active }}",
+					"oUId":"{{ n_KSloX.outputs.oUId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create record",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":1234,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":5
+}
