@@ -1,0 +1,82 @@
+{
+	"appsUsed":[
+		"amazon_s3"
+	],
+	"createdTime":1726824208138,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"MJoGE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"5yCDV",
+			"type":"next"
+		}
+	],
+	"id":"66ed3f10029a85599b62b549",
+	"lastModifiedBy":0,
+	"lcName":"s3_create bucket",
+	"modifiedTime":1780496147518,
+	"name":"s3_create bucket",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":59,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"iFyrO-1",
+			"id":"MJoGE",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"HTTP Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"amazon_s3",
+				"resourceVersion":2058,
+				"connectionId":"66e9c4d5f8a87d4f8ad32d97",
+				"resourceName":"amazon_s3_create_bucket",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"iFyrO-1",
+			"id":"5yCDV",
+			"index":0,
+			"inputs":{
+				"bucketName":"fileUploads_new_test_02",
+				"region":"us-east-1"
+			},
+			"skip":false,
+			"subTitle":"Amazon S3",
+			"title":"Create bucket",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":34,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":5
+}
