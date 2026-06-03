@@ -1,8 +1,36 @@
 {
-	"columnCounts":0,
+	"columnCounts":1,
 	"createdTime":1780470314017,
 	"deleted":false,
 	"id":"tesk",
+	"input":{
+		"type":"SCHEMA_AND_LAYOUT",
+		"dynamic":false,
+		"layout":{
+			"ui:order":[
+				"abc"
+			]
+		},
+		"schema":{
+			"additionalProperties":false,
+			"type":"object",
+			"properties":{
+				"abc":{
+					"type":"string",
+					"title":"abc",
+					"searchable":true,
+					"sortable":true,
+					"filterable":true,
+					"primaryKey":false,
+					"uniqueKey":false,
+					"nameField":false
+				}
+			},
+			"required":[
+				"abc"
+			]
+		}
+	},
 	"lastModifiedBy":199899,
 	"lcName":"tesk",
 	"metadata":{
@@ -23,7 +51,7 @@
 		],
 		"external":false,
 		"filterableFields":[
-			
+			"abc"
 		],
 		"hasTimeSeriesRecords":true,
 		"hashedFields":[
@@ -44,7 +72,7 @@
 		"scdType2Enabled":false,
 		"schemaValidationEnabled":true,
 		"searchableFields":[
-			
+			"abc"
 		],
 		"sessionBackedStorageEnabled":false,
 		"skipConfigSyncIfModified":false,
@@ -75,15 +103,37 @@
 		],
 		"versioningEnabled":false
 	},
-	"modifiedTime":1780470314017,
+	"modifiedTime":1780470331468,
 	"name":"tesk",
 	"ownerUserId":199899,
 	"packaged":false,
 	"pluralName":"tesk",
 	"projectId":2190,
+	"schema":{
+		"dynamic":false,
+		"schema":{
+			"additionalProperties":false,
+			"type":"object",
+			"properties":{
+				"abc":{
+					"type":"string",
+					"title":"abc",
+					"searchable":true,
+					"sortable":true,
+					"filterable":true,
+					"primaryKey":false,
+					"uniqueKey":false,
+					"nameField":false
+				}
+			},
+			"required":[
+				"abc"
+			]
+		}
+	},
 	"standard":false,
 	"tags":[
 		"Test"
 	],
-	"version":0
+	"version":1
 }
