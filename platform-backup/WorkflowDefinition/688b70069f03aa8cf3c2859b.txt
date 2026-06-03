@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1753968646685,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_0ZnyF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_tJ9Rt",
+			"type":"next"
+		}
+	],
+	"id":"688b70069f03aa8cf3c2859b",
+	"lastModifiedBy":-1,
+	"lcName":"dsds",
+	"modifiedTime":1780492419616,
+	"name":"dsds",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_0ZnyF-1",
+			"id":"_0ZnyF",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_0ZnyF-1",
+			"id":"_tJ9Rt",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":44108,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
