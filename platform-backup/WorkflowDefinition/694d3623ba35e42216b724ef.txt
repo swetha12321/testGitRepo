@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1766667811132,
+	"deleted":false,
+	"description":"description",
+	"edges":[
+		{
+			"fromNodeId":"_p0mjs",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_DCai6",
+			"type":"next"
+		}
+	],
+	"id":"694d3623ba35e42216b724ef",
+	"lastModifiedBy":-1,
+	"lcName":"clear_all_button_for_add cookie_217666668754950",
+	"modifiedTime":1780492411567,
+	"name":"clear_all_button_for_Add Cookie_217666668754950",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_p0mjs-1",
+			"id":"_p0mjs",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_p0mjs-1",
+			"id":"_DCai6",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":false,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
