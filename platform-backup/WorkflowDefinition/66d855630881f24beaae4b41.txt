@@ -1,0 +1,82 @@
+{
+	"appsUsed":[
+		"brevo"
+	],
+	"createdTime":1725453667398,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"krf1V",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"5MvFL",
+			"type":"next"
+		}
+	],
+	"id":"66d855630881f24beaae4b41",
+	"lastModifiedBy":0,
+	"lcName":"qa checks",
+	"modifiedTime":1780496150995,
+	"name":"qa checks",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":59,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"9MKwT-1",
+			"id":"krf1V",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"HTTP Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"brevo",
+				"resourceVersion":5,
+				"connectionId":"66d85606a9fd89367a6e34ae",
+				"resourceName":"brevo_get_contact_details",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"9MKwT-1",
+			"id":"5MvFL",
+			"index":0,
+			"inputs":{
+				"identifier":"yashhahlawatabdevill@gmail.com",
+				"identifierType":"email_id"
+			},
+			"skip":false,
+			"subTitle":"Brevo",
+			"title":"Get contact details",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":2621,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":10
+}
