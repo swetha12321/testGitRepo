@@ -1,0 +1,93 @@
+{
+	"appsUsed":[
+		"microsoft_sharepoint"
+	],
+	"createdTime":1755682801329,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1755684390634,
+		"deployedBy":2627,
+		"deployedDefinitionId":"68a59e23853cd24babd5b7d5",
+		"status":"PAUSED",
+		"version":1,
+		"workflowVersion":3
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_N7qGV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_KULar",
+			"type":"next"
+		}
+	],
+	"id":"68a597f1150e38520841886d",
+	"lastModifiedBy":-1,
+	"lcName":"update file",
+	"modifiedTime":1780492418774,
+	"name":"update file",
+	"nodes":[
+		{
+			"context":{
+				"appName":"microsoft_sharepoint",
+				"resourceVersion":14,
+				"connectionId":"688dee94785392afd0975584",
+				"resourceName":"microsoft_sharepoint_on_new_file_or_updated_file_polling"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_xLoj3-1",
+			"id":"n_N7qGV",
+			"index":1,
+			"inputs":{
+				"site_name":"site123",
+				"interval":1,
+				"from":"2025-08-20T10:05:40Z",
+				"batchSize":1,
+				"folder_path":"/Shared Documents/folder123/folder1234"
+			},
+			"skip":false,
+			"subTitle":"Microsoft SharePoint",
+			"title":"New or Updated file",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_xLoj3-1",
+			"id":"n_KULar",
+			"index":2,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":2627,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":4
+}
