@@ -1,0 +1,49 @@
+{
+	"createdTime":1710367345160,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65f22271a076350d55a0afa7",
+	"lastModifiedBy":3,
+	"lcName":"untitled",
+	"modifiedTime":1710393077343,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"amazon_sns"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"eWIrr-1",
+			"id":"eWIrr",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":3,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
