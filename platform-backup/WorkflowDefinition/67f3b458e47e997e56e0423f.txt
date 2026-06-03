@@ -1,0 +1,66 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1744024664723,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"IYgUA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Mq31a",
+			"type":"next"
+		}
+	],
+	"id":"67f3b458e47e997e56e0423f",
+	"lastModifiedBy":-1,
+	"lcName":"asassa",
+	"modifiedTime":1780492435479,
+	"name":"asassa",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"9XKkS-1",
+			"id":"IYgUA",
+			"index":0,
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"9XKkS-1",
+			"id":"Mq31a",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":426,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
