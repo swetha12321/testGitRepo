@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1754057950748,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_9ThHD",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_o44Iw",
+			"type":"next"
+		}
+	],
+	"id":"688cccdec7d2d4bdcefe5b75",
+	"lastModifiedBy":-1,
+	"lcName":"mail",
+	"modifiedTime":1780492419583,
+	"name":"mail",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_9ThHD-1",
+			"id":"_9ThHD",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_9ThHD-1",
+			"id":"_o44Iw",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":161861,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
