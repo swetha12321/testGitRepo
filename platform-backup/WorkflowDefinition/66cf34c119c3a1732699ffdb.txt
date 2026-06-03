@@ -1,0 +1,67 @@
+{
+	"appsUsed":[
+		"freshbooks"
+	],
+	"createdTime":1724855489089,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"pNlNA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"sLe9O",
+			"type":"next"
+		}
+	],
+	"id":"66cf34c119c3a1732699ffdb",
+	"lastModifiedBy":0,
+	"lcName":"new",
+	"modifiedTime":1780496151813,
+	"name":"new",
+	"nodes":[
+		{
+			"context":{
+				"appName":"freshbooks",
+				"resourceVersion":1914,
+				"connectionId":"668bad52fa6a2c6cbc647aa1",
+				"resourceName":"freshbooks_on_new_client"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"lzJSF-1",
+			"id":"pNlNA",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"FreshBooks",
+			"title":"New client",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"lzJSF-1",
+			"id":"sLe9O",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":174,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
