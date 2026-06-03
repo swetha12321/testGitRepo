@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1766729661520,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_APiCV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Kqs1z",
+			"type":"next"
+		}
+	],
+	"id":"694e27bdd5b36745b7f654bd",
+	"lastModifiedBy":-1,
+	"lcName":"hvg",
+	"modifiedTime":1780492411362,
+	"name":"hvg",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_APiCV-1",
+			"id":"_APiCV",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_APiCV-1",
+			"id":"_Kqs1z",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":132116,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
