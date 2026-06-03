@@ -1,0 +1,72 @@
+{
+	"appsUsed":[
+		"gsheets"
+	],
+	"createdTime":1756272991565,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1756273394697,
+		"deployedBy":155341,
+		"deployedDefinitionId":"68ae9aefdb0c0d4e996b2b29",
+		"status":"PAUSED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		
+	],
+	"id":"68ae995f9135a55164a34850",
+	"lastModifiedBy":-1,
+	"lcName":"fsfsdf",
+	"modifiedTime":1780492418580,
+	"name":"fsfsdf",
+	"nodes":[
+		{
+			"context":{
+				"appName":"gsheets",
+				"resourceVersion":3221,
+				"connectionId":"68ac1747aa495b37c5e81a30",
+				"resourceName":"gsheet_on_new_row_polling"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_PwXzm-1",
+			"id":"n_3PGa8",
+			"index":1,
+			"inputs":{
+				"sheetName":"Dev vs App",
+				"objectSourceResourceName":"gsheets_fetch_columns",
+				"interval":1,
+				"spreadsheetId":"1c-t_r1K0Gmu1zcm0vqMgmoBe_0She6cZe7NCtenhYxQ__Knowledge Indexing Project Master",
+				"batchSize":100
+			},
+			"skip":false,
+			"subTitle":"Google Sheets",
+			"title":"New row created",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":155341,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
