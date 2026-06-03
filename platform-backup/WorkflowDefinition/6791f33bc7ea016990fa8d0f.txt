@@ -1,0 +1,71 @@
+{
+	"appsUsed":[
+		"servicenow"
+	],
+	"createdTime":1737618235143,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"hFxDw",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"niAcY",
+			"type":"next"
+		}
+	],
+	"id":"6791f33bc7ea016990fa8d0f",
+	"lastModifiedBy":0,
+	"lcName":"cvbnm",
+	"modifiedTime":1780495207815,
+	"name":"cvbnm",
+	"nodes":[
+		{
+			"context":{
+				"appName":"servicenow"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"NoYXi-1",
+			"id":"hFxDw",
+			"index":0,
+			"skip":false,
+			"subTitle":"ServiceNow",
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"servicenow",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"NoYXi-1",
+			"id":"niAcY",
+			"index":0,
+			"skip":false,
+			"subTitle":"ServiceNow",
+			"title":"Select an action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":517,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
