@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767005906932,
+	"deleted":false,
+	"description":"description",
+	"edges":[
+		{
+			"fromNodeId":"_34ykh",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_GNO7g",
+			"type":"next"
+		}
+	],
+	"id":"69525ed2427e7c526ceb0858",
+	"lastModifiedBy":-1,
+	"lcName":"codesnippetsapp_1_217670037006920",
+	"modifiedTime":1780492411114,
+	"name":"codeSnippetsAPP_1_217670037006920",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_34ykh-1",
+			"id":"_34ykh",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_34ykh-1",
+			"id":"_GNO7g",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":false,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
