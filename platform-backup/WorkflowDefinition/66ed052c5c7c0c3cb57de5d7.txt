@@ -1,0 +1,71 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1726809388245,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"biRxl",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"2Vv2a",
+			"type":"next"
+		}
+	],
+	"id":"66ed052c5c7c0c3cb57de5d7",
+	"lastModifiedBy":0,
+	"lcName":"friday1",
+	"modifiedTime":1780496147549,
+	"name":"friday1",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":77,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"d4TOU-1",
+			"id":"biRxl",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				},
+				"endpointType":"REST"
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger using API",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"d4TOU-1",
+			"id":"2Vv2a",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
