@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1766668757222,
+	"deleted":false,
+	"description":"description",
+	"edges":[
+		{
+			"fromNodeId":"_R6yGL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_iSV6j",
+			"type":"next"
+		}
+	],
+	"id":"694d39d5b680665148cca21e",
+	"lastModifiedBy":-1,
+	"lcName":"condition box|number input - does not equal 21766666883114",
+	"modifiedTime":1780492411367,
+	"name":"Condition Box|Number Input - Does not equal 21766666883114",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_R6yGL-1",
+			"id":"_R6yGL",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_R6yGL-1",
+			"id":"_iSV6j",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
