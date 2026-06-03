@@ -1,0 +1,98 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767788169807,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_hVbj4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Va2jX",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Va2jX",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_aoTwo",
+			"type":"next"
+		}
+	],
+	"id":"695e4e898cf5851481213ff2",
+	"lastModifiedBy":-1,
+	"lcName":"ewuioewhu",
+	"modifiedTime":1780492410492,
+	"name":"ewuioewhu",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_hVbj4-1",
+			"id":"_hVbj4",
+			"index":1,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":1680,
+				"resourceName":"standard_entities_user_update_properties",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_hVbj4-1",
+			"id":"n_Va2jX",
+			"index":2,
+			"inputs":{
+				"customProperties":{
+					"testAnother":"test2"
+				},
+				"applicationId":"",
+				"user":"13"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Update User Properties",
+			"type":"ACTION"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_hVbj4-1",
+			"id":"_aoTwo",
+			"index":3,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":6701,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
