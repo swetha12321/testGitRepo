@@ -1,0 +1,66 @@
+{
+	"appsUsed":[
+		"slack"
+	],
+	"createdTime":1725861200466,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"P4yfT",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Jil74",
+			"type":"next"
+		}
+	],
+	"id":"66de8d50a138945ba09711c1",
+	"lastModifiedBy":0,
+	"lcName":"akma9sep1",
+	"modifiedTime":1780496150247,
+	"name":"akma9sep1",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"P4yfT-1",
+			"id":"P4yfT",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"slack",
+				"resourceVersion":2187,
+				"resourceName":"slack_archives_conversation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"P4yfT-1",
+			"id":"Jil74",
+			"index":0,
+			"skip":false,
+			"subTitle":"Slack",
+			"title":"Archives conversation",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
