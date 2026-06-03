@@ -1,0 +1,57 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725646636871,
+	"deleted":false,
+	"deployedVersion":4,
+	"deploymentState":{
+		"deployedAt":1726424483716,
+		"deployedBy":35,
+		"deployedDefinitionId":"66e725a3d5aa8726739a8aa2",
+		"status":"DEPLOYED",
+		"version":4,
+		"workflowVersion":5
+	},
+	"edges":[
+		
+	],
+	"id":"66db472cfc4fe1307abf91e2",
+	"lastModifiedBy":0,
+	"lcName":"teststreamdestination",
+	"modifiedTime":1780496150278,
+	"name":"TestStreamDestination",
+	"nodes":[
+		{
+			"context":{
+				"appName":"streams_by_unifyapps",
+				"resourceVersion":675,
+				"resourceName":"streams_by_unifyapps_on_event"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"edte4-1",
+			"id":"dXpln",
+			"index":0,
+			"inputs":{
+				"streamId":"e_66e08a9c8531d65e44f3e97f"
+			},
+			"skip":false,
+			"subTitle":"Streams by UnifyApps",
+			"title":"Triggers on new event from stream",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":35,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":6
+}
