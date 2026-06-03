@@ -1,0 +1,112 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1755841848514,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_8f16K",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_gY8ty",
+			"type":"next"
+		}
+	],
+	"id":"68a805388f443d6178ffc47f",
+	"lastModifiedBy":-1,
+	"lcName":"send notif test",
+	"modifiedTime":1780492418713,
+	"name":"send notif test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":803,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_LzVV5-1",
+			"id":"n_8f16K",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"notification_by_unifyapps",
+				"resourceVersion":748,
+				"resourceName":"notification_by_unifyapps_send_notification",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_LzVV5-1",
+			"id":"n_gY8ty",
+			"index":2,
+			"inputs":{
+				"cta":{
+					"type":"emitPageEvent",
+					"width":{
+						"custom":"400px"
+					},
+					"name":"Go To Case",
+					"eventName":"Go To Case",
+					"eventPayload":"{\"caseId\": \"xyz\"}"
+				},
+				"receiver":[
+					"175571"
+				],
+				"receiverType":"USER",
+				"module":"pipeline",
+				"eventType":"pipeline_alert",
+				"applicationId":"tick-labels",
+				"notificationPreviewTime":50,
+				"content":{
+					"templateId":"failed_export_notification_template",
+					"input_schema":{
+						"errorMessage":"hello"
+					}
+				},
+				"tags":[
+					"Alerts"
+				]
+			},
+			"skip":false,
+			"subTitle":"Notification by UnifyApps",
+			"title":"Send notification",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":106,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":7
+}
