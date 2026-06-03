@@ -1,0 +1,74 @@
+{
+	"appsUsed":[
+		"azure_blob"
+	],
+	"createdTime":1767688579521,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_eQfxc",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_MrTwF",
+			"type":"next"
+		}
+	],
+	"id":"695cc983947be8075e234629",
+	"lastModifiedBy":-1,
+	"lcName":"test",
+	"modifiedTime":1780492410548,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"azure_blob",
+				"resourceVersion":12,
+				"connectionId":"68fb52bd999eb3677bd3fc50",
+				"resourceName":"azure_blob_on_new_event"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_pGQjV-1",
+			"id":"n_eQfxc",
+			"index":1,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Azure Blob",
+			"title":"On new event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_pGQjV-1",
+			"id":"_MrTwF",
+			"index":2,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":124519,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
