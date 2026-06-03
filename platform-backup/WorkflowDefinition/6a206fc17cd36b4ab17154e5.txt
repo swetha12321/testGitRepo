@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780510657556,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_dbivr",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_XeFCk",
+			"type":"next"
+		}
+	],
+	"id":"6a206fc17cd36b4ab17154e5",
+	"lastModifiedBy":132116,
+	"lcName":"hgh",
+	"modifiedTime":1780510657556,
+	"name":"hgh",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_dbivr-1",
+			"id":"_dbivr",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_dbivr-1",
+			"id":"_XeFCk",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":132116,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
