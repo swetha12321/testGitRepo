@@ -1,0 +1,51 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1755606732716,
+	"deleted":false,
+	"description":"",
+	"edges":[
+		{
+			"fromNodeId":"_acvWK",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"DUMMY_RETURN_NODE_ID",
+			"type":"next"
+		}
+	],
+	"id":"68a46ecc1b34ed4e0ff8b03b",
+	"lastModifiedBy":-1,
+	"lcName":"wf agent cheehhat",
+	"modifiedTime":1780492418791,
+	"name":"WF agent cheehhat",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceName":"callables_return_to_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"id":"DUMMY_RETURN_NODE_ID",
+			"index":0,
+			"inputs":{
+				"result":{}
+			},
+			"skip":false,
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":45512,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		"Workflow Agent"
+	],
+	"version":10
+}
