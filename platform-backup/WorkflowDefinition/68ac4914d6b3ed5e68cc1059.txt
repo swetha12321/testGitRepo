@@ -1,0 +1,79 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1756121364219,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_HPeXo",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_z2jQi",
+			"type":"next"
+		}
+	],
+	"id":"68ac4914d6b3ed5e68cc1059",
+	"lastModifiedBy":-1,
+	"lcName":"testingchangedworkflow (copy)",
+	"modifiedTime":1780492418635,
+	"name":"testingChangedWorkflow (copy)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":803,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_3OOHP-1",
+			"id":"n_HPeXo",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_3OOHP-1",
+			"id":"n_z2jQi",
+			"index":2,
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Select an action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":39714,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":1
+}
