@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1766667775551,
+	"deleted":false,
+	"description":"description",
+	"edges":[
+		{
+			"fromNodeId":"_b6mqb",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_55WKS",
+			"type":"next"
+		}
+	],
+	"id":"694d35ff7b5b6a20205cdfb2",
+	"lastModifiedBy":-1,
+	"lcName":"automation_zoho deskdelete21766666875492",
+	"modifiedTime":1780492411579,
+	"name":"Automation_Zoho DeskDelete21766666875492",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_b6mqb-1",
+			"id":"_b6mqb",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_b6mqb-1",
+			"id":"_55WKS",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
