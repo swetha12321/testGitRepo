@@ -1,0 +1,85 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725244187286,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"eV0Qc",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"v8KLR",
+			"type":"next"
+		}
+	],
+	"id":"66d5231bfdcc794f295c0a9d",
+	"lastModifiedBy":0,
+	"lcName":"test_delete obj",
+	"modifiedTime":1780496151639,
+	"name":"test_delete obj",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":59,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"CljAz-1",
+			"id":"eV0Qc",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"HTTP Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":1887,
+				"resourceName":"storage_by_unifyapps_delete_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"CljAz-1",
+			"id":"v8KLR",
+			"index":0,
+			"inputs":{
+				"object_type":"test_kavish_object",
+				"numberOfRecordsToDelete":"MULTIPLE",
+				"page":{
+					"limit":20,
+					"offset":0
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Delete records",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":1,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
