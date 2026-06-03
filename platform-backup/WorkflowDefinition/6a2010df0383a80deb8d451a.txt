@@ -97,13 +97,14 @@
 	"id":"6a2010df0383a80deb8d451a",
 	"lastModifiedBy":195870,
 	"lcName":"ai agent(slack deployment)",
-	"modifiedTime":1780486367235,
+	"modifiedTime":1780486488736,
 	"name":"AI Agent(Slack Deployment)",
 	"nodes":[
 		{
 			"context":{
 				"appName":"slack",
 				"resourceVersion":1166,
+				"connectionId":"6a200fb5c86f38362bd0fd21",
 				"resourceName":"slack_on_new_message"
 			},
 			"debug":false,
@@ -169,7 +170,7 @@
 			"inputs":{
 				"filters":[
 					{
-						"property":"<<_ua_ai_agent.inputs.shouldReplyInThread>>",
+						"property":"true",
 						"filter":{
 							"operator":"EQUAL",
 							"value":"true"
@@ -250,7 +251,7 @@
 			"inputs":{
 				"filters":[
 					{
-						"property":"<<_ua_ai_agent.inputs.showThoughtsAsEmoji>>",
+						"property":"true",
 						"filter":{
 							"operator":"EQUAL",
 							"value":"true"
@@ -329,7 +330,7 @@
 			"id":"E3AuG",
 			"index":6,
 			"inputs":{
-				"connectionIds":"<CONNECTION_ID>"
+				"connectionIds":"6a200fb5c86f38362bd0fd21"
 			},
 			"skip":false,
 			"subTitle":"Standard entities by UnifyApps",
@@ -385,7 +386,7 @@
 					"triggeredFromAutomationId":"{{ __RUN__.outputs.workflowId }}",
 					"messageType":"FAN",
 					"fromCustomerUserId":"{{ h77A8.outputs.event.user }}",
-					"toCustomerUserId":"<AI_AGENT_ID>",
+					"toCustomerUserId":"e_6a2010242c47bb5066c42d8f",
 					"channelSpecificUserId":"{{ h77A8.outputs.event.user }}",
 					"channelName":"slack",
 					"text":"{{ h77A8.outputs.event.text }}",
@@ -413,7 +414,7 @@
 			"inputs":{
 				"automationId":"66acfe1b663a6211bbc40233",
 				"runtimeConnections":{
-					"slack":"<CONNECTION_ID>"
+					"slack":"6a200fb5c86f38362bd0fd21"
 				},
 				"synchronous":true,
 				"parameters":{
@@ -473,7 +474,7 @@
 				"parameters":{
 					"userQuery":"{{ h77A8.outputs.event.text }}",
 					"promptResolvableVariables":"{}",
-					"aiAgentId":"<AI_AGENT_ID>",
+					"aiAgentId":"e_6a2010242c47bb5066c42d8f",
 					"userEmailAddress":"{{ 0vkKV.outputs.emailAddress }}",
 					"messageId":"{{ _BQoJf.outputs.messageId }}",
 					"caseId":"{{ _BQoJf.outputs.caseId }}"
@@ -502,5 +503,5 @@
 	"tags":[
 		"AI Agent Deployment"
 	],
-	"version":0
+	"version":2
 }
