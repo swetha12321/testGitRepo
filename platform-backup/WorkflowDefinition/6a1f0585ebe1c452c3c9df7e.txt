@@ -4,14 +4,14 @@
 	],
 	"createdTime":1780417925800,
 	"deleted":false,
-	"deployedVersion":1,
+	"deployedVersion":2,
 	"deploymentState":{
-		"deployedAt":1780417997801,
-		"deployedBy":199599,
-		"deployedDefinitionId":"6a1f05cdbe0cac4e9dfbac54",
+		"deployedAt":1780491197775,
+		"deployedBy":199598,
+		"deployedDefinitionId":"6a2023bdaa50af1fc9539e4c",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":1
+		"version":2,
+		"workflowVersion":9
 	},
 	"edges":[
 		{
@@ -130,7 +130,7 @@
 	"id":"6a1f0585ebe1c452c3c9df7e",
 	"lastModifiedBy":199599,
 	"lcName":"[git] (copy2)fetch modified files in a given pr (updated) (copy)",
-	"modifiedTime":1780420506878,
+	"modifiedTime":1780492086632,
 	"name":"[git] (copy2)Fetch modified files in a given PR (updated) (copy)",
 	"nodes":[
 		{
@@ -491,7 +491,6 @@
 				"ua:list_type":"OBJECT"
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -790,7 +789,6 @@
 				"ua:list_type":"STRING"
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -1185,7 +1183,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_bcCHY-1",
 			"id":"n_VADwF",
@@ -1268,7 +1266,7 @@
 			"index":14,
 			"inputs":{
 				"result":{
-					"headSha":" {{ n_97ODX.outputs.head.sha }}",
+					"headSha":"{{ n_97ODX.outputs.head.sha }}",
 					"baseSha":"{{ n_97ODX.outputs.base.sha }}",
 					"assetDetails":{
 						"source":"{{ n_VADwF.outputs.result.assetDetails }}",
@@ -1297,5 +1295,5 @@
 		}
 	},
 	"standard":false,
-	"version":4
+	"version":11
 }
