@@ -1,0 +1,314 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1766522729665,
+	"deleted":false,
+	"deployedVersion":42,
+	"deploymentState":{
+		"deployedAt":1779701643133,
+		"deployedBy":161963,
+		"deployedDefinitionId":"6a14178ab21a6377f0f10336",
+		"status":"DEPLOYED",
+		"version":42,
+		"workflowVersion":81
+	},
+	"description":"Cleanup workflow Runs which are completed but still present in Redis",
+	"edges":[
+		{
+			"fromNodeId":"n_R4nP2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_mTali",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_mTali",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_wCaIr",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_wCaIr",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_pOKWX",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_pOKWX",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_WpkrN",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"VIEW_RUNS",
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"692aba733f8c853de07353fa",
+	"lastModifiedBy":-1,
+	"lcName":"process workflow runs v3.0",
+	"modifiedTime":1780492411776,
+	"name":"Process Workflow Runs V3.0",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_dlgFP-1",
+			"id":"n_R4nP2",
+			"index":1,
+			"inputs":{
+				"result":{
+					"additionalProperties":false,
+					"properties":{
+						"success":{
+							"title":"Success",
+							"type":"boolean"
+						}
+					},
+					"required":[],
+					"type":"object"
+				},
+				"setup":{
+					"additionalProperties":false,
+					"properties":{
+						"customerId":{
+							"title":"Customer Id",
+							"type":"integer"
+						},
+						"runDetails":{
+							"items":{
+								"additionalProperties":false,
+								"properties":{
+									"executionId":{
+										"title":"executionId",
+										"type":"string"
+									},
+									"workflowId":{
+										"title":"workflowId",
+										"type":"string"
+									}
+								},
+								"type":"object"
+							},
+							"title":"runDetails",
+							"type":"array"
+						}
+					},
+					"required":[
+						"customerId"
+					],
+					"type":"object"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":1,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_dlgFP-1",
+			"id":"n_mTali",
+			"index":2,
+			"inputs":{
+				"output":{
+					"additionalProperties":false,
+					"properties":{
+						"emptyContext":{
+							"additionalProperties":false,
+							"properties":{},
+							"title":"Empty Context",
+							"type":"object"
+						},
+						"now":{
+							"title":"now",
+							"type":"integer"
+						}
+					},
+					"required":[],
+					"type":"object"
+				},
+				"code":"return [\n  \"now\": System.currentTimeMillis(),\n  \"emptyContext\": [:]\n]",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_dlgFP-1",
+			"id":"n_wCaIr",
+			"index":3,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"carrierWithContext":{
+							"additionalProperties":false,
+							"properties":{},
+							"title":"Carrier With Context",
+							"type":"object"
+						},
+						"cleanupAfter":{
+							"title":"Cleanup After",
+							"type":"integer"
+						},
+						"eventCreationTime":{
+							"title":"Event Creation Time",
+							"type":"integer"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"eventCreationTime":"{{ n_mTali.outputs.result.now }}",
+				"carrierWithContext":"{{ n_mTali.outputs.result.emptyContext }}",
+				"cleanupAfter":"{{ n_mTali.outputs.result.now }}"
+			},
+			"outputSchema":{
+				"type":"SCHEMA",
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"carrierWithContext":{
+							"additionalProperties":false,
+							"properties":{},
+							"title":"Carrier With Context",
+							"type":"object"
+						},
+						"cleanupAfter":{
+							"title":"Cleanup After",
+							"type":"integer"
+						},
+						"eventCreationTime":{
+							"title":"Event Creation Time",
+							"type":"integer"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Control Params",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":11,
+				"resourceName":"standard_entities_cleanup_workflow_execution",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_dlgFP-1",
+			"id":"n_pOKWX",
+			"index":4,
+			"inputs":{
+				"cleanupAsync":false,
+				"executionIds":{
+					"items":"{{ n_R4nP2.outputs.runDetails[0].executionId }}",
+					"source":"{{ n_R4nP2.outputs.runDetails }}",
+					"ua:type":"mappedArray"
+				},
+				"workflowRunTimeType":"DEFAULT",
+				"customerId":"{{ n_R4nP2.outputs.customerId }}",
+				"runtimeType":"DEFAULT"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Cleanup Workflow Execution",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_dlgFP-1",
+			"id":"n_WpkrN",
+			"index":5,
+			"inputs":{
+				"result":{
+					"success":true
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":-1,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		"cleanup",
+		"redis"
+	],
+	"version":82
+}
