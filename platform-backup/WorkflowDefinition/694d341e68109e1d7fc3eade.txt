@@ -1,0 +1,55 @@
+{
+	"appsUsed":[
+		"shopify"
+	],
+	"createdTime":1766667294638,
+	"deleted":false,
+	"description":"description",
+	"edges":[
+		
+	],
+	"id":"694d341e68109e1d7fc3eade",
+	"lastModifiedBy":-1,
+	"lcName":"automation_google classroomdelete21766666874706",
+	"modifiedTime":1780492411722,
+	"name":"Automation_Google ClassroomDelete21766666874706",
+	"nodes":[
+		{
+			"context":{
+				"appName":"shopify"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_GkKVA-1",
+			"id":"n_gaUDI",
+			"index":1,
+			"skip":false,
+			"subTitle":"Shopify",
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":175325,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":false,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":4
+}
