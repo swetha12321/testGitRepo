@@ -1,0 +1,91 @@
+{
+	"appsUsed":[
+		"gdrive"
+	],
+	"createdTime":1766556368913,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1766556459191,
+		"deployedBy":2621,
+		"deployedDefinitionId":"694b832a97a9956475cc8738",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_rW9w4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_rmMhy",
+			"type":"next"
+		}
+	],
+	"id":"694b82d03de5f932049ec82f",
+	"lastModifiedBy":-1,
+	"lcName":"g_drive trigger",
+	"modifiedTime":1780492411758,
+	"name":"G_drive trigger",
+	"nodes":[
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":6410,
+				"connectionId":"694698f450ddc57537a7e530",
+				"resourceName":"gdrive_on_uploaded_or_modified_file_polling"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_fkMoS-1",
+			"id":"n_rW9w4",
+			"index":1,
+			"inputs":{
+				"from":"2023-12-01T06:06:00Z",
+				"interval":1,
+				"batchSize":10
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"On uploaded or modified file",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_fkMoS-1",
+			"id":"n_rmMhy",
+			"index":2,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":2621,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
