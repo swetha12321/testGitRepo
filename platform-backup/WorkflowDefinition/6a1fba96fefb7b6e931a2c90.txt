@@ -37,7 +37,7 @@
 	"id":"6a1fba96fefb7b6e931a2c90",
 	"lastModifiedBy":199651,
 	"lcName":"testk",
-	"modifiedTime":1780473914401,
+	"modifiedTime":1780474312435,
 	"name":"testk",
 	"nodes":[
 		{
@@ -307,7 +307,8 @@
 			},
 			"inputs":{
 				"createList":{
-					"ua:type":"mappedArray"
+					"ua:type":"mappedArray",
+					"items":"10"
 				},
 				"ua:title":"List",
 				"ua:list_type":"STRING"
@@ -411,7 +412,7 @@
 									"property":"ENTITY_kdata=::=salary",
 									"filter":{
 										"operator":"IN",
-										"value":"{{ n_4QHLX.outputs.result.list }}"
+										"value":"{{ n_ycVaU.outputs.items }}"
 									}
 								}
 							],
@@ -471,5 +472,5 @@
 	"tags":[
 		"Test"
 	],
-	"version":14
+	"version":15
 }
