@@ -1,0 +1,59 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1724924836810,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"ZaNBw",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"EEAxS",
+			"type":"next"
+		}
+	],
+	"id":"66d043a4d8a48361f2d8970d",
+	"lastModifiedBy":0,
+	"lcName":"test112",
+	"modifiedTime":1780496151778,
+	"name":"test112",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ZaNBw-1",
+			"id":"ZaNBw",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ZaNBw-1",
+			"id":"EEAxS",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":4596,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
