@@ -1,0 +1,82 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767457213187,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_w1Y8o",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_soI7r",
+			"type":"next"
+		}
+	],
+	"id":"695941bded2b905ff8485150",
+	"lastModifiedBy":-1,
+	"lcName":"gvcghhcg",
+	"modifiedTime":1780492410600,
+	"name":"gvcghhcg",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":834,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_sEv2s-1",
+			"id":"n_w1Y8o",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"excel_by_unifyapps",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_sEv2s-1",
+			"id":"n_soI7r",
+			"index":2,
+			"skip":false,
+			"subTitle":"Excel by UnifyApps",
+			"title":"Select an action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":2721,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
