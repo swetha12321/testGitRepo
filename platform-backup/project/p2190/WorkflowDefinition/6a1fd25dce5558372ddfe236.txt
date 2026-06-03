@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780470365229,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_xY9Ra",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_rkugY",
+			"type":"next"
+		}
+	],
+	"id":"6a1fd25dce5558372ddfe236",
+	"lastModifiedBy":199899,
+	"lcName":"tesking",
+	"modifiedTime":1780470365229,
+	"name":"Tesking",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_xY9Ra-1",
+			"id":"_xY9Ra",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_xY9Ra-1",
+			"id":"_rkugY",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":199899,
+	"projectId":2190,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		"Test"
+	],
+	"version":0
+}
