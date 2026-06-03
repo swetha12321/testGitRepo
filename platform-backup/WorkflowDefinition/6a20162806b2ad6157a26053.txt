@@ -3,7 +3,7 @@
 		
 	],
 	"createdTime":1780487720129,
-	"deleted":false,
+	"deleted":true,
 	"edges":[
 		{
 			"fromNodeId":"_9sycI",
@@ -16,7 +16,7 @@
 	"id":"6a20162806b2ad6157a26053",
 	"lastModifiedBy":199902,
 	"lcName":"testautomation",
-	"modifiedTime":1780487720129,
+	"modifiedTime":1780488739991,
 	"name":"TestAutomation",
 	"nodes":[
 		{
@@ -56,5 +56,5 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"version":1
 }
