@@ -1,0 +1,301 @@
+{
+	"appsUsed":[
+		"storage_by_unifyapps"
+	],
+	"createdTime":1754496381377,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1754509569928,
+		"deployedBy":44567,
+		"deployedDefinitionId":"6893b0fe3dd3d258084c3c29",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":14
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_Fg3jD",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_8tqmf",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_8tqmf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ccxYa",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ccxYa",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Bi5eg",
+			"type":"next"
+		}
+	],
+	"id":"68937d7d9368304921ba0f42",
+	"lastModifiedBy":-1,
+	"lcName":"nonautoprovisioningroledata",
+	"modifiedTime":1780492419384,
+	"name":"NonAutoProvisioningRoleData",
+	"nodes":[
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":789,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_9XJnD-1",
+			"id":"n_Fg3jD",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"success":{
+							"type":"string",
+							"title":"Success"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"json":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"PERSON_ID":{
+										"type":"string",
+										"title":"PERSON_ID"
+									},
+									"PERSON_NUMBER":{
+										"type":"string",
+										"title":"PERSON_NUMBER"
+									},
+									"FULL_NAME":{
+										"type":"string",
+										"title":"FULL_NAME"
+									},
+									"LOCATION":{
+										"type":"string",
+										"title":"LOCATION"
+									},
+									"ATC":{
+										"type":"string",
+										"title":"ATC"
+									},
+									"ORGANIZATION":{
+										"type":"string",
+										"title":"ORGANIZATION"
+									},
+									"LEGAL_ENTITY":{
+										"type":"string",
+										"title":"LEGAL_ENTITY"
+									},
+									"USERNAME":{
+										"type":"string",
+										"title":"USERNAME"
+									},
+									"USER_GUID":{
+										"type":"string",
+										"title":"USER_GUID"
+									},
+									"ROLE_NAME":{
+										"type":"string",
+										"title":"ROLE_NAME"
+									},
+									"ROLE_ID":{
+										"type":"string",
+										"title":"ROLE_ID"
+									},
+									"ROLE_GUID":{
+										"type":"string",
+										"title":"ROLE_GUID"
+									},
+									"EFFECTIVE_START_DATE":{
+										"type":"string",
+										"title":"EFFECTIVE_START_DATE"
+									},
+									"PROVISIONING_METHOD":{
+										"type":"string",
+										"title":"PROVISIONING_METHOD"
+									},
+									"ROLE_START_DATE":{
+										"type":"string",
+										"title":"ROLE_START_DATE"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"json"
+						}
+					},
+					"additionalProperties":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":806,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_9XJnD-1",
+			"id":"n_8tqmf",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"cur_time":{
+							"type":"string",
+							"title":"Cur Time"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"import java.time.*\nimport java.time.format.*\n\nString getCurrentISTDateTime() {\n    // Get current time in IST\n    ZonedDateTime istTime = ZonedDateTime.now(ZoneId.of(\"Asia/Kolkata\"))\n    \n    // Format as 'yyyy-MM-dd HH:mm:ss' (customize as needed)\n    DateTimeFormatter formatter = DateTimeFormatter.ofPattern(\"yyyy-MM-dd HH:mm:ss\")\n    \n    // Return formatted string\n    return istTime.format(formatter)\n}\n\n// Usage example:\nString currentIST = getCurrentISTDateTime();\nreturn ['cur_time': currentIST]"
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.records.items.PERSON_ID",
+					"root.records.items.PERSON_NUMBER",
+					"root.records.items.FULL_NAME",
+					"root.records.items.LOCATION",
+					"root.records.items.ATC",
+					"root.records.items.ORGANIZATION",
+					"root.records.items.LEGAL_ENTITY",
+					"root.records.items.USERNAME",
+					"root.records.items.USER_GUID",
+					"root.records.items.ROLE_NAME",
+					"root.records.items.ROLE_ID",
+					"root.records.items.ROLE_GUID",
+					"root.records.items.EFFECTIVE_START_DATE",
+					"root.records.items.PROVISIONING_METHOD",
+					"root.records.items.ROLE_START_DATE",
+					"root.records.items.STATUS",
+					"root.records.items.CREATED_DATE",
+					"root.records.items.LAST_UPDATED_DATE"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":1126,
+				"resourceName":"storage_by_unifyapps_bulk_create_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_9XJnD-1",
+			"id":"n_ccxYa",
+			"index":3,
+			"inputs":{
+				"object_type":"s_non_auto_provisioning_emp_roles",
+				"records":{
+					"source":"{{ n_Fg3jD.outputs.json }}",
+					"ua:type":"mappedArray",
+					"items":{
+						"PERSON_ID":"{{ n_Fg3jD.outputs.json[0].PERSON_ID }}",
+						"PERSON_NUMBER":"{{ n_Fg3jD.outputs.json[0].PERSON_NUMBER }}",
+						"FULL_NAME":"{{ n_Fg3jD.outputs.json[0].FULL_NAME }}",
+						"LOCATION":"{{ n_Fg3jD.outputs.json[0].LOCATION }}",
+						"ATC":"{{ n_Fg3jD.outputs.json[0].ATC }}",
+						"ORGANIZATION":"{{ n_Fg3jD.outputs.json[0].ORGANIZATION }}",
+						"LEGAL_ENTITY":"{{ n_Fg3jD.outputs.json[0].LEGAL_ENTITY }}",
+						"USERNAME":"{{ n_Fg3jD.outputs.json[0].USERNAME }}",
+						"USER_GUID":"{{ n_Fg3jD.outputs.json[0].USER_GUID }}",
+						"ROLE_NAME":"{{ n_Fg3jD.outputs.json[0].ROLE_NAME }}",
+						"ROLE_ID":"{{ n_Fg3jD.outputs.json[0].ROLE_ID }}",
+						"ROLE_GUID":"{{ n_Fg3jD.outputs.json[0].ROLE_GUID }}",
+						"EFFECTIVE_START_DATE":"{{ n_Fg3jD.outputs.json[0].EFFECTIVE_START_DATE }}",
+						"PROVISIONING_METHOD":"{{ n_Fg3jD.outputs.json[0].PROVISIONING_METHOD }}",
+						"ROLE_START_DATE":"{{ n_Fg3jD.outputs.json[0].ROLE_START_DATE }}",
+						"STATUS":"NEW",
+						"CREATED_DATE":"{{ n_8tqmf.outputs.result.cur_time }}",
+						"LAST_UPDATED_DATE":"{{ n_8tqmf.outputs.result.cur_time }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create or update records in bulk",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":800,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_9XJnD-1",
+			"id":"n_Bi5eg",
+			"index":4,
+			"inputs":{
+				"result":{
+					"success":"true"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":44567,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":15
+}
