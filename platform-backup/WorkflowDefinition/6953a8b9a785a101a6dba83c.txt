@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767090361966,
+	"deleted":false,
+	"description":"description",
+	"edges":[
+		{
+			"fromNodeId":"_q4kwg",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_1B4df",
+			"type":"next"
+		}
+	],
+	"id":"6953a8b9a785a101a6dba83c",
+	"lastModifiedBy":-1,
+	"lcName":"newversionzoombuttons-fit view-latest-version-21767090322651",
+	"modifiedTime":1780492410883,
+	"name":"newVersionZoomButtons-Fit View-latest-version-21767090322651",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_q4kwg-1",
+			"id":"_q4kwg",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_q4kwg-1",
+			"id":"_1B4df",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":false,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
