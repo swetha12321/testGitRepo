@@ -1,0 +1,69 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1737361447378,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"Dhsnv",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"dWiaA",
+			"type":"next"
+		}
+	],
+	"id":"678e0827241cf66f422c852b",
+	"lastModifiedBy":0,
+	"lcName":"harshaltest",
+	"modifiedTime":1780495208305,
+	"name":"harshaltest",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":189,
+				"resourceName":"callables_from_interface"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"cPJPL-1",
+			"id":"Dhsnv",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger interface",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"cPJPL-1",
+			"id":"dWiaA",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":522,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
