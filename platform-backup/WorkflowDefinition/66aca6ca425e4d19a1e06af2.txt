@@ -1,0 +1,163 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725259014487,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1725259014564,
+		"deployedBy":520,
+		"deployedDefinitionId":"66d55d06d3f02a7f56227267",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"edges":[
+		{
+			"fromNodeId":"tqLDO",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"EbzV2",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"EbzV2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"5qnbr",
+			"type":"next"
+		}
+	],
+	"id":"66aca6ca425e4d19a1e06af2",
+	"lastModifiedBy":0,
+	"lcName":"get campaign details (ecom campaign) ",
+	"modifiedTime":1780496151600,
+	"name":"Get Campaign Details (Ecom Campaign) ",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"8G5LM-1",
+			"id":"tqLDO",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"details":{
+							"type":"string",
+							"title":"Details"
+						},
+						"tentative_earnings":{
+							"type":"string",
+							"title":"Tentative Earnings"
+						},
+						"end_date":{
+							"type":"string",
+							"title":"End Date"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"campaign_id":{
+							"type":"string",
+							"title":"Campaign Id"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":235,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"8G5LM-1",
+			"id":"EbzV2",
+			"index":0,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_campaignId",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ tqLDO.outputs.campaign_id }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"campaign_details",
+				"page":{
+					"limit":20,
+					"offset":0
+				},
+				"numberOfRecordsToFetch":"SINGLE",
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"8G5LM-1",
+			"id":"5qnbr",
+			"index":0,
+			"inputs":{
+				"result":{
+					"details":"{{ EbzV2.outputs.properties.campaign_description_and_rules }}",
+					"tentative_earnings":"{{ EbzV2.outputs.properties.potential_earnings }}",
+					"end_date":"{{ EbzV2.outputs.properties.end_date }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Return data to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":3
+}
