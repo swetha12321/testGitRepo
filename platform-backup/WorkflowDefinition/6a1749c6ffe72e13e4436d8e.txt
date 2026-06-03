@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1779911110815,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_LQds7",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_KMdw9",
+			"type":"next"
+		}
+	],
+	"id":"6a1749c6ffe72e13e4436d8e",
+	"lastModifiedBy":199850,
+	"lcName":"learning-platform",
+	"modifiedTime":1780470333160,
+	"name":"learning-platform",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_LQds7-1",
+			"id":"_LQds7",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_LQds7-1",
+			"id":"_KMdw9",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":199850,
+	"settings":{
+		"circuitBreakerConfiguration":{
+			"enabled":true
+		},
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":false,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		},
+		"workflowTimeoutInMillis":12
+	},
+	"standard":false,
+	"version":9
+}
