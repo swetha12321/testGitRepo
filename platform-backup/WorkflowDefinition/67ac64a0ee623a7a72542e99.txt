@@ -1,0 +1,142 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1739351200082,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"wBpxJ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"dmOSC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"dmOSC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Do7rf",
+			"type":"next"
+		}
+	],
+	"id":"67ac64a0ee623a7a72542e99",
+	"lastModifiedBy":0,
+	"lcName":"total connectors actions ",
+	"modifiedTime":1780493623107,
+	"name":"total connectors actions ",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":283,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"AjkXa-1",
+			"id":"wBpxJ",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":2251,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"AjkXa-1",
+			"id":"dmOSC",
+			"index":0,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"nodeName",
+							"filter":{
+								"operator":"NOT_CONTAINS",
+								"value":"unifyapps"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"NodeBuilderResourceRecord",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":20
+				},
+				"numberOfRecordsToFetch":"MULTIPLE",
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"csv_by_unifyapps",
+				"resourceVersion":201,
+				"resourceName":"csv_by_unifyapps_list_to_csv_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"AjkXa-1",
+			"id":"Do7rf",
+			"index":0,
+			"inputs":{
+				"fileName":"total connectors",
+				"delimiter":",",
+				"staticHeaders":[
+					{
+						"key":"connector name",
+						"value":"test"
+					},
+					{
+						"key":"display name",
+						"value":"tes"
+					}
+				],
+				"headerType":"STATIC",
+				"encoding":"UTF-8",
+				"dataSource":"{{ dmOSC.outputs.objects }}"
+			},
+			"skip":false,
+			"subTitle":"CSV by UnifyApps",
+			"title":"Write data to CSV file",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":31268,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":7
+}
