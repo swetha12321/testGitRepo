@@ -24,9 +24,9 @@
 		}
 	],
 	"id":"66ebd5a620649f700be18f64",
-	"lastModifiedBy":520,
+	"lastModifiedBy":0,
 	"lcName":"asana_trigger",
-	"modifiedTime":1728289380633,
+	"modifiedTime":1780496147817,
 	"name":"asana_trigger",
 	"nodes":[
 		{
@@ -96,5 +96,5 @@
 	"tags":[
 		
 	],
-	"version":19
+	"version":20
 }
