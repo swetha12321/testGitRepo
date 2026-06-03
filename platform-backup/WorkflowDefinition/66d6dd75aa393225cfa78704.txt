@@ -1,0 +1,72 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725357429992,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"OmKNi",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"KhiUU",
+			"type":"next"
+		}
+	],
+	"id":"66d6dd75aa393225cfa78704",
+	"lastModifiedBy":0,
+	"lcName":"dfsahjkl",
+	"modifiedTime":1780496151071,
+	"name":"dfsahjkl",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"OmKNi-1",
+			"id":"OmKNi",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"conv_ai_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"conv_ai_by_unifyapps_publish_response",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"OmKNi-1",
+			"id":"KhiUU",
+			"index":0,
+			"inputs":{
+				"callableInterfaceId":"__ua__publish_response_interface",
+				"parameters":{
+					"endConversation":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Conversation AI by UnifyApps",
+			"title":"Publish Response",
+			"type":"CALL_INTERFACE_WORKFLOW"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
