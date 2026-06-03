@@ -1,0 +1,66 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1755241000254,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_zwSB3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_DGJ43",
+			"type":"next"
+		}
+	],
+	"id":"689eda28caebe9b840523284",
+	"lastModifiedBy":-1,
+	"lcName":"scheduler",
+	"modifiedTime":1780492419078,
+	"name":"Scheduler",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_zwSB3-1",
+			"id":"_zwSB3",
+			"index":1,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_zwSB3-1",
+			"id":"_DGJ43",
+			"index":2,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":3952,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
