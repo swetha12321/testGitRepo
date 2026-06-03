@@ -1,0 +1,66 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767691035253,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_W4iPI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_IHm5q",
+			"type":"next"
+		}
+	],
+	"id":"695cd31be33fb76fcfad8884",
+	"lastModifiedBy":-1,
+	"lcName":"redis alert",
+	"modifiedTime":1780492410544,
+	"name":"Redis Alert",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_W4iPI-1",
+			"id":"_W4iPI",
+			"index":1,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_W4iPI-1",
+			"id":"_IHm5q",
+			"index":2,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":161958,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
