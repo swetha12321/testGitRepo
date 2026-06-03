@@ -1,0 +1,387 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1727167162811,
+	"deleted":false,
+	"deployedVersion":4,
+	"deploymentState":{
+		"deployedAt":1729762300254,
+		"deployedBy":520,
+		"deployedDefinitionId":"671a13fcd2a3c5728ea2fd3d",
+		"status":"DEPLOYED",
+		"version":4,
+		"workflowVersion":38
+	},
+	"edges":[
+		{
+			"fromNodeId":"6JxKL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"ru2An",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"ru2An",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"z6VWf",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"z6VWf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"02Hyv",
+			"type":"next"
+		}
+	],
+	"id":"66f01a32d3dcd449ec43600b",
+	"lastModifiedBy":0,
+	"lcName":"catalog - category wise product discount distribution",
+	"modifiedTime":1780496146027,
+	"name":"Catalog - Category Wise Product Discount Distribution",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"tj5y9-1",
+			"id":"6JxKL",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"distribution":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"categoryName":{
+										"type":"string",
+										"title":"Category Name"
+									},
+									"noDiscount":{
+										"type":"number",
+										"title":"No Discount"
+									},
+									"disc30":{
+										"type":"number",
+										"title":"Disc 30"
+									},
+									"disc60":{
+										"type":"number",
+										"title":"Disc 60"
+									},
+									"disc100":{
+										"type":"number",
+										"title":"Disc 100"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"Distribution",
+							"required":[]
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"catalogueId":{
+							"type":"string",
+							"title":"Catalogue Id"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"analytics_by_unifyapps_query_reports",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"tj5y9-1",
+			"id":"ru2An",
+			"index":0,
+			"inputs":{
+				"projections":[
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_product=::=productCategoryName"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_product=::=ProductName"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_product=::=RegularPrice",
+						"alias":"reg"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_product=::=DiscountedPrice",
+						"alias":"dis"
+					},
+					{
+						"aggregationFunction":"CUSTOM",
+						"includePercentageChange":false,
+						"name":"(reg-dis)*100/reg",
+						"alias":"discper"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_product=::=DiscountStamp"
+					}
+				],
+				"filter":{
+					"filters":[
+						{
+							"property":"ENTITY_page=::=CatalogueId",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ 6JxKL.outputs.catalogueId }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"entityType":"ENTITY_product",
+				"group":"ENTITY_REPORTING"
+			},
+			"options":{
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"cacheKey":"{{ 6JxKL.outputs.catalogueId }}_{{ __RUN__.outputs.userId }}",
+					"enabled":true,
+					"timeToLive":"3600"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP"
+			},
+			"skip":false,
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Analytics Query",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"tj5y9-1",
+			"id":"z6VWf",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"result":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"lessThan30":{
+										"type":"number",
+										"title":"Less Than 30"
+									},
+									"between30And60":{
+										"type":"number",
+										"title":"Between 30 And 60"
+									},
+									"moreThan60":{
+										"type":"number",
+										"title":"More Than 60"
+									},
+									"noDiscount":{
+										"type":"string",
+										"title":"No Discount"
+									},
+									"category":{
+										"type":"string",
+										"title":"Category"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"Result",
+							"required":[]
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"products":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"category":{
+										"type":"string",
+										"title":"Category"
+									},
+									"product":{
+										"type":"string",
+										"title":"Product"
+									},
+									"discount":{
+										"type":"number",
+										"title":"Discount"
+									},
+									"noDiscount":{
+										"type":"string",
+										"title":"No Discount"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"Products"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"code":"def analyzeDiscountDistribution(products) {\n    // Function to categorize discount\n    def categorizeDiscount = { product ->\n        if (product.discount == 0) return \"No Discount\"\n        if (product.discount < 30) return \"Less than 30%\"\n        if (product.discount <= 60) return \"Between 30% and 60%\"\n        return \"More than 60%\"\n    }\n\n    // Analyze discount distribution\n    def distribution = products.groupBy { it.category }.collect { category, categoryProducts ->\n        def categoryDistribution = [\n            \"No Discount\": 0,\n            \"Less than 30%\": 0,\n            \"Between 30% and 60%\": 0,\n            \"More than 60%\": 0\n        ]\n        \n        categoryProducts.each { product ->\n            def discountCategory = categorizeDiscount(product)\n            categoryDistribution[discountCategory]++\n        }\n        \n        [\n            category: category,\n            noDiscount: categoryDistribution[\"No Discount\"],\n            lessThan30: categoryDistribution[\"Less than 30%\"],\n            between30And60: categoryDistribution[\"Between 30% and 60%\"],\n            moreThan60: categoryDistribution[\"More than 60%\"]\n        ]\n    }\n\n    return distribution\n}\n\n\n// Analyze the discount distribution\ndef result = analyzeDiscountDistribution(products)\n\n// Return the result\nreturn [result:result]",
+				"isAsync":false,
+				"parameters":{
+					"products":{
+						"source":"{{ ru2An.outputs.objects }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"category":"{{ ru2An.outputs.objects[0].columns.ENTITY_product=::=productCategoryName }}",
+							"product":"{{ ru2An.outputs.objects[0].columns.ENTITY_product=::=ProductName }}",
+							"discount":"{{ ru2An.outputs.objects[0].columns.discper }}",
+							"noDiscount":"{{ ru2An.outputs.objects[0].columns.ENTITY_product=::=DiscountStamp }}"
+						}
+					}
+				}
+			},
+			"options":{
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"cacheKey":"{{ 6JxKL.outputs.catalogueId }}",
+					"enabled":true,
+					"timeToLive":"3600"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP"
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"tj5y9-1",
+			"id":"02Hyv",
+			"index":0,
+			"inputs":{
+				"result":{
+					"distribution":{
+						"ua:type":"mappedArray",
+						"items":{
+							"categoryName":"{{ z6VWf.outputs.result.result[0].category }}",
+							"disc30":"{{ z6VWf.outputs.result.result[0].lessThan30 }}",
+							"disc60":"{{ z6VWf.outputs.result.result[0].between30And60 }}",
+							"disc100":"{{ z6VWf.outputs.result.result[0].moreThan60 }}",
+							"noDiscount":"{{ z6VWf.outputs.result.result[0].noDiscount }}"
+						},
+						"source":"{{ z6VWf.outputs.result.result }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		"Catalog"
+	],
+	"version":39
+}
