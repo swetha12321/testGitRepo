@@ -1,0 +1,84 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725371297566,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"Rzba4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"xytZ3",
+			"type":"next"
+		}
+	],
+	"id":"66d713a129443559044ab721",
+	"lastModifiedBy":0,
+	"lcName":"test",
+	"modifiedTime":1780496151058,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":59,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Hmonw-1",
+			"id":"Rzba4",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"HTTP Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":18,
+				"resourceName":"standard_entities_get_automation_details",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Hmonw-1",
+			"id":"xytZ3",
+			"index":0,
+			"inputs":{
+				"workflowIds":[
+					"669f377a9383b64e18306046",
+					"66b0a7345b81b62d0bc995ae"
+				],
+				"includeNodesAndEdges":false
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Get automation details",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":13,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
