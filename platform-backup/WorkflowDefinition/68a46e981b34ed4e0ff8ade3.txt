@@ -1,0 +1,54 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1755606680705,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_tS7OB",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"DUMMY_RETURN_NODE_ID",
+			"type":"next"
+		}
+	],
+	"id":"68a46e981b34ed4e0ff8ade3",
+	"lastModifiedBy":-1,
+	"lcName":"wf agent chat",
+	"modifiedTime":1780492418793,
+	"name":"WF agent chat",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceName":"callables_return_to_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"id":"DUMMY_RETURN_NODE_ID",
+			"index":0,
+			"inputs":{
+				"result":{}
+			},
+			"skip":false,
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":45512,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		"Workflow Agent"
+	],
+	"version":1
+}
