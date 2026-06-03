@@ -4,9 +4,18 @@
 	],
 	"createdTime":1780510838469,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1780511298228,
+		"deployedBy":161875,
+		"deployedDefinitionId":"6a2072427cd36b4ab1715a5f",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":5
+	},
 	"edges":[
 		{
-			"fromNodeId":"n_OXi8s",
+			"fromNodeId":"n_1SW7U",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_9t8kU",
@@ -101,54 +110,34 @@
 	"id":"6a2070767cd36b4ab1715671",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-parent-rechecker",
-	"modifiedTime":1780511296565,
+	"modifiedTime":1780512448361,
 	"name":"credit-calculation-parent-rechecker",
 	"nodes":[
 		{
 			"context":{
-				"appName":"callables",
-				"resourceVersion":4066,
-				"resourceName":"callables_from_automation"
+				"appName":"schedule",
+				"resourceVersion":919,
+				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
-			"id":"n_OXi8s",
+			"id":"n_1SW7U",
 			"index":1,
 			"inputs":{
-				"result":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"completed":{
-							"type":"string",
-							"title":"Completed"
-						}
-					}
-				},
-				"setup":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"date":{
-							"type":"string",
-							"title":"Date"
-						},
-						"backtrack":{
-							"type":"boolean",
-							"title":"Backtrack"
-						}
-					}
-				}
+				"cron":"EXPRESSION",
+				"expression":"30 6 * * *",
+				"sequential":false,
+				"timezone":"Asia/Calcutta",
+				"interval":15,
+				"frequency":"MINUTES"
 			},
 			"skip":false,
-			"subTitle":"Callable",
-			"title":"Trigger via automation",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"CALLABLE"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
@@ -1207,5 +1196,5 @@
 		}
 	},
 	"standard":false,
-	"version":5
+	"version":6
 }
