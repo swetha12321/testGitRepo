@@ -1,0 +1,82 @@
+{
+	"appsUsed":[
+		"sqlserver"
+	],
+	"createdTime":1727183726639,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"iOoCC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"QOfBp",
+			"type":"next"
+		}
+	],
+	"id":"66f2bb6ef5e6a15c4fa93476",
+	"lastModifiedBy":0,
+	"lcName":"dasd",
+	"modifiedTime":1780496145973,
+	"name":"daSD",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":59,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FDCRv-1",
+			"id":"iOoCC",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"HTTP Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"sqlserver",
+				"resourceVersion":2144,
+				"connectionId":"66f2ff81f4cba301afe155a5",
+				"resourceName":"sqlserver_execute_sql",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FDCRv-1",
+			"id":"QOfBp",
+			"index":0,
+			"inputs":{
+				"objectSourceResourceName":"sqlserver_execute_sql_metadata",
+				"sql":"SELECT TOP 10 * FROM test_etl;"
+			},
+			"skip":false,
+			"subTitle":"Microsoft SQL Server",
+			"title":"Execute a SQL statement",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":5
+}
