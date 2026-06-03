@@ -1,0 +1,59 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1726460360079,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"DT0st",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"TV4Ns",
+			"type":"next"
+		}
+	],
+	"id":"66e7b1c89f93993c326a5e78",
+	"lastModifiedBy":0,
+	"lcName":"checks",
+	"modifiedTime":1780496149397,
+	"name":"checks",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DT0st-1",
+			"id":"DT0st",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DT0st-1",
+			"id":"TV4Ns",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":2621,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
