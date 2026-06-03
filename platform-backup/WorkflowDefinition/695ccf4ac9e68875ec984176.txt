@@ -1,0 +1,87 @@
+{
+	"appsUsed":[
+		"azure_blob"
+	],
+	"createdTime":1767690058892,
+	"deleted":false,
+	"deployedVersion":2,
+	"deploymentState":{
+		"deployedAt":1767690119866,
+		"deployedBy":124519,
+		"deployedDefinitionId":"695ccf87e33fb76fcfad73aa",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":4
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_i3dEY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_nI1fI",
+			"type":"next"
+		}
+	],
+	"id":"695ccf4ac9e68875ec984176",
+	"lastModifiedBy":-1,
+	"lcName":"testing new",
+	"modifiedTime":1780492410545,
+	"name":"testing new",
+	"nodes":[
+		{
+			"context":{
+				"appName":"azure_blob",
+				"resourceVersion":12,
+				"connectionId":"68ee30f2af190e20d1cbcaa1",
+				"resourceName":"azure_blob_on_new_event"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_zBGSB-1",
+			"id":"n_i3dEY",
+			"index":1,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Azure Blob",
+			"title":"On new event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_zBGSB-1",
+			"id":"n_nI1fI",
+			"index":2,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":124519,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":5
+}
