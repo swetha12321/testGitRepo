@@ -1,0 +1,93 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1755245839767,
+	"deleted":false,
+	"deployedVersion":2,
+	"deploymentState":{
+		"deployedAt":1755245867822,
+		"deployedBy":39713,
+		"deployedDefinitionId":"689eed2b9188e67f08b10251",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":2
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_Z6bVq",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_jeMUQ",
+			"type":"next"
+		}
+	],
+	"id":"689eed0f9188e67f08b10168",
+	"lastModifiedBy":-1,
+	"lcName":"test-123-123",
+	"modifiedTime":1780492419077,
+	"name":"test-123-123",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":802,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_W9rGr-1",
+			"id":"n_Z6bVq",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":868,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_W9rGr-1",
+			"id":"n_jeMUQ",
+			"index":2,
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":39713,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
