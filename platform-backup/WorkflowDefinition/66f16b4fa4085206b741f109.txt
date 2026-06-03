@@ -1,0 +1,59 @@
+{
+	"appsUsed":[
+		"microsoft_entra_id"
+	],
+	"createdTime":1727097679401,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1727097696286,
+		"deployedBy":520,
+		"deployedDefinitionId":"66f16b5fa4085206b741f10e",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"edges":[
+		
+	],
+	"id":"66f16b4fa4085206b741f109",
+	"lastModifiedBy":0,
+	"lcName":"sdcaa",
+	"modifiedTime":1780496147221,
+	"name":"sdcaa",
+	"nodes":[
+		{
+			"context":{
+				"appName":"microsoft_entra_id",
+				"resourceVersion":2311,
+				"connectionId":"66f0e08bbf6c5f1381adde63",
+				"resourceName":"microsoft_entra_id_on_new_or_updated_user"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"aUGd2-1",
+			"id":"LAhCr",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Microsoft Entra ID",
+			"title":"New / updated user",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
