@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1754059071904,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_zU5uY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Uny62",
+			"type":"next"
+		}
+	],
+	"id":"688cd13f946b3de0025266cc",
+	"lastModifiedBy":-1,
+	"lcName":"snowflake",
+	"modifiedTime":1780492419580,
+	"name":"snowflake",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_zU5uY-1",
+			"id":"_zU5uY",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_zU5uY-1",
+			"id":"_Uny62",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":3952,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
