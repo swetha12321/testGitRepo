@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780491630955,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_CV4Lt",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_ztb04",
+			"type":"next"
+		}
+	],
+	"id":"6a20256eaa50af1fc953b53a",
+	"lastModifiedBy":175325,
+	"lcName":"readtextfrompdffilepdflocalprotected pdf with wrong passwordszregrybel",
+	"modifiedTime":1780491630955,
+	"name":"ReadTextFromPDFFilePDFLocalProtected PDF with Wrong PasswordsZReGRybeL",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_CV4Lt-1",
+			"id":"_CV4Lt",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_CV4Lt-1",
+			"id":"_ztb04",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
