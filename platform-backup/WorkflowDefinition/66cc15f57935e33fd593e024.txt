@@ -1,0 +1,81 @@
+{
+	"appsUsed":[
+		"jira_service_management"
+	],
+	"createdTime":1724650997666,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"xQDiY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"FdzOP",
+			"type":"next"
+		}
+	],
+	"id":"66cc15f57935e33fd593e024",
+	"lastModifiedBy":0,
+	"lcName":"jira checks",
+	"modifiedTime":1780496151989,
+	"name":"jira checks",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":56,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"2oQL3-1",
+			"id":"xQDiY",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"HTTP Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"jira_service_management",
+				"resourceVersion":21,
+				"connectionId":"66cc15b653273d6bc3526552",
+				"resourceName":"jira_service_management_create_organization",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"2oQL3-1",
+			"id":"FdzOP",
+			"index":0,
+			"inputs":{
+				"name":"Ahlawats"
+			},
+			"skip":false,
+			"subTitle":"Jira Service Management",
+			"title":"Create organization",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":174,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
