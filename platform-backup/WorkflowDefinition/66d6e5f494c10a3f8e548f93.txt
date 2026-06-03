@@ -1,0 +1,86 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725359604046,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"ofKWE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"EZ6F7",
+			"type":"next"
+		}
+	],
+	"id":"66d6e5f494c10a3f8e548f93",
+	"lastModifiedBy":0,
+	"lcName":"nirav",
+	"modifiedTime":1780496151068,
+	"name":"nirav",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":59,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Ew8xN-1",
+			"id":"ofKWE",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"HTTP Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":3,
+				"resourceName":"utility_by_unifyapps_export_unifyapps_pages_to_pdf",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Ew8xN-1",
+			"id":"EZ6F7",
+			"index":0,
+			"inputs":{
+				"urls":[
+					"https://qa.unifyapps.com/p/0/automations"
+				],
+				"page":{
+					"pdfLayout":"PORTRAIT",
+					"passwordProtection":"NO"
+				}
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Export UnifyApps pages to PDF",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":21,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
