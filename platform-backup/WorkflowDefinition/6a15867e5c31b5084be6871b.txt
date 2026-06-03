@@ -1,0 +1,207 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1779795582737,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_PUORy",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_409Zc",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_409Zc",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ycPcx",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ycPcx",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ISAIv",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ISAIv",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Z0HhP",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Z0HhP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_TN6Lc",
+			"type":"next"
+		}
+	],
+	"id":"6a15867e5c31b5084be6871b",
+	"lastModifiedBy":0,
+	"lcName":"pastebin",
+	"modifiedTime":1780491811526,
+	"name":"pasteBin",
+	"nodes":[
+		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":911,
+				"resourceName":"schedule_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_yVnu7-1",
+			"id":"n_PUORy",
+			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":15,
+				"frequency":"MINUTES"
+			},
+			"skip":false,
+			"subTitle":"Schedule",
+			"title":"New recurring event",
+			"trigger":{
+				"type":"SCHEDULED"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":2188,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_yVnu7-1",
+			"id":"n_409Zc",
+			"index":2,
+			"inputs":{
+				"code":"SELECT\n\nCAST(\n\nCOALESCE(\n\nCASE\n\nWHEN GIT_Dom IS NOT NULL AND Sales_Dom IS NOT NULL THEN\n\nCASE WHEN GIT_Dom < Sales_Dom THEN GIT_Dom ELSE Sales_Dom END\n\nELSE COALESCE(GIT_Dom, Sales_Dom)\n\nEND,\n\n0) AS DECIMAL(18,2)\n\n) AS FinalFloorPriceLastMonth_Domestic,\n\n\n\n\n\n\n\nCAST(\n\nCOALESCE(\n\nCASE\n\nWHEN GIT_Exp IS NOT NULL AND Sales_Exp IS NOT NULL THEN\n\nCASE WHEN GIT_Exp < Sales_Exp THEN GIT_Exp ELSE Sales_Exp END\n\nELSE COALESCE(GIT_Exp, Sales_Exp)\n\nEND,\n\n0) AS DECIMAL(18,2)\n\n) AS FinalFloorPriceLastMonth_Export\n\n\n\n\n\n\n\nFROM\n\n\n\n\n\n\n\n(SELECT MIN(CAST(_pr_GIT_Price AS DOUBLE)) AS GIT_Dom\n\nFROM ENTITY_uc_5_git_data\n\nWHERE _pr_Tax_invoice_Date >= '{{ Execute_Groovy_code_in_Code_by_UnifyApps.outputs.result.lastmonthday.format2 }}'\n\nAND _pr_Tax_invoice_Date < '{{ Execute_Groovy_code_in_Code_by_UnifyApps.outputs.result.latestmonthday.format2 }}'\n\nAND _pr_itemcode_extracted LIKE '%{{ For_each_loop_in_Loop.outputs.item }}%'\n\nAND _pr_Position_Number IN ('1', '101', '102')\n\nAND _pr_Currency_Type != 'USD'\n\nAND deleted = 0) AS table_git_dom\n\n\n\n\n\n\n\nCROSS JOIN\n\n\n\n\n\n\n\n(SELECT MIN(_pr_InvoiceAmount / NULLIF(_pr_ItemQuantityInKG, 0)) AS Sales_Dom\n\nFROM ENTITY_uc_5_git_view_data\n\nWHERE _pr_InvoiceDate >= '{{ Execute_Groovy_code_in_Code_by_UnifyApps.outputs.result.lastmonthday.format2 }}'\n\nAND _pr_InvoiceDate < '{{ Execute_Groovy_code_in_Code_by_UnifyApps.outputs.result.latestmonthday.format2 }}'\n\nAND _pr_itemcodeextracted LIKE '%{{ For_each_loop_in_Loop.outputs.item }}%'\n\nAND _pr_DomExp = 2\n\nAND deleted = 0) AS table_sales_dom\n\n\n\n\n\n\n\nCROSS JOIN\n\n\n\n\n\n\n\n(SELECT MIN(CAST(_pr_GIT_Price AS DOUBLE)) AS GIT_Exp\n\nFROM ENTITY_uc_5_git_data\n\nWHERE _pr_Tax_invoice_Date >= '{{ Execute_Groovy_code_in_Code_by_UnifyApps.outputs.result.lastmonthday.format2 }}'\n\nAND _pr_Tax_invoice_Date < '{{ Execute_Groovy_code_in_Code_by_UnifyApps.outputs.result.latestmonthday.format2 }}'\n\nAND _pr_itemcode_extracted LIKE '%{{ For_each_loop_in_Loop.outputs.item }}%'\n\nAND _pr_Position_Number IN ('1', '101', '102')\n\nAND _pr_Currency_Type = 'USD'\n\nAND deleted = 0) AS table_git_exp\n\n\n\n\n\n\n\nCROSS JOIN\n\n\n\n\n\n\n\n(SELECT MIN(\n\nCASE\n\nWHEN _pr_BaseCurrency IN ('EUR', 'CNY') THEN\n\nCAST(_pr_InvoiceAmountBasicINR AS DOUBLE) /\n\nNULLIF((\n\nSELECT MAX(CAST(_pr_ExchangeRate AS DOUBLE))\n\nFROM ENTITY_uc_5_git_view_data\n\nWHERE _pr_BaseCurrency = 'USD'\n\nAND _pr_InvoiceDate >= '{{ Execute_Groovy_code_in_Code_by_UnifyApps.outputs.result.lastmonthday.format2 }}'\n\nAND _pr_InvoiceDate < '{{ Execute_Groovy_code_in_Code_by_UnifyApps.outputs.result.latestmonthday.format2 }}'\n\nAND deleted = 0\n\n), 0)\n\nELSE CAST(_pr_InvoiceAmountBase AS DOUBLE)\n\nEND / NULLIF(CAST(_pr_ItemQuantityInKG AS DOUBLE), 0)\n\n) AS Sales_Exp\n\nFROM ENTITY_uc_5_git_view_data\n\nWHERE _pr_InvoiceDate >= '{{ Execute_Groovy_code_in_Code_by_UnifyApps.outputs.result.lastmonthday.format2 }}'\n\nAND _pr_InvoiceDate < '{{ Execute_Groovy_code_in_Code_by_UnifyApps.outputs.result.latestmonthday.format2 }}'\n\nAND _pr_itemcodeextracted LIKE '%{{ For_each_loop_in_Loop.outputs.item }}%'\n\nAND _pr_DomExp = 1\n\nAND deleted = 0) AS table_sales_exp ",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":2189,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_yVnu7-1",
+			"id":"n_ycPcx",
+			"index":3,
+			"inputs":{
+				"code":"{\n  \"metadata\": {\n    \"rowMetadata\": [\n      {\n        \"columnName\": \"id\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"timestamp\",\n        \"dataType\": \"DATETIME\"\n      },\n      {\n        \"columnName\": \"count\",\n        \"dataType\": \"TINYINT\"\n      },\n      {\n        \"columnName\": \"_pr_CompanyCode\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_Sales_Order\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_Sales_Order_Type\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_Currency_Type\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_Exchange_Rate\",\n        \"dataType\": \"DOUBLE\"\n      },\n      {\n        \"columnName\": \"_pr_Tax_Invoice_Number\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_Order_Origin\",\n        \"dataType\": \"DOUBLE\"\n      },\n      {\n        \"columnName\": \"_pr_Order_Number\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_Set\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"_pr_Line\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"_pr_Sequence\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"_pr_Transaction_Type\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_Invoice_Date\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"_pr_Invoice_Number\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_Invoice_qty\",\n        \"dataType\": \"DOUBLE\"\n      },\n      {\n        \"columnName\": \"_pr_Invoice_qty_unit\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_return_consumption_qty\",\n        \"dataType\": \"DOUBLE\"\n      },\n      {\n        \"columnName\": \"_pr_actual_delivery_date\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"_pr_delivered_qty\",\n        \"dataType\": \"DOUBLE\"\n      },\n      {\n        \"columnName\": \"_pr_rejected_qty\",\n        \"dataType\": \"DOUBLE\"\n      },\n      {\n        \"columnName\": \"_pr_rejected_qty_unit\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_Git_price\",\n        \"dataType\": \"DOUBLE\"\n      },\n      {\n        \"columnName\": \"_pr_Position_number\",\n        \"dataType\": \"DOUBLE\"\n      },\n      {\n        \"columnName\": \"_pr_Item_code\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_key\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_total_git_price\",\n        \"dataType\": \"DOUBLE\"\n      },\n      {\n        \"columnName\": \"_pr_DimDom\",\n        \"dataType\": \"DOUBLE\"\n      },\n      {\n        \"columnName\": \"_pr_Shipment_Number\",\n        \"dataType\": \"DOUBLE\"\n      },\n      {\n        \"columnName\": \"_pr_shipment_date\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"_pr_tax_invoice_date\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"_pr_total_git_values\",\n        \"dataType\": \"DOUBLE\"\n      },\n      {\n        \"columnName\": \"_pr_git_values_INR\",\n        \"dataType\": \"DOUBLE\"\n      },\n      {\n        \"columnName\": \"_pr_git_values_USD\",\n        \"dataType\": \"DOUBLE\"\n      },\n      {\n        \"columnName\": \"_pr_SiteCodeFromFactSales\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_Site_Code\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_MonthYear\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_itemcode_extracted\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"createdTime\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"modifiedTime\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"version\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"deleted\",\n        \"dataType\": \"BIT\"\n      },\n      {\n        \"columnName\": \"ownerUserId\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"lastModifiedBy\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"projectId\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"grants\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_taxinvoice_sitecode\",\n        \"dataType\": \"VARCHAR\"\n      }\n    ]\n  },\n  \"objects\": [\n    {\n      \"columns\": {\n        \"_pr_Currency_Type\": \"USD\",\n        \"modifiedTime\": 1779198620524,\n        \"_pr_CompanyCode\": \"600\",\n        \"_pr_Line\": 1,\n        \"_pr_shipment_date\": 1769731200000,\n        \"_pr_Site_Code\": \"GFC001\",\n        \"_pr_tax_invoice_date\": 1769817600000,\n        \"_pr_Git_price\": 95.148,\n        \"_pr_Order_Origin\": 1,\n        \"_pr_Shipment_Number\": 100009308,\n        \"_pr_Invoice_Date\": 0,\n        \"_pr_Sales_Order_Type\": \"EXP\",\n        \"_pr_Exchange_Rate\": 91.57,\n        \"createdTime\": 1779198620524,\n        \"id\": \"e_6a0c6a9cf65ed74073a8ebf4\",\n        \"timestamp\": \"2026-05-19 13:50:20\",\n        \"_pr_actual_delivery_date\": 1769817600000,\n        \"_pr_Position_number\": 1,\n        \"_pr_Item_code\": \"F00222-COMPOSITE-0050\",\n        \"grants\": \"[\\\"u/1/C\\\",\\\"u/1/D\\\",\\\"u/1/E\\\",\\\"u/1/V\\\"]\",\n        \"_pr_Invoice_qty\": 300,\n        \"_pr_Sequence\": 0,\n        \"_pr_rejected_qty\": 0,\n        \"_pr_return_consumption_qty\": 0,\n        \"_pr_Set\": 1,\n        \"lastModifiedBy\": 1,\n        \"count\": 1,\n        \"_pr_Order_Number\": \"HE3001675\",\n        \"_pr_Invoice_qty_unit\": \"KGS\",\n        \"version\": 1,\n        \"_pr_delivered_qty\": 300,\n        \"deleted\": true,\n        \"ownerUserId\": 1,\n        \"_pr_Sales_Order\": \"HE3001675\",\n        \"_pr_Tax_Invoice_Number\": \"GJE2500000000956\",\n        \"_pr_Invoice_Number\": \"0\",\n        \"_pr_itemcode_extracted\": \"F00222\"\n      }\n    }\n  ]\n}",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":2189,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_yVnu7-1",
+			"id":"n_ISAIv",
+			"index":4,
+			"inputs":{
+				"code":"{\n  \"metadata\": {\n    \"rowMetadata\": [\n      {\n        \"columnName\": \"id\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"timestamp\",\n        \"dataType\": \"DATETIME\"\n      },\n      {\n        \"columnName\": \"count\",\n        \"dataType\": \"TINYINT\"\n      },\n      {\n        \"columnName\": \"_pr_ActualSalesFlag\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_AddressID\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_BaseCurrency\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_CompanyCode\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_CountryID\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_CurrencyType\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_CustName\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_CustomerCode\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_CustomerID\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_DeliveryDate\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_DeliveryTermID\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_DomExp\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"_pr_ExchangeRate\",\n        \"dataType\": \"DOUBLE\"\n      },\n      {\n        \"columnName\": \"_pr_Flag_QtrlyReversal\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"_pr_HomeTaxableSalesFreightAmount\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_HomeTaxableSalesInsuranceAmount\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_HomeTaxableSalesPackingAmount\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_InvoiceAmount\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"_pr_InvoiceAmountBase\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"_pr_InvoiceAmountBasicINR\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"_pr_InvoiceDate\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_InvoiceNumber\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_InvoicetoAddress\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_ItemID\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_ItemQuantity\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"_pr_ItemQuantityChanged\",\n        \"dataType\": \"DOUBLE\"\n      },\n      {\n        \"columnName\": \"_pr_ItemQuantityInKG\",\n        \"dataType\": \"DOUBLE\"\n      },\n      {\n        \"columnName\": \"_pr_Itemcode\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_MonthofInvoice\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_OldInvoiceDate\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_OrderDate\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_OrderNumber\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_PaymentTermID\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_PositionNumber\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_PriceUnit\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_Region\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_RegionCode\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_SaleTax\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"_pr_SalesOrderType\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_SalesType\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_ShipmentLine\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_ShipmentNumber\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_SiteCode\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_SiteID\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_Sitedesc\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_Status\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_Subsidary\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_TaxID\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_TaxLineSequence\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_TaxableSalesFreightAmount\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_TaxableSalesInsuranceAmount\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_TaxableSalesPackingAmount\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_TransactionType\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_UOMChange\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_Unit\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_UnitAmount\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"_pr_UnitGrouped\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_UnitOfMeasure\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_YearofInvoice\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"_pr_InvoiceTaxAmountBase\",\n        \"dataType\": \"DOUBLE\"\n      },\n      {\n        \"columnName\": \"createdTime\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"modifiedTime\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"version\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"deleted\",\n        \"dataType\": \"BIT\"\n      },\n      {\n        \"columnName\": \"ownerUserId\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"lastModifiedBy\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"projectId\",\n        \"dataType\": \"BIGINT\"\n      },\n      {\n        \"columnName\": \"grants\",\n        \"dataType\": \"VARCHAR\"\n      },\n      {\n        \"columnName\": \"_pr_itemcodeextracted\",\n        \"dataType\": \"VARCHAR\"\n      }\n    ]\n  },\n  \"objects\": [\n    {\n      \"columns\": {\n        \"_pr_PriceUnit\": \"KGS\",\n        \"modifiedTime\": 1777467925787,\n        \"_pr_CompanyCode\": \"600\",\n        \"_pr_itemcodeextracted\": \"         F00153\",\n        \"_pr_HomeTaxableSalesFreightAmount\": \"0.00\",\n        \"_pr_InvoiceDate\": \"2023-10-09\",\n        \"_pr_ItemQuantityInKG\": 16800,\n        \"_pr_TaxID\": \"23000790BIS1600\",\n        \"_pr_InvoiceNumber\": \"23000790\",\n        \"_pr_TaxableSalesFreightAmount\": \"0.00\",\n        \"_pr_ItemQuantity\": 16800,\n        \"_pr_CustomerCode\": \"FDIS11977\",\n        \"createdTime\": 1777467925787,\n        \"id\": \"e_69f2021540f2c07b587fa3b4\",\n        \"_pr_BaseCurrency\": \"INR\",\n        \"_pr_HomeTaxableSalesInsuranceAmount\": \"0.00\",\n        \"_pr_InvoiceAmountBase\": 1596000,\n        \"_pr_ActualSalesFlag\": \"Actual Sales\",\n        \"_pr_OldInvoiceDate\": \"2023-10-09\",\n        \"_pr_DeliveryTermID\": \"600-200\",\n        \"_pr_ExchangeRate\": 1,\n        \"_pr_SiteID\": \"600-SAN001\",\n        \"count\": 1,\n        \"_pr_TaxableSalesInsuranceAmount\": \"0.00\",\n        \"_pr_ShipmentLine\": \"1\",\n        \"_pr_InvoicetoAddress\": \"ACI007283\",\n        \"_pr_YearofInvoice\": 2023,\n        \"_pr_DeliveryDate\": \"2023-10-09\",\n        \"version\": 1,\n        \"_pr_OrderNumber\": \"FD4003439\",\n        \"_pr_HomeTaxableSalesPackingAmount\": \"0.00\",\n        \"_pr_Unit\": \"KGS\",\n        \"_pr_InvoiceAmountBasicINR\": 1596000,\n        \"_pr_Subsidary\": \"NA\",\n        \"_pr_RegionCode\": \"C01\",\n        \"_pr_Flag_QtrlyReversal\": 0,\n        \"_pr_SalesType\": \"BIS\",\n        \"_pr_InvoiceTaxAmountBase\": 1596000,\n        \"_pr_PaymentTermID\": \"600-X39\",\n        \"_pr_TaxableSalesPackingAmount\": \"0.00\",\n        \"_pr_UOMChange\": \"MT\",\n        \"_pr_DomExp\": 2,\n        \"_pr_ItemQuantityChanged\": 16.8,\n        \"_pr_TaxLineSequence\": \"1\",\n        \"_pr_UnitAmount\": 95,\n        \"_pr_InvoiceAmount\": 1596000,\n        \"_pr_MonthofInvoice\": \"Oct\",\n        \"_pr_CurrencyType\": \"INR\",\n        \"_pr_SalesOrderType\": \"BIS\",\n        \"_pr_AddressID\": \"600-ACI010622\",\n        \"_pr_TransactionType\": \"BIS\",\n        \"_pr_CustomerID\": \"600-FDIS11977\",\n        \"_pr_Itemcode\": \"         F00153-BAGBOPPLAMINATED-0030\",\n        \"_pr_OrderDate\": \"2023-10-07 04:30:00\",\n        \"timestamp\": \"2026-04-29 13:05:25\",\n        \"grants\": \"[\\\"u/1/C\\\",\\\"u/1/D\\\",\\\"u/1/E\\\",\\\"u/1/V\\\"]\",\n        \"_pr_UnitOfMeasure\": \"KGS\",\n        \"_pr_Sitedesc\": \"Savli Animal Nutrition and Hea\",\n        \"_pr_PositionNumber\": \"1\",\n        \"_pr_Region\": \"Chennai\",\n        \"_pr_ItemID\": \"600-         F00153-BAGBOPPLAMINATED-0030\",\n        \"lastModifiedBy\": 1,\n        \"_pr_Status\": \"80\",\n        \"_pr_CountryID\": \"600-IN\",\n        \"_pr_SaleTax\": 0,\n        \"deleted\": true,\n        \"_pr_SiteCode\": \"SAN001\",\n        \"ownerUserId\": 1,\n        \"_pr_ShipmentNumber\": \"S00199099\",\n        \"_pr_UnitGrouped\": \"WEIGHT\",\n        \"_pr_CustName\": \"SRI LAKSMI TRADERS\"\n      }\n    }\n  ]\n}",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":2189,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_yVnu7-1",
+			"id":"n_Z0HhP",
+			"index":5,
+			"inputs":{
+				"code":"WITH\n\ngit_dom_floor AS (\n    SELECT MIN(CAST(_pr_total_git_price AS DOUBLE)) AS GIT_Dom\n    FROM ENTITY_uc_5_git_data\n    WHERE FROM_UNIXTIME(_pr_tax_invoice_date / 1000, 'yyyy-MM-dd')\n            >= '{{ n_ISAIv.outputs.result.lastmonthday.format2 }}'\n      AND FROM_UNIXTIME(_pr_tax_invoice_date / 1000, 'yyyy-MM-dd')\n            < '{{ n_ISAIv.outputs.result.latestmonthday.format2 }}'\n      AND TRIM(_pr_itemcode_extracted) = '{{ For_each_loop_in_Loop.outputs.item }}'\n      AND _pr_Position_number = 1\n      AND _pr_DimDom = 2\n      AND deleted = 0\n),\n\ngit_exp_floor AS (\n    SELECT MIN(CAST(_pr_total_git_price AS DOUBLE)) AS GIT_Exp\n    FROM ENTITY_uc_5_git_data\n    WHERE FROM_UNIXTIME(_pr_tax_invoice_date / 1000, 'yyyy-MM-dd')\n            >= '{{ n_ISAIv.outputs.result.lastmonthday.format2 }}'\n      AND FROM_UNIXTIME(_pr_tax_invoice_date / 1000, 'yyyy-MM-dd')\n            < '{{ n_ISAIv.outputs.result.latestmonthday.format2 }}'\n      AND TRIM(_pr_itemcode_extracted) = '{{ For_each_loop_in_Loop.outputs.item }}'\n      AND _pr_Position_number = 1\n      AND _pr_DimDom = 1\n      AND deleted = 0\n),\n\nusd_xrate AS (\n    SELECT MAX(CAST(_pr_ExchangeRate AS DOUBLE)) AS usd_rate\n    FROM ENTITY_uc_5_git_view_data\n    WHERE _pr_BaseCurrency = 'USD'\n      AND _pr_InvoiceDate >= '{{ n_ISAIv.outputs.result.lastmonthday.format2 }}'\n      AND _pr_InvoiceDate < '{{ n_ISAIv.outputs.result.latestmonthday.format2 }}'\n      AND deleted = 0\n),\n\nsales_dom_floor AS (\n    SELECT MIN(\n        (\n            CAST(_pr_InvoiceAmount AS DOUBLE)\n          + COALESCE(CAST(NULLIF(TRIM(_pr_TaxableSalesFreightAmount), '') AS DOUBLE), 0)\n          + COALESCE(CAST(NULLIF(TRIM(_pr_TaxableSalesInsuranceAmount), '') AS DOUBLE), 0)\n          + COALESCE(CAST(NULLIF(TRIM(_pr_TaxableSalesPackingAmount), '') AS DOUBLE), 0)\n        )\n        / NULLIF(CAST(_pr_ItemQuantityInKG AS DOUBLE), 0)\n    ) AS Sales_Dom\n    FROM ENTITY_uc_5_git_view_data\n    WHERE _pr_InvoiceDate >= '{{ n_ISAIv.outputs.result.lastmonthday.format2 }}'\n      AND _pr_InvoiceDate < '{{ n_ISAIv.outputs.result.latestmonthday.format2 }}'\n      AND TRIM(_pr_itemcodeextracted) = '{{ For_each_loop_in_Loop.outputs.item }}'\n      AND _pr_DomExp = 2\n      AND _pr_ItemQuantityInKG > 0\n      AND deleted = 0\n),\n\nsales_exp_floor AS (\n    SELECT MIN(\n        CASE\n            WHEN gvd._pr_BaseCurrency IN ('EUR', 'CNY')\n                THEN CAST(gvd._pr_InvoiceAmountBasicINR AS DOUBLE) / NULLIF(ux.usd_rate, 0)\n            ELSE\n                CAST(gvd._pr_InvoiceAmountBase AS DOUBLE)\n        END\n        / NULLIF(CAST(gvd._pr_ItemQuantityInKG AS DOUBLE), 0)\n    ) AS Sales_Exp\n    FROM ENTITY_uc_5_git_view_data gvd\n    CROSS JOIN usd_xrate ux\n    WHERE gvd._pr_InvoiceDate >= '{{ n_ISAIv.outputs.result.lastmonthday.format2 }}'\n      AND gvd._pr_InvoiceDate < '{{ n_ISAIv.outputs.result.latestmonthday.format2 }}'\n      AND TRIM(gvd._pr_itemcodeextracted) = '{{ For_each_loop_in_Loop.outputs.item }}'\n      AND gvd._pr_DomExp = 1\n      AND gvd._pr_ItemQuantityInKG > 0\n      AND gvd.deleted = 0\n)\n\nSELECT\n    CAST(\n        COALESCE(\n            CASE\n                WHEN gd.GIT_Dom IS NOT NULL AND sd.Sales_Dom IS NOT NULL\n                    THEN CASE\n                            WHEN gd.GIT_Dom < sd.Sales_Dom\n                            THEN gd.GIT_Dom\n                            ELSE sd.Sales_Dom\n                         END\n                ELSE COALESCE(gd.GIT_Dom, sd.Sales_Dom)\n            END,\n            0\n        ) AS DECIMAL(18,2)\n    ) AS FinalFloorPriceLastMonth_Domestic,\n\n    CAST(\n        COALESCE(\n            CASE\n                WHEN ge.GIT_Exp IS NOT NULL AND se.Sales_Exp IS NOT NULL\n                    THEN CASE\n                            WHEN ge.GIT_Exp < se.Sales_Exp\n                            THEN ge.GIT_Exp\n                            ELSE se.Sales_Exp\n                         END\n                ELSE COALESCE(ge.GIT_Exp, se.Sales_Exp)\n            END,\n            0\n        ) AS DECIMAL(18,2)\n    ) AS FinalFloorPriceLastMonth_Export\n\nFROM git_dom_floor gd\nCROSS JOIN sales_dom_floor sd\nCROSS JOIN git_exp_floor ge\nCROSS JOIN sales_exp_floor se;",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":2189,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_yVnu7-1",
+			"id":"n_TN6Lc",
+			"index":6,
+			"inputs":{
+				"code":"WITH\n\ngit_dom_floor AS (\n    SELECT MIN(CAST(_pr_total_git_price AS DOUBLE)) AS GIT_Dom\n    FROM ENTITY_uc_5_git_data\n    WHERE FROM_UNIXTIME(_pr_tax_invoice_date / 1000, 'yyyy-MM-dd')\n            >= '2026-04-01'\n      AND FROM_UNIXTIME(_pr_tax_invoice_date / 1000, 'yyyy-MM-dd')\n            < '2026-05-01'\n      AND TRIM(_pr_itemcode_extracted) = 'F00153'\n      AND _pr_Position_number = 1\n      AND _pr_DimDom = 2\n      AND deleted = 0\n),\n\ngit_exp_floor AS (\n    SELECT MIN(CAST(_pr_total_git_price AS DOUBLE)) AS GIT_Exp\n    FROM ENTITY_uc_5_git_data\n    WHERE FROM_UNIXTIME(_pr_tax_invoice_date / 1000, 'yyyy-MM-dd')\n            >= '2026-04-01'\n      AND FROM_UNIXTIME(_pr_tax_invoice_date / 1000, 'yyyy-MM-dd')\n            < '2026-05-01'\n      AND TRIM(_pr_itemcode_extracted) = 'F00153'\n      AND _pr_Position_number = 1\n      AND _pr_DimDom = 1\n      AND deleted = 0\n),\n\nusd_xrate AS (\n    SELECT MAX(CAST(_pr_ExchangeRate AS DOUBLE)) AS usd_rate\n    FROM ENTITY_uc_5_git_view_data\n    WHERE _pr_BaseCurrency = 'USD'\n      AND _pr_InvoiceDate >= '2026-04-01'\n      AND _pr_InvoiceDate < '2026-05-01'\n      AND deleted = 0\n),\n\nsales_dom_floor AS (\n    SELECT MIN(\n        (\n            CAST(_pr_InvoiceAmount AS DOUBLE)\n          + COALESCE(CAST(NULLIF(TRIM(_pr_TaxableSalesFreightAmount), '') AS DOUBLE), 0)\n          + COALESCE(CAST(NULLIF(TRIM(_pr_TaxableSalesInsuranceAmount), '') AS DOUBLE), 0)\n          + COALESCE(CAST(NULLIF(TRIM(_pr_TaxableSalesPackingAmount), '') AS DOUBLE), 0)\n        )\n        / NULLIF(CAST(_pr_ItemQuantityInKG AS DOUBLE), 0)\n    ) AS Sales_Dom\n    FROM ENTITY_uc_5_git_view_data\n    WHERE _pr_InvoiceDate >= '2026-04-01'\n      AND _pr_InvoiceDate < '2026-05-01'\n      AND TRIM(_pr_itemcodeextracted) = 'F00153'\n      AND _pr_DomExp = 2\n      AND _pr_ItemQuantityInKG > 0\n      AND deleted = 0\n),\n\nsales_exp_floor AS (\n    SELECT MIN(\n        CASE\n            WHEN gvd._pr_BaseCurrency IN ('EUR', 'CNY')\n                THEN CAST(gvd._pr_InvoiceAmountBasicINR AS DOUBLE) / NULLIF(ux.usd_rate, 0)\n            ELSE\n                CAST(gvd._pr_InvoiceAmountBase AS DOUBLE)\n        END\n        / NULLIF(CAST(gvd._pr_ItemQuantityInKG AS DOUBLE), 0)\n    ) AS Sales_Exp\n    FROM ENTITY_uc_5_git_view_data gvd\n    CROSS JOIN usd_xrate ux\n    WHERE gvd._pr_InvoiceDate >= '2026-04-01'\n      AND gvd._pr_InvoiceDate < '2026-05-01'\n      AND TRIM(gvd._pr_itemcodeextracted) = 'F00153'\n      AND gvd._pr_DomExp = 1\n      AND gvd._pr_ItemQuantityInKG > 0\n      AND gvd.deleted = 0\n)\n\nSELECT\n    CAST(\n        COALESCE(\n            CASE\n                WHEN gd.GIT_Dom IS NOT NULL AND sd.Sales_Dom IS NOT NULL\n                    THEN CASE\n                            WHEN gd.GIT_Dom < sd.Sales_Dom\n                            THEN gd.GIT_Dom\n                            ELSE sd.Sales_Dom\n                         END\n                ELSE COALESCE(gd.GIT_Dom, sd.Sales_Dom)\n            END,\n            0\n        ) AS DECIMAL(18,2)\n    ) AS FinalFloorPriceLastMonth_Domestic,\n\n    CAST(\n        COALESCE(\n            CASE\n                WHEN ge.GIT_Exp IS NOT NULL AND se.Sales_Exp IS NOT NULL\n                    THEN CASE\n                            WHEN ge.GIT_Exp < se.Sales_Exp\n                            THEN ge.GIT_Exp\n                            ELSE se.Sales_Exp\n                         END\n                ELSE COALESCE(ge.GIT_Exp, se.Sales_Exp)\n            END,\n            0\n        ) AS DECIMAL(18,2)\n    ) AS FinalFloorPriceLastMonth_Export\n\nFROM git_dom_floor gd\nCROSS JOIN sales_dom_floor sd\nCROSS JOIN git_exp_floor ge\nCROSS JOIN sales_exp_floor se;",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":199855,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":7
+}
