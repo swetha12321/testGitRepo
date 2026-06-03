@@ -1,0 +1,127 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1739605155488,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"hsG4X",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Pryb5",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Pryb5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"IcCAA",
+			"type":"next"
+		}
+	],
+	"id":"67b044a306f67458bb95c154",
+	"lastModifiedBy":-1,
+	"lcName":"mhasdjfasdf",
+	"modifiedTime":1780492633145,
+	"name":"mhasdjfasdf",
+	"nodes":[
+		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":254,
+				"resourceName":"schedule_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"F72HL-1",
+			"id":"hsG4X",
+			"index":0,
+			"inputs":{
+				"cron":"INTERVAL",
+				"interval":15,
+				"frequency":"MINUTES"
+			},
+			"skip":false,
+			"subTitle":"Schedule",
+			"title":"New recurring event",
+			"trigger":{
+				"type":"SCHEDULED"
+			},
+			"type":"START"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.assetDetails.items.assetVersion"
+				]
+			},
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":4,
+				"resourceName":"standard_entities_export_changeset",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"F72HL-1",
+			"id":"Pryb5",
+			"index":0,
+			"inputs":{
+				"assetDetails":[
+					{
+						"assetId":"67b031a617a2e2117dc2c723",
+						"assetClass":"WORKFLOW_DEFINITION",
+						"assetVersion":"1"
+					}
+				],
+				"password":"hello",
+				"name":"testing"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Export changeset",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":210,
+				"resourceName":"standard_entities_import_changeset",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"F72HL-1",
+			"id":"IcCAA",
+			"index":0,
+			"inputs":{
+				"password":"hello",
+				"fileDetails":"{{ Pryb5.outputs.fileDetails }}",
+				"updateExisting":true,
+				"deploy":true
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Import changeset",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":517,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":4
+}
