@@ -4,14 +4,14 @@
 	],
 	"createdTime":1778073200128,
 	"deleted":false,
-	"deployedVersion":65,
+	"deployedVersion":75,
 	"deploymentState":{
-		"deployedAt":1780506503486,
+		"deployedAt":1780510210666,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a205f87c247fd1d8f7f357b",
+		"deployedDefinitionId":"6a206e027cd36b4ab1714ff4",
 		"status":"DEPLOYED",
-		"version":65,
-		"workflowVersion":224
+		"version":75,
+		"workflowVersion":246
 	},
 	"edges":[
 		{
@@ -185,11 +185,11 @@
 			"fromNodeId":"n_52rnD",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_XI2J2",
+			"toNodeId":"n_bgpJG",
 			"type":"loop"
 		},
 		{
-			"fromNodeId":"n_XI2J2",
+			"fromNodeId":"n_bgpJG",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -221,7 +221,7 @@
 	"id":"69fb3e7035bf0679fa2b48b9",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-parent",
-	"modifiedTime":1780506723402,
+	"modifiedTime":1780511095478,
 	"name":"credit-calculation-parent",
 	"nodes":[
 		{
@@ -865,7 +865,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_5a67w@_KzyGt-1@l",
 			"id":"n_uJCdc",
@@ -1185,7 +1185,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_5a67w@_KzyGt-1@l",
 			"id":"n_5Imaj",
@@ -1380,7 +1380,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_5a67w@_KzyGt-1@l",
 			"id":"n_INlXu",
@@ -1410,7 +1410,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"CONTINUE",
 			"groupId":"n_INlXu@n_5a67w@_KzyGt-1@l@y",
 			"id":"n_jX0tB",
@@ -1525,7 +1525,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_INlXu@n_5a67w@_KzyGt-1@l@y",
 			"id":"n_QpfCY",
@@ -1570,7 +1570,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_5a67w@_KzyGt-1@l",
 			"id":"n_GV9K8",
@@ -1807,9 +1807,10 @@
 			"id":"n_52rnD",
 			"index":21,
 			"inputs":{
-				"repeatMode":"SINGLE",
+				"repeatMode":"BATCH",
 				"listSource":"{{ n_BucVj.outputs.items }}",
-				"captureIterations":false
+				"captureIterations":false,
+				"batchSize":10
 			},
 			"skip":false,
 			"subTitle":"Loop",
@@ -1819,58 +1820,66 @@
 		{
 			"additional":{
 				"visibleOptionalFields":[
-					"root.parameters.parameters.source",
-					"root.parameters.parameters.ua:type",
-					"root.parameters.parameters.items.automationId",
-					"root.parameters.parameters.items.total_success",
-					"root.parameters.parameters.items.total_fail",
-					"root.parameters.parameters.items.backTrack",
-					"root.parameters.parameters.items.applicationNodeExecutionPerCredit",
-					"root.parameters.parameters.items.internalNodeExecutionPerCredit",
-					"root.parameters.parameters.items.helperNodeExecutionPerCredit",
-					"root.parameters.customer_id",
-					"root.parameters.date"
+					"root.parametersList.source",
+					"root.parametersList.ua:type",
+					"root.parametersList.items.parameters.source",
+					"root.parametersList.items.parameters.ua:type",
+					"root.parametersList.items.parameters.items.automationId",
+					"root.parametersList.items.parameters.items.total_success",
+					"root.parametersList.items.parameters.items.total_fail",
+					"root.parametersList.items.parameters.items.backTrack",
+					"root.parametersList.items.parameters.items.applicationNodeExecutionPerCredit",
+					"root.parametersList.items.parameters.items.internalNodeExecutionPerCredit",
+					"root.parametersList.items.parameters.items.helperNodeExecutionPerCredit",
+					"root.parametersList.items.customer_id",
+					"root.parametersList.items.date"
 				]
 			},
 			"context":{
 				"appName":"callables",
-				"resourceVersion":4139,
-				"resourceName":"callables_call_automation",
+				"resourceVersion":3952,
+				"resourceName":"callables_call_automation_batch",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"CONTINUE",
 			"groupId":"n_52rnD@n_7mESR@_KzyGt-1@n@l",
-			"id":"n_XI2J2",
+			"id":"n_bgpJG",
 			"index":22,
 			"inputs":{
 				"automationId":"69f863a40eedcf52f9640aa6",
 				"runtimeConnections":{},
 				"synchronous":false,
-				"version":"-1",
-				"parameters":{
-					"customer_id":"{{ n_52rnD.outputs.item.customer_id }}",
-					"date":"{{ n_52rnD.outputs.item.date }}",
-					"parameters":{
-						"source":"{{ n_52rnD.outputs.item.parameters }}",
-						"ua:type":"mappedArray",
-						"items":{
-							"automationId":"{{ n_52rnD.outputs.item.parameters[0].automationId }}",
-							"total_success":"{{ n_52rnD.outputs.item.parameters[0].total_success }}",
-							"total_fail":"{{ n_52rnD.outputs.item.parameters[0].total_fail }}",
-							"backTrack":"{{ n_52rnD.outputs.item.parameters[0].backTrack }}",
-							"applicationNodeExecutionPerCredit":"{{ n_52rnD.outputs.item.parameters[0].applicationNodeExecutionPerCredit }}",
-							"internalNodeExecutionPerCredit":"{{ n_52rnD.outputs.item.parameters[0].internalNodeExecutionPerCredit }}",
-							"helperNodeExecutionPerCredit":"{{ n_52rnD.outputs.item.parameters[0].helperNodeExecutionPerCredit }}",
-							"deployed_versions":{
-								"source":"{{ n_52rnD.outputs.item.parameters[0].deployed_versions }}",
-								"ua:type":"mappedArray",
-								"items":"{{ n_52rnD.outputs.item.parameters[0].deployed_versions[0] }}"
+				"triggerWorkflowWithRuntimeType":"DEFAULT",
+				"distributeWorkflowLoad":true,
+				"parametersList":{
+					"source":"{{ n_52rnD.outputs.item }}",
+					"ua:type":"mappedArray",
+					"items":{
+						"parameters":{
+							"source":"{{ n_52rnD.outputs.item[0].parameters }}",
+							"ua:type":"mappedArray",
+							"items":{
+								"automationId":"{{ n_52rnD.outputs.item[0].parameters[0].automationId }}",
+								"total_success":"{{ n_52rnD.outputs.item[0].parameters[0].total_success }}",
+								"total_fail":"{{ n_52rnD.outputs.item[0].parameters[0].total_fail }}",
+								"backTrack":"{{ n_52rnD.outputs.item[0].parameters[0].backTrack }}",
+								"applicationNodeExecutionPerCredit":"{{ n_52rnD.outputs.item[0].parameters[0].applicationNodeExecutionPerCredit }}",
+								"internalNodeExecutionPerCredit":"{{ n_52rnD.outputs.item[0].parameters[0].internalNodeExecutionPerCredit }}",
+								"helperNodeExecutionPerCredit":"{{ n_52rnD.outputs.item[0].parameters[0].helperNodeExecutionPerCredit }}",
+								"deployed_versions":{
+									"source":"{{ n_52rnD.outputs.item[0].parameters[0].deployed_versions }}",
+									"ua:type":"mappedArray",
+									"items":"{{ n_52rnD.outputs.item[0].parameters[0].deployed_versions[0] }}"
+								}
 							}
-						}
+						},
+						"customer_id":"{{ n_52rnD.outputs.item[0].customer_id }}",
+						"date":"{{ n_52rnD.outputs.item[0].date }}"
 					}
-				}
+				},
+				"version":"-1"
 			},
 			"options":{
 				"bulkheadConfig":{
@@ -1909,7 +1918,7 @@
 				"rateLimitConfig":{
 					"duration":"1",
 					"enabled":true,
-					"threshold":"50",
+					"threshold":"40",
 					"unit":"MINUTES",
 					"waitForNextWindow":true
 				},
@@ -1926,7 +1935,8 @@
 					]
 				},
 				"timeoutConfig":{
-					"enabled":false
+					"enabled":false,
+					"unit":"SECONDS"
 				}
 			},
 			"skip":false,
@@ -1987,5 +1997,5 @@
 		}
 	},
 	"standard":false,
-	"version":225
+	"version":247
 }
