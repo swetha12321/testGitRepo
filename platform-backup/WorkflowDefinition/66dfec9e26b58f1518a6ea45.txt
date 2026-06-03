@@ -1,0 +1,81 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725951134191,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"HlWA5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"i8L6e",
+			"type":"next"
+		}
+	],
+	"id":"66dfec9e26b58f1518a6ea45",
+	"lastModifiedBy":0,
+	"lcName":"test",
+	"modifiedTime":1780496150180,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":59,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"JJRmc-1",
+			"id":"HlWA5",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"HTTP Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":58,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"JJRmc-1",
+			"id":"i8L6e",
+			"index":0,
+			"inputs":{
+				"code":"// Hello World in Groovy\nreturn result= [\"result\":'Hello, World!']\n",
+				"isAsync":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":508,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
