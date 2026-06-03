@@ -1,0 +1,52 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1711548205443,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6604272df043f135811706ba",
+	"lastModifiedBy":5,
+	"lcName":"untitled",
+	"modifiedTime":1711554903483,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"YmSRd-1",
+			"id":"YmSRd",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":5,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
