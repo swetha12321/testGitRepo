@@ -1,0 +1,426 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1779774439842,
+	"deleted":false,
+	"deployedVersion":9,
+	"deploymentState":{
+		"deployedAt":1779788407869,
+		"deployedBy":195823,
+		"deployedDefinitionId":"6a156a777f4e1f466483fed8",
+		"status":"PAUSED",
+		"version":9,
+		"workflowVersion":41
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_fo2Yc",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_GqriG",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_GqriG",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_8QmbR",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_8QmbR",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_vwbBU",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_vwbBU",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_GNG2o",
+			"type":"next"
+		}
+	],
+	"id":"6a1533e7cfe8c610850063b4",
+	"lastModifiedBy":0,
+	"lcName":"best practice | batch llm trigger ",
+	"modifiedTime":1780491836734,
+	"name":"Best Practice | Batch LLM trigger ",
+	"nodes":[
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3916,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_UgW1X-1",
+			"id":"n_fo2Yc",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"check_id":{
+							"type":"string",
+							"title":"check_id"
+						},
+						"status":{
+							"type":"string",
+							"title":"status"
+						},
+						"targets":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"target_id":{
+										"type":"string",
+										"title":"target_id"
+									},
+									"target_type":{
+										"type":"string",
+										"title":"target_type"
+									},
+									"path":{
+										"type":"array",
+										"items":{
+											"type":"string"
+										},
+										"title":"path"
+									},
+									"failureMessage":{
+										"type":"string",
+										"title":"failureMessage"
+									}
+								},
+								"additionalProperties":false,
+								"required":[]
+							},
+							"title":"targets"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"connectionId":{
+							"type":"string",
+							"title":"Connection Id"
+						},
+						"model":{
+							"type":"string",
+							"title":"Model"
+						},
+						"app":{
+							"type":"string",
+							"title":"App"
+						},
+						"entityType":{
+							"type":"string",
+							"title":"Entity Type"
+						},
+						"Entity":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Entity"
+						},
+						"Check":{
+							"type":"object",
+							"properties":{
+								"checkId":{
+									"type":"string",
+									"title":"Check Id"
+								},
+								"checkName":{
+									"type":"string",
+									"title":"Check Name"
+								},
+								"instructions":{
+									"type":"string",
+									"title":"Instructions"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Check",
+							"required":[
+								"checkName"
+							]
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.check.checkId",
+					"root.parameters.check.checkName",
+					"root.parameters.check.instructions"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":2185,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_UgW1X-1",
+			"id":"n_GqriG",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"title":"Output",
+					"properties":{
+						"context":{
+							"type":"object",
+							"title":"context"
+						},
+						"input":{
+							"type":"object",
+							"title":"input"
+						},
+						"options":{
+							"type":"object",
+							"title":"options"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"title":"Input",
+					"required":[
+						"app",
+						"model",
+						"connectionId"
+					],
+					"properties":{
+						"app":{
+							"type":"string",
+							"title":"App"
+						},
+						"model":{
+							"type":"string",
+							"title":"Model"
+						},
+						"connectionId":{
+							"type":"string",
+							"title":"Connection Id"
+						},
+						"entityType":{
+							"type":"string",
+							"title":"Entity Type"
+						},
+						"entity":{
+							"type":"object",
+							"additionalProperties":true,
+							"properties":{},
+							"title":"Entity"
+						},
+						"check":{
+							"type":"object",
+							"additionalProperties":false,
+							"title":"Check",
+							"properties":{
+								"checkId":{
+									"type":"string",
+									"title":"Check Id"
+								},
+								"checkName":{
+									"type":"string",
+									"title":"Check Name"
+								},
+								"instructions":{
+									"type":"string",
+									"title":"Instructions"
+								}
+							},
+							"required":[]
+						}
+					}
+				},
+				"code":"import groovy.json.JsonOutput\n\n// Inputs (app, model, connectionId, entity, entityType, check)\n// are bound from 'parameters'.\n\n// Instructions / system prompt live inside the check object.\ndef instructions = (check?.instructions ?: '').toString()\n\n// The entity is the content the model evaluates.\ndef entityText =\n    (entity instanceof CharSequence)\n        ? entity.toString()\n        : JsonOutput.toJson(entity)\n\n// Label the entity in the user message so the model knows what it's looking at.\n// .toString() guards against a GString leaking into the request body.\ndef userContent = (\n    \"Evaluate the following \" +\n    (entityType ?: 'entity') +\n    \":\\n\\n\" +\n    entityText\n).toString()\n\ndef ctx\ndef reqInput\ndef opts = [:]   // no cache / rate-limit by default\n\ndef normalizedApp = (app ?: '').toString().toLowerCase()\n\nif (normalizedApp.contains('anthropic')) {\n\n    // ---- Behaves like \"Anthropic - Create Message\" ----\n    ctx = [\n        type         : \"APPLICATION\",\n        appName      : \"anthropic\",\n        resourceName : \"anthropic_create_message\",\n        connectionId : connectionId\n    ]\n\n    reqInput = [\n        \"anthropic-version\": \"2023-06-01\",\n        model              : model,\n        max_tokens         : 4096,\n        system             : instructions, // <- instructions\n        messages           : [\n            [\n                role   : \"user\",\n                content: [\n                    [\n                        type : \"text\",\n                        text : userContent // <- entity\n                    ]\n                ]\n            ]\n        ]\n    ]\n\n} else {\n\n    // ---- Default / OpenAI -> behaves like \"OpenAI - Create Response\" ----\n    ctx = [\n        type         : \"APPLICATION\",\n        appName      : \"openai\",\n        resourceName : \"openai_create_response\",\n        connectionId : connectionId\n    ]\n\n    reqInput = [\n        model        : model,\n        instructions : instructions, // <- instructions\n        input        : [\n            [\n                role    : \"user\",\n                content : userContent // <- entity\n            ]\n        ]\n    ]\n}\n\nreturn [\n    context : ctx,\n    input   : reqInput,\n    options : opts\n]",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"app":"{{ n_fo2Yc.outputs.app }}",
+					"model":"{{ n_fo2Yc.outputs.model }}",
+					"connectionId":"{{ n_fo2Yc.outputs.connectionId }}",
+					"entityType":"{{ n_fo2Yc.outputs.entityType }}",
+					"entity":"{{ n_fo2Yc.outputs.Entity }}",
+					"check":{
+						"checkId":"{{ n_fo2Yc.outputs.Check.checkId }}",
+						"checkName":"{{ n_fo2Yc.outputs.Check.checkName }}",
+						"instructions":"{{ n_fo2Yc.outputs.Check.instructions }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Build LLM request (context/input/options)",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"custom_application",
+				"resourceName":"custom_application_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_UgW1X-1",
+			"id":"n_8QmbR",
+			"index":3,
+			"inputs":{
+				"input":"{{ n_GqriG.outputs.result.input }}",
+				"context":"{{ n_GqriG.outputs.result.context }}",
+				"options":"{{ n_GqriG.outputs.result.options }}"
+			},
+			"skip":false,
+			"subTitle":"Custom Application",
+			"title":"Call LLM (OpenAI / Anthropic)",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":5100,
+				"resourceName":"utility_by_unifyapps_to_json_object",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_UgW1X-1",
+			"id":"n_vwbBU",
+			"index":4,
+			"inputs":{
+				"jsonSchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"check_id":{
+							"type":"string",
+							"title":"check_id"
+						},
+						"status":{
+							"type":"string",
+							"title":"status"
+						},
+						"targets":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"target_id":{
+										"type":"string",
+										"title":"target_id"
+									},
+									"target_type":{
+										"type":"string",
+										"title":"target_type"
+									},
+									"path":{
+										"type":"array",
+										"title":"path"
+									},
+									"failureMessage":{
+										"type":"string",
+										"title":"failureMessage"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"targets"
+						}
+					}
+				},
+				"jsonString":"{{ n_8QmbR.outputs.result.content[0].text }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Deserialise string to JSON object",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3953,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_UgW1X-1",
+			"id":"n_GNG2o",
+			"index":5,
+			"inputs":{
+				"result":{
+					"check_id":"{{ n_fo2Yc.outputs.Check.checkId }}",
+					"status":"{{ n_vwbBU.outputs.result.status }}",
+					"targets":{
+						"source":"{{ n_vwbBU.outputs.result.targets }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"target_id":"{{ n_vwbBU.outputs.result.targets[0].target_id }}",
+							"target_type":"{{ n_vwbBU.outputs.result.targets[0].target_type }}",
+							"path":{
+								"source":"{{ n_vwbBU.outputs.result.targets[0].path }}",
+								"ua:type":"mappedArray",
+								"items":"{{ n_vwbBU.outputs.result.targets[0].path[0] }}"
+							},
+							"failureMessage":"{{ n_vwbBU.outputs.result.targets[0].failureMessage }}"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":195823,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":44
+}
