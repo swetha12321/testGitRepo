@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767005616129,
+	"deleted":false,
+	"description":"description",
+	"edges":[
+		{
+			"fromNodeId":"_wBJHj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_453i1",
+			"type":"next"
+		}
+	],
+	"id":"69525db066819b318bfc2179",
+	"lastModifiedBy":-1,
+	"lcName":"httpcustomvalueworkflow1_217670037006920",
+	"modifiedTime":1780492411140,
+	"name":"HTTPCustomValueWorkflow1_217670037006920",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_wBJHj-1",
+			"id":"_wBJHj",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_wBJHj-1",
+			"id":"_453i1",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":false,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
