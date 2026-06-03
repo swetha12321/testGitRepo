@@ -4,14 +4,14 @@
 	],
 	"createdTime":1778073200128,
 	"deleted":false,
-	"deployedVersion":76,
+	"deployedVersion":77,
 	"deploymentState":{
-		"deployedAt":1780511098453,
+		"deployedAt":1780511317057,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a20717a7cd36b4ab171589d",
+		"deployedDefinitionId":"6a2072557cd36b4ab1715aa8",
 		"status":"DEPLOYED",
-		"version":76,
-		"workflowVersion":247
+		"version":77,
+		"workflowVersion":248
 	},
 	"edges":[
 		{
@@ -221,7 +221,7 @@
 	"id":"69fb3e7035bf0679fa2b48b9",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-parent",
-	"modifiedTime":1780511315668,
+	"modifiedTime":1780512977299,
 	"name":"credit-calculation-parent",
 	"nodes":[
 		{
@@ -1801,7 +1801,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_7mESR@_KzyGt-1@n",
 			"id":"n_52rnD",
@@ -1810,7 +1810,7 @@
 				"repeatMode":"BATCH",
 				"listSource":"{{ n_BucVj.outputs.items }}",
 				"captureIterations":false,
-				"batchSize":10
+				"batchSize":40
 			},
 			"skip":false,
 			"subTitle":"Loop",
@@ -1842,7 +1842,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"CONTINUE",
 			"groupId":"n_52rnD@n_7mESR@_KzyGt-1@n@l",
 			"id":"n_bgpJG",
@@ -1850,7 +1850,7 @@
 			"inputs":{
 				"automationId":"69f863a40eedcf52f9640aa6",
 				"runtimeConnections":{},
-				"synchronous":false,
+				"synchronous":true,
 				"triggerWorkflowWithRuntimeType":"DEFAULT",
 				"distributeWorkflowLoad":true,
 				"parametersList":{
@@ -1997,5 +1997,5 @@
 		}
 	},
 	"standard":false,
-	"version":248
+	"version":249
 }
