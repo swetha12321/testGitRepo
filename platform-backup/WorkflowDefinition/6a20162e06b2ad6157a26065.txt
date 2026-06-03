@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780487726051,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_gKpOj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_abHvH",
+			"type":"next"
+		}
+	],
+	"id":"6a20162e06b2ad6157a26065",
+	"lastModifiedBy":199902,
+	"lcName":"testautomation",
+	"modifiedTime":1780487726051,
+	"name":"TestAutomation",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_gKpOj-1",
+			"id":"_gKpOj",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_gKpOj-1",
+			"id":"_abHvH",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":199902,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
