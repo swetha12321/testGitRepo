@@ -1,0 +1,643 @@
+{
+	"appsUsed":[
+		"salesforce",
+		"schedule"
+	],
+	"createdTime":1717436898619,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"Y4jn9",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"MLUws",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"MLUws",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"vtrMA",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"vtrMA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"JEtKR",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"JEtKR",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"1WmnT",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"1WmnT",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"WhwtF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"WhwtF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"uJatO",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"uJatO",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"yabn3",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"yabn3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"CIdqN",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"CIdqN",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"zjGGC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"zjGGC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"ICM6f",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"ICM6f",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"f8HsA",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"f8HsA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"9uT68",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"9uT68",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Df4gv",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"Df4gv",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"2ynV2",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"2ynV2",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Df4gv",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Df4gv",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"zjGGC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"9uT68",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"zjGGC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"zjGGC",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"WhwtF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"WhwtF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"gMXmU",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"665e01e2191bf92c80f9ae93",
+	"lastModifiedBy":174,
+	"lcName":"salesforce_dc(do not touch) (copy)",
+	"modifiedTime":1717436924227,
+	"name":"Salesforce_DC(Do Not Touch) (Copy)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":8,
+				"resourceName":"schedule_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Y4jn9-1",
+			"id":"Y4jn9",
+			"index":0,
+			"inputs":{
+				"cron":"INTERVAL",
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"",
+							"filter":{
+								"operator":"EQUAL",
+								"value":""
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"interval":1,
+				"frequency":"DAYS"
+			},
+			"skip":false,
+			"title":"New Recurring Event",
+			"trigger":{
+				"type":"SCHEDULED"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"salesforce",
+				"resourceVersion":3,
+				"connectionId":"662d63a100f52a726efd3ca4",
+				"resourceName":"salesforce_fetch_organization_metadata",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Y4jn9-1",
+			"id":"MLUws",
+			"index":0,
+			"skip":false,
+			"subTitle":"Salesforce",
+			"title":"Fetch organization metadata",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":9,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Y4jn9-1",
+			"id":"vtrMA",
+			"index":0,
+			"inputs":{
+				"recordId":"salesforce_organization_{{ MLUws.outputs.records[0].Id }}",
+				"object_type":"e_data_catalog_asset",
+				"record":{
+					"name":"{{ MLUws.outputs.records[0].Name }}",
+					"description":"{{ MLUws.outputs.records[0].Name }}",
+					"assetType":"e_data_catalog_sfdc_organization",
+					"sourceDetails":{
+						"sourceType":"salesforce",
+						"sourceName":"salesforce",
+						"sourceId":"salesforce",
+						"sourceAssetType":"ORGANIZATION",
+						"sourceAssetId":"{{ MLUws.outputs.records[0].Id }}"
+					},
+					"glossary":"e_662bcada014cd30ed9c04d5a",
+					"classifications":"pii",
+					"tags":"e_662bcaca014cd30ed9c04d57",
+					"parentAssetDetails":{
+						"parentAssetType":"empty",
+						"parentAssetId":"empty"
+					},
+					"owners":"2",
+					"sharedWith":"3",
+					"certificate":"Verified",
+					"createdBy":"2",
+					"editedBy":"3"
+				},
+				"upsert":false,
+				"object_id":"salesforce_org_{{ MLUws.outputs.records[0].Id }}"
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create Record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":9,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Y4jn9-1",
+			"id":"JEtKR",
+			"index":0,
+			"inputs":{
+				"recordId":"salesforce_organization_{{ MLUws.outputs.records[0].Id }}",
+				"object_type":"e_data_catalog_sfdc_organization",
+				"record":{
+					"name":"{{ MLUws.outputs.records[0].Name }}",
+					"sourceCreatedDate":"{{ MLUws.outputs.records[0].CreatedDate }}",
+					"sourceLastModifiedDate":"{{ MLUws.outputs.records[0].LastModifiedDate }}",
+					"sourceCreatedBy":"{{ MLUws.outputs.records[0].CreatedById }}",
+					"sourceLastModifiedBy":"{{ MLUws.outputs.records[0].LastModifiedById }}"
+				},
+				"upsert":false,
+				"object_id":"salesforce_org_{{ MLUws.outputs.records[0].Id }}"
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create Record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"salesforce",
+				"resourceVersion":3,
+				"connectionId":"662d63a100f52a726efd3ca4",
+				"resourceName":"salesforce_fetch_object_metadata",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Y4jn9-1",
+			"id":"1WmnT",
+			"index":0,
+			"skip":false,
+			"subTitle":"Salesforce",
+			"title":"Fetch object metadata",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":49,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Y4jn9-1",
+			"id":"WhwtF",
+			"index":0,
+			"inputs":{
+				"repeatMode":"SINGLE",
+				"listSource":"{{ 1WmnT.outputs.sobjects[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"For each item in the list",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"salesforce",
+				"resourceVersion":1,
+				"connectionId":"662d63a100f52a726efd3ca4",
+				"resourceName":"salesforce_fetch_fields",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WhwtF@Y4jn9-1@l",
+			"id":"uJatO",
+			"index":0,
+			"inputs":{
+				"objectId":"{{ WhwtF.outputs.item.name }}"
+			},
+			"skip":false,
+			"subTitle":"Salesforce",
+			"title":"Fetch object fields",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":9,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WhwtF@Y4jn9-1@l",
+			"id":"yabn3",
+			"index":0,
+			"inputs":{
+				"recordId":"salesforce_object_{{ WhwtF.outputs.item.name }}",
+				"object_type":"e_data_catalog_asset",
+				"record":{
+					"name":"{{ WhwtF.outputs.item.label }}",
+					"description":"{{ WhwtF.outputs.item.label }}",
+					"assetType":"e_data_catalog_table",
+					"sourceDetails":{
+						"sourceType":"salesforce",
+						"sourceName":"salesforce",
+						"sourceId":"salesforce",
+						"sourceAssetType":"OBJECT",
+						"sourceAssetId":"{{ WhwtF.outputs.item.name }}"
+					},
+					"parentAssetDetails":{
+						"parentAssetType":"e_data_catalog_sfdc_organization",
+						"parentAssetId":"salesforce_org_{{ MLUws.outputs.records[0].Id }}"
+					},
+					"classifications":"pii",
+					"glossary":"data",
+					"owners":"4",
+					"sharedWith":"5",
+					"tags":"e_662bcaca014cd30ed9c04d57",
+					"certificate":"Verified",
+					"createdBy":"5",
+					"editedBy":"10"
+				},
+				"upsert":false,
+				"object_id":"salesforce_object_{{ WhwtF.outputs.item.name }}"
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create Record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":9,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WhwtF@Y4jn9-1@l",
+			"id":"CIdqN",
+			"index":0,
+			"inputs":{
+				"recordId":"salesforce_object_{{ WhwtF.outputs.item.name }}",
+				"object_type":"e_data_catalog_table",
+				"record":{
+					"recordCount":1000,
+					"fieldCount":"=LEN({{ uJatO.outputs.fields[0] }})"
+				},
+				"upsert":false,
+				"object_id":"salesforce_object_{{ WhwtF.outputs.item.name }}"
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create Record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":49,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WhwtF@Y4jn9-1@l",
+			"id":"zjGGC",
+			"index":0,
+			"inputs":{
+				"repeatMode":"SINGLE",
+				"listSource":"{{ uJatO.outputs.fields[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"For each item in the list",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":9,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"zjGGC@WhwtF@Y4jn9-1@l@l",
+			"id":"ICM6f",
+			"index":0,
+			"inputs":{
+				"recordId":"salesforce_object_field_{{ WhwtF.outputs.item.name }}__{{ zjGGC.outputs.item.name }}",
+				"object_type":"e_data_catalog_asset",
+				"record":{
+					"name":"{{ zjGGC.outputs.item.name }}",
+					"description":"{{ zjGGC.outputs.item.label }}",
+					"assetType":"e_data_catalog_field",
+					"sourceDetails":{
+						"sourceType":"salesforce",
+						"sourceName":"salesforce",
+						"sourceId":"salesforce",
+						"sourceAssetType":"FIELD",
+						"sourceAssetId":"{{ zjGGC.outputs.item.name }}"
+					},
+					"parentAssetDetails":{
+						"parentAssetType":"e_data_catalog_sfdc_object",
+						"parentAssetId":"{{ WhwtF.outputs.item.name }}"
+					},
+					"owners":"5",
+					"sharedWith":"10",
+					"tags":"e_662bcaca014cd30ed9c04d57",
+					"classifications":"pii",
+					"glossary":"data",
+					"certificate":"Verified",
+					"createdBy":"5",
+					"editedBy":"10"
+				},
+				"upsert":false,
+				"object_id":"salesforce_field_{{ WhwtF.outputs.item.name }}_{{ zjGGC.outputs.item.name }}"
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create Record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":9,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"zjGGC@WhwtF@Y4jn9-1@l@l",
+			"id":"f8HsA",
+			"index":0,
+			"inputs":{
+				"recordId":"salesforce_object_field_{{ WhwtF.outputs.item.name }}__{{ zjGGC.outputs.item.name }}",
+				"object_type":"e_data_catalog_field",
+				"record":{
+					"primaryKey":true
+				},
+				"upsert":false,
+				"object_id":"salesforce_field_{{ WhwtF.outputs.item.name }}__{{ zjGGC.outputs.item.name }}"
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create Record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":8,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"zjGGC@WhwtF@Y4jn9-1@l@l",
+			"id":"9uT68",
+			"index":0,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ zjGGC.outputs.item.referenceTo[0] }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":49,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"9uT68@zjGGC@WhwtF@Y4jn9-1@l@l@y",
+			"id":"Df4gv",
+			"index":0,
+			"inputs":{
+				"repeatMode":"SINGLE",
+				"listSource":"{{ zjGGC.outputs.item.referenceTo[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"For each item in the list",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":9,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Df4gv@9uT68@zjGGC@WhwtF@Y4jn9-1@l@l@y@l",
+			"id":"2ynV2",
+			"index":0,
+			"inputs":{
+				"recordId":"{{ yabn3.outputs.recordId }}__salesforce_object_{{ Df4gv.outputs.item }}",
+				"object_type":"e_data_catalog_entity_relationship",
+				"record":{
+					"primaryEntityId":"salesforce_object_{{ WhwtF.outputs.item.name }}",
+					"primaryEntityType":"e_data_catalog_table",
+					"associatedEntityId":"salesforce_object_{{ Df4gv.outputs.item }}",
+					"associatedEntityType":"e_data_catalog_table",
+					"relationshipType":"ONE_TO_ONE",
+					"primaryField":"{{ zjGGC.outputs.item.name }}",
+					"associatedField":"Id",
+					"scopeId":"data_catalog"
+				},
+				"upsert":true,
+				"object_id":"salesforce_object_{{ WhwtF.outputs.item.name }}__salesforce_object_{{ Df4gv.outputs.item }}__field_{{ zjGGC.outputs.item.name }}"
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create Record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Y4jn9-1",
+			"id":"gMXmU",
+			"index":0,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":174,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
