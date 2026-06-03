@@ -1,0 +1,74 @@
+{
+	"appsUsed":[
+		"microsoft_teams"
+	],
+	"createdTime":1739429625543,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"NNio5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"64LXK",
+			"type":"next"
+		}
+	],
+	"id":"67ad96f96e8af63ecd1b7e20",
+	"lastModifiedBy":0,
+	"lcName":"test",
+	"modifiedTime":1780493621610,
+	"name":"test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"NNio5-1",
+			"id":"NNio5",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"microsoft_teams",
+				"resourceVersion":21,
+				"connectionId":"67ade8af9f5a6f6c7d301a1b",
+				"resourceName":"microsoft_teams_download_attachment",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"NNio5-1",
+			"id":"64LXK",
+			"index":0,
+			"inputs":{
+				"messageId":"1737985102642",
+				"attachmentId":"51744122-8fac-448a-a18c-b5ff1a368651"
+			},
+			"skip":false,
+			"subTitle":"Microsoft Teams",
+			"title":"Download attachment",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":1234,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
