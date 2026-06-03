@@ -1,0 +1,52 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1716820823502,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"66549b57e8bdff40bf83f767",
+	"lastModifiedBy":311,
+	"lcName":"untitled",
+	"modifiedTime":1716821421186,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"KoQJO-1",
+			"id":"KoQJO",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":311,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
