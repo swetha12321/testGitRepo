@@ -4,6 +4,15 @@
 	],
 	"createdTime":1780516372077,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1780516372130,
+		"deployedBy":-1,
+		"deployedDefinitionId":"6a208614e01793339f042e71",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":3
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_1529R",
@@ -40,7 +49,7 @@
 	"id":"69e9b8c1624f0e1e9628ebf8",
 	"lastModifiedBy":-1,
 	"lcName":"agent builder | manual edits to agent",
-	"modifiedTime":1780516372077,
+	"modifiedTime":1780516449672,
 	"name":"Agent Builder | Manual Edits to Agent",
 	"nodes":[
 		{
@@ -189,5 +198,5 @@
 	"tags":[
 		"text-to-agent"
 	],
-	"version":3
+	"version":5
 }
