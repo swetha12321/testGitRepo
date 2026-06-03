@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767006581651,
+	"deleted":false,
+	"description":"description",
+	"edges":[
+		{
+			"fromNodeId":"_ZWTbH",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_vaep0",
+			"type":"next"
+		}
+	],
+	"id":"69526175607f3e77b2217a91",
+	"lastModifiedBy":-1,
+	"lcName":"import_soapapigroupcustom_ 217670037006920",
+	"modifiedTime":1780492411087,
+	"name":"import_SoapAPIGroupCustom_ 217670037006920",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ZWTbH-1",
+			"id":"_ZWTbH",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ZWTbH-1",
+			"id":"_vaep0",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":false,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
