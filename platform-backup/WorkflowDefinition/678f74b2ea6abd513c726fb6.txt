@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		"gitlab"
+	],
+	"createdTime":1737454770444,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1737454790885,
+		"deployedBy":520,
+		"deployedDefinitionId":"678f74c6ea6abd513c726fd3",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"edges":[
+		
+	],
+	"id":"678f74b2ea6abd513c726fb6",
+	"lastModifiedBy":0,
+	"lcName":"test",
+	"modifiedTime":1780495208125,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"gitlab",
+				"resourceVersion":284,
+				"connectionId":"6756e8dae3c79368270989ce",
+				"resourceName":"gitlab_on_new_or_updated_pipeline_polling"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"EUQvg-1",
+			"id":"EF1H9",
+			"index":0,
+			"inputs":{
+				"interval":2,
+				"projectId":"61524617"
+			},
+			"skip":false,
+			"subTitle":"GitLab",
+			"title":"New or updated pipeline",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
