@@ -104,11 +104,11 @@
 		],
 		"versioningEnabled":false
 	},
-	"modifiedTime":1780489451792,
+	"modifiedTime":1780489478611,
 	"name":"test object for testing to test for the sake of testing",
 	"ownerUserId":195517,
 	"packaged":false,
-	"pluralName":"test object for testing to test",
+	"pluralName":"test object for testing to test for testing sake",
 	"projectId":2120,
 	"schema":{
 		"dynamic":false,
@@ -140,5 +140,5 @@
 		"tag2",
 		"revops"
 	],
-	"version":2
+	"version":3
 }
