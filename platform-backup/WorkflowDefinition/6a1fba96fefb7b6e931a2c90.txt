@@ -37,7 +37,7 @@
 	"id":"6a1fba96fefb7b6e931a2c90",
 	"lastModifiedBy":199651,
 	"lcName":"testk",
-	"modifiedTime":1780474312435,
+	"modifiedTime":1780474394556,
 	"name":"testk",
 	"nodes":[
 		{
@@ -85,7 +85,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_MQ4dS-1",
 			"id":"n_ycVaU",
@@ -335,6 +335,11 @@
 			"type":"ACTION"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
 			"context":{
 				"appName":"code_by_unifyapps",
 				"resourceVersion":2316,
@@ -342,26 +347,20 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MQ4dS-1",
 			"id":"n_4QHLX",
 			"index":3,
 			"inputs":{
 				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"list"
-					],
-					"properties":{
-						"list":{
-							"type":"array",
-							"items":{
-								"type":"string"
-							},
-							"title":"List"
-						}
+					"type":"array",
+					"title":"List",
+					"disableActions":true,
+					"ua:__linkedVariable__":"n_ycVaU.outputs.items",
+					"items":{
+						"type":"string",
+						"properties":{}
 					}
 				},
 				"input":{
@@ -391,7 +390,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_MQ4dS-1",
 			"id":"n_ldklk",
@@ -472,5 +471,5 @@
 	"tags":[
 		"Test"
 	],
-	"version":15
+	"version":17
 }
