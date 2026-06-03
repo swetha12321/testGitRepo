@@ -1,0 +1,98 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767458194953,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1767458291223,
+		"deployedBy":193336,
+		"deployedDefinitionId":"695945f3dd8b2e59886cf984",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_qWWwT",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_umjHT",
+			"type":"next"
+		}
+	],
+	"id":"69594592dd8b2e59886cf65d",
+	"lastModifiedBy":-1,
+	"lcName":"fetch audit",
+	"modifiedTime":1780492410599,
+	"name":"fetch audit",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":834,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Pvye7-1",
+			"id":"n_qWWwT",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"mdm_by_unifyapps",
+				"resourceVersion":16,
+				"resourceName":"mdm_by_unifyapps_fetch_mdm_audit",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Pvye7-1",
+			"id":"n_umjHT",
+			"index":2,
+			"inputs":{
+				"assetId":"69593de750c0437041c4681c",
+				"sortOrder":"DESC",
+				"assetClass":"basic_audit_qa"
+			},
+			"skip":false,
+			"subTitle":"UDM by UnifyApps",
+			"title":"Fetch mdm audit",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":193336,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
