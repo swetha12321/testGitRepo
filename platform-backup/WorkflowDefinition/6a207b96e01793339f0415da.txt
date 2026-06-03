@@ -23,11 +23,11 @@
 			"fromNodeId":"n_iFpqm",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"qApBx",
+			"toNodeId":"n_JvYQl",
 			"type":"loop"
 		},
 		{
-			"fromNodeId":"qApBx",
+			"fromNodeId":"n_JvYQl",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -45,7 +45,7 @@
 	"id":"6a207b96e01793339f0415da",
 	"lastModifiedBy":43523,
 	"lcName":"populate vector data",
-	"modifiedTime":1780514056102,
+	"modifiedTime":1780514126028,
 	"name":"populate vector data",
 	"nodes":[
 		{
@@ -143,8 +143,7 @@
 			"additional":{
 				"visibleOptionalFields":[
 					"root.record.embeddings2.items",
-					"root.record.sharedWithIds.items",
-					"root.record.chunkMetadata.name"
+					"root.record.sharedWithIds.items"
 				]
 			},
 			"context":{
@@ -154,10 +153,10 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_iFpqm@_MDDyf-1@l",
-			"id":"qApBx",
+			"id":"n_JvYQl",
 			"index":4,
 			"inputs":{
 				"useRawPayload":false,
@@ -169,7 +168,6 @@
 					"knowledgeVersion":1,
 					"text":"abcd",
 					"uniqueEntityId":"testknowledge12345",
-					"chunkMetadata":"{{ hqkdg.outputs.chunkMetadata }}",
 					"embeddings":{
 						"source":"{{ n_e1QOm.outputs.result.vector }}",
 						"ua:type":"mappedArray",
@@ -251,5 +249,5 @@
 		}
 	},
 	"standard":false,
-	"version":4
+	"version":5
 }
