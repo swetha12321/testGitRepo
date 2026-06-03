@@ -1,0 +1,96 @@
+{
+	"appsUsed":[
+		"imap"
+	],
+	"createdTime":1743584352797,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1743584366986,
+		"deployedBy":13,
+		"deployedDefinitionId":"67ecfc6e3537da319eade8e4",
+		"status":"PAUSED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		{
+			"fromNodeId":"kmPwP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"YQ7XD",
+			"type":"next"
+		}
+	],
+	"id":"67ecfc60ed41b95fad102ad7",
+	"lastModifiedBy":-1,
+	"lcName":"test imap",
+	"modifiedTime":1780492436570,
+	"name":"test imap",
+	"nodes":[
+		{
+			"context":{
+				"appName":"imap",
+				"resourceVersion":236,
+				"connectionId":"67dbbd20002cb917c5dbb594",
+				"resourceName":"imap_on_new_email"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"xlnwp-1",
+			"id":"kmPwP",
+			"index":0,
+			"inputs":{
+				"folder":"INBOX",
+				"interval":1
+			},
+			"skip":false,
+			"subTitle":"IMAP",
+			"title":"On new email",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"imap",
+				"resourceVersion":1272,
+				"connectionId":"67ed2a8558e99c4be7b35770",
+				"resourceName":"imap_list_emails_from_folder",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"xlnwp-1",
+			"id":"YQ7XD",
+			"index":0,
+			"inputs":{
+				"folder":"Inbox",
+				"offset":0,
+				"maxResults":11,
+				"deleteFromServer":false
+			},
+			"skip":false,
+			"subTitle":"IMAP",
+			"title":"List emails from a specific folder",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":13,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":6
+}
