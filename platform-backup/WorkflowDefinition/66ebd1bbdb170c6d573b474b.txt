@@ -1,0 +1,66 @@
+{
+	"appsUsed":[
+		"active_campaign"
+	],
+	"createdTime":1726730683624,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"cjI8g",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"eJBlr",
+			"type":"next"
+		}
+	],
+	"id":"66ebd1bbdb170c6d573b474b",
+	"lastModifiedBy":0,
+	"lcName":"hhh",
+	"modifiedTime":1780496147819,
+	"name":"hhh",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"cjI8g-1",
+			"id":"cjI8g",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"active_campaign",
+				"resourceVersion":2202,
+				"resourceName":"active_campaign_add_note_to_deal",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"cjI8g-1",
+			"id":"eJBlr",
+			"index":0,
+			"skip":false,
+			"subTitle":"Active Campaign",
+			"title":"Add note to deal",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
