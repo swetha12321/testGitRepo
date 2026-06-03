@@ -1,0 +1,386 @@
+{
+	"appsUsed":[
+		"postgres"
+	],
+	"createdTime":1715257228610,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"dbkSx",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"P1qqZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"P1qqZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"TNsGM",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"TNsGM",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"fMird",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"fMird",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"UWhHN",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"UWhHN",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"m3HBG",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"m3HBG",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"MHRcC",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"m3HBG",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"jp1XU",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"MHRcC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"BWPX8",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"jp1XU",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"BWPX8",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"663cbf8cefdc5418a1d94b53",
+	"lastModifiedBy":35,
+	"lcName":"testing versions 1",
+	"modifiedTime":1715268557305,
+	"name":"testing versions 1",
+	"nodes":[
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":9,
+				"resourceName":"storage_by_unifyapps_on_create_record"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"dbkSx-1",
+			"id":"dbkSx",
+			"index":0,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"{{ dbkSx.outputs.properties.assetType }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"e_data_catalog_field"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"e_data_catalog_field"
+			},
+			"skip":false,
+			"subTitle":"Field",
+			"title":"On new record",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":9,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"dbkSx-1",
+			"id":"P1qqZ",
+			"index":0,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"id",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ dbkSx.outputs.properties.parentAssetDetails.parentAssetId }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"e_data_catalog_asset",
+				"pageSize":20,
+				"numberOfRecordsToFetch":"SINGLE"
+			},
+			"skip":false,
+			"subTitle":"Table",
+			"title":"Fetch Records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":9,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"dbkSx-1",
+			"id":"TNsGM",
+			"index":0,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"id",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ P1qqZ.outputs.properties.parentAssetDetails.parentAssetId }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"e_data_catalog_asset",
+				"pageSize":20,
+				"numberOfRecordsToFetch":"SINGLE"
+			},
+			"skip":false,
+			"subTitle":"Schema",
+			"title":"Fetch Records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":9,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"dbkSx-1",
+			"id":"fMird",
+			"index":0,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"id",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ TNsGM.outputs.properties.parentAssetDetails.parentAssetId }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"e_data_catalog_asset",
+				"pageSize":20,
+				"numberOfRecordsToFetch":"SINGLE"
+			},
+			"skip":false,
+			"subTitle":"Database",
+			"title":"Fetch Records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":19,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"dbkSx-1",
+			"id":"UWhHN",
+			"index":0,
+			"inputs":{
+				"automationId":"66264635772da57d3adb5e5a",
+				"synchronous":true,
+				"parameters":{
+					"CampaignId":"{{ TNsGM.outputs.properties.sourceDetails.sourceName }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":8,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"dbkSx-1",
+			"id":"m3HBG",
+			"index":0,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ dbkSx.outputs.properties.fieldType }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"INTEGER"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"postgres",
+				"resourceVersion":0,
+				"connectionId":"65cf4b0a0f49770d631e3744",
+				"resourceName":"postgres_execute_sql",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"m3HBG@dbkSx-1@y",
+			"id":"MHRcC",
+			"index":0,
+			"inputs":{
+				"database":"{{ fMird.outputs.properties.name }}",
+				"sql":"ALTER TABLE {{ TNsGM.outputs.properties.name }}.{{ P1qqZ.outputs.properties.name }} ADD COLUMN {{ dbkSx.outputs.properties.name }} NUMERIC;"
+			},
+			"skip":false,
+			"subTitle":"Postgres",
+			"title":"Execute a SQL statement",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"postgres",
+				"resourceVersion":0,
+				"connectionId":"65cf4b0a0f49770d631e3744",
+				"resourceName":"postgres_execute_sql",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"m3HBG@dbkSx-1@n",
+			"id":"jp1XU",
+			"index":0,
+			"inputs":{
+				"database":"{{ fMird.outputs.properties.name }}",
+				"sql":"ALTER TABLE {{ TNsGM.outputs.properties.name }}.{{ P1qqZ.outputs.properties.name }} ADD COLUMN {{ dbkSx.outputs.properties.name }} VARCHAR(255);"
+			},
+			"skip":false,
+			"subTitle":"Postgres",
+			"title":"Execute a SQL statement",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":10,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"dbkSx-1",
+			"id":"BWPX8",
+			"index":0,
+			"inputs":{
+				"recordId":"{{ dbkSx.outputs.id }}",
+				"object_type":"e_data_catalog_asset",
+				"record":{
+					"name":"{{ dbkSx.outputs.properties.name }}",
+					"description":"{{ dbkSx.outputs.properties.description }}",
+					"assetType":"{{ dbkSx.outputs.properties.assetType }}",
+					"sourceDetails":{
+						"sourceType":"{{ dbkSx.outputs.properties.sourceDetails.sourceType }}",
+						"sourceName":"{{ dbkSx.outputs.properties.sourceDetails.sourceName }}",
+						"sourceId":"{{ dbkSx.outputs.properties.sourceDetails.sourceId }}",
+						"sourceAssetType":"{{ dbkSx.outputs.properties.sourceDetails.sourceAssetType }}",
+						"sourceAssetId":"{{ dbkSx.outputs.properties.sourceDetails.sourceAssetId }}"
+					},
+					"parentAssetDetails":{
+						"parentAssetType":"{{ dbkSx.outputs.properties.parentAssetDetails.parentAssetType }}",
+						"parentAssetId":"{{ dbkSx.outputs.properties.parentAssetDetails.parentAssetId }}"
+					},
+					"owners":"{{ dbkSx.outputs.properties.owners[0] }}",
+					"sharedWith":"{{ dbkSx.outputs.properties.sharedWith[0] }}",
+					"tags":"{{ dbkSx.outputs.properties.tags[0] }}",
+					"classifications":"{{ dbkSx.outputs.properties.classifications[0] }}",
+					"glossary":"{{ dbkSx.outputs.properties.glossary[0] }}",
+					"certificate":"{{ dbkSx.outputs.properties.certificate }}",
+					"createdBy":"{{ dbkSx.outputs.properties.createdBy }}",
+					"editedBy":"{{ dbkSx.outputs.properties.editedBy }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create Record",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":206,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":13
+}
