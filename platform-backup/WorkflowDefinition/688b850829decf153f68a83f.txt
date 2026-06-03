@@ -1,0 +1,77 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1753974024300,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_OoW6o",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_JMqnE",
+			"type":"next"
+		}
+	],
+	"id":"688b850829decf153f68a83f",
+	"lastModifiedBy":-1,
+	"lcName":"test",
+	"modifiedTime":1780492419612,
+	"name":"test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_OoW6o-1",
+			"id":"_OoW6o",
+			"index":1,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":739,
+				"resourceName":"analytics_by_unifyapps_execute_query",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_OoW6o-1",
+			"id":"n_JMqnE",
+			"index":2,
+			"inputs":{
+				"query":"select * from ENTITY_lineItemDetails where id=\"e_6886ec61cb264993382341c9\" limit 1",
+				"group":"ENTITY_REPORTING"
+			},
+			"skip":false,
+			"subTitle":"Analytics",
+			"title":"Execute Analytics SQL Query",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":46209,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
