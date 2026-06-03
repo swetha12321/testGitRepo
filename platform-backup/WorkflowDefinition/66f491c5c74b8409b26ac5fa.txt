@@ -1,0 +1,246 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1727304133067,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1727304252090,
+		"deployedBy":520,
+		"deployedDefinitionId":"66f4923cc74b8409b26ac611",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		{
+			"fromNodeId":"OFtEz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"dtUtf",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"dtUtf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"5LzIB",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"5LzIB",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"OVE0X",
+			"type":"next"
+		}
+	],
+	"id":"66f491c5c74b8409b26ac5fa",
+	"lastModifiedBy":0,
+	"lcName":"missing cta count drilldown",
+	"modifiedTime":1780496145909,
+	"name":"Missing CTA count Drilldown",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":52,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"U8PT2-1",
+			"id":"OFtEz",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"response":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"phoneNumber":{
+										"type":"string",
+										"title":"Phone Number"
+									},
+									"content":{
+										"type":"string",
+										"title":"Content"
+									},
+									"divID":{
+										"type":"string",
+										"title":"Div ID"
+									},
+									"TempID":{
+										"type":"string",
+										"title":"Temp ID"
+									},
+									"messageID":{
+										"type":"string",
+										"title":"Message ID"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"Response",
+							"required":[]
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"starttime":{
+							"type":"string",
+							"title":"Starttime"
+						},
+						"endtime":{
+							"type":"string",
+							"title":"Endtime"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":18,
+				"resourceName":"utility_by_unifyapps_to_json_object",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"U8PT2-1",
+			"id":"dtUtf",
+			"index":0,
+			"inputs":{
+				"jsonString":"{\"filters\":{\n\"field\":\"ENTITY_Message:==:Cta\"\n\"op\":\"IN\"\n\"values\":[\"false\"]\n}\n}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Deserialise string to JSON object",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":70,
+				"resourceName":"analytics_by_unifyapps_query_reports",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"U8PT2-1",
+			"id":"5LzIB",
+			"index":0,
+			"inputs":{
+				"projections":[
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_e_message=::=rec__cnId"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_e_message=::=cnMsgId"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_e_message=::=cntnt__templateId"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_e_message=::=divId"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_uch_templates=::=content"
+					}
+				],
+				"filter":{
+					"filters":[
+						{
+							"resolvedFilter":{
+								"filter":"{{ dtUtf.outputs.result }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"entityType":"ENTITY_e_message",
+				"timeFilter":{
+					"since":"{{ OFtEz.outputs.starttime }}",
+					"until":"{{ OFtEz.outputs.endtime }}"
+				},
+				"group":"ENTITY_REPORTING"
+			},
+			"skip":false,
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Analytics Query",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":48,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"U8PT2-1",
+			"id":"OVE0X",
+			"index":0,
+			"inputs":{
+				"result":{
+					"response":{
+						"items":{
+							"phoneNumber":"{{ 5LzIB.outputs.objects[0].columns.ENTITY_e_message=::=rec__cnId }}",
+							"content":"{{ 5LzIB.outputs.objects[0].columns.ENTITY_uch_templates=::=content }}",
+							"divID":"{{ 5LzIB.outputs.objects[0].columns.ENTITY_e_message=::=divId }}",
+							"TempID":"{{ 5LzIB.outputs.objects[0].columns.ENTITY_e_message=::=cntnt__templateId }}",
+							"messageID":"{{ 5LzIB.outputs.objects[0].columns.ENTITY_e_message=::=cnMsgId }}"
+						},
+						"ua:type":"mappedArray",
+						"source":"{{ 5LzIB.outputs.objects }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
