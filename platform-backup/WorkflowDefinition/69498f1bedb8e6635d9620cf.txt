@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1766428443338,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_uceFX",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_XPafD",
+			"type":"next"
+		}
+	],
+	"id":"69498f1bedb8e6635d9620cf",
+	"lastModifiedBy":-1,
+	"lcName":"yewtdg",
+	"modifiedTime":1780492412362,
+	"name":"yewtdg",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_uceFX-1",
+			"id":"_uceFX",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_uceFX-1",
+			"id":"_XPafD",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175510,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
