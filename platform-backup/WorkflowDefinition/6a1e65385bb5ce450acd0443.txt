@@ -39,7 +39,7 @@
 	"id":"6a1e65385bb5ce450acd0443",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-trigger",
-	"modifiedTime":1780512765621,
+	"modifiedTime":1780512780464,
 	"name":"credit-calculation-trigger",
 	"nodes":[
 		{
@@ -49,7 +49,7 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_y81dO-1",
 			"id":"n_b5lvy",
@@ -83,7 +83,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_y81dO-1",
 			"id":"n_oovH5",
@@ -120,7 +120,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_y81dO-1",
 			"id":"n_0MDjb",
@@ -166,7 +166,8 @@
 				},
 				"runtimeConnections":{},
 				"cancel_existing":true,
-				"version":"-1"
+				"version":"-1",
+				"schedule_name":"rechecker_automation"
 			},
 			"skip":false,
 			"subTitle":"Callable",
@@ -188,5 +189,5 @@
 		}
 	},
 	"standard":false,
-	"version":11
+	"version":12
 }
