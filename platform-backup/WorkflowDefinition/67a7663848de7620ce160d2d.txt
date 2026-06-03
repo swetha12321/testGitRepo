@@ -1,0 +1,255 @@
+{
+	"appsUsed":[
+		"azure_bot"
+	],
+	"createdTime":1739023928443,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1739023928680,
+		"deployedBy":34802,
+		"deployedDefinitionId":"67a7663848de7620ce160d2e",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		{
+			"fromNodeId":"_upyrX",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_HNdgu",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_HNdgu",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_NATLT",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_NATLT",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_b9qRW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_b9qRW",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_cvDyy",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_cvDyy",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_5F9t3",
+			"type":"next"
+		}
+	],
+	"id":"67a7663848de7620ce160d2d",
+	"lastModifiedBy":0,
+	"lcName":"azure bot trigger (ai agent)",
+	"modifiedTime":1780493768292,
+	"name":"Azure Bot Trigger (AI Agent)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"azure_bot",
+				"resourceVersion":627,
+				"connectionId":"67a7649d88eba7613753dd54",
+				"resourceName":"azure_bot_on_new_message"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_becCv-1",
+			"id":"_upyrX",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Azure Bot",
+			"title":"On new message",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":150,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_becCv-1",
+			"id":"_HNdgu",
+			"index":0,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"teamsConnectionId":{
+							"type":"string",
+							"title":"Teams Connection Id"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"teamsConnectionId":"67a7662788eba7613753dd87"
+			},
+			"outputSchema":{
+				"type":"SCHEMA",
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"teamsConnectionId":{
+							"type":"string",
+							"title":"Teams Connection Id"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"teamsConnectionId",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":84,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_becCv-1",
+			"id":"_NATLT",
+			"index":0,
+			"inputs":{
+				"automationId":"674afe5adefb851816d61959",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"parameters":{
+					"caseAssociationType":"PREVIOUS_FAN_MESSAGE_IN_ONE_DAY",
+					"channelName":"AZURE_BOT",
+					"text":"{{ _upyrX.outputs.text }}",
+					"attachments":{
+						"source":"{{ _upyrX.outputs.attachments }}",
+						"ua:type":"mappedArray",
+						"items":"{{ _upyrX.outputs.attachments[0] }}"
+					},
+					"triggeredFromAutomationId":"{{ __RUN__.outputs.workflowId }}",
+					"messageType":"FAN",
+					"customerUserId":"{{ _upyrX.outputs.from.aadObjectId }}",
+					"triggerInput":"{{ _upyrX.outputs }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Case Management",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":84,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_becCv-1",
+			"id":"_b9qRW",
+			"index":0,
+			"inputs":{
+				"automationId":"6707e3c40e381a37b25270b8",
+				"runtimeConnections":{
+					"microsoft_teams":"{{ _HNdgu.outputs.teamsConnectionId }}"
+				},
+				"synchronous":true,
+				"parameters":{
+					"userId":"{{ _upyrX.outputs.from.aadObjectId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"get Teams User",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":79,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_becCv-1",
+			"id":"_cvDyy",
+			"index":0,
+			"inputs":{
+				"automationId":"6732f70850384a29acf312fd",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"parameters":{
+					"userQuery":"{{ _upyrX.outputs.text }}",
+					"caseId":"{{ _NATLT.outputs.caseId }}",
+					"messageId":"{{ _NATLT.outputs.messageId }}",
+					"userEmailAddress":"{{ _b9qRW.outputs.emailAddress }}",
+					"aiAgentId":"e_67a75aeb268c4d65c41b848c"
+				}
+			},
+			"skip":false,
+			"subTitle":"Trigger AI Agent",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_becCv-1",
+			"id":"_5F9t3",
+			"index":0,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":34802,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":3
+}
