@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1755161549912,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_CkArv",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_JAqVg",
+			"type":"next"
+		}
+	],
+	"id":"689da3cd33414f42c5758ed5",
+	"lastModifiedBy":-1,
+	"lcName":"khoros trigger",
+	"modifiedTime":1780492419189,
+	"name":"Khoros Trigger",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_CkArv-1",
+			"id":"_CkArv",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_CkArv-1",
+			"id":"_JAqVg",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":3952,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
