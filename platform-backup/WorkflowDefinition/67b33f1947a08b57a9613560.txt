@@ -1,0 +1,68 @@
+{
+	"appsUsed":[
+		"hubspot"
+	],
+	"createdTime":1739800345652,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1739800378238,
+		"deployedBy":12,
+		"deployedDefinitionId":"67b33f3947a08b57a96135d0",
+		"status":"PAUSED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		
+	],
+	"id":"67b33f1947a08b57a9613560",
+	"lastModifiedBy":-1,
+	"lcName":"tres",
+	"modifiedTime":1780492632658,
+	"name":"tres",
+	"nodes":[
+		{
+			"context":{
+				"appName":"hubspot",
+				"resourceVersion":3707,
+				"connectionId":"67a5f5ac07b46e67aac6ed81",
+				"resourceName":"hubspot_on_new_record_polling"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"fEJ9g-1",
+			"id":"TjBov",
+			"index":0,
+			"inputs":{
+				"archived":false,
+				"objectSourceResourceName":"hubspot_fetch_properties_by_objectType",
+				"interval":1,
+				"batchSize":1,
+				"objectType":"companies"
+			},
+			"skip":false,
+			"subTitle":"HubSpot",
+			"title":"New record",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":12,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
