@@ -16,7 +16,7 @@
 	"id":"6a1fe0ad43421607bf7291a3",
 	"lastModifiedBy":46030,
 	"lcName":"test",
-	"modifiedTime":1780486054913,
+	"modifiedTime":1780486064003,
 	"name":"test",
 	"nodes":[
 		{
@@ -67,10 +67,6 @@
 					"ua:type":"mappedArray"
 				},
 				"fileName":"sdfdsf",
-				"page":{
-					"offset":0,
-					"limit":10
-				},
 				"batchSize":1000,
 				"keepExactFileName":false,
 				"fileType":"CSV",
@@ -96,5 +92,5 @@
 		}
 	},
 	"standard":false,
-	"version":2
+	"version":3
 }
