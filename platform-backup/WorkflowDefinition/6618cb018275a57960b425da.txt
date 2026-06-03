@@ -1,0 +1,52 @@
+{
+	"appsUsed":[
+		"glaucusmaven"
+	],
+	"createdTime":1712900865794,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6618cb018275a57960b425da",
+	"lastModifiedBy":11,
+	"lcName":"untitled",
+	"modifiedTime":1712900886335,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"glaucusmaven"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"MMb30-1",
+			"id":"MMb30",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":11,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
