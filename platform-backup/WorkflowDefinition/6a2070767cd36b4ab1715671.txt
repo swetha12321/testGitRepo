@@ -9,6 +9,20 @@
 			"fromNodeId":"n_OXi8s",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_9t8kU",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_9t8kU",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_yLkcY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_yLkcY",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_A2Q03",
 			"type":"next"
 		},
@@ -21,6 +35,13 @@
 		},
 		{
 			"fromNodeId":"n_PaNY3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_X3O8O",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_X3O8O",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_ny9WS",
@@ -87,7 +108,7 @@
 	"id":"6a2070767cd36b4ab1715671",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-parent-rechecker",
-	"modifiedTime":1780510960569,
+	"modifiedTime":1780511176464,
 	"name":"credit-calculation-parent-rechecker",
 	"nodes":[
 		{
@@ -140,6 +161,49 @@
 		},
 		{
 			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":4885,
+				"resourceName":"utility_by_unifyapps_date_to_epoch",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_KzyGt-1",
+			"id":"n_9t8kU",
+			"index":2,
+			"inputs":{
+				"date":"{{ n_OXi8s.outputs.date }}",
+				"epochUnit":"milliseconds"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Date to Epoch",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":4795,
+				"resourceName":"utility_by_unifyapps_epoch_to_date",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_KzyGt-1",
+			"id":"n_yLkcY",
+			"index":3,
+			"inputs":{
+				"epochUnit":"milliseconds"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Epoch to Date",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"analytics_by_unifyapps",
 				"resourceVersion":2297,
 				"resourceName":"analytics_by_unifyapps_query_reports",
@@ -150,7 +214,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_A2Q03",
-			"index":2,
+			"index":4,
 			"inputs":{
 				"projections":[
 					{
@@ -199,7 +263,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_PaNY3",
-			"index":3,
+			"index":5,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -447,6 +511,48 @@
 		},
 		{
 			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":2297,
+				"resourceName":"analytics_by_unifyapps_query_reports",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_KzyGt-1",
+			"id":"n_X3O8O",
+			"index":6,
+			"inputs":{
+				"projections":[
+					{
+						"name":"WORKFLOW_ID",
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false
+					},
+					{
+						"name":"ID",
+						"aggregationFunction":"COUNT",
+						"includePercentageChange":false
+					}
+				],
+				"entityType":"WORKFLOW_EXECUTION",
+				"page":{
+					"limit":4000
+				},
+				"timeFilter":{
+					"timeField":"END_TIME",
+					"since":"={{ n_9t8kU.outputs.epoch }}-24*3600*1000",
+					"until":"={{ n_9t8kU.outputs.epoch }}"
+				},
+				"group":"PLATFORM"
+			},
+			"skip":false,
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Analytics Query",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"utility_by_unifyapps",
 				"resourceVersion":0,
 				"resourceName":"utility_by_unifyapps_filter_list",
@@ -457,9 +563,20 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_ny9WS",
-			"index":4,
+			"index":7,
 			"inputs":{
-				"listSource":"{{ n_IDvlI.outputs.items }}"
+				"filter":{
+					"filters":[
+						{
+							"property":"{{ n_X3O8O.outputs.objects[0].columns.WORKFLOW_ID }}",
+							"filter":{
+								"operator":"EQUAL"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"listSource":"{{ n_X3O8O.outputs.objects }}"
 			},
 			"skip":false,
 			"subTitle":"Utility by UnifyApps",
@@ -478,7 +595,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_i14Ya",
-			"index":5,
+			"index":8,
 			"inputs":{
 				"repeatMode":"BATCH",
 				"listSource":"{{ n_ny9WS.outputs.filteredList }}",
@@ -502,7 +619,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_i14Ya@_KzyGt-1@l",
 			"id":"n_Y5SaA",
-			"index":6,
+			"index":9,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -760,7 +877,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_i14Ya@_KzyGt-1@l",
 			"id":"n_YAhAP",
-			"index":7,
+			"index":10,
 			"inputs":{
 				"projections":[
 					{
@@ -841,7 +958,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_i14Ya@_KzyGt-1@l",
 			"id":"n_wXcRb",
-			"index":8,
+			"index":11,
 			"inputs":{
 				"output":{
 					"type":"array",
@@ -972,7 +1089,7 @@
 			"fallbackMode":"CONTINUE",
 			"groupId":"n_i14Ya@_KzyGt-1@l",
 			"id":"n_kQmB8",
-			"index":9,
+			"index":12,
 			"inputs":{
 				"automationId":"69f863a40eedcf52f9640aa6",
 				"runtimeConnections":{},
@@ -1076,7 +1193,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_aqKnm",
-			"index":10,
+			"index":13,
 			"inputs":{
 				"result":{
 					"completed":"true"
@@ -1096,7 +1213,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_fBO9h",
-			"index":11,
+			"index":14,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -1117,5 +1234,5 @@
 		}
 	},
 	"standard":false,
-	"version":2
+	"version":3
 }
