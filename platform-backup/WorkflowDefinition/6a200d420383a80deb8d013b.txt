@@ -4,14 +4,14 @@
 	],
 	"createdTime":1780485442180,
 	"deleted":false,
-	"deployedVersion":1,
+	"deployedVersion":2,
 	"deploymentState":{
-		"deployedAt":1780485442364,
+		"deployedAt":1780487262189,
 		"deployedBy":191185,
-		"deployedDefinitionId":"6a200d420383a80deb8d0141",
+		"deployedDefinitionId":"6a20145e0383a80deb8d70e4",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":1
+		"version":2,
+		"workflowVersion":2
 	},
 	"edges":[
 		{
@@ -106,7 +106,7 @@
 	"id":"6a200d420383a80deb8d013b",
 	"lastModifiedBy":191185,
 	"lcName":"ai agent(slack deployment)",
-	"modifiedTime":1780487260076,
+	"modifiedTime":1780487506056,
 	"name":"AI Agent(Slack Deployment)",
 	"nodes":[
 		{
@@ -117,7 +117,7 @@
 				"resourceName":"slack_on_new_message"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"WXTwJ-1",
 			"id":"h77A8",
@@ -129,7 +129,7 @@
 							"property":"{{ h77A8.outputs.authorizations[0].is_bot }}",
 							"filter":{
 								"operator":"EQUAL",
-								"value":"false"
+								"value":"true"
 							}
 						},
 						{
@@ -226,6 +226,7 @@
 				"timestamp":"{{ h77A8.outputs.event.event_ts }}"
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -307,6 +308,7 @@
 				"replyWithEmoji":true
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -512,5 +514,5 @@
 	"tags":[
 		"AI Agent Deployment"
 	],
-	"version":2
+	"version":3
 }
