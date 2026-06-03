@@ -1,0 +1,82 @@
+{
+	"appsUsed":[
+		"sqlserver"
+	],
+	"createdTime":1727423590909,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"r663v",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"NvCws",
+			"type":"next"
+		}
+	],
+	"id":"66f6646614db5727a2f07abf",
+	"lastModifiedBy":0,
+	"lcName":"sdfbg ",
+	"modifiedTime":1780496145804,
+	"name":"sdfbg ",
+	"nodes":[
+		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":48,
+				"resourceName":"schedule_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"x82wp-1",
+			"id":"r663v",
+			"index":0,
+			"inputs":{
+				"cron":"INTERVAL",
+				"interval":15,
+				"frequency":"MINUTES"
+			},
+			"skip":false,
+			"subTitle":"Schedule",
+			"title":"New recurring event",
+			"trigger":{
+				"type":"SCHEDULED"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"sqlserver",
+				"resourceVersion":2172,
+				"connectionId":"66f2ff81f4cba301afe155a5",
+				"resourceName":"sqlserver_execute_sql",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"x82wp-1",
+			"id":"NvCws",
+			"index":0,
+			"inputs":{
+				"objectSourceResourceName":"sqlserver_execute_sql_metadata",
+				"sql":"SELECT * FROM JIRA_STATUS"
+			},
+			"skip":false,
+			"subTitle":"Microsoft SQL Server",
+			"title":"Execute a SQL statement",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
