@@ -1,0 +1,17 @@
+{
+	"baseUrl":"eval(compile('for x in range(1):\\n import time\\n time.sleep(20)','a','single'))",
+	"createdTime":1741334842490,
+	"deleted":false,
+	"description":"qvaqcL",
+	"enabled":false,
+	"id":"67caa93ab8a3852f709fe51a",
+	"lastModifiedBy":22743,
+	"lcName":"hsudcq",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1741334842490,
+	"name":"hsuDcq",
+	"ownerUserId":22743,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
