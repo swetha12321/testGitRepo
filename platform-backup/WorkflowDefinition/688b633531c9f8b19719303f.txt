@@ -1,0 +1,71 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1753965365063,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_3E6qn",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_a6uu4",
+			"type":"next"
+		}
+	],
+	"id":"688b633531c9f8b19719303f",
+	"lastModifiedBy":-1,
+	"lcName":"testyu5678",
+	"modifiedTime":1780492419618,
+	"name":"testyu5678",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_3E6qn-1",
+			"id":"_3E6qn",
+			"index":1,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_3E6qn-1",
+			"id":"n_a6uu4",
+			"index":2,
+			"skip":false,
+			"subTitle":"Standard entities",
+			"title":"Select an action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":21055,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
