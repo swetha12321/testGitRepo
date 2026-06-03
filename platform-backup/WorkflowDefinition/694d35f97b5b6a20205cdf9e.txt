@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1766667769047,
+	"deleted":false,
+	"description":"description",
+	"edges":[
+		{
+			"fromNodeId":"_QcACU",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_RRZ7b",
+			"type":"next"
+		}
+	],
+	"id":"694d35f97b5b6a20205cdf9e",
+	"lastModifiedBy":-1,
+	"lcName":"parent_callable_automation_true_in_memory_actual_217666668754950",
+	"modifiedTime":1780492411592,
+	"name":"parent_callable_automation_True_IN_MEMORY_actual_217666668754950",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_QcACU-1",
+			"id":"_QcACU",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_QcACU-1",
+			"id":"_RRZ7b",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":false,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
