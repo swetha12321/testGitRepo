@@ -1,0 +1,83 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1737664522354,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"30Ivh",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"X0eOQ",
+			"type":"next"
+		}
+	],
+	"id":"6792a80a62a7fc5081eeea52",
+	"lastModifiedBy":0,
+	"lcName":"tes hdfc",
+	"modifiedTime":1780495207722,
+	"name":"tes hdfc",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":216,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"7v5sp-1",
+			"id":"30Ivh",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"hdfc_custom_integrations",
+				"resourceVersion":148,
+				"resourceName":"hdfc_custom_integrations_identify_template_for_message",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"7v5sp-1",
+			"id":"X0eOQ",
+			"index":0,
+			"inputs":{
+				"message":"Dear Customer, we need more details to process your FD application. Please complete using link https://smartxlt.hbctxdom.com/customer/home-HDFÇ Bank"
+			},
+			"skip":false,
+			"subTitle":"HDFC Custom Integrations",
+			"title":"Identify template for message",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":5
+}
