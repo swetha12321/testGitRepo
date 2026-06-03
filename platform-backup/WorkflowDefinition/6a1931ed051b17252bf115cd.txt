@@ -23,7 +23,7 @@
 	"id":"6a1931ed051b17252bf115cd",
 	"lastModifiedBy":195488,
 	"lcName":"schema-ref-delete",
-	"modifiedTime":1780486761597,
+	"modifiedTime":1780486829240,
 	"name":"schema-ref-delete",
 	"nodes":[
 		{
@@ -33,7 +33,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RXUg9-1",
 			"id":"n_ghqYR",
@@ -64,7 +64,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RXUg9-1",
 			"id":"n_uRRNr",
@@ -78,15 +78,8 @@
 				"path":"/",
 				"httpVersion":"HTTP_2",
 				"bodySchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"$comment":"yrdyinh",
-					"properties":{
-						"yrdyih":{
-							"type":"string",
-							"title":"yrdyih"
-						}
-					}
+					"$ref":"#/definitions/entity|e_code_snippet|e_6a1d1e7016376f12e10b9f76",
+					"$comment":"yrdyinh"
 				},
 				"responseContentType":"HEADER_BASED",
 				"followRedirects":"NORMAL",
@@ -127,15 +120,8 @@
 				"path":"/",
 				"httpVersion":"HTTP_2",
 				"bodySchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"$comment":"yrdyinh",
-					"properties":{
-						"yrdyih":{
-							"type":"string",
-							"title":"yrdyih"
-						}
-					}
+					"$ref":"#/definitions/entity|e_code_snippet|e_6a1d1e7016376f12e10b9f76",
+					"$comment":"yrdyinh"
 				},
 				"responseContentType":"HEADER_BASED",
 				"followRedirects":"NORMAL",
@@ -152,7 +138,7 @@
 	],
 	"ownerUserId":195488,
 	"schemaReferences":[
-		
+		"entity|e_code_snippet|e_6a1d1e7016376f12e10b9f76"
 	],
 	"settings":{
 		"enableNodeLevelLogging":true,
@@ -164,5 +150,5 @@
 		}
 	},
 	"standard":false,
-	"version":34
+	"version":35
 }
