@@ -1,0 +1,83 @@
+{
+	"appsUsed":[
+		"storage_by_unifyapps"
+	],
+	"createdTime":1754564755816,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_BBChd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_yCuLs",
+			"type":"next"
+		}
+	],
+	"id":"6894889357a4af23271eedc5",
+	"lastModifiedBy":-1,
+	"lcName":"delete_obusers",
+	"modifiedTime":1780492419357,
+	"name":"Delete_OBusers",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":769,
+				"resourceName":"callables_from_interface"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_fT7L5-1",
+			"id":"n_BBChd",
+			"index":1,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger interface",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":395,
+				"resourceName":"storage_by_unifyapps_delete_all_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_fT7L5-1",
+			"id":"n_yCuLs",
+			"index":2,
+			"inputs":{
+				"object_type":"ob_user"
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Delete all records",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175096,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":4
+}
