@@ -1,0 +1,84 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1766667394466,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1766667471724,
+		"deployedBy":175325,
+		"deployedDefinitionId":"694d34aeb5e73f280ffec3ef",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"description":"description",
+	"edges":[
+		
+	],
+	"id":"694d348261a5212f412c2b94",
+	"lastModifiedBy":-1,
+	"lcName":"comparedeployedversions_schemavalidation_validatetheviewchangesbuttonformodifiednodes_217666668831140",
+	"modifiedTime":1780492411665,
+	"name":"compareDeployedVersions_schemaValidation_validateTheViewChangesButtonForModifiedNodes_217666668831140",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_3jb9T-1",
+			"id":"n_YqCxx",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json",
+					"body":{
+						"type":"object",
+						"properties":{
+							"addedVar":{
+								"type":"string",
+								"title":"addedVar"
+							}
+						},
+						"additionalProperties":false,
+						"required":[
+							"addedVar"
+						]
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":175325,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":false,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
