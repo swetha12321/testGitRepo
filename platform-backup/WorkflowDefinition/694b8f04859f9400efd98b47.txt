@@ -1,0 +1,121 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1766559492288,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_hqskF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_QAeP6",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_QAeP6",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_YAFHs",
+			"type":"next"
+		}
+	],
+	"id":"694b8f04859f9400efd98b47",
+	"lastModifiedBy":-1,
+	"lcName":"edf3g45",
+	"modifiedTime":1780492411756,
+	"name":"edf3g45",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_xB4XZ-1",
+			"id":"n_hqskF",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":1095,
+				"resourceName":"analytics_by_unifyapps_execute_query",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_xB4XZ-1",
+			"id":"n_QAeP6",
+			"index":2,
+			"inputs":{
+				"query":"SELECT \n    id,\n    _pr_aiAgentId,\n    _pr_inputToken,\n    _pr_outputToken,\n    _pr_cost,\n    _pr_input,\n    _pr_outputObject,\n    _pr_toolName,\n    _pr_output,\n    _pr_userId,\n    _pr_llmErrorType\nFROM ENTITY_e_traces\nlimit 1",
+				"group":"ENTITY_REPORTING"
+			},
+			"skip":false,
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Execute Analytics SQL Query",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"json_by_unifyapps",
+				"resourceVersion":316,
+				"resourceName":"json_by_unifyapps_write_data_to_json_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_xB4XZ-1",
+			"id":"n_YAFHs",
+			"index":3,
+			"inputs":{
+				"appendData":false,
+				"fileName":"test.json",
+				"encoding":"UTF-8",
+				"dataSource":"{{ n_QAeP6.outputs.objects }}",
+				"keepExactFileName":true,
+				"fileType":"json"
+			},
+			"skip":false,
+			"subTitle":"JSON by UnifyApps",
+			"title":"Write data to JSON file",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":3546,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":4
+}
