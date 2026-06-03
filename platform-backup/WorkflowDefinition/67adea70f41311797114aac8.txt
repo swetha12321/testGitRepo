@@ -1,0 +1,45 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1739450992321,
+	"deleted":false,
+	"edges":[
+		
+	],
+	"id":"67adea70f41311797114aac8",
+	"lastModifiedBy":0,
+	"lcName":"test",
+	"modifiedTime":1780493621295,
+	"name":"test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4CRRi-1",
+			"id":"4CRRi",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":47193,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
