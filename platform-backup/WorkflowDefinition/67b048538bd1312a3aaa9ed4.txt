@@ -1,0 +1,66 @@
+{
+	"appsUsed":[
+		"rebrandly"
+	],
+	"createdTime":1739606099498,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1739606123755,
+		"deployedBy":44108,
+		"deployedDefinitionId":"67b0486b8bd1312a3aaa9eef",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"edges":[
+		
+	],
+	"id":"67b048538bd1312a3aaa9ed4",
+	"lastModifiedBy":-1,
+	"lcName":"test-hhh",
+	"modifiedTime":1780492633073,
+	"name":"test-hhh",
+	"nodes":[
+		{
+			"context":{
+				"appName":"rebrandly",
+				"resourceVersion":40,
+				"connectionId":"67af0af55f38c6667f606735",
+				"resourceName":"rebrandly_new_branded_link_polling"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"m4owc-1",
+			"id":"7rA3G",
+			"index":0,
+			"inputs":{
+				"workspace":"f24a3074caf84c548b332bd526bddfb9",
+				"interval":1,
+				"batchSize":100
+			},
+			"skip":false,
+			"subTitle":"Rebrandly",
+			"title":"New branded link",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":44108,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
