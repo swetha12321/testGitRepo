@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1768197714201,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_Yd7dv",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_OWtXN",
+			"type":"next"
+		}
+	],
+	"id":"69648e529a41d701040b2dc2",
+	"lastModifiedBy":-1,
+	"lcName":"test_keka",
+	"modifiedTime":1780492410376,
+	"name":"test_keka",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Yd7dv-1",
+			"id":"_Yd7dv",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Yd7dv-1",
+			"id":"_OWtXN",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":3546,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
