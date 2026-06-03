@@ -1,0 +1,91 @@
+{
+	"appsUsed":[
+		"gmail",
+		"microsoft_teams"
+	],
+	"createdTime":1739180295856,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"xArkj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"YLjTO",
+			"type":"next"
+		}
+	],
+	"id":"67a9c9071c68d61ae3b2fbc2",
+	"lastModifiedBy":0,
+	"lcName":"efw",
+	"modifiedTime":1780493723501,
+	"name":"efw",
+	"nodes":[
+		{
+			"context":{
+				"appName":"gmail",
+				"resourceName":"gmail_on_new_email_polling",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"xArkj-1",
+			"id":"xArkj",
+			"index":0,
+			"inputs":{
+				"interval":5,
+				"batchSize":5
+			},
+			"skip":false,
+			"subTitle":"Gmail",
+			"title":"On New Email Polling",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"microsoft_teams",
+				"resourceName":"microsoft_teams_send_chat_message",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"xArkj-1",
+			"id":"YLjTO",
+			"index":0,
+			"inputs":{
+				"summary":"{{ xArkj.batch[0].snippet }}",
+				"messageType":"message",
+				"subject":"{{ xArkj.batch[0].subject }}",
+				"importance":"normal",
+				"body":{
+					"contentType":"text",
+					"content":"{{ xArkj.batch[0].body_plain[0] }}"
+				},
+				"locale":"en-us",
+				"chat_id":"your_chat_id_here"
+			},
+			"skip":false,
+			"subTitle":"Microsoft_teams",
+			"title":"Send Chat Message",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":44096,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
