@@ -1,0 +1,52 @@
+{
+	"appsUsed":[
+		"gokwik"
+	],
+	"createdTime":1715246920437,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"663c9748efdc5418a1d935e5",
+	"lastModifiedBy":34,
+	"lcName":"untitled",
+	"modifiedTime":1715246997476,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"gokwik"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"h5Ol8-1",
+			"id":"h5Ol8",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":34,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
