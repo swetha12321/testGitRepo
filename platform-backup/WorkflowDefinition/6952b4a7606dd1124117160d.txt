@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767027879868,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_YZKK6",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_MpG1k",
+			"type":"next"
+		}
+	],
+	"id":"6952b4a7606dd1124117160d",
+	"lastModifiedBy":-1,
+	"lcName":"dvsv",
+	"modifiedTime":1780492410954,
+	"name":"dvsv",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_YZKK6-1",
+			"id":"_YZKK6",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_YZKK6-1",
+			"id":"_MpG1k",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":678,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
