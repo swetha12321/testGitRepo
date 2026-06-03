@@ -2,10 +2,10 @@
 	"createdTime":1744785746125,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1780525311974,
+		"deployedAt":1780525371126,
 		"deployedBy":557,
-		"entityVersion":863,
-		"version":66
+		"entityVersion":866,
+		"version":67
 	},
 	"entityType":"e_interface",
 	"grants":{
@@ -30,7 +30,7 @@
 	},
 	"id":"test231",
 	"lastModifiedBy":557,
-	"modifiedTime":1780525347774,
+	"modifiedTime":1780525835126,
 	"ownerUserId":522,
 	"properties":{
 		"standard":false,
@@ -80,7 +80,7 @@
 			]
 		},
 		"customCode":{
-			"footer":""
+			"footer":" <script type=\"text/javascript\">\n      window.ymConfig = {\"bot\":\"x1777975593791\",\"host\":\"https://cloud.yellow.ai\", \"payload\" : {\n    \"employeeCode\": \"\",\n    \"workerCategory\": \"\",\n    \"grade\": \"\",\n    \"workerNumber\": \"\",\n    \"circle\": \"\",\n    \"city\": \"\",\n    \"contactNo\": \"\",\n    \"country\": \"\",\n    \"dateOfJoining\": \"\",\n    \"designation\": \"\",\n    \"email\": \"\",\n    \"locationId\": \"\",\n    \"locationName\": \"\",\n    \"region\": \"\",\n    \"reportingManagerEmployeeCode\": \"\",\n    \"reportingManagerEmployeeName\": \"\",\n    \"role\": \"\",\n    \"state\": \"\",\n    \"employeeStatus\": \"\",\n    \"StoreCode\": \"\",\n    \"LocationType\": \"\"\n  }};\n    (function() {\n        var w = window,\n            ic = w.YellowMessenger;\n        if (\"function\" === typeof ic) ic(\"reattach_activator\"), ic(\"update\", ymConfig);\n        else {\n            var d = document,\n                i = function() {\n                    i.c(arguments)\n                };\n            function l() {\n                var e = d.createElement(\"script\");\n                e.type = \"text/javascript\", e.async = !0, e.src = \"https://cdn.yellowmessenger.com/plugin/widget-v2/latest/dist/main.min.js\";\n                var t = d.getElementsByTagName(\"script\")[0];\n                t.parentNode.insertBefore(e, t)\n            }\n            i.q = [], i.c = function(e) {\n                i.q.push(e)\n            }, w.YellowMessenger = i;\n        if (d.readyState === \"complete\") {\n            l();\n        } else {\n            w.attachEvent ? w.attachEvent(\"onload\", l) : w.addEventListener(\"load\", l, !1);\n        }\n    }\n    })();\n    </script>"
 		},
 		"navigation":{
 			"secondary":[
@@ -745,5 +745,5 @@
 		}
 	},
 	"standard":false,
-	"version":864
+	"version":868
 }
