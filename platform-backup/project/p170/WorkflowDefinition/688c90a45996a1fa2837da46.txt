@@ -1,0 +1,94 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1754042532676,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_JPLYu",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_MS1ta",
+			"type":"next"
+		}
+	],
+	"id":"688c90a45996a1fa2837da46",
+	"lastModifiedBy":-1,
+	"lcName":"check",
+	"modifiedTime":1780492419595,
+	"name":"check",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":801,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_RIWYE-1",
+			"id":"n_JPLYu",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"conv_ai_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"conv_ai_by_unifyapps_publish_response",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_RIWYE-1",
+			"id":"n_MS1ta",
+			"index":2,
+			"inputs":{
+				"callableInterfaceId":"__ua__publish_response_interface",
+				"defaultFallbackWorkflowId":"66fbed229edc4e0b6303cefd",
+				"parameters":{
+					"responses":[
+						{
+							"content":"Hi there! Welcome to our flight information service. How can I assist you today? Do you have any questions about flights, schedules, or any other travel-related information?",
+							"language":"en"
+						}
+					],
+					"caseId":"e_68678a8e9c65c4094d9c56f3",
+					"fromCustomerUserId":"e_686593f1605ea211c1c5635b",
+					"temporaryMessage":false,
+					"publishToEndUser":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Conversation AI",
+			"title":"Publish Response",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":39717,
+	"projectId":170,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":6
+}
