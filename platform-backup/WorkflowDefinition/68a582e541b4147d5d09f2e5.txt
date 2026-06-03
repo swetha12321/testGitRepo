@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1755677413907,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_LOpHI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_EpsXB",
+			"type":"next"
+		}
+	],
+	"id":"68a582e541b4147d5d09f2e5",
+	"lastModifiedBy":-1,
+	"lcName":"jira test",
+	"modifiedTime":1780492418775,
+	"name":"jira test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_LOpHI-1",
+			"id":"_LOpHI",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_LOpHI-1",
+			"id":"_EpsXB",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":161875,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
