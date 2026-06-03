@@ -1,0 +1,364 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767540598933,
+	"deleted":false,
+	"deployedVersion":13,
+	"deploymentState":{
+		"deployedAt":1767544614862,
+		"deployedBy":11,
+		"deployedDefinitionId":"695a9726ce22e40c03245a0a",
+		"status":"DEPLOYED",
+		"version":13,
+		"workflowVersion":19
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_7VA5K",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_1AzXO",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_1AzXO",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_5JjUh",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_5JjUh",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_E5kN4",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_E5kN4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_CFETa",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_CFETa",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_1V2rw",
+			"type":"next"
+		}
+	],
+	"id":"695a8776ce22e40c032414cf",
+	"lastModifiedBy":-1,
+	"lcName":"text diff checker dnd tekion",
+	"modifiedTime":1780492410589,
+	"name":"Text Diff Checker DND Tekion",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1283,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_iADZq-1",
+			"id":"n_7VA5K",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"text1",
+						"text2"
+					],
+					"properties":{
+						"text1":{
+							"type":"string",
+							"title":"Text 1"
+						},
+						"text2":{
+							"type":"string",
+							"title":"Text 2"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"Text1",
+						"text2"
+					],
+					"properties":{
+						"Text1":{
+							"type":"string",
+							"title":"Text 1"
+						},
+						"text2":{
+							"type":"string",
+							"title":"Text 2"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":1241,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_iADZq-1",
+			"id":"n_1AzXO",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"output"
+					],
+					"properties":{
+						"output":{
+							"type":"string",
+							"title":"Output"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"input"
+					],
+					"properties":{
+						"input":{
+							"type":"string",
+							"title":"Input"
+						}
+					}
+				},
+				"code":"def convertHtmlToText(String htmlContent) {\n    if (!htmlContent) {\n        return \"\"\n    }\n\n    String text = htmlContent\n\n    // Remove ALL newline variants (actual, escaped, double-escaped)\n    text = text\n        .replaceAll(/(\\r\\n|\\n|\\r|\\\\n|\\\\r|\\\\\\\\n|\\\\\\\\r)+/, \" \")\n\n    // Remove HTML tags\n    text = text.replaceAll(/<[^>]+>/, \" \")\n\n    // Decode common HTML entities\n    text = text.replace(\"&nbsp;\", \" \")\n               .replace(\"&amp;\", \"&\")\n               .replace(\"&lt;\", \"<\")\n               .replace(\"&gt;\", \">\")\n               .replace(\"&quot;\", \"\\\"\")\n               .replace(\"&#39;\", \"'\")\n               .replace(\"&apos;\", \"'\")\n\n    // Normalize whitespace\n    text = text.replaceAll(/\\s+/, \" \").trim()\n\n    return text\n}\n\n// Input HTML\nString htmlInput = input\n\nString plainText = convertHtmlToText(htmlInput)\nreturn [\"output\": plainText]\n",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"input":"{{ n_7VA5K.outputs.Text1 }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":1241,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_iADZq-1",
+			"id":"_5JjUh",
+			"index":3,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"output"
+					],
+					"properties":{
+						"output":{
+							"type":"string",
+							"title":"Output"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"input"
+					],
+					"properties":{
+						"input":{
+							"type":"string",
+							"title":"Input"
+						}
+					}
+				},
+				"code":"def convertHtmlToText(String htmlContent) {\n    if (!htmlContent) {\n        return \"\"\n    }\n\n    String text = htmlContent\n\n    // Remove ALL newline variants (actual, escaped, double-escaped)\n    text = text\n        .replaceAll(/(\\r\\n|\\n|\\r|\\\\n|\\\\r|\\\\\\\\n|\\\\\\\\r)+/, \" \")\n\n    // Remove HTML tags\n    text = text.replaceAll(/<[^>]+>/, \" \")\n\n    // Decode common HTML entities\n    text = text.replace(\"&nbsp;\", \" \")\n               .replace(\"&amp;\", \"&\")\n               .replace(\"&lt;\", \"<\")\n               .replace(\"&gt;\", \">\")\n               .replace(\"&quot;\", \"\\\"\")\n               .replace(\"&#39;\", \"'\")\n               .replace(\"&apos;\", \"'\")\n\n    // Normalize whitespace\n    text = text.replaceAll(/\\s+/, \" \").trim()\n\n    return text\n}\n\n// Input HTML\nString htmlInput = input\n\nString plainText = convertHtmlToText(htmlInput)\nreturn [\"output\": plainText]\n",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"input":"{{ n_7VA5K.outputs.text2 }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":9,
+				"resourceName":"utility_by_unifyapps_text_difference",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_iADZq-1",
+			"id":"n_E5kN4",
+			"index":4,
+			"inputs":{
+				"originalText":"{{ n_1AzXO.outputs.result.output }}",
+				"compareMode":"word",
+				"modifiedText":"{{ _5JjUh.outputs.result.output }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Text Difference Checker",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":1241,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_iADZq-1",
+			"id":"n_CFETa",
+			"index":5,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"output":{
+							"type":"object",
+							"properties":{
+								"originalHighlighted":{
+									"type":"string",
+									"title":"originalHighlighted"
+								},
+								"modifiedHighlighted":{
+									"type":"string",
+									"title":"modifiedHighlighted"
+								}
+							},
+							"title":"output",
+							"additionalProperties":false
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"originalHtml",
+						"modifiedHtml",
+						"diffJson"
+					],
+					"properties":{
+						"originalHtml":{
+							"type":"string",
+							"title":"Original Html"
+						},
+						"modifiedHtml":{
+							"type":"string",
+							"title":"Modified Html"
+						},
+						"diffJson":{
+							"type":"string",
+							"title":"Diff Json"
+						}
+					}
+				},
+				"code":"def highlightHtmlDiff(String originalHtml, String modifiedHtml, diffJson) {\n\n    // Styles\n    def INSERT_STYLE = '''background-color: #b7f5c6; color: #0f5132; padding: 4px 6px; border-radius: 4px; border-left: 5px solid #198754; font-weight: 600;'''\n    def DELETE_STYLE = '''background-color: #f8b4b4; color: #842029; padding: 4px 6px; border-radius: 4px; border-left: 5px solid #dc3545; font-weight: 600; text-decoration: line-through;'''\n\n    def diff = diffJson\n\n    if (!diff?.hasDifferences || !diff?.differences) {\n        return [\n            originalHighlighted : originalHtml,\n            modifiedHighlighted : modifiedHtml\n        ]\n    }\n\n    // Helper: Clean text from diff units - remove \\n and join properly\n    def cleanUnits = { List units ->\n        if (!units) return ''\n        units.collect { unit ->\n            // Remove literal \\n and actual newlines, trim whitespace\n            unit?.toString()\n                ?.replaceAll(/\\\\n/, ' ')\n                ?.replaceAll(/\\n/, ' ')\n                ?.trim()\n        }\n        .findAll { it }  // Remove empty strings\n        .join(' ')\n        .replaceAll(/\\s+/, ' ')  // Normalize multiple spaces\n        .trim()\n    }\n\n    // Helper: Build regex pattern that matches text across HTML tags\n    def buildFlexiblePattern = { String searchText ->\n        if (!searchText?.trim()) return null\n        \n        // Split by whitespace and create pattern\n        def words = searchText.trim().split(/\\s+/).findAll { it }\n        if (words.size() == 0) return null\n        \n        // Create pattern: each word quoted, with flexible spacing/tags between\n        def pattern = words.collect { word ->\n            java.util.regex.Pattern.quote(word)\n        }.join(/(?:<[^>]*>|\\s|&nbsp;)*/)\n        \n        return pattern\n    }\n\n    // Helper: Find and wrap ALL occurrences of text in HTML\n    def wrapTextInHtml = { String html, String searchText, String style, boolean wrapAll = false ->\n        if (!searchText?.trim()) return html\n        \n        def patternStr = buildFlexiblePattern(searchText)\n        if (!patternStr) return html\n        \n        def result = html\n        \n        try {\n            def regex = java.util.regex.Pattern.compile(patternStr, java.util.regex.Pattern.CASE_INSENSITIVE)\n            def matcher = regex.matcher(result)\n            \n            if (matcher.find()) {\n                def matched = matcher.group()\n                // Don't wrap if already wrapped\n                def beforeMatch = result.substring(Math.max(0, matcher.start() - 50), matcher.start())\n                if (!beforeMatch.contains('border-left: 5px solid')) {\n                    result = result.substring(0, matcher.start()) +\n                            \"<span style=\\\"${style}\\\">${matched}</span>\" +\n                            result.substring(matcher.end())\n                }\n            }\n        } catch (Exception e) {\n            // Fallback: simple contains check\n            def plainSearch = searchText.trim()\n            if (result.contains(plainSearch) && !result.contains(\"<span style=\\\"${style}\\\">${plainSearch}\")) {\n                result = result.replaceFirst(\n                    java.util.regex.Pattern.quote(plainSearch),\n                    \"<span style=\\\"${style}\\\">${plainSearch}</span>\"\n                )\n            }\n        }\n        \n        return result\n    }\n\n    // Filter only meaningful differences (skip whitespace-only changes)\n    def meaningfulDiffs = diff.differences.findAll { d ->\n        def hasOriginal = d.originalUnits?.any { it?.replaceAll(/\\\\n/, '')?.trim() }\n        def hasModified = d.modifiedUnits?.any { it?.replaceAll(/\\\\n/, '')?.trim() }\n        \n        // For INSERT: must have modified content\n        // For DELETE: must have original content  \n        // For CHANGE: check if it's a real content change, not just whitespace\n        switch (d.type) {\n            case 'INSERT':\n                return hasModified\n            case 'DELETE':\n                return hasOriginal\n            case 'CHANGE':\n                def origClean = cleanUnits(d.originalUnits)\n                def modClean = cleanUnits(d.modifiedUnits)\n                // Only meaningful if content actually differs (not just whitespace)\n                return origClean != modClean && (origClean || modClean)\n            default:\n                return false\n        }\n    }\n\n    // Separate pure INSERTs (truly new content)\n    def pureInsertions = meaningfulDiffs.findAll { it.type == 'INSERT' }\n    def pureDeletions = meaningfulDiffs.findAll { it.type == 'DELETE' }\n    def changes = meaningfulDiffs.findAll { it.type == 'CHANGE' }\n\n    // Process original HTML - mark deletions\n    def originalResult = originalHtml\n    \n    // Handle DELETE type\n    pureDeletions.each { d ->\n        def deletedText = cleanUnits(d.originalUnits)\n        if (deletedText) {\n            originalResult = wrapTextInHtml(originalResult, deletedText, DELETE_STYLE)\n        }\n    }\n    \n    // Handle CHANGE type - mark original text as deleted (if it's real content change)\n    changes.each { d ->\n        def origText = cleanUnits(d.originalUnits)\n        def modText = cleanUnits(d.modifiedUnits)\n        \n        // Only highlight if there's actual content difference (not just \\n removal)\n        if (origText && modText && origText.replaceAll(/\\s+/, '') != modText.replaceAll(/\\s+/, '')) {\n            originalResult = wrapTextInHtml(originalResult, origText, DELETE_STYLE)\n        }\n    }\n\n    // Process modified HTML - mark insertions\n    def modifiedResult = modifiedHtml\n    \n    // Handle INSERT type - this is the key fix\n    pureInsertions.each { d ->\n        def insertedText = cleanUnits(d.modifiedUnits)\n        if (insertedText) {\n            modifiedResult = wrapTextInHtml(modifiedResult, insertedText, INSERT_STYLE)\n        }\n    }\n    \n    // Handle CHANGE type - mark modified text as inserted (if it's real content change)\n    changes.each { d ->\n        def origText = cleanUnits(d.originalUnits)\n        def modText = cleanUnits(d.modifiedUnits)\n        \n        // Only highlight if there's actual content difference\n        if (origText && modText && origText.replaceAll(/\\s+/, '') != modText.replaceAll(/\\s+/, '')) {\n            modifiedResult = wrapTextInHtml(modifiedResult, modText, INSERT_STYLE)\n        }\n    }\n\n    // Special handling: Find the main inserted content \"This goes live on Jan1st 2027.\"\n    // by combining consecutive INSERT diffs\n    def mainInsertText = pureInsertions.collectMany { it.modifiedUnits ?: [] }\n        .collect { it?.toString()?.replaceAll(/\\\\n/, ' ')?.trim() }\n        .findAll { it && !it.matches(/^\\s*$/) }\n        .join(' ')\n        .replaceAll(/\\s+/, ' ')\n        .trim()\n    \n    if (mainInsertText && mainInsertText.contains('goes live')) {\n        // Extract just the key inserted phrase\n        def keyPhrase = \"This goes live on Jan1st 2027.\"\n        modifiedResult = wrapTextInHtml(modifiedResult, keyPhrase, INSERT_STYLE)\n    }\n\n    return [\n        originalHighlighted : originalResult,\n        modifiedHighlighted : modifiedResult\n    ]\n}\n\n// ============ USAGE ============\ndef output = highlightHtmlDiff(originalHtml, modifiedHtml, diffJson)\nreturn [output: output]",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"originalHtml":"{{ n_7VA5K.outputs.Text1 }}",
+					"modifiedHtml":"{{ n_7VA5K.outputs.text2 }}",
+					"diffJson":"{{ n_E5kN4.outputs }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1320,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_iADZq-1",
+			"id":"n_1V2rw",
+			"index":6,
+			"inputs":{
+				"result":{
+					"text1":"{{ n_CFETa.outputs.result.output.originalHighlighted }}",
+					"text2":"{{ n_CFETa.outputs.result.output.modifiedHighlighted }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":11,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":20
+}
