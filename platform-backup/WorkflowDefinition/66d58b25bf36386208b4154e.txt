@@ -1,0 +1,59 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725270821936,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"lYG4J",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"K8NZX",
+			"type":"next"
+		}
+	],
+	"id":"66d58b25bf36386208b4154e",
+	"lastModifiedBy":0,
+	"lcName":"testing autofill",
+	"modifiedTime":1780496151539,
+	"name":"testing autofill",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"lYG4J-1",
+			"id":"lYG4J",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"lYG4J-1",
+			"id":"K8NZX",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":533,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
