@@ -1,0 +1,219 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1753888981057,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1753888981124,
+		"deployedBy":89323,
+		"deployedDefinitionId":"688a38d5e81f724f111c2852",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":27
+	},
+	"description":"Caso de uso NRT",
+	"edges":[
+		{
+			"fromNodeId":"bKQ2x",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"fnTJJ",
+			"type":"next"
+		}
+	],
+	"id":"66992d2b07564f28f34c28c5",
+	"lastModifiedBy":-1,
+	"lcName":"recepción tramas insider",
+	"modifiedTime":1780492419719,
+	"name":"Recepción tramas insider",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":0,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"bKQ2x-1",
+			"id":"bKQ2x",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json",
+					"body":{
+						"type":"object",
+						"properties":{
+							"insider_id":{
+								"type":"string",
+								"title":"insider_id"
+							},
+							"partner":{
+								"type":"string",
+								"title":"partner"
+							},
+							"hook_id":{
+								"type":"integer",
+								"title":"hook_id"
+							},
+							"name":{
+								"type":"string",
+								"title":"name"
+							},
+							"event_name":{
+								"type":"string",
+								"title":"event_name"
+							},
+							"triggers":{
+								"type":"string",
+								"title":"triggers"
+							},
+							"event_parameters":{
+								"type":"object",
+								"properties":{
+									"campaign_name":{
+										"type":"string",
+										"title":"campaign_name"
+									},
+									"human_open":{
+										"type":"boolean",
+										"title":"human_open"
+									},
+									"machine_open":{
+										"type":"boolean",
+										"title":"machine_open"
+									},
+									"email_campaign_id":{
+										"type":"integer",
+										"title":"email_campaign_id"
+									},
+									"src":{
+										"type":"string",
+										"title":"src"
+									},
+									"subject":{
+										"type":"string",
+										"title":"subject"
+									},
+									"variation_id":{
+										"type":"string",
+										"title":"variation_id"
+									},
+									"ip_address":{
+										"type":"string",
+										"title":"ip_address"
+									},
+									"campaign_id":{
+										"type":"string",
+										"title":"campaign_id"
+									},
+									"user_agent":{
+										"type":"string",
+										"title":"user_agent"
+									}
+								},
+								"title":"event_parameters",
+								"additionalProperties":false
+							},
+							"timestamp":{
+								"type":"integer",
+								"title":"timestamp"
+							},
+							"attrs":{
+								"type":"object",
+								"properties":{
+									"country":{
+										"type":"string",
+										"title":"country"
+									},
+									"c_country_code":{
+										"type":"string",
+										"title":"c_country_code"
+									},
+									"email":{
+										"type":"string",
+										"title":"email"
+									}
+								},
+								"title":"attrs",
+								"additionalProperties":false
+							}
+						},
+						"additionalProperties":false
+					}
+				}
+			},
+			"skip":false,
+			"title":"Http Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"streams_by_unifyapps",
+				"resourceVersion":74,
+				"resourceName":"streams_by_unifyapps_publish_event",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"bKQ2x-1",
+			"id":"fnTJJ",
+			"index":0,
+			"inputs":{
+				"streamId":"e_66d75e6ced3f103c155ce5d4",
+				"event":{
+					"insider_id":"{{ bKQ2x.outputs.body.insider_id }}",
+					"partner":"{{ bKQ2x.outputs.body.partner }}",
+					"hook_id":"{{ bKQ2x.outputs.body.hook_id }}",
+					"name":"{{ bKQ2x.outputs.body.name }}",
+					"event_name":"{{ bKQ2x.outputs.body.event_name }}",
+					"triggers":"{{ bKQ2x.outputs.body.triggers }}",
+					"event_parameters":{
+						"campaign_name":"{{ bKQ2x.outputs.body.event_parameters.campaign_name }}",
+						"human_open":"{{ bKQ2x.outputs.body.event_parameters.human_open }}",
+						"machine_open":"{{ bKQ2x.outputs.body.event_parameters.machine_open }}",
+						"email_campaign_id":"{{ bKQ2x.outputs.body.event_parameters.email_campaign_id }}",
+						"src":"{{ bKQ2x.outputs.body.event_parameters.src }}",
+						"subject":"{{ bKQ2x.outputs.body.event_parameters.subject }}",
+						"variation_id":"{{ bKQ2x.outputs.body.event_parameters.variation_id }}",
+						"ip_address":"{{ bKQ2x.outputs.body.event_parameters.ip_address }}",
+						"campaign_id":"{{ bKQ2x.outputs.body.event_parameters.campaign_id }}",
+						"user_agent":"{{ bKQ2x.outputs.body.event_parameters.user_agent }}"
+					},
+					"timestamp":"{{ bKQ2x.outputs.body.timestamp }}",
+					"attrs":{
+						"country":"{{ bKQ2x.outputs.body.attrs.country }}",
+						"c_country_code":"{{ bKQ2x.outputs.body.attrs.c_country_code }}",
+						"email":"{{ bKQ2x.outputs.body.attrs.email }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Streams by UnifyApps",
+			"title":"Publish event to stream",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":89323,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		"Internal"
+	],
+	"version":28
+}
