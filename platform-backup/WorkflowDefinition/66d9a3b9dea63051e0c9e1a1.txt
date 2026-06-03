@@ -1,0 +1,484 @@
+{
+	"appsUsed":[
+		"quora_ads_conversion"
+	],
+	"createdTime":1725539257665,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"Xx1Ii",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3rm5d",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"3rm5d",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"6fSAY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"6fSAY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"ptLZg",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"ptLZg",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"JCYi3",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"JCYi3",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"TtihE",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"JCYi3",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"YC4aC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"TtihE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"GS6Yg",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"YC4aC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"GS6Yg",
+			"type":"next"
+		}
+	],
+	"id":"66d9a3b9dea63051e0c9e1a1",
+	"lastModifiedBy":0,
+	"lcName":"get conversion event",
+	"modifiedTime":1780496150339,
+	"name":"get conversion event",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":52,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Wt8Vb-1",
+			"id":"Xx1Ii",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"result":{
+							"type":"boolean",
+							"title":"Result"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"account_id":{
+							"type":"string",
+							"title":"account_id"
+						},
+						"user":{
+							"type":"object",
+							"properties":{
+								"country":{
+									"type":"string",
+									"title":"country"
+								},
+								"city":{
+									"type":"string",
+									"title":"city"
+								},
+								"date_of_birth":{
+									"type":"string",
+									"title":"date_of_birth"
+								},
+								"ip":{
+									"type":"string",
+									"title":"ip"
+								},
+								"company_name":{
+									"type":"string",
+									"title":"company_name"
+								},
+								"name":{
+									"type":"string",
+									"title":"name"
+								},
+								"phone_number":{
+									"type":"string",
+									"title":"phone_number"
+								},
+								"region":{
+									"type":"string",
+									"title":"region"
+								},
+								"postal_code":{
+									"type":"string",
+									"title":"postal_code"
+								},
+								"job_title":{
+									"type":"string",
+									"title":"job_title"
+								},
+								"email":{
+									"type":"string",
+									"title":"email"
+								}
+							},
+							"title":"user",
+							"additionalProperties":false
+						},
+						"device":{
+							"type":"object",
+							"properties":{
+								"referrer":{
+									"type":"string",
+									"title":"referrer"
+								},
+								"mobile_device_id":{
+									"type":"string",
+									"title":"mobile_device_id"
+								},
+								"language":{
+									"type":"string",
+									"title":"language"
+								},
+								"user_agent":{
+									"type":"string",
+									"title":"user_agent"
+								}
+							},
+							"title":"device",
+							"additionalProperties":false
+						},
+						"conversion":{
+							"type":"object",
+							"properties":{
+								"event_id":{
+									"type":"string",
+									"title":"event_id"
+								},
+								"click_id":{
+									"type":"string",
+									"title":"click_id"
+								},
+								"event_name":{
+									"type":"string",
+									"title":"event_name"
+								},
+								"value":{
+									"type":"number",
+									"title":"value"
+								},
+								"timestamp":{
+									"type":"integer",
+									"title":"timestamp"
+								}
+							},
+							"title":"conversion",
+							"additionalProperties":false
+						}
+					},
+					"additionalProperties":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":120,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Wt8Vb-1",
+			"id":"3rm5d",
+			"index":0,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{
+					"ui:submitButtonOptions":{
+						"norender":true
+					}
+				},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"validate":{
+							"type":"boolean",
+							"title":"Validate"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{},
+			"outputSchema":{
+				"type":"SCHEMA",
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"validate":{
+							"type":"boolean",
+							"title":"Validate"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"quora_ads_conversion",
+				"resourceVersion":1,
+				"connectionId":"66d9a4e2a0e42e398e6ccd5e",
+				"resourceName":"quora_ads_conversion_get_conversion_event",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Wt8Vb-1",
+			"id":"6fSAY",
+			"index":0,
+			"inputs":{
+				"account_id":"{{ Xx1Ii.outputs.account_id }}",
+				"user":{
+					"email":"{{ Xx1Ii.outputs.user.email }}",
+					"phone_number":"{{ Xx1Ii.outputs.user.phone_number }}",
+					"name":"{{ Xx1Ii.outputs.user.name }}",
+					"ip":"{{ Xx1Ii.outputs.user.ip }}",
+					"country":"{{ Xx1Ii.outputs.user.country }}",
+					"region":"{{ Xx1Ii.outputs.user.region }}",
+					"city":"{{ Xx1Ii.outputs.user.city }}",
+					"postal_code":"{{ Xx1Ii.outputs.user.postal_code }}",
+					"company_name":"{{ Xx1Ii.outputs.user.company_name }}",
+					"job_title":"{{ Xx1Ii.outputs.user.job_title }}",
+					"date_of_birth":"{{ Xx1Ii.outputs.user.date_of_birth }}"
+				},
+				"device":{
+					"mobile_device_id":"{{ Xx1Ii.outputs.device.mobile_device_id }}",
+					"referrer":"{{ Xx1Ii.outputs.device.referrer }}",
+					"user_agent":"{{ Xx1Ii.outputs.device.user_agent }}",
+					"language":"{{ Xx1Ii.outputs.device.language }}"
+				},
+				"conversion":{
+					"event_name":"{{ Xx1Ii.outputs.conversion.event_name }}",
+					"timestamp":"{{ Xx1Ii.outputs.conversion.timestamp }}",
+					"value":"{{ Xx1Ii.outputs.conversion.value }}",
+					"event_id":"{{ Xx1Ii.outputs.conversion.event_id }}",
+					"click_id":"{{ Xx1Ii.outputs.conversion.click_id }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Quora Ads Conversion",
+			"title":"Get conversion event",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"quora_ads_conversion",
+				"resourceVersion":1,
+				"connectionId":"66d9a4e2a0e42e398e6ccd5e",
+				"resourceName":"quora_ads_conversion_get_conversion_event",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Wt8Vb-1",
+			"id":"ptLZg",
+			"index":0,
+			"inputs":{
+				"account_id":"{{ Xx1Ii.outputs.account_id }}",
+				"user":{
+					"email":"{{ Xx1Ii.outputs.user.email }}",
+					"phone_number":"{{ Xx1Ii.outputs.user.phone_number }}",
+					"name":"{{ Xx1Ii.outputs.user.name }}",
+					"ip":"{{ Xx1Ii.outputs.user.ip }}",
+					"country":"{{ Xx1Ii.outputs.user.country }}",
+					"region":"{{ Xx1Ii.outputs.user.region }}",
+					"city":"{{ Xx1Ii.outputs.user.city }}",
+					"postal_code":"{{ Xx1Ii.outputs.user.postal_code }}",
+					"company_name":"{{ Xx1Ii.outputs.user.company_name }}",
+					"job_title":"{{ Xx1Ii.outputs.user.job_title }}",
+					"date_of_birth":"{{ Xx1Ii.outputs.user.date_of_birth }}"
+				},
+				"device":{
+					"mobile_device_id":"{{ Xx1Ii.outputs.device.mobile_device_id }}",
+					"referrer":"{{ Xx1Ii.outputs.device.referrer }}",
+					"user_agent":"{{ Xx1Ii.outputs.device.user_agent }}",
+					"language":"{{ Xx1Ii.outputs.device.language }}"
+				},
+				"conversion":{
+					"event_name":"{{ Xx1Ii.outputs.conversion.event_name }}",
+					"timestamp":"{{ Xx1Ii.outputs.conversion.timestamp }}",
+					"value":"{{ Xx1Ii.outputs.conversion.value }}",
+					"event_id":"{{ Xx1Ii.outputs.conversion.event_id }}",
+					"click_id":"{{ Xx1Ii.outputs.conversion.click_id }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Quora Ads Conversion",
+			"title":"Get conversion event",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":50,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Wt8Vb-1",
+			"id":"JCYi3",
+			"index":0,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ 6fSAY.outputs.status }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"{{ ptLZg.outputs.status }}"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":62,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"JCYi3@Wt8Vb-1@y",
+			"id":"TtihE",
+			"index":0,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ 3rm5d.outputs.validate }}",
+						"value":true
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":62,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"JCYi3@Wt8Vb-1@n",
+			"id":"YC4aC",
+			"index":0,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ 3rm5d.outputs.validate }}",
+						"value":false
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":48,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Wt8Vb-1",
+			"id":"GS6Yg",
+			"index":0,
+			"inputs":{
+				"result":{
+					"validate":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":6
+}
