@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1755111863930,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_nyZNl",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_hHksl",
+			"type":"next"
+		}
+	],
+	"id":"689ce1b7381877382e07fce0",
+	"lastModifiedBy":-1,
+	"lcName":"wefeq",
+	"modifiedTime":1780492419198,
+	"name":"wefeq",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_nyZNl-1",
+			"id":"_nyZNl",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_nyZNl-1",
+			"id":"_hHksl",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":15430,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
