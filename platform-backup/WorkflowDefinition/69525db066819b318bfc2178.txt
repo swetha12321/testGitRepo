@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767005616078,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_BrZ2B",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_7aKSP",
+			"type":"next"
+		}
+	],
+	"id":"69525db066819b318bfc2178",
+	"lastModifiedBy":-1,
+	"lcName":"test automation",
+	"modifiedTime":1780492411141,
+	"name":"Test Automation",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_BrZ2B-1",
+			"id":"_BrZ2B",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_BrZ2B-1",
+			"id":"_7aKSP",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":2,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
