@@ -24,7 +24,7 @@
 	},
 	"id":"app-level-module",
 	"lastModifiedBy":188280,
-	"modifiedTime":1780514378717,
+	"modifiedTime":1780514424077,
 	"ownerUserId":188280,
 	"properties":{
 		"standard":false,
@@ -40,7 +40,7 @@
 			"_counter":{
 				"_mqttTopicCounter":0,
 				"_pageCount":1,
-				"_moduleCount":0,
+				"_moduleCount":1,
 				"_templateComponentCount":0
 			}
 		},
@@ -237,5 +237,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":3
 }
