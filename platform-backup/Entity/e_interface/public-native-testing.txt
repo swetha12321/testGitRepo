@@ -2,9 +2,29 @@
 	"createdTime":1780512023265,
 	"deleted":false,
 	"entityType":"e_interface",
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A",
+					"C",
+					"S",
+					"VI",
+					"D",
+					"E",
+					"V",
+					"M_L"
+				],
+				"principalIds":[
+					"30179"
+				],
+				"principalType":"USER"
+			}
+		]
+	},
 	"id":"public-native-testing",
 	"lastModifiedBy":30179,
-	"modifiedTime":1780512023265,
+	"modifiedTime":1780512055417,
 	"ownerUserId":30179,
 	"properties":{
 		"standard":false,
@@ -19,14 +39,15 @@
 			},
 			"_counter":{
 				"_mqttTopicCounter":0,
-				"_pageCount":0,
+				"_dataSourceCounter":1,
+				"_pageCount":1,
 				"_moduleCount":0,
 				"_templateComponentCount":0
 			}
 		},
 		"navigation":{
 			"secondary":[],
-			"defaultPageId":"",
+			"defaultPageId":"e_6a20751796b1c372b0779758",
 			"appearance":{
 				"SM":{
 					"primary":[],
@@ -58,7 +79,8 @@
 						"padding":{
 							"all":"p-0"
 						}
-					}
+					},
+					"secondary":[]
 				},
 				"LG":{
 					"primary":[],
@@ -96,7 +118,8 @@
 						"gapSecondary":{
 							"y":"gap-y-lg"
 						}
-					}
+					},
+					"secondary":[]
 				},
 				"XL":{
 					"primary":[],
@@ -134,7 +157,8 @@
 						"gapSecondary":{
 							"y":"gap-y-lg"
 						}
-					}
+					},
+					"secondary":[]
 				},
 				"MD":{
 					"primary":[],
@@ -172,10 +196,15 @@
 						"gapSecondary":{
 							"y":"gap-y-lg"
 						}
-					}
+					},
+					"secondary":[]
 				}
 			},
 			"primary":[]
+		},
+		"interfacePageIdVsSlugMap":{
+			"e_6a20751796b1c372b0779758":"homepage",
+			"e_global_public-native-testing":"global-page-of-public-native-testing"
 		},
 		"manifest":{
 			"type":"MOBILE",
@@ -204,6 +233,16 @@
 				}
 			}
 		},
+		"paths":{
+			"f_root":{
+				"id":"f_root",
+				"segment":"",
+				"children":[
+					"e_6a20751796b1c372b0779758"
+				],
+				"path":"/"
+			}
+		},
 		"name":"public-native-testing",
 		"theme":{
 			"defaultThemeId":"UNIFYAPPS_DEFAULT_THEME"
@@ -211,11 +250,23 @@
 		"type":"application",
 		"locale":{
 			"defaultLocale":"en-US"
+		},
+		"entityDetailsMap":{
+			"e_6a20751796b1c372b0779758":{
+				"slug":"homepage",
+				"isPublic":false,
+				"type":"PAGE"
+			},
+			"e_global_public-native-testing":{
+				"slug":"global-page-of-public-native-testing",
+				"isPublic":false,
+				"type":"PAGE"
+			}
 		}
 	},
 	"standard":false,
 	"tags":[
 		
 	],
-	"version":0
+	"version":6
 }
