@@ -45,7 +45,7 @@
 	"id":"6a207b96e01793339f0415da",
 	"lastModifiedBy":43523,
 	"lcName":"populate vector data",
-	"modifiedTime":1780513987895,
+	"modifiedTime":1780514011625,
 	"name":"populate vector data",
 	"nodes":[
 		{
@@ -55,7 +55,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_MDDyf-1",
 			"id":"n_XOKWA",
@@ -123,7 +123,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_MDDyf-1",
 			"id":"n_iFpqm",
@@ -143,7 +143,8 @@
 			"additional":{
 				"visibleOptionalFields":[
 					"root.record.embeddings2.items",
-					"root.record.sharedWithIds.items"
+					"root.record.sharedWithIds.items",
+					"root.record.chunkMetadata.name"
 				]
 			},
 			"context":{
@@ -225,7 +226,7 @@
 				"appName":"stop"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_MDDyf-1",
 			"id":"n_uE0sX",
@@ -250,5 +251,5 @@
 		}
 	},
 	"standard":false,
-	"version":1
+	"version":2
 }
