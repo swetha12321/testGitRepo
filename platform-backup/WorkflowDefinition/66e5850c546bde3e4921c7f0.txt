@@ -1,0 +1,92 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1726317836265,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"riLct",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"sroPP",
+			"type":"next"
+		}
+	],
+	"id":"66e5850c546bde3e4921c7f0",
+	"lastModifiedBy":0,
+	"lcName":"dfg",
+	"modifiedTime":1780496149500,
+	"name":"dfg",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":59,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"6bHDv-1",
+			"id":"riLct",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"HTTP Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"timestream_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"timestream_by_unifyapps_record_timestream_point",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"6bHDv-1",
+			"id":"sroPP",
+			"index":0,
+			"inputs":{
+				"object_type":"ua__time_series_definition",
+				"record":{
+					"name":"test",
+					"Description":"kafka test",
+					"dimensions":{
+						"items":"divisionId",
+						"ua:type":"mappedArray"
+					},
+					"measurements":{
+						"items":"4",
+						"ua:type":"mappedArray"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Timestream by UnifyApps",
+			"title":"Record timestream point",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":17,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":8
+}
