@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1766991032991,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_ZPA1W",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_NswAb",
+			"type":"next"
+		}
+	],
+	"id":"695224b8b31ddb345f21277e",
+	"lastModifiedBy":-1,
+	"lcName":"fsda",
+	"modifiedTime":1780492411304,
+	"name":"fsda",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ZPA1W-1",
+			"id":"_ZPA1W",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ZPA1W-1",
+			"id":"_NswAb",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":45012,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
