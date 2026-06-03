@@ -1,0 +1,287 @@
+{
+	"appsUsed":[
+		"openai"
+	],
+	"createdTime":1726657824596,
+	"deleted":false,
+	"description":"",
+	"edges":[
+		{
+			"fromNodeId":"8DUEL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Bs2Ww",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Bs2Ww",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"viC2k",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"viC2k",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"0Fwep",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"0Fwep",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Iq6tb",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Iq6tb",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"lDo4L",
+			"type":"next"
+		}
+	],
+	"id":"66eab5203f265f0d3c262ae3",
+	"lastModifiedBy":0,
+	"lcName":"text to workflow - add vectors to store automation",
+	"modifiedTime":1780496147979,
+	"name":"Text to Workflow - Add Vectors to Store automation",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":52,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"8DUEL-1",
+			"id":"8DUEL",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"success":{
+							"type":"string",
+							"title":"Success"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"connector":{
+							"type":"string",
+							"title":"Connector"
+						},
+						"action":{
+							"type":"string",
+							"title":"Action"
+						},
+						"actionDescription":{
+							"type":"string",
+							"title":"Action Description"
+						},
+						"resourcetype":{
+							"type":"string",
+							"title":"Resourcetype"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":43,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"8DUEL-1",
+			"id":"Bs2Ww",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"metadata":{
+							"type":"string",
+							"title":"metadata"
+						}
+					},
+					"additionalProperties":false
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"connector":{
+							"type":"string",
+							"title":"connector"
+						},
+						"action":{
+							"type":"string",
+							"title":"action"
+						},
+						"actionDescription":{
+							"type":"string",
+							"title":"actionDescription"
+						},
+						"resourcetype":{
+							"type":"string",
+							"title":"resourcetype"
+						}
+					},
+					"additionalProperties":false
+				},
+				"code":"def metadata = connector + \"\\n\" + action + \"\\n\" + resourcetype + \"\\n\" + actionDescription\n\nreturn [\"metadata\": metadata]",
+				"isAsync":false,
+				"parameters":{
+					"connector":"{{ 8DUEL.outputs.connector }}",
+					"action":"{{ 8DUEL.outputs.action }}",
+					"actionDescription":"{{ 8DUEL.outputs.actionDescription }}",
+					"resourcetype":"{{ 8DUEL.outputs.resourcetype }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code By UnifyApps",
+			"title":"Execute groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"openai",
+				"resourceVersion":592,
+				"connectionId":"66601031b4b25014fecfe801",
+				"resourceName":"openai_generate_text_embedding",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"8DUEL-1",
+			"id":"viC2k",
+			"index":0,
+			"inputs":{
+				"model":"text-embedding-ada-002",
+				"text":"{{ Bs2Ww.outputs.result.metadata }}"
+			},
+			"skip":false,
+			"subTitle":"OpenAI",
+			"title":"Generate text embedding",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"openai",
+				"resourceVersion":595,
+				"connectionId":"66601031b4b25014fecfe801",
+				"resourceName":"openai_generate_text_embedding",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"8DUEL-1",
+			"id":"0Fwep",
+			"index":0,
+			"inputs":{
+				"model":"text-embedding-ada-002",
+				"text":"{{ 8DUEL.outputs.action }}"
+			},
+			"skip":false,
+			"subTitle":"OpenAI",
+			"title":"Generate text embedding",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":44,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"8DUEL-1",
+			"id":"Iq6tb",
+			"index":0,
+			"inputs":{
+				"object_type":"connector_actions_temporary",
+				"record":{
+					"Embeddings":{
+						"source":"{{ viC2k.outputs.data[0].embedding }}",
+						"ua:type":"mappedArray",
+						"items":"{{ viC2k.outputs.data[0].embedding[0] }}"
+					},
+					"metadata":"{{ Bs2Ww.outputs.result.metadata }}",
+					"ActionNameEmbedding":{
+						"source":"{{ 0Fwep.outputs.data[0].embedding }}",
+						"ua:type":"mappedArray",
+						"items":"{{ 0Fwep.outputs.data[0].embedding[0] }}"
+					},
+					"ActionEmbedding":{
+						"source":"{{ 0Fwep.outputs.data[0].embedding }}",
+						"ua:type":"mappedArray",
+						"items":"{{ 0Fwep.outputs.data[0].embedding[0] }}"
+					},
+					"connector":"{{ 8DUEL.outputs.connector }}",
+					"action":"{{ 8DUEL.outputs.action }}",
+					"resourcetype":"{{ 8DUEL.outputs.resourcetype }}",
+					"actionDescription":"{{ 8DUEL.outputs.actionDescription }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":48,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"8DUEL-1",
+			"id":"lDo4L",
+			"index":0,
+			"inputs":{
+				"result":{
+					"success":"true"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":17,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":4
+}
