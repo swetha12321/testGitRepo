@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767090357902,
+	"deleted":false,
+	"description":"description",
+	"edges":[
+		{
+			"fromNodeId":"_XPUCK",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_roY7K",
+			"type":"next"
+		}
+	],
+	"id":"6953a8b5eaf2c1658c08ed6c",
+	"lastModifiedBy":-1,
+	"lcName":"stepnamesworkflow-step added-21767090348434",
+	"modifiedTime":1780492410886,
+	"name":"stepNamesWorkflow-step added-21767090348434",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XPUCK-1",
+			"id":"_XPUCK",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XPUCK-1",
+			"id":"_roY7K",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":false,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
