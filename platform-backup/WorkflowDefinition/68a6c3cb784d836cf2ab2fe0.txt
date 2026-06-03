@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1755759563797,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_DTvWI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_oPK8y",
+			"type":"next"
+		}
+	],
+	"id":"68a6c3cb784d836cf2ab2fe0",
+	"lastModifiedBy":-1,
+	"lcName":"dont_delete_vaibhav_dhand",
+	"modifiedTime":1780492418747,
+	"name":"DONT_DELETE_VAIBHAV_DHAND",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_DTvWI-1",
+			"id":"_DTvWI",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_DTvWI-1",
+			"id":"_oPK8y",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":100894,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
