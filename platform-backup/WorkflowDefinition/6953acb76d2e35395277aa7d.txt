@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767091383210,
+	"deleted":false,
+	"description":"description",
+	"edges":[
+		{
+			"fromNodeId":"_J6sDZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_7mgIs",
+			"type":"next"
+		}
+	],
+	"id":"6953acb76d2e35395277aa7d",
+	"lastModifiedBy":-1,
+	"lcName":"zoom outtooltipvalidation-21767091371856",
+	"modifiedTime":1780492410853,
+	"name":"Zoom OutTooltipValidation-21767091371856",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_J6sDZ-1",
+			"id":"_J6sDZ",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_J6sDZ-1",
+			"id":"_7mgIs",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":false,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
