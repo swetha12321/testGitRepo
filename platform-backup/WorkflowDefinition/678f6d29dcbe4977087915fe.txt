@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		"sap_successfactors"
+	],
+	"createdTime":1737452841876,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1737453231945,
+		"deployedBy":520,
+		"deployedDefinitionId":"678f6eafdcbe497708791975",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"edges":[
+		
+	],
+	"id":"678f6d29dcbe4977087915fe",
+	"lastModifiedBy":0,
+	"lcName":"test",
+	"modifiedTime":1780495208130,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"sap_successfactors",
+				"resourceVersion":1,
+				"connectionId":"678f6ea8cb12407f9a1672b0",
+				"resourceName":"sap_successfactors_on_new_user"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"J8xm9-1",
+			"id":"1Jm20",
+			"index":0,
+			"inputs":{
+				"interval":2
+			},
+			"skip":false,
+			"subTitle":"SAP SuccessFactors",
+			"title":"On New User",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
