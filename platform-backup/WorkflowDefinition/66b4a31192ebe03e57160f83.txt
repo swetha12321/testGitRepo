@@ -1,0 +1,447 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725259013212,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1725259013318,
+		"deployedBy":520,
+		"deployedDefinitionId":"66d55d05d3f02a7f5622724f",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":6
+	},
+	"edges":[
+		{
+			"fromNodeId":"XUfVW",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"8iu34",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"8iu34",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"rFFb1",
+			"type":"next"
+		}
+	],
+	"id":"66b4a31192ebe03e57160f83",
+	"lastModifiedBy":0,
+	"lcName":"campaign description (ecom campaign)",
+	"modifiedTime":1780496151605,
+	"name":"Campaign Description (Ecom Campaign)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4mXv2-1",
+			"id":"XUfVW",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"campaign_table_fetch":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"campaign_fetch":{
+										"type":"object",
+										"properties":{
+											"campaign_name":{
+												"type":"string",
+												"title":"Campaign Name"
+											},
+											"start_date":{
+												"type":"string",
+												"title":"Start Date"
+											},
+											"end_date":{
+												"type":"string",
+												"title":"End Date"
+											},
+											"kpi_type":{
+												"type":"string",
+												"title":"Kpi Type"
+											},
+											"kpi_goal":{
+												"type":"string",
+												"title":"Kpi Goal"
+											},
+											"tag_1":{
+												"type":"string",
+												"title":"Tag 1"
+											},
+											"tag_2":{
+												"type":"string",
+												"title":"Tag 2"
+											},
+											"image_url":{
+												"type":"string",
+												"title":"Image Url"
+											},
+											"active":{
+												"type":"boolean",
+												"title":"Active",
+												"default":false
+											},
+											"potential_earnings":{
+												"type":"string",
+												"title":"Potential Earnings"
+											},
+											"campaign_description_and_rules":{
+												"type":"string",
+												"title":"Campaign Description And Rules"
+											},
+											"campaign_id":{
+												"type":"string",
+												"title":"Campaign Id"
+											},
+											"status":{
+												"type":"string",
+												"title":"Status"
+											},
+											"location":{
+												"type":"string",
+												"title":"Location"
+											},
+											"achievers_count":{
+												"type":"string",
+												"title":"Achievers Count"
+											},
+											"campaign_type":{
+												"type":"string",
+												"title":"Campaign Type"
+											},
+											"role_type":{
+												"type":"string",
+												"title":"Role Type"
+											},
+											"region":{
+												"type":"string",
+												"title":"Region"
+											},
+											"states":{
+												"type":"string",
+												"title":"States"
+											},
+											"cities":{
+												"type":"string",
+												"title":"Cities"
+											},
+											"dc_codes":{
+												"type":"string",
+												"title":"Dc Codes"
+											},
+											"campaign_goal":{
+												"type":"string",
+												"title":"Campaign Goal"
+											},
+											"budget":{
+												"type":"number",
+												"title":"Budget"
+											},
+											"managed_dc":{
+												"type":"boolean",
+												"title":"Managed Dc",
+												"default":false
+											},
+											"customer_type":{
+												"type":"string",
+												"title":"Customer Type"
+											},
+											"shipper_id":{
+												"type":"string",
+												"title":"Shipper Id"
+											},
+											"user_activity":{
+												"type":"string",
+												"title":"User Activity"
+											},
+											"product_types":{
+												"type":"string",
+												"title":"Product Types"
+											},
+											"shipment_types":{
+												"type":"string",
+												"title":"Shipment Types"
+											},
+											"user_activity_count":{
+												"type":"string",
+												"title":"User Activity Count"
+											},
+											"product_type":{
+												"type":"string",
+												"title":"Product Type"
+											},
+											"sub_product_type":{
+												"type":"string",
+												"title":"Sub Product Type"
+											},
+											"compliance_type":{
+												"type":"string",
+												"title":"Compliance Type"
+											},
+											"compliance_frequency":{
+												"type":"string",
+												"title":"Compliance Frequency"
+											},
+											"compliance_percentage":{
+												"type":"string",
+												"title":"Compliance Percentage"
+											},
+											"attendance_type":{
+												"type":"string",
+												"title":"Attendance Type"
+											},
+											"attendance_days":{
+												"type":"string",
+												"title":"Attendance Days"
+											},
+											"productivity_type":{
+												"type":"string",
+												"title":"Productivity Type"
+											},
+											"productivity_frequency":{
+												"type":"string",
+												"title":"Productivity Frequency"
+											},
+											"productivity_percentage":{
+												"type":"string",
+												"title":"Productivity Percentage"
+											},
+											"pan_india_check":{
+												"type":"boolean",
+												"title":"Pan India Check",
+												"default":false
+											},
+											"role_code":{
+												"type":"string",
+												"title":"Role Code"
+											},
+											"productivity_unit":{
+												"type":"string",
+												"title":"Productivity Unit"
+											},
+											"compliance_unit":{
+												"type":"string",
+												"title":"Compliance Unit"
+											},
+											"criteria_1":{
+												"type":"string",
+												"title":"Criteria 1"
+											},
+											"reward_1":{
+												"type":"string",
+												"title":"Reward 1"
+											},
+											"criteria_2":{
+												"type":"string",
+												"title":"Criteria 2"
+											},
+											"reward_2":{
+												"type":"string",
+												"title":"Reward 2"
+											},
+											"criteria_3":{
+												"type":"string",
+												"title":"Criteria 3"
+											},
+											"reward_3":{
+												"type":"string",
+												"title":"Reward 3"
+											},
+											"criteria_4":{
+												"type":"string",
+												"title":"Criteria 4"
+											},
+											"reward_4":{
+												"type":"string",
+												"title":"Reward 4"
+											},
+											"criteria_5":{
+												"type":"string",
+												"title":"Criteria 5"
+											},
+											"reward_5":{
+												"type":"string",
+												"title":"Reward 5"
+											}
+										},
+										"title":"campaign_fetch",
+										"additionalProperties":false,
+										"required":[]
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"campaign_table_fetch",
+							"required":[]
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"campaign_id":{
+							"type":"string",
+							"title":"Campaign ID"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":270,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4mXv2-1",
+			"id":"8iu34",
+			"index":0,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_campaignId",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ XUfVW.outputs.campaign_id }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"campaign_details",
+				"page":{
+					"limit":20,
+					"offset":0
+				},
+				"numberOfRecordsToFetch":"SINGLE",
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4mXv2-1",
+			"id":"rFFb1",
+			"index":0,
+			"inputs":{
+				"result":{
+					"campaign_table_fetch":{
+						"items":{
+							"campaign_fetch":{
+								"active":true,
+								"campaign_name":"{{ 8iu34.outputs.properties.campaign_name }}",
+								"start_date":"{{ 8iu34.outputs.properties.start_date }}",
+								"end_date":"{{ 8iu34.outputs.properties.end_date }}",
+								"kpi_type":"{{ 8iu34.outputs.properties.kpi_type }}",
+								"kpi_goal":"{{ 8iu34.outputs.properties.kpi_goal }}",
+								"tag_1":"{{ 8iu34.outputs.properties.tag_1 }}",
+								"tag_2":"{{ 8iu34.outputs.properties.tag_2 }}",
+								"image_url":"{{ 8iu34.outputs.properties.image_url }}",
+								"potential_earnings":"{{ 8iu34.outputs.properties.potential_earnings }}",
+								"campaign_description_and_rules":"{{ 8iu34.outputs.properties.campaign_description_and_rules }}",
+								"campaign_id":"{{ 8iu34.outputs.properties.campaignId }}",
+								"status":"{{ 8iu34.outputs.properties.Status }}",
+								"location":"{{ 8iu34.outputs.properties.location }}",
+								"achievers_count":"{{ 8iu34.outputs.properties.achievers_count }}",
+								"campaign_type":"{{ 8iu34.outputs.properties.campaign_type_1 }}",
+								"role_type":"{{ 8iu34.outputs.properties.role_type }}",
+								"region":"{{ 8iu34.outputs.properties.region }}",
+								"states":"{{ 8iu34.outputs.properties.states }}",
+								"cities":"{{ 8iu34.outputs.properties.cities }}",
+								"dc_codes":"{{ 8iu34.outputs.properties.dc_codes }}",
+								"campaign_goal":"{{ 8iu34.outputs.properties.campaign_goal }}",
+								"budget":"{{ 8iu34.outputs.properties.budget }}",
+								"managed_dc":"{{ 8iu34.outputs.properties.mdc_boolean }}",
+								"customer_type":"{{ 8iu34.outputs.properties.customer_type }}",
+								"shipper_id":"{{ 8iu34.outputs.properties.shipper_id }}",
+								"user_activity":"{{ 8iu34.outputs.properties.user_activity }}",
+								"product_types":"{{ 8iu34.outputs.properties.product_types }}",
+								"shipment_types":"{{ 8iu34.outputs.properties.shipment_types }}",
+								"user_activity_count":"{{ 8iu34.outputs.properties.user_activity_count }}",
+								"product_type":"{{ 8iu34.outputs.properties.product_type }}",
+								"sub_product_type":"{{ 8iu34.outputs.properties.sub_product_type }}",
+								"compliance_type":"{{ 8iu34.outputs.properties.compliance_type }}",
+								"compliance_frequency":"{{ 8iu34.outputs.properties.compliance_frequency }}",
+								"compliance_percentage":"{{ 8iu34.outputs.properties.compliance_percentage }}",
+								"attendance_type":"{{ 8iu34.outputs.properties.attendance_type }}",
+								"attendance_days":"{{ 8iu34.outputs.properties.attendance_days }}",
+								"productivity_type":"{{ 8iu34.outputs.properties.productivity_type }}",
+								"productivity_frequency":"{{ 8iu34.outputs.properties.productivity_frequency }}",
+								"productivity_percentage":"{{ 8iu34.outputs.properties.productivity_percentage }}",
+								"pan_india_check":"{{ 8iu34.outputs.properties.pan_india_check }}",
+								"role_code":"{{ 8iu34.outputs.properties.role_code }}",
+								"productivity_unit":"{{ 8iu34.outputs.properties.productivity_unit }}",
+								"compliance_unit":"{{ 8iu34.outputs.properties.compliance_unit }}",
+								"criteria_1":"{{ 8iu34.outputs.properties.criteria_1 }}",
+								"reward_1":"{{ 8iu34.outputs.properties.reward_1 }}",
+								"criteria_2":"{{ 8iu34.outputs.properties.criteria_2 }}",
+								"reward_2":"{{ 8iu34.outputs.properties.reward_2 }}",
+								"criteria_3":"{{ 8iu34.outputs.properties.criteria_3 }}",
+								"reward_3":"{{ 8iu34.outputs.properties.reward_3 }}",
+								"criteria_4":"{{ 8iu34.outputs.properties.criteria_4 }}",
+								"reward_4":"{{ 8iu34.outputs.properties.reward_4 }}",
+								"criteria_5":"{{ 8iu34.outputs.properties.criteria_5 }}",
+								"reward_5":"{{ 8iu34.outputs.properties.reward_5 }}"
+							}
+						},
+						"ua:type":"mappedArray"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Return data to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":7
+}
