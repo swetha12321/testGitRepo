@@ -23,7 +23,7 @@
 	"id":"6a1931ed051b17252bf115cd",
 	"lastModifiedBy":195488,
 	"lcName":"schema-ref-delete",
-	"modifiedTime":1780486829240,
+	"modifiedTime":1780486907832,
 	"name":"schema-ref-delete",
 	"nodes":[
 		{
@@ -78,8 +78,15 @@
 				"path":"/",
 				"httpVersion":"HTTP_2",
 				"bodySchema":{
-					"$ref":"#/definitions/entity|e_code_snippet|e_6a1d1e7016376f12e10b9f76",
-					"$comment":"yrdyinh"
+					"type":"object",
+					"additionalProperties":false,
+					"$comment":"yrdyinh",
+					"properties":{
+						"yrdyih":{
+							"type":"string",
+							"title":"yrdyih"
+						}
+					}
 				},
 				"responseContentType":"HEADER_BASED",
 				"followRedirects":"NORMAL",
@@ -150,5 +157,5 @@
 		}
 	},
 	"standard":false,
-	"version":35
+	"version":36
 }
