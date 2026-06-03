@@ -1,0 +1,52 @@
+{
+	"appsUsed":[
+		"salesforce"
+	],
+	"createdTime":1710721570237,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65f78a22a9298026ad03ff1f",
+	"lastModifiedBy":26,
+	"lcName":"untitled",
+	"modifiedTime":1710863463913,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"salesforce"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"uecTp-1",
+			"id":"uecTp",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":26,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
