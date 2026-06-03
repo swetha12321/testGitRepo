@@ -1,0 +1,97 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1726330218791,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1726336854461,
+		"deployedBy":520,
+		"deployedDefinitionId":"66e5cf56bdbf4f0438601dcf",
+		"status":"PAUSED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"edges":[
+		{
+			"fromNodeId":"i6T5U",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"H4z6V",
+			"type":"next"
+		}
+	],
+	"id":"66e5b56abdbf4f0438601a2b",
+	"lastModifiedBy":0,
+	"lcName":"fgxfv",
+	"modifiedTime":1780496149484,
+	"name":"fgxfv",
+	"nodes":[
+		{
+			"context":{
+				"appName":"timestream_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"timestream_by_unifyapps_on_anomaly_detected"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"N8UQE-1",
+			"id":"i6T5U",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Timestream by UnifyApps",
+			"title":"Triggers when an anomaly is detected",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"timestream_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"timestream_by_unifyapps_record_timestream_point",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"N8UQE-1",
+			"id":"H4z6V",
+			"index":0,
+			"inputs":{
+				"object_type":"ua__time_series_definition",
+				"record":{
+					"name":"asd",
+					"Description":"fasd",
+					"dimensions":{
+						"items":"country",
+						"ua:type":"mappedArray"
+					},
+					"measurements":{
+						"items":"5",
+						"ua:type":"mappedArray"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Timestream by UnifyApps",
+			"title":"Record timestream point",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
