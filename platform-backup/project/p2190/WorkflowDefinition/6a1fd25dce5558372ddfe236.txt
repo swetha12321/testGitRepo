@@ -6,7 +6,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_xY9Ra",
+			"fromNodeId":"n_HHhcL",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_rkugY",
@@ -16,20 +16,33 @@
 	"id":"6a1fd25dce5558372ddfe236",
 	"lastModifiedBy":199899,
 	"lcName":"tesking",
-	"modifiedTime":1780470365229,
+	"modifiedTime":1780470384396,
 	"name":"Tesking",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":4181,
+				"resourceName":"callables_from_api"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_xY9Ra-1",
-			"id":"_xY9Ra",
-			"index":0,
+			"id":"n_HHhcL",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				},
+				"endpointType":"REST",
+				"streamingResponse":false
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via API",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -39,7 +52,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_xY9Ra-1",
 			"id":"_rkugY",
-			"index":0,
+			"index":2,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
@@ -47,6 +60,9 @@
 	],
 	"ownerUserId":199899,
 	"projectId":2190,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -60,5 +76,5 @@
 	"tags":[
 		"Test"
 	],
-	"version":0
+	"version":1
 }
