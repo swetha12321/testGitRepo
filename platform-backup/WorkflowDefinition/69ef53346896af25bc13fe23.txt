@@ -4,6 +4,15 @@
 	],
 	"createdTime":1780516372376,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1780516372478,
+		"deployedBy":-1,
+		"deployedDefinitionId":"6a208614e01793339f042e79",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":37
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_f2YwS",
@@ -121,7 +130,7 @@
 	"id":"69ef53346896af25bc13fe23",
 	"lastModifiedBy":-1,
 	"lcName":"agent builder | callback oauth",
-	"modifiedTime":1780516372376,
+	"modifiedTime":1780516449974,
 	"name":"Agent Builder | Callback Oauth",
 	"nodes":[
 		{
@@ -752,5 +761,5 @@
 	"tags":[
 		"text-to-agent"
 	],
-	"version":37
+	"version":39
 }
