@@ -1,0 +1,17 @@
+{
+	"baseUrl":"http://burpcollaborator.net/zgjZCdeP",
+	"createdTime":1741334781140,
+	"deleted":false,
+	"description":"qvaqcL",
+	"enabled":false,
+	"id":"67caa8fdb8a3852f709fe3eb",
+	"lastModifiedBy":22743,
+	"lcName":"6f1ub6zpde)(!(!(objectclass=*))",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1741334781140,
+	"name":"6f1ub6zpde)(!(!(objectClass=*))",
+	"ownerUserId":22743,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
