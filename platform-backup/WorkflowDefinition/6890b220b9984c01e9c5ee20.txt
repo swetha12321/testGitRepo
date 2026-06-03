@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1754313248426,
+	"deleted":false,
+	"description":"some trial description opdfgpodpf description opdfgpodpfdescription opdfgpodpfdescription opdfgpodpfdescription opdfgpodpfdescription opdfgpodpfdescription opdfgpodpfdescription opdfgpodpfdescription opdfgpodpfdescription opdfgpodpfdescription opdfgpodpfdescription opdfgpodpfdescription opdfgpodpfdescription opdfgpodpfdescription opdfgpodpfdescription opdfgpodpfdescription opdfgpodpfdescription opdfgpodpfdescription opdfgpodpf",
+	"edges":[
+		{
+			"fromNodeId":"_22WwJ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_pwrEE",
+			"type":"next"
+		}
+	],
+	"id":"6890b220b9984c01e9c5ee20",
+	"lastModifiedBy":-1,
+	"lcName":"test",
+	"modifiedTime":1780492419467,
+	"name":"test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_22WwJ-1",
+			"id":"_22WwJ",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_22WwJ-1",
+			"id":"_pwrEE",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":161877,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
