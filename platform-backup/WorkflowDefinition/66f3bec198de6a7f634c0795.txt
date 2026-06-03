@@ -1,0 +1,395 @@
+{
+	"appsUsed":[
+		"sprinklr",
+		"zendesk",
+		"gmail",
+		"slack"
+	],
+	"createdTime":1727250113476,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"opnVz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Sq2XF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Sq2XF",
+			"name":"1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Sq2XF@1",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"Sq2XF@1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"i6ir6",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Sq2XF",
+			"name":"2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Sq2XF@2",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"Sq2XF@2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Bg801",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"i6ir6",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"NI2tY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Bg801",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"NI2tY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Sq2XF",
+			"name":"default",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"NI2tY",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"NI2tY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"FX6Gk",
+			"type":"next"
+		}
+	],
+	"id":"66f3bec198de6a7f634c0795",
+	"lastModifiedBy":0,
+	"lcName":"test copilot - text to automation md",
+	"modifiedTime":1780496145956,
+	"name":"Test Copilot - text to automation MD",
+	"nodes":[
+		{
+			"context":{
+				"appName":"slack",
+				"connectionId":"66f2fd66f4cba301afe1414d",
+				"resourceName":"slack_on_new_message",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"opnVz-1",
+			"id":"opnVz",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Slack",
+			"title":"On New Message",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"branch",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"opnVz-1",
+			"id":"Sq2XF",
+			"index":0,
+			"inputs":{
+				"branches":[
+					{
+						"id":"1",
+						"inputs":{
+							"name":"Branch 1"
+						}
+					},
+					{
+						"id":"2",
+						"inputs":{
+							"name":"Branch 2"
+						}
+					},
+					{
+						"id":"default"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Branch",
+			"title":"",
+			"type":"BRANCH"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":36,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Sq2XF@opnVz-1@1",
+			"id":"Sq2XF@1",
+			"index":0,
+			"inputs":{
+				"name":"Branch 1"
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"zendesk",
+				"resourceVersion":2523,
+				"connectionId":"66ed0d23f5c75a3a2069e6fe",
+				"resourceName":"zendesk_create_ticket",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Sq2XF@opnVz-1@1",
+			"id":"i6ir6",
+			"index":0,
+			"inputs":{
+				"ticket":{
+					"subject":"{{ opnVz.outputs.event.files[0].subject }}",
+					"external_id":"{{ opnVz.outputs.event.files[0].external_type }}",
+					"macro_ids":{
+						"source":"{{ opnVz.outputs.event.files[0].mode }}",
+						"ua:type":"{{ opnVz.outputs.event.type }}"
+					},
+					"type":"{{ opnVz.outputs.event.type }}",
+					"email_ccs":{
+						"source":"{{ opnVz.outputs.event.files[0].mode }}",
+						"items":{
+							"user_email":"{{ __RUN__.outputs.userId }}",
+							"user_name":"{{ opnVz.outputs.event.files[0].username }}",
+							"action":"{{ opnVz.outputs.event.blocks[0].elements[0].action_id }}"
+						},
+						"ua:type":"{{ opnVz.outputs.event.type }}"
+					},
+					"collaborators":{
+						"source":"{{ opnVz.outputs.event.files[0].mode }}",
+						"items":"{{ opnVz.outputs.event.bot_profile.icons }}",
+						"ua:type":"{{ opnVz.outputs.event.type }}"
+					},
+					"due_at":"{{ __ENV__.outputs.test }}",
+					"raw_subject":"{{ opnVz.outputs.event.files[0].subject }}",
+					"requester":{
+						"name":"{{ opnVz.outputs.event.bot_profile.name }}",
+						"email":"{{ __ENV__.outputs.asass }}"
+					},
+					"additional_collaborators":{
+						"source":"{{ opnVz.outputs.event.files[0].mode }}",
+						"items":"{{ opnVz.outputs.event.bot_profile.icons }}",
+						"ua:type":"{{ opnVz.outputs.event.type }}"
+					},
+					"priority":"{{ opnVz.outputs.event.files[0].preview }}",
+					"followers":{
+						"source":"{{ opnVz.outputs.event.files[0].mode }}",
+						"items":{
+							"user_email":"{{ __RUN__.outputs.userId }}",
+							"action":"{{ opnVz.outputs.event.blocks[0].elements[0].action_id }}"
+						},
+						"ua:type":"{{ opnVz.outputs.event.type }}"
+					},
+					"recipient":"{{ __ENV__.outputs.Regextest }}",
+					"comment":{
+						"public":"{{ opnVz.outputs.event.files[0].is_public }}",
+						"html_body":"{{ opnVz.outputs.event.files[0].mode }}",
+						"body":"{{ opnVz.outputs.event.files[0].mode }}",
+						"type":"{{ opnVz.outputs.event.type }}",
+						"uploads":"{{ opnVz.outputs.event.blocks }}"
+					},
+					"attribute_value_ids":{
+						"source":"{{ opnVz.outputs.event.files[0].mode }}",
+						"ua:type":"{{ opnVz.outputs.event.type }}"
+					},
+					"status":"{{ __ENV__.outputs.asass }}"
+				},
+				"objectSourceResourceName":"zendesk_get_custom_fields_schema",
+				"objectId":"ticket"
+			},
+			"skip":false,
+			"subTitle":"Zendesk",
+			"title":"Create a ticket",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":36,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Sq2XF@opnVz-1@2",
+			"id":"Sq2XF@2",
+			"index":0,
+			"inputs":{
+				"name":"Branch 2"
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"zendesk",
+				"resourceVersion":2523,
+				"connectionId":"66ed0d23f5c75a3a2069e6fe",
+				"resourceName":"zendesk_create_ticket",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Sq2XF@opnVz-1@2",
+			"id":"Bg801",
+			"index":0,
+			"inputs":{
+				"ticket":{
+					"attribute_value_ids":{
+						"ua:type":"mappedArray"
+					},
+					"collaborators":{
+						"ua:type":"mappedArray"
+					},
+					"additional_collaborators":{
+						"ua:type":"mappedArray"
+					},
+					"email_ccs":{
+						"ua:type":"mappedArray"
+					},
+					"followers":{
+						"ua:type":"mappedArray"
+					},
+					"macro_ids":{
+						"ua:type":"mappedArray"
+					}
+				},
+				"objectSourceResourceName":"zendesk_get_custom_fields_schema",
+				"objectId":"ticket"
+			},
+			"skip":false,
+			"subTitle":"Zendesk",
+			"title":"Create a ticket",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"sprinklr",
+				"resourceVersion":2601,
+				"connectionId":"66eab0342e09111847de62aa",
+				"resourceName":"sprinklr_create_case",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"opnVz-1",
+			"id":"NI2tY",
+			"index":0,
+			"inputs":{
+				"customProperties":{},
+				"objectSourceResourceName":"sprinklr_fetch_custom_fields_schema_for_output",
+				"objectId":"UNIVERSAL_CASE_CUSTOM_FIELDS",
+				"case":{
+					"summary":"{{ __ENV__.outputs.akmare }}",
+					"workflow":{
+						"assignment":{
+							"assigneeType":"{{ __RUN__.outputs.context.assetType }}"
+						}
+					},
+					"subject":"{{ opnVz.outputs.event.files[0].subject }}",
+					"queues":"{{ opnVz.outputs.event.files }}",
+					"externalCase":{
+						"createdTime":"{{ i6ir6.outputs.ticket.created_at }}",
+						"channelType":"{{ opnVz.outputs.event.channel_type }}",
+						"id":"{{ opnVz.outputs.event.bot_profile.id }}",
+						"permalink":"{{ opnVz.outputs.event.files[0].permalink }}"
+					},
+					"contact":{
+						"name":"{{ opnVz.outputs.event.bot_profile.name }}",
+						"id":"{{ i6ir6.outputs.ticket.attachments[0].id }}"
+					},
+					"dueDate":"{{ i6ir6.outputs.ticket.due_at }}",
+					"description":"{{ i6ir6.outputs.ticket.description }}",
+					"firstMessageId":"{{ opnVz.outputs.event.files[0].headers.message_id }}",
+					"priority":"{{ i6ir6.outputs.ticket.priority }}",
+					"caseType":"{{ __RUN__.outputs.context.assetType }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Sprinklr",
+			"title":"Create Case",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gmail",
+				"resourceVersion":2091,
+				"connectionId":"66f144d3b6c51d330d14eab7",
+				"resourceName":"gmail_send_email",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"opnVz-1",
+			"id":"FX6Gk",
+			"index":0,
+			"inputs":{
+				"cc":"{{ __ENV__.outputs.1 }}",
+				"bcc":"{{ __ENV__.outputs.1 }}",
+				"attachments":{
+					"file_name":"{{ __ENV__.outputs.AUTH_NAME }}"
+				},
+				"email_type":"{{ __RUN__.outputs.context.assetType }}",
+				"subject":"{{ __ENV__.outputs.AUTH_SECET }}",
+				"from":"{{ __ENV__.outputs.1 }}",
+				"to":"{{ __ENV__.outputs.1 }}",
+				"message":"{{ __ENV__.outputs.assasa }}"
+			},
+			"skip":false,
+			"subTitle":"Gmail",
+			"title":"Send email",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":15430,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
