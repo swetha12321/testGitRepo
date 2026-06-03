@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1737201568749,
+	"deleted":false,
+	"description":"Describe your automation in a few words",
+	"edges":[
+		{
+			"fromNodeId":"ODjRV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"PYGeo",
+			"type":"next"
+		}
+	],
+	"id":"678b97a0265a1768760224f2",
+	"lastModifiedBy":0,
+	"lcName":"spedzs",
+	"modifiedTime":1780495208707,
+	"name":"sPedzS",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ODjRV-1",
+			"id":"ODjRV",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ODjRV-1",
+			"id":"PYGeo",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":854,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
