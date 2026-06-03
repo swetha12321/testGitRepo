@@ -1,0 +1,49 @@
+{
+	"createdTime":1710493483079,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65f40f2bf86c2202fb83276e",
+	"lastModifiedBy":3,
+	"lcName":"untitled",
+	"modifiedTime":1710510893875,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"zendesk"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"IIh9W-1",
+			"id":"IIh9W",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":3,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
