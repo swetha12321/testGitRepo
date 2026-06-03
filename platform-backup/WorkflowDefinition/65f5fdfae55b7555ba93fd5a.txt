@@ -1,0 +1,73 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1710620154666,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"Opxqy",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"odtmt",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65f5fdfae55b7555ba93fd5a",
+	"lastModifiedBy":23,
+	"lcName":"test excel ",
+	"modifiedTime":1710620792584,
+	"name":"TEST EXCEL ",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Opxqy-1",
+			"id":"Opxqy",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Opxqy-1",
+			"id":"odtmt",
+			"index":0,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":23,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
