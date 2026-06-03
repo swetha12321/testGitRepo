@@ -1,0 +1,421 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1712459125177,
+	"deleted":true,
+	"deployedVersion":0,
+	"deploymentState":{
+		"deployedAt":1712462788406,
+		"deployedDefinitionId":"66121bc496cc7f268150c976",
+		"status":"DEPLOYED",
+		"version":0,
+		"workflowVersion":1
+	},
+	"edges":[
+		{
+			"fromNodeId":"HIsql",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"YzcSF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"YzcSF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"r0ESh",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"r0ESh",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"wrA4R",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"wrA4R",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Wp6Cw",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Wp6Cw",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"qjxwd",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"66120d7596cc7f268150c932",
+	"lastModifiedBy":174,
+	"lcName":"api booked option for marketing(don not touch)",
+	"modifiedTime":1712468454901,
+	"name":"API booked option for marketing(Don not touch)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":35,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"HIsql-1",
+			"id":"HIsql",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				},
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"",
+							"filter":{
+								"operator":"EQUAL",
+								"value":""
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"response":[
+					{
+						"status":"200",
+						"contentType":"application/json",
+						"name":"Success",
+						"body":{
+							"type":"object",
+							"properties":{
+								"list":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{
+											"Option":{
+												"type":"string",
+												"title":"Option"
+											},
+											"Validfrom":{
+												"type":"string",
+												"title":"valid from"
+											},
+											"TerminationUntil":{
+												"type":"string",
+												"title":"Termination Until"
+											},
+											"GrossPrice":{
+												"type":"string",
+												"title":"Gross Price"
+											},
+											"NetPrice":{
+												"type":"string",
+												"title":"Net price"
+											}
+										}
+									},
+									"title":"list",
+									"required":[]
+								}
+							},
+							"required":[]
+						}
+					}
+				]
+			},
+			"skip":false,
+			"title":"Call Automation via API",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":57,
+				"resourceName":"variable_by_unifyapps_create_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"HIsql-1",
+			"id":"YzcSF",
+			"index":0,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{
+					"createList":{
+						"ui:title":"",
+						"ua:type":{
+							"ui:widget":"hidden"
+						},
+						"source":{
+							"ui:title":"List Item Source",
+							"ui:help":"Input a list item datapill"
+						},
+						"items":{
+							"ui:title":"List Items",
+							"ui:description":"Set the initial values in the list, defaults to empty"
+						}
+					},
+					"ui:submitButtonOptions":{
+						"norender":true
+					},
+					"ua:title":{
+						"ui:widget":"hidden"
+					},
+					"ua:data_path":{
+						"ui:widget":"hidden"
+					}
+				},
+				"schema":{
+					"format":"ua:list",
+					"type":"object",
+					"properties":{
+						"ua:title":{
+							"type":"string"
+						},
+						"createList":{
+							"type":"object",
+							"properties":{
+								"ua:type":{
+									"type":"string",
+									"default":"mappedArray"
+								},
+								"source":{
+									"type":"string",
+									"format":"ua:source"
+								},
+								"items":{
+									"type":"object",
+									"properties":{
+										"Option":{
+											"type":"string",
+											"title":"Option"
+										},
+										"TerminationUntil":{
+											"type":"string",
+											"title":"Termination Until"
+										},
+										"Validfrom":{
+											"type":"string",
+											"title":"valid from"
+										},
+										"GrossPrice":{
+											"type":"string",
+											"title":"Gross Price"
+										},
+										"NetPrice":{
+											"type":"string",
+											"title":"Net price"
+										}
+									},
+									"required":[]
+								}
+							}
+						}
+					}
+				}
+			},
+			"inputs":{
+				"createList":{
+					"ua:type":"mappedArray",
+					"items":{
+						"List":[]
+					}
+				}
+			},
+			"outputSchema":{
+				"type":"SCHEMA",
+				"dynamic":false,
+				"schema":{
+					"type":"object",
+					"properties":{
+						"items":{
+							"type":"array",
+							"title":"List",
+							"items":{
+								"type":"object",
+								"properties":{
+									"Option":{
+										"type":"string",
+										"title":"Option"
+									},
+									"TerminationUntil":{
+										"type":"string",
+										"title":"Termination Until"
+									},
+									"Validfrom":{
+										"type":"string",
+										"title":"valid from"
+									},
+									"GrossPrice":{
+										"type":"string",
+										"title":"Gross Price"
+									},
+									"NetPrice":{
+										"type":"string",
+										"title":"Net price"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"variable_by_unifyapps_add_item_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"HIsql-1",
+			"id":"r0ESh",
+			"index":0,
+			"inputs":{
+				"itemToAdd":{
+					"Option":"Home Network Diagram",
+					"TerminationUntil":"TT.MM.JJJ",
+					"Validfrom":"TT.MM.JJJ",
+					"GrossPrice":"20,00€ mtl.",
+					"NetPrice":"18,75€ mtl."
+				},
+				"insertLocation":"START",
+				"listName":"{{ YzcSF.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add an item to list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"variable_by_unifyapps_add_item_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"HIsql-1",
+			"id":"wrA4R",
+			"index":0,
+			"inputs":{
+				"itemToAdd":{
+					"NetPrice":"0,00€ mtl.",
+					"GrossPrice":"0,00€ mtl.",
+					"TerminationUntil":"TT.MM.JJJ",
+					"Validfrom":"TT.MM.JJJ",
+					"Option":"VDSL 50 IP"
+				},
+				"insertLocation":"END",
+				"listName":"{{ YzcSF.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add an item to list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"variable_by_unifyapps_add_item_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"HIsql-1",
+			"id":"Wp6Cw",
+			"index":0,
+			"inputs":{
+				"itemToAdd":{
+					"NetPrice":"0,00€ mtl.",
+					"GrossPrice":"0,00€ mtl.",
+					"Validfrom":"TT.MM.JJJ",
+					"TerminationUntil":"TT.MM.JJJ",
+					"Option":"VoIP BasisTarrif"
+				},
+				"insertLocation":"END",
+				"listName":"{{ YzcSF.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add an item to list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"HIsql-1",
+			"id":"qjxwd",
+			"index":0,
+			"inputs":{
+				"headers":{},
+				"responseName":"Success",
+				"textBody":{},
+				"body":{
+					"list":{
+						"ua:type":"mappedArray",
+						"source":"{{ YzcSF.outputs.items[0] }}",
+						"items":{
+							"Option":"{{ YzcSF.outputs.items[0].Option }}",
+							"Validfrom":"{{ YzcSF.outputs.items[0].Validfrom }}",
+							"TerminationUntil":"{{ YzcSF.outputs.items[0].TerminationUntil }}",
+							"GrossPrice":"{{ YzcSF.outputs.items[0].GrossPrice }}",
+							"NetPrice":"{{ YzcSF.outputs.items[0].NetPrice }}"
+						}
+					}
+				},
+				"multiPartBody":{}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to API Request",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":174,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
