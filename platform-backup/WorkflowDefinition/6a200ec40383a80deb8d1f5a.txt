@@ -1,51 +1,456 @@
 {
 	"appsUsed":[
-		
+		"gdrive"
 	],
 	"createdTime":1780485828868,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_iZq9y",
+			"fromNodeId":"n_PnhGc",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_SAW3x",
+			"toNodeId":"n_BC1j8",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_BC1j8",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_6Spfk",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_6Spfk",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_dsvnZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_dsvnZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_dBuux",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_dBuux",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_dsvnZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_dsvnZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_KROwu",
 			"type":"next"
 		}
 	],
 	"id":"6a200ec40383a80deb8d1f5a",
 	"lastModifiedBy":175325,
 	"lcName":"readtextfrompdffilepdflocalprotected pdf with wrong passwordyvkenzjioy",
-	"modifiedTime":1780485828868,
+	"modifiedTime":1780485940646,
 	"name":"ReadTextFromPDFFilePDFLocalProtected PDF with Wrong PasswordyvKEnzjioY",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":4081,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_iZq9y-1",
-			"id":"_iZq9y",
-			"index":0,
+			"id":"n_PnhGc",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"r":{
+							"type":"string",
+							"title":"r"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"a":{
+							"type":"string",
+							"title":"a"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":1593,
+				"resourceName":"variable_by_unifyapps_create_list",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_iZq9y-1",
-			"id":"_SAW3x",
-			"index":0,
+			"id":"n_BC1j8",
+			"index":2,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{
+					"createList":{
+						"ui:title":"",
+						"ua:type":{
+							"ui:widget":"hidden"
+						},
+						"items":{
+							"ui:title":"Initial list items",
+							"ui:description":"Set the initial values of the list (defaults to empty)"
+						},
+						"ui:order":[
+							"*",
+							"items"
+						]
+					},
+					"ua:title":{
+						"ui:widget":"hidden"
+					},
+					"ua:list_type":{
+						"ui:widget":"hidden"
+					}
+				},
+				"schema":{
+					"allOf":[
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"OBJECT"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"items":{
+												"type":"object",
+												"properties":{}
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"STRING"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of String"
+											},
+											"items":{
+												"type":"string"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"INTEGER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Integers"
+											},
+											"items":{
+												"type":"integer"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"NUMBER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Numbers"
+											},
+											"items":{
+												"type":"number"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"BOOLEAN"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Booleans"
+											},
+											"items":{
+												"type":"boolean"
+											}
+										}
+									}
+								}
+							}
+						}
+					],
+					"format":"ua:list",
+					"type":"object",
+					"properties":{
+						"ua:title":{
+							"type":"string"
+						},
+						"ua:list_type":{
+							"type":"string",
+							"title":"List Type",
+							"oneOf":[
+								{
+									"const":"OBJECT",
+									"title":"Object"
+								},
+								{
+									"const":"STRING",
+									"title":"String"
+								},
+								{
+									"const":"NUMBER",
+									"title":"Number"
+								},
+								{
+									"const":"INTEGER",
+									"title":"Integer"
+								},
+								{
+									"const":"BOOLEAN",
+									"title":"Boolean"
+								}
+							],
+							"default":"OBJECT"
+						},
+						"createList":{
+							"type":"object",
+							"properties":{
+								"ua:type":{
+									"type":"string",
+									"default":"mappedArray"
+								},
+								"source":{
+									"type":"string",
+									"format":"ua:source",
+									"title":"List Item Source"
+								},
+								"items":{
+									"additionalProperties":false,
+									"type":[
+										"object",
+										"string",
+										"number",
+										"boolean",
+										"integer"
+									],
+									"properties":{}
+								}
+							}
+						}
+					}
+				}
+			},
+			"inputs":{
+				"createList":{
+					"ua:type":"mappedArray"
+				},
+				"ua:title":"list",
+				"ua:list_type":"STRING"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"type":"object",
+					"properties":{
+						"items":{
+							"type":"array",
+							"title":"list",
+							"disableActions":true,
+							"items":{
+								"type":"string"
+							}
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create list",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":8277,
+				"connectionId":"67435f240be24a3cb216cf60",
+				"resourceName":"gdrive_get_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_iZq9y-1",
+			"id":"n_6Spfk",
+			"index":3,
+			"inputs":{
+				"fileId":"1X6biOzQ9bag6fLfQBaHRk3jdpdMO90Sh"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Get file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"pdf_by_unifyapps",
+				"resourceVersion":1987,
+				"resourceName":"pdf_by_unifyapps_for_each_page",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_iZq9y-1",
+			"id":"n_dsvnZ",
+			"index":4,
+			"inputs":{
+				"password":"Test@",
+				"file":"{{ n_6Spfk.outputs.file }}",
+				"useCustomHeaders":false,
+				"usePlaywright":false
+			},
+			"skip":false,
+			"subTitle":"PDF by UnifyApps",
+			"title":"Read text from PDF file",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":1576,
+				"resourceName":"variable_by_unifyapps_add_item_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_dsvnZ@_iZq9y-1@l",
+			"id":"n_dBuux",
+			"index":5,
+			"inputs":{
+				"itemToAdd":"{{ n_dsvnZ.outputs.item }}",
+				"insertLocation":"START",
+				"captureAddedItem":false,
+				"listName":"{{ n_BC1j8.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add item to list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":4118,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_iZq9y-1",
+			"id":"n_KROwu",
+			"index":6,
+			"inputs":{
+				"result":{
+					"r":"{{ n_BC1j8.outputs.items }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":175325,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -56,5 +461,5 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"version":1
 }
