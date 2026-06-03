@@ -1,0 +1,84 @@
+{
+	"appsUsed":[
+		"gforms"
+	],
+	"createdTime":1725439049014,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"EZDtl",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"1dsMV",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"1dsMV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"qr9PQ",
+			"type":"next"
+		}
+	],
+	"id":"66d81c492fb7b722af9f55ea",
+	"lastModifiedBy":0,
+	"lcName":"ft-test-decision",
+	"modifiedTime":1780496151014,
+	"name":"ft-test-decision",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"EZDtl-1",
+			"id":"EZDtl",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"EZDtl-1",
+			"id":"1dsMV",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gforms",
+				"resourceVersion":1785,
+				"resourceName":"gforms_add_questions",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"EZDtl-1",
+			"id":"qr9PQ",
+			"index":0,
+			"skip":false,
+			"subTitle":"Google Forms",
+			"title":"Add questions",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
