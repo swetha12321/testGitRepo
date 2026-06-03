@@ -1,0 +1,73 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1739772320868,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"6586E",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"0ZvCV",
+			"type":"next"
+		}
+	],
+	"id":"67b2d1a07f5a7a6d70ec582b",
+	"lastModifiedBy":-1,
+	"lcName":"test snapmint",
+	"modifiedTime":1780492632964,
+	"name":"test snapmint",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":302,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WTz3o-1",
+			"id":"6586E",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WTz3o-1",
+			"id":"0ZvCV",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":33,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
