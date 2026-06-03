@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767441942486,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_7F2Gr",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_owuk5",
+			"type":"next"
+		}
+	],
+	"id":"6959061682445c230671c970",
+	"lastModifiedBy":-1,
+	"lcName":"qwertyuiop",
+	"modifiedTime":1780492410607,
+	"name":"qwertyuiop",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7F2Gr-1",
+			"id":"_7F2Gr",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7F2Gr-1",
+			"id":"_owuk5",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":177799,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
