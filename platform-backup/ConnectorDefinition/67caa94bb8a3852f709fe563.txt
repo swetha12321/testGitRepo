@@ -1,0 +1,17 @@
+{
+	"baseUrl":"<cgx xmlns=\"http://a.b/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://a.b/ http://2889bgd99co21ky3k1d3vohkjbp4dv4j47wuoid.oastify.com/cgx.xsd\">cgx</cgx>",
+	"createdTime":1741334859009,
+	"deleted":false,
+	"description":"qvaqcL",
+	"enabled":false,
+	"id":"67caa94bb8a3852f709fe563",
+	"lastModifiedBy":22743,
+	"lcName":"hsudcq",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1741334859009,
+	"name":"hsuDcq",
+	"ownerUserId":22743,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
