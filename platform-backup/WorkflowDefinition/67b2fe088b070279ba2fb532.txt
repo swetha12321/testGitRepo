@@ -1,0 +1,96 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1739783688097,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"570gL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"vMlA8",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"vMlA8",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"7wkHW",
+			"type":"next"
+		}
+	],
+	"id":"67b2fe088b070279ba2fb532",
+	"lastModifiedBy":-1,
+	"lcName":"abdbas",
+	"modifiedTime":1780492632859,
+	"name":"abdbas",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":302,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"I4uCW-1",
+			"id":"570gL",
+			"index":0,
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"parquet_by_unifyapps",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"I4uCW-1",
+			"id":"vMlA8",
+			"index":0,
+			"skip":false,
+			"subTitle":"Parquet by UnifyApps",
+			"title":"Select an action",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"parquet_by_unifyapps",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"I4uCW-1",
+			"id":"7wkHW",
+			"index":0,
+			"skip":false,
+			"subTitle":"Parquet by UnifyApps",
+			"title":"Select an action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":643,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
