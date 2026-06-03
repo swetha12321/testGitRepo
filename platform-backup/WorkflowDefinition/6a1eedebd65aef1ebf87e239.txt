@@ -1,51 +1,87 @@
 {
 	"appsUsed":[
-		
+		"webwright_by_unifyapps"
 	],
 	"createdTime":1780411883407,
 	"deleted":false,
+	"deployedVersion":10,
+	"deploymentState":{
+		"deployedAt":1780508224393,
+		"deployedBy":196065,
+		"deployedDefinitionId":"6a20664049552748da4a50aa",
+		"status":"DEPLOYED",
+		"version":10,
+		"workflowVersion":15
+	},
 	"edges":[
 		{
-			"fromNodeId":"_eIlAE",
+			"fromNodeId":"n_5N5A0",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_JxBum",
+			"toNodeId":"n_hCAkz",
 			"type":"next"
 		}
 	],
 	"id":"6a1eedebd65aef1ebf87e239",
 	"lastModifiedBy":196065,
 	"lcName":"test",
-	"modifiedTime":1780411883407,
+	"modifiedTime":1780514621934,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":904,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_eIlAE-1",
-			"id":"_eIlAE",
-			"index":0,
+			"id":"n_5N5A0",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"webwright_by_unifyapps",
+				"resourceVersion":37,
+				"connectionId":"6a2051b0c86f38362bd8b388",
+				"resourceName":"webwright_by_unifyapps_run_task",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_eIlAE-1",
-			"id":"_JxBum",
-			"index":0,
+			"id":"n_hCAkz",
+			"index":2,
+			"inputs":{
+				"task":"Go to https://qa2.unifyapps.com and log in with username \"admin\" and password \"Hello@135\". Once on the dashboard, navigate to the Agents section, click to create a new agent, name it \"Test\nAgent\", and save it. and ask \"hi from webwright agent\"  to agent and return the response here.  Report whether the agent was created successfully and what confirmation you saw.",
+				"max_steps":30,
+				"start_url":"https://qa2.unifyapps.com"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Webwright by UnifyApps",
+			"title":"Run Task",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":196065,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -56,5 +92,5 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"version":16
 }
