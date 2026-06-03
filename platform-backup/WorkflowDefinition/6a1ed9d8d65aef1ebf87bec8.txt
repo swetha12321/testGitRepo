@@ -4,14 +4,14 @@
 	],
 	"createdTime":1780406744129,
 	"deleted":false,
-	"deployedVersion":1,
+	"deployedVersion":2,
 	"deploymentState":{
-		"deployedAt":1780414590699,
-		"deployedBy":199598,
-		"deployedDefinitionId":"6a1ef87ea098c85f99106182",
+		"deployedAt":1780418049554,
+		"deployedBy":199599,
+		"deployedDefinitionId":"6a1f0601be0cac4e9dfbacb5",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":5
+		"version":2,
+		"workflowVersion":6
 	},
 	"edges":[
 		{
@@ -80,9 +80,9 @@
 		}
 	],
 	"id":"6a1ed9d8d65aef1ebf87bec8",
-	"lastModifiedBy":199599,
+	"lastModifiedBy":199598,
 	"lcName":"(copy)[git] filter pr assets by real diff (copy)",
-	"modifiedTime":1780418046755,
+	"modifiedTime":1780492476288,
 	"name":"(copy)[git] Filter PR assets by real diff (copy)",
 	"nodes":[
 		{
@@ -163,7 +163,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_TURwu-1",
 			"id":"n_jXoYy",
@@ -765,5 +765,5 @@
 		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":6
+	"version":11
 }
