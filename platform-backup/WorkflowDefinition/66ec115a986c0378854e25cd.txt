@@ -1,0 +1,183 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1726746970530,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1726747312817,
+		"deployedBy":520,
+		"deployedDefinitionId":"66ec12b0d30bbf1560f15e08",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		{
+			"fromNodeId":"jy2G9",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"JFFWK",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"JFFWK",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"WTLft",
+			"type":"next"
+		}
+	],
+	"id":"66ec115a986c0378854e25cd",
+	"lastModifiedBy":0,
+	"lcName":"http / generic rest api",
+	"modifiedTime":1780496147798,
+	"name":"HTTP / Generic REST API",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":77,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"yf4CA-1",
+			"id":"jy2G9",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				},
+				"endpointType":"REST",
+				"response":[
+					{
+						"status":200,
+						"contentType":"application/json",
+						"name":"success",
+						"body":{
+							"type":"object",
+							"properties":{
+								"result":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{
+											"sellerCode":{
+												"type":"integer",
+												"title":"Seller Code"
+											},
+											"category":{
+												"type":"string",
+												"title":"Category"
+											},
+											"subcategory":{
+												"type":"string",
+												"title":"Subcategory"
+											},
+											"productType":{
+												"type":"string",
+												"title":"Product Type"
+											},
+											"DisplayName":{
+												"type":"string",
+												"title":"Display Name"
+											}
+										},
+										"additionalProperties":false
+									},
+									"title":"Result",
+									"required":[]
+								}
+							},
+							"additionalProperties":false,
+							"required":[]
+						}
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger using API",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":2041,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"yf4CA-1",
+			"id":"JFFWK",
+			"index":0,
+			"inputs":{
+				"object_type":"phone_pay_data",
+				"page":{
+					"limit":30,
+					"offset":0
+				},
+				"numberOfRecordsToFetch":"MULTIPLE",
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":54,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"yf4CA-1",
+			"id":"WTLft",
+			"index":0,
+			"inputs":{
+				"responseName":"success",
+				"body":{
+					"result":{
+						"source":"{{ JFFWK.outputs.objects }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"sellerCode":"{{ JFFWK.outputs.objects[0].properties.SellerCode }}",
+							"category":"{{ JFFWK.outputs.objects[0].properties.Category }}",
+							"subcategory":"{{ JFFWK.outputs.objects[0].properties.SubCategory }}",
+							"productType":"{{ JFFWK.outputs.objects[0].properties.ProductType }}",
+							"DisplayName":"{{ JFFWK.outputs.objects[0].properties.DisplayName }}"
+						}
+					}
+				},
+				"status":200
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to API request",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
