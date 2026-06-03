@@ -1,0 +1,71 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1726314365685,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"fy46g",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Lywr6",
+			"type":"next"
+		}
+	],
+	"id":"66e5777d8c2b2b4289f60979",
+	"lastModifiedBy":0,
+	"lcName":"qa",
+	"modifiedTime":1780496149502,
+	"name":"qa",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"fy46g-1",
+			"id":"fy46g",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_call_automation_async",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"fy46g-1",
+			"id":"Lywr6",
+			"index":0,
+			"inputs":{
+				"automationId":"66950fffcdac544eed6df8bf",
+				"runtimeConnections":{},
+				"parameters":{}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation async",
+			"type":"CALL_WORKFLOW"
+		}
+	],
+	"ownerUserId":6,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
