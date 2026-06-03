@@ -1,0 +1,96 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1755487829239,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_2w3xw",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_VA7Bl",
+			"type":"next"
+		}
+	],
+	"id":"68a29e559d7d8d3f5047c54f",
+	"lastModifiedBy":-1,
+	"lcName":"soapmultiparttest",
+	"modifiedTime":1780492419044,
+	"name":"soapMultiparttest",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":803,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ackdc-1",
+			"id":"n_2w3xw",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":0,
+				"resourceName":"custom_http_endpoint_execute_soap_multipart",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ackdc-1",
+			"id":"n_VA7Bl",
+			"index":2,
+			"inputs":{
+				"responseContentType":"application/soap+xml",
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"authType":"CUSTOM",
+				"httpMethod":"POST",
+				"requestContentType":"application/soap+xml",
+				"version":"v1.1",
+				"sslVerify":false,
+				"isNestedHeaders":false
+			},
+			"skip":false,
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute SOAP multipart request",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":39713,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
