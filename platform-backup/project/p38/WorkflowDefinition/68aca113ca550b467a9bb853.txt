@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1756143891935,
+	"deleted":false,
+	"description":"Testing",
+	"edges":[
+		{
+			"fromNodeId":"_xDteo",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_yq5HM",
+			"type":"next"
+		}
+	],
+	"id":"68aca113ca550b467a9bb853",
+	"lastModifiedBy":-1,
+	"lcName":"test_practice",
+	"modifiedTime":1780492418624,
+	"name":"Test_practice",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_xDteo-1",
+			"id":"_xDteo",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_xDteo-1",
+			"id":"_yq5HM",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175401,
+	"projectId":38,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
