@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1754457236247,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_WaSsV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_b0EE6",
+			"type":"next"
+		}
+	],
+	"id":"6892e4947a4b8fc16e1d15f8",
+	"lastModifiedBy":-1,
+	"lcName":"edw",
+	"modifiedTime":1780492419414,
+	"name":"edw",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_WaSsV-1",
+			"id":"_WaSsV",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_WaSsV-1",
+			"id":"_b0EE6",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":45010,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
