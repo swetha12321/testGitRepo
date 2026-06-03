@@ -1,0 +1,78 @@
+{
+	"appsUsed":[
+		"mysql"
+	],
+	"createdTime":1755492114767,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_7BflC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Fnly6",
+			"type":"next"
+		}
+	],
+	"id":"68a2af129d7d8d3f5047d3db",
+	"lastModifiedBy":-1,
+	"lcName":"test",
+	"modifiedTime":1780492419034,
+	"name":"test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7BflC-1",
+			"id":"_7BflC",
+			"index":1,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"mysql",
+				"resourceVersion":5527,
+				"connectionId":"6859195f0417f1216c0da3b6",
+				"resourceName":"mysql_execute_sql",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7BflC-1",
+			"id":"n_Fnly6",
+			"index":2,
+			"inputs":{
+				"objectSourceResourceName":"mysql_execute_sql_metadata",
+				"sql":"SELECT * FROM DestinationTable;"
+			},
+			"skip":false,
+			"subTitle":"MySQL",
+			"title":"Execute SQL statement",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":15,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
