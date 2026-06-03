@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		"hubspot"
+	],
+	"createdTime":1739553688418,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1739553723618,
+		"deployedBy":12,
+		"deployedDefinitionId":"67af7bbb69fae32445feff3c",
+		"status":"PAUSED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		
+	],
+	"id":"67af7b9869fae32445feff3a",
+	"lastModifiedBy":-1,
+	"lcName":"test",
+	"modifiedTime":1780492633157,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"hubspot",
+				"resourceVersion":2,
+				"connectionId":"67a5f5ac07b46e67aac6ed81",
+				"resourceName":"hubspot_fetch_deals"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"tZEsT-1",
+			"id":"k4ofH",
+			"index":0,
+			"inputs":{
+				"interval":1,
+				"batchSize":2
+			},
+			"skip":false,
+			"subTitle":"HubSpot",
+			"title":"New deal",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":12,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
