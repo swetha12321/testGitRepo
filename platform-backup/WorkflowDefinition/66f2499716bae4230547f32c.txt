@@ -1,0 +1,59 @@
+{
+	"appsUsed":[
+		"microsoft_entra_id"
+	],
+	"createdTime":1727154583002,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1727154598143,
+		"deployedBy":520,
+		"deployedDefinitionId":"66f249a516bae4230547f3fb",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		
+	],
+	"id":"66f2499716bae4230547f32c",
+	"lastModifiedBy":0,
+	"lcName":"delete",
+	"modifiedTime":1780496146052,
+	"name":"delete",
+	"nodes":[
+		{
+			"context":{
+				"appName":"microsoft_entra_id",
+				"resourceVersion":2309,
+				"connectionId":"66f0e08bbf6c5f1381adde63",
+				"resourceName":"microsoft_entra_id_on_deleted_user"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"gDQzO-1",
+			"id":"XYSU8",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Microsoft Entra ID",
+			"title":"Deleted user",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
