@@ -1,0 +1,92 @@
+{
+	"appsUsed":[
+		"browse_ai",
+		"getform"
+	],
+	"createdTime":1739351771073,
+	"deleted":false,
+	"deployedVersion":2,
+	"deploymentState":{
+		"deployedAt":1739352390063,
+		"deployedBy":45012,
+		"deployedDefinitionId":"67ac6945ee623a7a725432bb",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":7
+	},
+	"edges":[
+		{
+			"fromNodeId":"yZcLR",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"XzBu4",
+			"type":"next"
+		}
+	],
+	"id":"67ac66dbee623a7a7254305e",
+	"lastModifiedBy":0,
+	"lcName":" tesy",
+	"modifiedTime":1780493623103,
+	"name":" tesy",
+	"nodes":[
+		{
+			"context":{
+				"appName":"browse_ai",
+				"resourceVersion":14,
+				"connectionId":"6798ceffcc0f0e42c92a9458",
+				"resourceName":"browse_ai_on_task_finished"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DMP9c-1",
+			"id":"yZcLR",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Browse AI",
+			"title":"Task is finished",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"getform",
+				"resourceVersion":6,
+				"connectionId":"67a2f4d2b7717c0a4aafda9a",
+				"resourceName":"getform_get_form_submissions",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DMP9c-1",
+			"id":"XzBu4",
+			"index":0,
+			"inputs":{
+				"formId":"ajjjkowa",
+				"token":"Zp61UKQg4vxoyQJoAXUnLBLKEbDB7MXbmXqFwHEkEX4SBBULqDP2u2rAGCXk"
+			},
+			"skip":false,
+			"subTitle":"Getform",
+			"title":"Get form submissions",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":45012,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":9
+}
