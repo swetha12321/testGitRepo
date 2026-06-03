@@ -1,0 +1,103 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1766402843628,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1766402872248,
+		"deployedBy":161875,
+		"deployedDefinitionId":"69492b3273e28b2f2280a812",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_qFHVk",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_FlFd7",
+			"type":"next"
+		}
+	],
+	"id":"69492b1b22fc947a0bef8b1e",
+	"lastModifiedBy":-1,
+	"lcName":"test_automation",
+	"modifiedTime":1780492412374,
+	"name":"test_automation",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_w7HCf-1",
+			"id":"n_qFHVk",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"ai_agents_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"ai_agents_by_unifyapps_invoke_agent",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_w7HCf-1",
+			"id":"n_FlFd7",
+			"index":2,
+			"inputs":{
+				"callableInterfaceId":"__ua__invoke_ai_agent_by_unifyapps",
+				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
+				"defaultFallbackWorkflowId":"68050ca67df58855654804a0",
+				"parameters":{
+					"userQuery":"Hi , there how are you ",
+					"aiAgentId":"e_69492254f1b16a344b9d70a7",
+					"triggerWorkflowWithRuntimeType":"IN_MEMORY"
+				}
+			},
+			"skip":false,
+			"subTitle":"AI Agents by UnifyApps",
+			"title":"Invoke Agent",
+			"type":"CALL_INTERFACE_WORKFLOW"
+		}
+	],
+	"ownerUserId":161875,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
