@@ -1,0 +1,81 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1724851933250,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"0YDha",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"5sH5X",
+			"type":"next"
+		}
+	],
+	"id":"66cf26dd2f8498743cfdbb0b",
+	"lastModifiedBy":0,
+	"lcName":"test",
+	"modifiedTime":1780496151821,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":56,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"5X0gR-1",
+			"id":"0YDha",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"HTTP Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":55,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"5X0gR-1",
+			"id":"5sH5X",
+			"index":0,
+			"inputs":{
+				"code":"// List of URLs\ndef urls = [\"abc\", \"def\"]\n\n// Create a list of hardcoded JSON object strings\ndef result = urls.collect {\n    '''\n    {\n        \"dateRangePreset\": \"last30days\",\n        \"dateTimeFilter\": {\n            \"startTime\": \"2024-07-28T18:30:00.000Z\",\n            \"endTime\": \"2024-08-28T18:29:59.999Z\",\n            \"previousStartTime\": \"2024-06-27T18:30:00.001Z\",\n            \"previousEndTime\": \"2024-07-28T18:30:00.000Z\"\n        },\n        \"search\": \"Hello\",\n        \"filter\": {\n            \"op\": \"AND\",\n            \"values\": [\n                {\n                    \"field\": \"ENTITY_662ea2126dec761ec1269f23=::=CREATED_TIME\",\n                    \"op\": \"LT\",\n                    \"values\": [\n                        1724697000000\n                    ]\n                }\n            ]\n        },\n        \"dateQuickFilter\": null\n    }\n    '''\n}",
+				"isAsync":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":569,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
