@@ -1,0 +1,860 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725286264370,
+	"deleted":false,
+	"deployedVersion":8,
+	"deploymentState":{
+		"deployedAt":1752328243594,
+		"deployedBy":103171,
+		"deployedDefinitionId":"687268332bebc94b177ffdfb",
+		"status":"DEPLOYED",
+		"version":8,
+		"workflowVersion":50
+	},
+	"edges":[
+		{
+			"fromNodeId":"hESQP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_g0knE",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_g0knE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_LHeHW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_LHeHW",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_VWQ0W",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_VWQ0W",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_mvsOz",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_mvsOz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_9PO2i",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_9PO2i",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_6aDKK",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_6aDKK",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_HaUYT",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_HaUYT",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"MMtlF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"MMtlF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_KZO1m",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_KZO1m",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"CsUIb",
+			"type":"next"
+		}
+	],
+	"id":"66d5c778a9f5602c63de84a0",
+	"lastModifiedBy":0,
+	"lcName":"[hdfc uch] post approval user creation",
+	"modifiedTime":1780496151520,
+	"name":"[HDFC UCH] Post approval user creation",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":52,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FvfKc-1",
+			"id":"hESQP",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"Status":{
+							"type":"string",
+							"title":"Status"
+						},
+						"platformUserID":{
+							"type":"string",
+							"title":"Platform User ID"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"userID":{
+							"type":"string",
+							"title":"User ID"
+						},
+						"employeeCode":{
+							"type":"string",
+							"title":"Employee Code"
+						},
+						"employeeName":{
+							"type":"string",
+							"title":"Employee Name"
+						},
+						"branchCode":{
+							"type":"string",
+							"title":"Branch Code"
+						},
+						"branchName":{
+							"type":"string",
+							"title":"Branch Name"
+						},
+						"departmentCode":{
+							"type":"string",
+							"title":"Department Code"
+						},
+						"departmentName":{
+							"type":"string",
+							"title":"Department Name"
+						},
+						"RoleCode":{
+							"type":"string",
+							"title":"Role Code"
+						},
+						"roleName":{
+							"type":"string",
+							"title":"Role Name"
+						},
+						"email":{
+							"type":"string",
+							"title":"Email"
+						},
+						"mobileNumber":{
+							"type":"string",
+							"title":"Mobile Number"
+						},
+						"address":{
+							"type":"string",
+							"title":"Address"
+						},
+						"supervisorCode":{
+							"type":"string",
+							"title":"Supervisor Code"
+						},
+						"id":{
+							"type":"string",
+							"title":"Id"
+						},
+						"makerDateTime":{
+							"type":"string",
+							"title":"Maker Date Time"
+						},
+						"state":{
+							"type":"string",
+							"title":"State"
+						},
+						"activityType":{
+							"type":"string",
+							"title":"Activity Type"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":13,
+				"resourceName":"standard_entities_fetch_roles",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FvfKc-1",
+			"id":"_g0knE",
+			"index":0,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"applicationId",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"hdfc-uch-app"
+							}
+						},
+						{
+							"property":"id",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ hESQP.outputs.roleName }}"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Fetch roles",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":29,
+				"resourceName":"standard_entities_fetch_user",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FvfKc-1",
+			"id":"_LHeHW",
+			"index":0,
+			"inputs":{
+				"fetchBy":"id",
+				"applicationId":"hdfc-uch-app",
+				"user":"{{ __RUN__.outputs.userId }}"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Fetch User",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":45,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FvfKc-1",
+			"id":"_VWQ0W",
+			"index":0,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_empID",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ hESQP.outputs.employeeCode }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"admin_activity_report",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"sortBy":[
+					{
+						"field":"cTm",
+						"order":"ASC"
+					}
+				],
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":20
+				},
+				"numberOfRecordsToFetch":"SINGLE",
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Fetch Maker Checker from admin activity report",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":29,
+				"resourceName":"standard_entities_create_user",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FvfKc-1",
+			"id":"_mvsOz",
+			"index":0,
+			"inputs":{
+				"loginType":"PASSWORD",
+				"user":{
+					"password":"Hdfcbank@135",
+					"contactDetails":{
+						"email":"{{ hESQP.outputs.email }}",
+						"phoneNumber":"{{ hESQP.outputs.mobileNumber }}"
+					},
+					"applicationId":"hdfc-uch-app",
+					"state":"ACTIVE",
+					"customProperties":{
+						"initiatedBy":"{{ _VWQ0W.outputs.properties.maker }}",
+						"approvedBy":"{{ _LHeHW.outputs.username }}",
+						"UserID":"{{ hESQP.outputs.userID }}",
+						"employeeCode":"{{ hESQP.outputs.employeeCode }}",
+						"employeeName":"{{ hESQP.outputs.employeeName }}",
+						"roleName":"{{ _g0knE.outputs.roles[0].name }}",
+						"email":"{{ hESQP.outputs.email }}",
+						"supervisorCode":"{{ hESQP.outputs.supervisorCode }}",
+						"branchCode":"{{ hESQP.outputs.branchCode }}",
+						"branchName":"{{ hESQP.outputs.branchName }}",
+						"departmentCode":"{{ hESQP.outputs.departmentCode }}",
+						"departmentName":"{{ hESQP.outputs.departmentName }}",
+						"roleCode":"{{ hESQP.outputs.RoleCode }}",
+						"mobileNumber":"{{ hESQP.outputs.mobileNumber }}",
+						"address":"{{ hESQP.outputs.address }}"
+					},
+					"name":"{{ hESQP.outputs.employeeName }}",
+					"username":"{{ hESQP.outputs.employeeCode }}"
+				},
+				"needToResetPassword":false
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Create User",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":8,
+				"resourceName":"variable_by_unifyapps_create_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FvfKc-1",
+			"id":"_9PO2i",
+			"index":0,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{
+					"createList":{
+						"ui:title":"",
+						"ua:type":{
+							"ui:widget":"hidden"
+						},
+						"items":{
+							"ui:title":"Initial list items",
+							"ui:description":"Set the initial values of the list (defaults to empty)"
+						},
+						"ui:order":[
+							"*",
+							"items"
+						]
+					},
+					"ua:title":{
+						"ui:widget":"hidden"
+					},
+					"ua:list_type":{
+						"ui:widget":"hidden"
+					}
+				},
+				"schema":{
+					"allOf":[
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"OBJECT"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"items":{
+												"type":"object",
+												"properties":{}
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"STRING"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of String"
+											},
+											"items":{
+												"type":"string"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"INTEGER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Integers"
+											},
+											"items":{
+												"type":"integer"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"NUMBER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Numbers"
+											},
+											"items":{
+												"type":"number"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"BOOLEAN"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Booleans"
+											},
+											"items":{
+												"type":"boolean"
+											}
+										}
+									}
+								}
+							}
+						}
+					],
+					"format":"ua:list",
+					"type":"object",
+					"properties":{
+						"ua:title":{
+							"type":"string"
+						},
+						"ua:list_type":{
+							"type":"string",
+							"title":"List Type",
+							"oneOf":[
+								{
+									"const":"OBJECT",
+									"title":"Object"
+								},
+								{
+									"const":"STRING",
+									"title":"String"
+								},
+								{
+									"const":"NUMBER",
+									"title":"Number"
+								},
+								{
+									"const":"INTEGER",
+									"title":"Integer"
+								},
+								{
+									"const":"BOOLEAN",
+									"title":"Boolean"
+								}
+							],
+							"default":"OBJECT"
+						},
+						"createList":{
+							"type":"object",
+							"properties":{
+								"ua:type":{
+									"type":"string",
+									"default":"mappedArray"
+								},
+								"source":{
+									"type":"string",
+									"format":"ua:source",
+									"title":"List Item Source"
+								},
+								"items":{
+									"additionalProperties":false,
+									"type":[
+										"object",
+										"string",
+										"number",
+										"boolean",
+										"integer"
+									],
+									"properties":{}
+								}
+							}
+						}
+					}
+				}
+			},
+			"inputs":{
+				"createList":{
+					"ua:type":"mappedArray"
+				},
+				"ua:title":"Role",
+				"ua:list_type":"STRING"
+			},
+			"outputSchema":{
+				"type":"SCHEMA",
+				"dynamic":false,
+				"schema":{
+					"type":"object",
+					"properties":{
+						"items":{
+							"type":"array",
+							"title":"Role",
+							"disableActions":true,
+							"items":{
+								"type":"string"
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":8,
+				"resourceName":"variable_by_unifyapps_add_item_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FvfKc-1",
+			"id":"_6aDKK",
+			"index":0,
+			"inputs":{
+				"itemToAdd":"{{ hESQP.outputs.roleName }}",
+				"insertLocation":"START",
+				"listName":"{{ _9PO2i.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add item to list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":4,
+				"resourceName":"standard_entities_assign_roles",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FvfKc-1",
+			"id":"_HaUYT",
+			"index":0,
+			"inputs":{
+				"roles":"{{ _9PO2i.outputs.items }}",
+				"applicationId":"hdfc-uch-app",
+				"user":"{{ _mvsOz.outputs.id }}"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Assign Roles",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":1896,
+				"resourceName":"storage_by_unifyapps_update_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FvfKc-1",
+			"id":"MMtlF",
+			"index":0,
+			"inputs":{
+				"numberOfRecordsToUpdate":"SINGLE",
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"id",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ hESQP.outputs.id }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"hdfc_uch_user_creation_requests",
+				"updateFields":[
+					{
+						"fieldName":"properties.status",
+						"actionType":"SET",
+						"setValue":"Approved"
+					},
+					{
+						"fieldName":"properties.address",
+						"actionType":"SET",
+						"setValue":"{{ hESQP.outputs.address }}"
+					},
+					{
+						"fieldName":"properties.branchCode",
+						"actionType":"SET",
+						"setValue":"{{ hESQP.outputs.branchCode }}"
+					},
+					{
+						"fieldName":"properties.branchName",
+						"actionType":"SET",
+						"setValue":"{{ hESQP.outputs.branchName }}"
+					},
+					{
+						"fieldName":"properties.departmentCode",
+						"actionType":"SET",
+						"setValue":"{{ hESQP.outputs.departmentCode }}"
+					},
+					{
+						"fieldName":"properties.departmentName",
+						"actionType":"SET",
+						"setValue":"{{ hESQP.outputs.departmentName }}"
+					},
+					{
+						"fieldName":"properties.email",
+						"actionType":"SET",
+						"setValue":"{{ hESQP.outputs.email }}"
+					},
+					{
+						"fieldName":"properties.emloyeeCode",
+						"actionType":"SET",
+						"setValue":"{{ hESQP.outputs.employeeCode }}"
+					},
+					{
+						"fieldName":"properties.employeeName",
+						"actionType":"SET",
+						"setValue":"{{ hESQP.outputs.employeeName }}"
+					},
+					{
+						"fieldName":"properties.mobileNo",
+						"actionType":"SET",
+						"setValue":"{{ hESQP.outputs.mobileNumber }}"
+					},
+					{
+						"fieldName":"properties.roleCode",
+						"actionType":"SET",
+						"setValue":"{{ hESQP.outputs.RoleCode }}"
+					},
+					{
+						"fieldName":"properties.roleName",
+						"actionType":"SET",
+						"setValue":"{{ hESQP.outputs.roleName }}"
+					},
+					{
+						"fieldName":"properties.supervisorCode",
+						"actionType":"SET",
+						"setValue":"{{ hESQP.outputs.supervisorCode }}"
+					},
+					{
+						"fieldName":"properties.userID",
+						"actionType":"SET",
+						"setValue":"{{ hESQP.outputs.userID }}"
+					},
+					{
+						"fieldName":"properties.checker",
+						"actionType":"SET",
+						"setValue":"{{ _LHeHW.outputs.id }}"
+					},
+					{
+						"fieldName":"properties.platformUserID",
+						"actionType":"SET",
+						"setValue":"{{ _mvsOz.outputs.id }}"
+					}
+				],
+				"skipIfEmpty":false,
+				"page":{
+					"offset":0,
+					"limit":20
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Update records by query",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":4,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FvfKc-1",
+			"id":"_KZO1m",
+			"index":0,
+			"inputs":{
+				"automationId":"6718a79cc5864f3b2210dfc2",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"version":"-1",
+				"parameters":{
+					"Email":"{{ hESQP.outputs.email }}",
+					"employeeName":"{{ hESQP.outputs.employeeName }}",
+					"employeeCode":"{{ hESQP.outputs.branchCode }}",
+					"username":"{{ DVTtp.outputs.username }}",
+					"password":"{{ MMtlF.outputs.result }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":48,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FvfKc-1",
+			"id":"CsUIb",
+			"index":0,
+			"inputs":{
+				"result":{
+					"Status":"200",
+					"platformUserID":"{{ _mvsOz.outputs.id }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":520,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":51
+}
