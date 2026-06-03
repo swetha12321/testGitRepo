@@ -1,0 +1,47 @@
+{
+	"createdTime":1754489538302,
+	"deleted":false,
+	"entityType":"e_interface",
+	"id":"ua-workflows-clone-2",
+	"lastModifiedBy":196003,
+	"modifiedTime":1770271387013,
+	"ownerUserId":9,
+	"properties":{
+		"standard":false,
+		"deviceDetails":{
+			"base":"desktop"
+		},
+		"metadata":{
+			"logo":{
+				"small":"https://assets.unifyapps.com/theme/unifyapps/unify.svg",
+				"large":"https://assets.unifyapps.com/theme/unifyapps/unify-logo.svg",
+				"favicon":"/favicon.png"
+			},
+			"_counter":{
+				"_moduleCount":0,
+				"_pageCount":0
+			}
+		},
+		"navigation":{
+			"secondary":[],
+			"defaultPageId":"e_689362c27716d38ade474a1d",
+			"primary":[]
+		},
+		"interfacePageIdVsSlugMap":{
+			"e_689362c27716d38ade474a1e":"ua-workflow-insights",
+			"e_689362c27716d38ade474a1d":"ua-workflows-clone-2-aggregated-insights",
+			"e_global_ua-workflows-clone-2":"global-page-of-ua-workflows-clone-2"
+		},
+		"skipAutoSyncOnModification":true,
+		"pagePermissions":{
+			"e_689362c27716d38ade474a1e":{}
+		},
+		"name":"UnifyApps Workflows (Clone)",
+		"locale":{
+			"defaultLocale":"en-US"
+		},
+		"syncFromSourceCustomer":true
+	},
+	"standard":false,
+	"version":3
+}
