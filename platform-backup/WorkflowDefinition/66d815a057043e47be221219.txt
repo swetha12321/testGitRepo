@@ -1,0 +1,72 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725437344876,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"kyudT",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"kgTjh",
+			"type":"next"
+		}
+	],
+	"id":"66d815a057043e47be221219",
+	"lastModifiedBy":0,
+	"lcName":"abcd",
+	"modifiedTime":1780496151016,
+	"name":"abcd",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":77,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Fruam-1",
+			"id":"kyudT",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				},
+				"endpointType":"SOAP",
+				"soapVersion":"v1.2"
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger using API",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Fruam-1",
+			"id":"kgTjh",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":5,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
