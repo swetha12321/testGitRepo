@@ -1,0 +1,59 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1744034034197,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"s6DbK",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"NwFCg",
+			"type":"next"
+		}
+	],
+	"id":"67f3d8f2597cb0329b6d09d1",
+	"lastModifiedBy":-1,
+	"lcName":"ecec",
+	"modifiedTime":1780492435456,
+	"name":"ecec",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"s6DbK-1",
+			"id":"s6DbK",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"s6DbK-1",
+			"id":"NwFCg",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":522,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
