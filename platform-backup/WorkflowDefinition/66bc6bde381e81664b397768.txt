@@ -1,0 +1,70 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1724854544813,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"qa3q7",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Z3zFo",
+			"type":"next"
+		}
+	],
+	"id":"66bc6bde381e81664b397768",
+	"lastModifiedBy":0,
+	"lcName":"test ayush",
+	"modifiedTime":1780496151816,
+	"name":"test ayush",
+	"nodes":[
+		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":0,
+				"resourceName":"schedule_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"BDGut-1",
+			"id":"qa3q7",
+			"index":0,
+			"inputs":{
+				"cron":"INTERVAL",
+				"interval":15,
+				"frequency":"MINUTES"
+			},
+			"skip":false,
+			"subTitle":"Schedule",
+			"title":"New recurring event",
+			"trigger":{
+				"type":"SCHEDULED"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"BDGut-1",
+			"id":"Z3zFo",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
