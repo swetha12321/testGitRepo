@@ -9,7 +9,7 @@
 		"deployedAt":1780485442364,
 		"deployedBy":191185,
 		"deployedDefinitionId":"6a200d420383a80deb8d0141",
-		"status":"PAUSED",
+		"status":"DEPLOYED",
 		"version":1,
 		"workflowVersion":1
 	},
@@ -106,7 +106,7 @@
 	"id":"6a200d420383a80deb8d013b",
 	"lastModifiedBy":191185,
 	"lcName":"ai agent(slack deployment)",
-	"modifiedTime":1780485442417,
+	"modifiedTime":1780485461211,
 	"name":"AI Agent(Slack Deployment)",
 	"nodes":[
 		{
