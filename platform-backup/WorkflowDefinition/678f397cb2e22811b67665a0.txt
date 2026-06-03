@@ -1,0 +1,77 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1737439612315,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"WUWc8",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"8GJFS",
+			"type":"next"
+		}
+	],
+	"id":"678f397cb2e22811b67665a0",
+	"lastModifiedBy":0,
+	"lcName":"test",
+	"modifiedTime":1780495208207,
+	"name":"test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WUWc8-1",
+			"id":"WUWc8",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":154,
+				"resourceName":"custom_http_endpoint_execute_multipart",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WUWc8-1",
+			"id":"8GJFS",
+			"index":0,
+			"inputs":{
+				"responseContentType":"application/json",
+				"requestTimeoutInSecs":-1,
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"sslVerify":true
+			},
+			"skip":false,
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST multipart request",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
