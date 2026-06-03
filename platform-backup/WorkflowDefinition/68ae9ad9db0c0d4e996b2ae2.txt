@@ -1,0 +1,100 @@
+{
+	"appsUsed":[
+		"microsoft_entra_id",
+		"salesforce",
+		"storage_by_unifyapps"
+	],
+	"createdTime":1756273369070,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_ZlFZd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_R0cM4",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_R0cM4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Tr1OH",
+			"type":"next"
+		}
+	],
+	"id":"68ae9ad9db0c0d4e996b2ae2",
+	"lastModifiedBy":-1,
+	"lcName":"test automation",
+	"modifiedTime":1780492418579,
+	"name":"Test Automation",
+	"nodes":[
+		{
+			"context":{
+				"appName":"microsoft_entra_id"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_oYrvg-1",
+			"id":"n_ZlFZd",
+			"index":1,
+			"skip":false,
+			"subTitle":"Microsoft Entra ID",
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"salesforce",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_oYrvg-1",
+			"id":"n_R0cM4",
+			"index":2,
+			"skip":false,
+			"subTitle":"Salesforce",
+			"title":"Select an action",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_oYrvg-1",
+			"id":"n_Tr1OH",
+			"index":3,
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Select an action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175510,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
