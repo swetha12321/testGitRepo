@@ -1,0 +1,90 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1739792210660,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"ieupA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"EvEJy",
+			"type":"next"
+		}
+	],
+	"id":"67b31f527c8d3c503c3b5664",
+	"lastModifiedBy":-1,
+	"lcName":"sampel",
+	"modifiedTime":1780492632749,
+	"name":"sampel",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":302,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"W0t6L-1",
+			"id":"ieupA",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":6,
+				"resourceName":"standard_entities_create_or_update_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"W0t6L-1",
+			"id":"EvEJy",
+			"index":0,
+			"inputs":{
+				"endpointType":"REST",
+				"automation":"66d17c319627d00147082631",
+				"name":"workflow1",
+				"active":true,
+				"description":"workflow1",
+				"httpMethod":"GET",
+				"collectionId":"67b1894374f0e475e1827fb5",
+				"resourceType":"CALLABLE_WORKFLOW"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Create or update API",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":522,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":5
+}
