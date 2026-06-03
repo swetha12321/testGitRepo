@@ -4,6 +4,15 @@
 	],
 	"createdTime":1780516373611,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1780516373674,
+		"deployedBy":-1,
+		"deployedDefinitionId":"6a208615e01793339f042e93",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":40
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_MdwX6",
@@ -195,7 +204,7 @@
 	"id":"69dbf0132c6abc6dca2a0449",
 	"lastModifiedBy":-1,
 	"lcName":"agent builder | recommended tools",
-	"modifiedTime":1780516373611,
+	"modifiedTime":1780516451099,
 	"name":"Agent Builder | Recommended Tools",
 	"nodes":[
 		{
@@ -1663,5 +1672,5 @@
 	"tags":[
 		"text-to-agent"
 	],
-	"version":40
+	"version":42
 }
