@@ -1,0 +1,268 @@
+{
+	"appsUsed":[
+		"sftp"
+	],
+	"createdTime":1727181215052,
+	"deleted":false,
+	"deployedVersion":2,
+	"deploymentState":{
+		"deployedAt":1727183450281,
+		"deployedBy":3562,
+		"deployedDefinitionId":"66f2ba5af5e6a15c4fa9337d",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":10
+	},
+	"edges":[
+		{
+			"fromNodeId":"VGwZl",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"IlyDJ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"IlyDJ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"BSb6S",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"BSb6S",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"tjOmC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"tjOmC",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"IlyDJ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"IlyDJ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"TUxEt",
+			"type":"next"
+		}
+	],
+	"id":"66f2b19f0ef9270167076e91",
+	"lastModifiedBy":0,
+	"lcName":"[hdfc] email upload sftp",
+	"modifiedTime":1780496145978,
+	"name":"[HDFC] Email Upload SFTP",
+	"nodes":[
+		{
+			"context":{
+				"appName":"sftp",
+				"resourceVersion":2132,
+				"connectionId":"66e84c8460c28f2b8d088fc6",
+				"resourceName":"sftp_on_new_or_updated_csv_file"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4BgSN-1",
+			"id":"VGwZl",
+			"index":0,
+			"inputs":{
+				"path":"/Uploads/",
+				"headerRow":true,
+				"columns":[
+					"MESSAGE_ID",
+					"MSISDN",
+					"REQUEST_TIME",
+					"VENDOR_SUBMIT_TIME",
+					"DIV_ID",
+					"VENDOR_RESPONSE_ID",
+					"MESSAGE_TEXT",
+					"VENDOR",
+					"STATUS",
+					"STATUS_DESC"
+				],
+				"delimiter":",",
+				"batch":true,
+				"encoding":"UTF-8",
+				"batchSize":100,
+				"recursive":false,
+				"concurrency":1
+			},
+			"skip":false,
+			"subTitle":"SFTP",
+			"title":"On new or updated csv file",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":93,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4BgSN-1",
+			"id":"IlyDJ",
+			"index":0,
+			"inputs":{
+				"repeatMode":"SINGLE",
+				"listSource":"{{ VGwZl.outputs.rows }}"
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"For loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":120,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"IlyDJ@4BgSN-1@l",
+			"id":"BSb6S",
+			"index":0,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"CLExceedance":{
+							"type":"boolean",
+							"title":"CL Exceedance"
+						},
+						"CTAPresent":{
+							"type":"boolean",
+							"title":"CTA Present"
+						},
+						"DuplicateMail":{
+							"type":"boolean",
+							"title":"Duplicate Mail"
+						},
+						"isOTP":{
+							"type":"boolean",
+							"title":"Is OTP"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"CTAPresent":"=IF(NOT(OR( REGEXMATCH({{ IlyDJ.outputs.item.MESSAGE_TEXT }}, \"\\b\\d{10}\\b\"), REGEXMATCH({{ IlyDJ.outputs.item.MESSAGE_TEXT }}, \"1800\\d{7}\"), REGEXMATCH({{ IlyDJ.outputs.item.MESSAGE_TEXT }}, \"hdfcbk\\.io\") )), false,true)",
+				"DuplicateMail":false,
+				"CLExceedance":"=IF(LEN({{ IlyDJ.outputs.item.MESSAGE_TEXT }}) >= 160, true, false)",
+				"isOTP":"=IF(REGEXMATCH({{ IlyDJ.outputs.item.MESSAGE_TEXT }}, \"(is your otp|your otp|secret otp|one time password|OTP for validation|OTP for authentication|OTP for)\"),true,false)"
+			},
+			"outputSchema":{
+				"type":"SCHEMA",
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"CLExceedance":{
+							"type":"boolean",
+							"title":"CL Exceedance"
+						},
+						"CTAPresent":{
+							"type":"boolean",
+							"title":"CTA Present"
+						},
+						"DuplicateMail":{
+							"type":"boolean",
+							"title":"Duplicate Mail"
+						},
+						"isOTP":{
+							"type":"boolean",
+							"title":"Is OTP"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":2052,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"IlyDJ@4BgSN-1@l",
+			"id":"tjOmC",
+			"index":0,
+			"inputs":{
+				"object_type":"hdfc_emails",
+				"record":{
+					"duplicate":"{{ BSb6S.outputs.DuplicateMail }}",
+					"CLExceeded":"{{ BSb6S.outputs.CLExceedance }}",
+					"CTAPresent":"{{ BSb6S.outputs.CTAPresent }}",
+					"isOTP":"{{ BSb6S.outputs.isOTP }}",
+					"status":"=IF({{ IlyDJ.outputs.item.STATUS }}=\"S\", \"Sent\", IF({{ IlyDJ.outputs.item.STATUS }}=\"F\", \"Failed\", IF({{ IlyDJ.outputs.item.STATUS }}=\"D\", \"Delivered\", \"Other\")))",
+					"messageText":"{{ IlyDJ.outputs.item.MESSAGE_TEXT }}",
+					"divID":"{{ IlyDJ.outputs.item.DIV_ID }}",
+					"vendorSubmitTime":"{{ IlyDJ.outputs.item.VENDOR_SUBMIT_TIME }}",
+					"requestTime":"{{ IlyDJ.outputs.item.REQUEST_TIME }}",
+					"vendorResponseID":"{{ IlyDJ.outputs.item.VENDOR_RESPONSE_ID }}",
+					"statusDescription":"{{ IlyDJ.outputs.item.STATUS_DESC }}",
+					"MISISDN":"{{ IlyDJ.outputs.item.MSISDN }}",
+					"messageID":"{{ IlyDJ.outputs.item.MESSAGE_ID }}",
+					"vendor":"{{ IlyDJ.outputs.item.VENDOR }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4BgSN-1",
+			"id":"TUxEt",
+			"index":0,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":3562,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":11
+}
