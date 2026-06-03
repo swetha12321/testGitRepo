@@ -1,0 +1,833 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1726565852546,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1727861793564,
+		"deployedBy":520,
+		"deployedDefinitionId":"66fd14214ba6cf6fefebfe74",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":11
+	},
+	"description":"",
+	"edges":[
+		{
+			"fromNodeId":"YnUAj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"dMv0s",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"dMv0s",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"D8y9K",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"D8y9K",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"2tt17",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"2tt17",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"cqtCL",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"cqtCL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"MWsYB",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"MWsYB",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"HswLY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"HswLY",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"krODL",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"krODL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"VuKC2",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"VuKC2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"GpWjh",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"HswLY",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"GpWjh",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"GpWjh",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"u1Guz",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"u1Guz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"TL9OT",
+			"type":"next"
+		}
+	],
+	"id":"66e94ddc6ded246ab034c06f",
+	"lastModifiedBy":0,
+	"lcName":"tta_test",
+	"modifiedTime":1780496148043,
+	"name":"TTA_TEST",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":46,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"YnUAj-1",
+			"id":"YnUAj",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"predictedWorkflow":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Predicted Workflow"
+						},
+						"llmResponse":{
+							"type":"string",
+							"title":"Llm Response"
+						},
+						"reasoning":{
+							"type":"string",
+							"title":"reasoning"
+						},
+						"context_actions":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"connector":{
+										"type":"string",
+										"title":"connector"
+									},
+									"action":{
+										"type":"string",
+										"title":"action"
+									},
+									"actionDescription":{
+										"type":"string",
+										"title":"actionDescription"
+									},
+									"resourcetype":{
+										"type":"string",
+										"title":"resourcetype"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"context_actions"
+						},
+						"used_actions":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"connector":{
+										"type":"string",
+										"title":"connector"
+									},
+									"action":{
+										"type":"string",
+										"title":"action"
+									},
+									"actionDescription":{
+										"type":"string",
+										"title":"actionDescription"
+									},
+									"resourcetype":{
+										"type":"string",
+										"title":"resourcetype"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"used_actions"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"properties":{
+						"caseId":{
+							"type":"string",
+							"title":"Case Id"
+						},
+						"workflow":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Workflow"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":1070,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"YnUAj-1",
+			"id":"dMv0s",
+			"index":0,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_entityId",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ YnUAj.outputs.caseId }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"workflow_co_pilot_metadata",
+				"page":{
+					"limit":20,
+					"offset":0
+				},
+				"numberOfRecordsToFetch":"SINGLE",
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Fetch Co Pilot Info",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":48,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"YnUAj-1",
+			"id":"D8y9K",
+			"index":0,
+			"inputs":{
+				"automationId":"66a5d045873bc65fcea8378d",
+				"synchronous":true,
+				"parameters":{
+					"caseId":"{{ YnUAj.outputs.caseId }}",
+					"workflow":"{{ YnUAj.outputs.workflow }}",
+					"usedActions":{
+						"source":"{{ dMv0s.outputs.properties.used_actions }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"connector":"{{ dMv0s.outputs.properties.used_actions[0].connector }}",
+							"action":"{{ dMv0s.outputs.properties.used_actions[0].action }}",
+							"actionDescription":"{{ dMv0s.outputs.properties.used_actions[0].actionDescription }}",
+							"resourceType":"{{ dMv0s.outputs.properties.used_actions[0].resourcetype }}"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"prepare payload for LLM",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":48,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"YnUAj-1",
+			"id":"2tt17",
+			"index":0,
+			"inputs":{
+				"automationId":"66a4b147e9ba8d4faababc3c",
+				"synchronous":true,
+				"parameters":{
+					"userQuery":"{{ YnUAj.outputs.userQuery }}",
+					"payloads":{
+						"ua:type":"mappedArray",
+						"items":{
+							"messages":{
+								"ua:type":"mappedArray",
+								"items":{
+									"blocks":{
+										"ua:type":"mappedArray",
+										"items":{
+											"data":{
+												"text":"{{ D8y9K.outputs.payloads[0].messages[0].blocks[0].data.text }}"
+											},
+											"blockType":"{{ D8y9K.outputs.payloads[0].messages[0].blocks[0].blockType }}"
+										},
+										"source":"{{ D8y9K.outputs.payloads[0].messages[0].blocks }}"
+									},
+									"additional":{
+										"used_actions":{
+											"source":"{{ gYAyn.outputs.result.payloads[0].messages[0].additional.used_actions }}",
+											"ua:type":"mappedArray"
+										},
+										"context_actions":{
+											"source":"{{ gYAyn.outputs.result.payloads[0].messages[0].additional.context_actions }}",
+											"ua:type":"mappedArray"
+										}
+									},
+									"role":"{{ D8y9K.outputs.payloads[0].messages[0].role }}"
+								},
+								"source":"{{ D8y9K.outputs.payloads[0].messages }}"
+							},
+							"additional":{
+								"context_actions":{
+									"source":"{{ dMv0s.outputs.properties.context_actions }}",
+									"ua:type":"mappedArray",
+									"items":{
+										"connector":"{{ dMv0s.outputs.properties.context_actions[0].connector }}",
+										"action":"{{ dMv0s.outputs.properties.context_actions[0].action }}",
+										"actionDescription":"{{ dMv0s.outputs.properties.context_actions[0].actionDescription }}",
+										"resourceType":"{{ dMv0s.outputs.properties.context_actions[0].resourcetype }}"
+									}
+								},
+								"used_actions":{
+									"source":"{{ D8y9K.outputs.payloads[0].additional.used_actions }}",
+									"ua:type":"mappedArray",
+									"items":{
+										"connector":"{{ D8y9K.outputs.payloads[0].additional.used_actions[0].connector }}",
+										"action":"{{ D8y9K.outputs.payloads[0].additional.used_actions[0].action }}",
+										"actionDescription":"{{ D8y9K.outputs.payloads[0].additional.used_actions[0].actionDescription }}",
+										"resourceType":"{{ D8y9K.outputs.payloads[0].additional.used_actions[0].resourceType }}"
+									}
+								}
+							}
+						},
+						"source":"{{ D8y9K.outputs.payloads }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Text to Workflow - LLM",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":12,
+				"resourceName":"utility_by_unifyapps_to_json_object",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"YnUAj-1",
+			"id":"cqtCL",
+			"index":0,
+			"inputs":{
+				"jsonSchema":{
+					"type":"object",
+					"properties":{
+						"workflow":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"connector":{
+										"type":"string",
+										"title":"connector"
+									},
+									"subflow":{
+										"type":"object",
+										"properties":{
+											"1":{
+												"type":"array",
+												"items":{
+													"type":"object",
+													"properties":{
+														"connector":{
+															"type":"string",
+															"title":"connector"
+														},
+														"subflow":{
+															"type":"object",
+															"properties":{
+																"1":{
+																	"type":"array",
+																	"items":{
+																		"type":"object",
+																		"properties":{
+																			"connector":{
+																				"type":"string",
+																				"title":"connector"
+																			},
+																			"action":{
+																				"type":"string",
+																				"title":"action"
+																			}
+																		},
+																		"additionalProperties":false
+																	},
+																	"title":"1"
+																},
+																"2":{
+																	"type":"array",
+																	"items":{
+																		"type":"object",
+																		"properties":{
+																			"connector":{
+																				"type":"string",
+																				"title":"connector"
+																			},
+																			"action":{
+																				"type":"string",
+																				"title":"action"
+																			}
+																		},
+																		"additionalProperties":false
+																	},
+																	"title":"2"
+																}
+															},
+															"title":"subflow",
+															"additionalProperties":false
+														},
+														"action":{
+															"type":"string",
+															"title":"action"
+														}
+													},
+													"additionalProperties":false
+												},
+												"title":"1"
+											}
+										},
+										"title":"subflow",
+										"additionalProperties":false
+									},
+									"action":{
+										"type":"string",
+										"title":"action"
+									},
+									"trigger":{
+										"type":"string",
+										"title":"trigger"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"workflow"
+						},
+						"reasoning":{
+							"type":"string",
+							"title":"reasoning"
+						}
+					},
+					"additionalProperties":false
+				},
+				"jsonString":"{{ 2tt17.outputs.results[0].data.text }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Deserialize string to json object",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":58,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"YnUAj-1",
+			"id":"MWsYB",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"isEmptyWorkflow":{
+							"type":"boolean",
+							"title":"Is Empty Workflow"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"reasoning":{
+							"type":"string",
+							"title":"Reasoning"
+						},
+						"workflow":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Workflow"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"code":"if (!binding.hasVariable(\"workflow\")) {\n    return [\"isEmptyWorkflow\": true]\n}\n\nboolean isEmptyWorkflow = workflow.empty\nreturn [\"isEmptyWorkflow\": isEmptyWorkflow]\n",
+				"isAsync":false,
+				"parameters":{
+					"workflow":{
+						"ua:type":"mappedArray",
+						"source":"{{ cqtCL.outputs.result.workflow }}",
+						"items":"{{ cqtCL.outputs.result.workflow[0] }}"
+					},
+					"reasoning":"{{ cqtCL.outputs.result.reasoning }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":50,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"YnUAj-1",
+			"id":"HswLY",
+			"index":0,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ MWsYB.outputs.result.isEmptyWorkflow }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"true"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":48,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"HswLY@YnUAj-1@y",
+			"id":"krODL",
+			"index":0,
+			"inputs":{
+				"result":{
+					"llmResponse":"{{ 2tt17.outputs.results[0].data.text }}",
+					"reasoning":"{{ cqtCL.outputs.result.reasoning }}",
+					"context_actions":{
+						"source":"{{ 2tt17.outputs.additional.context_actions }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"connector":"{{ 2tt17.outputs.additional.context_actions[0].connector }}",
+							"action":"{{ 2tt17.outputs.additional.context_actions[0].action }}",
+							"actionDescription":"{{ 2tt17.outputs.additional.context_actions[0].actionDescription }}",
+							"resourcetype":"{{ 2tt17.outputs.additional.context_actions[0].resourcetype }}"
+						}
+					},
+					"used_actions":{
+						"source":"{{ 2tt17.outputs.additional.used_actions }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"connector":"{{ 2tt17.outputs.additional.used_actions[0].connector }}",
+							"action":"{{ 2tt17.outputs.additional.used_actions[0].action }}",
+							"actionDescription":"{{ 2tt17.outputs.additional.used_actions[0].actionDescription }}",
+							"resourcetype":"{{ 2tt17.outputs.additional.used_actions[0].resourcetype }}"
+						}
+					},
+					"predictedWorkflow":"{}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"HswLY@YnUAj-1@y",
+			"id":"VuKC2",
+			"index":0,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":48,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"YnUAj-1",
+			"id":"GpWjh",
+			"index":0,
+			"inputs":{
+				"automationId":"6699251e2925925dd2563f2b",
+				"synchronous":true,
+				"parameters":{
+					"workflowJson":"{{ cqtCL.outputs.result.workflow }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"LLM response to Workflow Json",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":52,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"YnUAj-1",
+			"id":"u1Guz",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"workflowJson":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Workflow Json"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"nodes":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Nodes",
+							"required":[]
+						},
+						"edges":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Edges"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"code":"def workflowJson = [\"nodes\": nodes]\nif(!binding.hasVariable('edges')){\n    workflowJson.put(\"edges\", [])\n} else {\n     workflowJson.put(\"edges\",edges)\n}\nreturn [\"workflowJson\": workflowJson];",
+				"parameters":{
+					"nodes":"{{ GpWjh.outputs.nodes }}",
+					"edges":"{{ GpWjh.outputs.edges }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code By UnifyApps",
+			"title":"Execute groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":42,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"YnUAj-1",
+			"id":"TL9OT",
+			"index":0,
+			"inputs":{
+				"result":{
+					"nodes":{
+						"source":"{{ GpWjh.outputs.nodes }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"subTitle":"{{ GpWjh.outputs.nodes[0].subTitle }}",
+							"inputs":{
+								"repeatMode":"{{ GpWjh.outputs.nodes[0].inputs.repeatMode }}",
+								"name":"{{ GpWjh.outputs.nodes[0].inputs.name }}",
+								"branches":{
+									"source":"{{ GpWjh.outputs.nodes[0].inputs.branches }}",
+									"ua:type":"mappedArray",
+									"items":{
+										"inputs":{
+											"name":"{{ GpWjh.outputs.nodes[0].inputs.branches[0].inputs.name }}"
+										},
+										"id":"{{ GpWjh.outputs.nodes[0].inputs.branches[0].id }}"
+									}
+								}
+							},
+							"fallbackMode":"{{ GpWjh.outputs.nodes[0].fallbackMode }}",
+							"groupId":"{{ GpWjh.outputs.nodes[0].groupId }}",
+							"context":{
+								"appName":"{{ GpWjh.outputs.nodes[0].context.appName }}",
+								"resourceName":"{{ GpWjh.outputs.nodes[0].context.resourceName }}",
+								"type":"{{ GpWjh.outputs.nodes[0].context.type }}"
+							},
+							"skip":"{{ GpWjh.outputs.nodes[0].skip }}",
+							"id":"{{ GpWjh.outputs.nodes[0].id }}",
+							"trigger":{
+								"type":"{{ GpWjh.outputs.nodes[0].trigger.type }}"
+							},
+							"title":"{{ GpWjh.outputs.nodes[0].title }}",
+							"type":"{{ GpWjh.outputs.nodes[0].type }}"
+						}
+					},
+					"name":"{{ GpWjh.outputs.name }}",
+					"edges":{
+						"source":"{{ GpWjh.outputs.edges }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"name":"{{ GpWjh.outputs.edges[0].name }}",
+							"toNodeId":"{{ GpWjh.outputs.edges[0].toNodeId }}",
+							"fromNodeId":"{{ GpWjh.outputs.edges[0].fromNodeId }}",
+							"type":"{{ GpWjh.outputs.edges[0].type }}"
+						}
+					},
+					"description":"{{ GpWjh.outputs.description }}",
+					"workflowJson":"{{ u1Guz.outputs.result.workflowJson }}",
+					"reasoning":"{{ cqtCL.outputs.result.reasoning }}",
+					"copilotInfos":"{{ 2tt17.outputs.additional }}",
+					"llmResponse":"{{ 2tt17.outputs.results[0].data.text }}",
+					"used_actions":{
+						"source":"{{ 2tt17.outputs.additional.used_actions }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"connector":"{{ 2tt17.outputs.additional.used_actions[0].connector }}",
+							"action":"{{ 2tt17.outputs.additional.used_actions[0].action }}",
+							"actionDescription":"{{ 2tt17.outputs.additional.used_actions[0].actionDescription }}",
+							"resourcetype":"{{ 2tt17.outputs.additional.used_actions[0].resourcetype }}"
+						}
+					},
+					"predictedWorkflow":"{{ u1Guz.outputs.result.workflowJson }}",
+					"context_actions":{
+						"ua:type":"mappedArray",
+						"items":{
+							"connector":"{{ 2tt17.outputs.additional.context_actions[0].connector }}",
+							"action":"{{ 2tt17.outputs.additional.context_actions[0].action }}",
+							"actionDescription":"{{ 2tt17.outputs.additional.context_actions[0].actionDescription }}",
+							"resourcetype":"{{ 2tt17.outputs.additional.context_actions[0].resourcetype }}"
+						},
+						"source":"{{ 2tt17.outputs.additional.context_actions }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Return data to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":17,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":12
+}
