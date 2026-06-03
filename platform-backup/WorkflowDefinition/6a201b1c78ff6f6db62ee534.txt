@@ -4,6 +4,15 @@
 	],
 	"createdTime":1780488988443,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1780489010188,
+		"deployedBy":132116,
+		"deployedDefinitionId":"6a201b32ebaa0148481aaba1",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_Sb7hE",
@@ -16,7 +25,7 @@
 	"id":"6a201b1c78ff6f6db62ee534",
 	"lastModifiedBy":132116,
 	"lcName":"reds",
-	"modifiedTime":1780489008116,
+	"modifiedTime":1780489011740,
 	"name":"reds",
 	"nodes":[
 		{
@@ -26,7 +35,7 @@
 				"resourceName":"callables_from_api"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_1u7Pa-1",
 			"id":"n_Sb7hE",
@@ -67,7 +76,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_1u7Pa-1",
 			"id":"n_re8m4",
@@ -97,5 +106,5 @@
 		}
 	},
 	"standard":false,
-	"version":1
+	"version":2
 }
