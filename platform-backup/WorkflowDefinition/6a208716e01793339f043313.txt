@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780516630310,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_IUYIS",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_C9tVl",
+			"type":"next"
+		}
+	],
+	"id":"6a208716e01793339f043313",
+	"lastModifiedBy":517,
+	"lcName":"kafka topics cleanup",
+	"modifiedTime":1780516630310,
+	"name":"Kafka Topics Cleanup",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_IUYIS-1",
+			"id":"_IUYIS",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_IUYIS-1",
+			"id":"_C9tVl",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":517,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
