@@ -1,0 +1,600 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1753956597893,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"dLtOG",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"o1lnC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"o1lnC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"K1FVg",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"K1FVg",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"jZE81",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"K1FVg",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_EzkEa",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"jZE81",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_EzkEa",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_EzkEa",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"usryV",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"usryV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"ynFPS",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"ynFPS",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"MOS7l",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"MOS7l",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"pSQDR",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"ynFPS",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"pSQDR",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"pSQDR",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"hbDEU",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"hbDEU",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Bj9rR",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"Bj9rR",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"GNCFO",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"hbDEU",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"GNCFO",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"GNCFO",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"ZGof8",
+			"type":"next"
+		}
+	],
+	"id":"688b40f5f080723d75eed8b0",
+	"lastModifiedBy":-1,
+	"lcName":"mdm record processor (copy) (copy)",
+	"modifiedTime":1780492419624,
+	"name":"MDM Record Processor (copy) (copy)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":305,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Ia0uz-1",
+			"id":"dLtOG",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"processed":{
+							"type":"integer",
+							"title":"Processed"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"processed"
+					]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"modelId":{
+							"type":"string",
+							"title":"Model Id"
+						},
+						"entityId":{
+							"type":"string",
+							"title":"Entity Id"
+						},
+						"batchSize":{
+							"type":"integer",
+							"title":"Batch Size"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"modelId",
+						"entityId",
+						"batchSize"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"mdm_by_unifyapps",
+				"resourceVersion":14,
+				"resourceName":"mdm_by_unifyapps_fetch_staging_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Ia0uz-1",
+			"id":"o1lnC",
+			"index":2,
+			"inputs":{
+				"size":"{{ dLtOG.outputs.batchSize }}",
+				"modelId":"{{ dLtOG.outputs.modelId }}",
+				"unifiedEntityId":"{{ dLtOG.outputs.entityId }}"
+			},
+			"skip":false,
+			"subTitle":"MDM by UnifyApps",
+			"title":"Fetch Staging Records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":283,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Ia0uz-1",
+			"id":"K1FVg",
+			"index":3,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ o1lnC.outputs.records[0].stageRecordId }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":302,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"K1FVg@Ia0uz-1@n",
+			"id":"jZE81",
+			"index":4,
+			"inputs":{
+				"result":{
+					"processed":0
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.records.items.stageRecordId",
+					"root.records.items.sourceId",
+					"root.records.items.recordEventType",
+					"root.records.items.matchedRecordId",
+					"root.records.items.properties",
+					"root.records.source",
+					"root.records.ua:type",
+					"root.records.items.stageRecordId",
+					"root.records.items.sourceId",
+					"root.records.items.recordEventType"
+				]
+			},
+			"context":{
+				"appName":"mdm_by_unifyapps",
+				"resourceVersion":14,
+				"resourceName":"mdm_by_unifyapps_apply_survivorship_rules",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Ia0uz-1",
+			"id":"_EzkEa",
+			"index":5,
+			"inputs":{
+				"modelId":"{{ dLtOG.outputs.modelId }}",
+				"records":{
+					"source":"{{ o1lnC.outputs.records }}",
+					"ua:type":"mappedArray",
+					"items":{
+						"stageRecordId":"{{ o1lnC.outputs.records[0].stageRecordId }}",
+						"sourceId":"{{ o1lnC.outputs.records[0].sourceId }}",
+						"recordEventType":"{{ o1lnC.outputs.records[0].recordEventType }}",
+						"properties":"{{ o1lnC.outputs.records[0].properties }}",
+						"matchedRecordId":"{{ o1lnC.outputs.records[0].unifiedEntityId }}"
+					}
+				},
+				"unifiedEntityId":"{{ dLtOG.outputs.entityId }}"
+			},
+			"skip":false,
+			"subTitle":"MDM by UnifyApps",
+			"title":"Apply Data Survivorship Rules",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.records.items.stageRecordId",
+					"root.records.items.recordEventType",
+					"root.records.items.properties",
+					"root.records.items.sourceId"
+				]
+			},
+			"context":{
+				"appName":"mdm_by_unifyapps",
+				"resourceVersion":1,
+				"resourceName":"mdm_by_unifyapps_apply_data_quality_rules",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"CONTINUE",
+			"groupId":"Ia0uz-1",
+			"id":"usryV",
+			"index":6,
+			"inputs":{
+				"records":{
+					"source":"{{ o1lnC.outputs.records }}",
+					"ua:type":"mappedArray",
+					"items":{
+						"stageRecordId":"{{ o1lnC.outputs.records[0].stageRecordId }}",
+						"recordEventType":"{{ o1lnC.outputs.records[0].recordEventType }}",
+						"properties":"{{ o1lnC.outputs.records[0].properties }}",
+						"sourceId":"{{ o1lnC.outputs.records[0].sourceId }}"
+					}
+				},
+				"modelId":"{{ dLtOG.outputs.modelId }}",
+				"unifiedEntityId":"{{ dLtOG.outputs.entityId }}"
+			},
+			"options":{
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false
+				},
+				"logConfig":{
+					"enabled":false
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"CONTINUE",
+				"telemetryConfig":{
+					"enableTelemetry":false
+				}
+			},
+			"skip":true,
+			"subTitle":"MDM by UnifyApps",
+			"title":"Apply Data Quality Rules",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":283,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Ia0uz-1",
+			"id":"ynFPS",
+			"index":7,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ usryV.outputs.validRecords[0].record.stageRecordId }}",
+						"filter":{
+							"operator":"MISSING"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":302,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ynFPS@Ia0uz-1@y",
+			"id":"MOS7l",
+			"index":8,
+			"inputs":{
+				"result":{
+					"processed":"=LEN({{ o1lnC.outputs.records }})"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.records.items.stageRecordId",
+					"root.records.items.sourceId",
+					"root.records.items.recordEventType",
+					"root.records.items.properties"
+				]
+			},
+			"context":{
+				"appName":"mdm_by_unifyapps",
+				"resourceVersion":25,
+				"resourceName":"mdm_by_unifyapps_apply_data_matching_rules",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Ia0uz-1",
+			"id":"pSQDR",
+			"index":9,
+			"inputs":{
+				"modelId":"{{ dLtOG.outputs.modelId }}",
+				"records":{
+					"source":"{{ usryV.outputs.validRecords }}",
+					"ua:type":"mappedArray",
+					"items":{
+						"stageRecordId":"{{ usryV.outputs.validRecords[0].record.stageRecordId }}",
+						"sourceId":"{{ usryV.outputs.validRecords[0].record.sourceId }}",
+						"recordEventType":"{{ usryV.outputs.validRecords[0].record.recordEventType }}",
+						"properties":"{{ usryV.outputs.validRecords[0].record.properties }}"
+					}
+				},
+				"unifiedEntityId":"{{ dLtOG.outputs.entityId }}"
+			},
+			"skip":true,
+			"subTitle":"MDM by UnifyApps",
+			"title":"Apply Data Matching Rules",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":283,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Ia0uz-1",
+			"id":"hbDEU",
+			"index":10,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ pSQDR.outputs.matchedRecords[0].record.stageRecordId }}",
+						"filter":{
+							"operator":"MISSING"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":302,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"hbDEU@Ia0uz-1@y",
+			"id":"Bj9rR",
+			"index":11,
+			"inputs":{
+				"result":{
+					"processed":"=LEN({{ o1lnC.outputs.records }})"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.records.items.stageRecordId",
+					"root.records.items.sourceId",
+					"root.records.items.recordEventType",
+					"root.records.items.matchedRecordId",
+					"root.records.items.properties"
+				]
+			},
+			"context":{
+				"appName":"mdm_by_unifyapps",
+				"resourceVersion":14,
+				"resourceName":"mdm_by_unifyapps_apply_survivorship_rules",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Ia0uz-1",
+			"id":"GNCFO",
+			"index":12,
+			"inputs":{
+				"modelId":"{{ dLtOG.outputs.modelId }}",
+				"records":{
+					"source":"{{ pSQDR.outputs.matchedRecords }}",
+					"ua:type":"mappedArray",
+					"items":{
+						"stageRecordId":"{{ pSQDR.outputs.matchedRecords[0].record.stageRecordId }}",
+						"sourceId":"{{ pSQDR.outputs.matchedRecords[0].record.sourceId }}",
+						"recordEventType":"{{ pSQDR.outputs.matchedRecords[0].record.recordEventType }}",
+						"properties":"{{ pSQDR.outputs.matchedRecords[0].record.properties }}",
+						"matchedRecordId":"{{ pSQDR.outputs.matchedRecords[0].matchedEntityId }}"
+					}
+				},
+				"unifiedEntityId":"{{ dLtOG.outputs.entityId }}"
+			},
+			"skip":false,
+			"subTitle":"MDM by UnifyApps",
+			"title":"Apply Data Survivorship Rules",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":303,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Ia0uz-1",
+			"id":"ZGof8",
+			"index":13,
+			"inputs":{
+				"result":{
+					"processed":"=LEN({{ o1lnC.outputs.records }})"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":679,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":8
+}
