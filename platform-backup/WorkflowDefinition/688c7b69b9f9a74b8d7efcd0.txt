@@ -1,0 +1,108 @@
+{
+	"appsUsed":[
+		"gmail"
+	],
+	"createdTime":1754037097449,
+	"deleted":false,
+	"deployedVersion":15,
+	"deploymentState":{
+		"deployedAt":1754144159369,
+		"deployedBy":118661,
+		"deployedDefinitionId":"688e1d9ba5c01cb2cd6b2bc1",
+		"status":"PAUSED",
+		"version":15,
+		"workflowVersion":27
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_RPsWE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_akCEb",
+			"type":"next"
+		}
+	],
+	"id":"688c7b69b9f9a74b8d7efcd0",
+	"lastModifiedBy":-1,
+	"lcName":"schedule test",
+	"modifiedTime":1780492419598,
+	"name":"Schedule Test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":785,
+				"resourceName":"schedule_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_1vq2I-1",
+			"id":"n_RPsWE",
+			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"interval":1,
+				"frequency":"MINUTES"
+			},
+			"skip":false,
+			"subTitle":"Schedule",
+			"title":"New recurring event",
+			"trigger":{
+				"type":"SCHEDULED"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"gmail",
+				"resourceVersion":5111,
+				"connectionId":"688c7bf6605f8d84c88f0c3c",
+				"resourceName":"gmail_send_email",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_1vq2I-1",
+			"id":"n_akCEb",
+			"index":2,
+			"inputs":{
+				"cc":{
+					"source":"kshitij.arora@unifyapps.com",
+					"ua:type":"mappedArray"
+				},
+				"email_type":"html",
+				"subject":"Daily Consent Report – [NotGiven, TimeOutput1 to TimeOutput2]",
+				"from":"kshitij.arora@unifyapps.com",
+				"to":{
+					"items":"kshitij.arora@unifyapps.com",
+					"ua:type":"mappedArray"
+				},
+				"message":"<!DOCTYPE html> <html> <head> <meta charset=\"UTF-8\"> <title>Consent Management Report</title> <style> body { font-family: Arial, sans-serif; color: #333; background-color: #f9f9f9; margin: 0; padding: 0; } .container { max-width: 600px; margin: 30px auto; background: #ffffff; border: 1px solid #ddd; padding: 30px; border-radius: 8px; } .header { font-size: 18px; font-weight: bold; color: #004481; margin-bottom: 10px; } .content { font-size: 15px; line-height: 1.5; } .footer { margin-top: 30px; font-size: 13px; color: #777; } .highlight { font-weight: bold; color: #000; } .cta-link { display: inline-block; padding: 10px 20px; background-color: #004481; color: #ffffff; text-decoration: none; border-radius: 4px; } .note { background-color: #f1f1f1; padding: 10px; border-left: 4px solid #004481; margin-top: 20px; font-size: 15px; } .confidentiality { font-size: 15px; background-color: #f1f1f1; border-left: 4px solid #FFA000; /* Darker amber for accent */ padding: 10px; line-height: 1.5; margin-bottom: 20px; color: #000; } </style> </head> <body> <div class=\"container\"> <div class=\"confidentiality\"> <strong>Confidentiality Notice:</strong> This report contains sensitive user data related to consent and preference choices. Please handle in accordance with the Bank's data privacy and governance policies. </div> <div class=\"header\">Daily Consent Report</div> <div class=\"content\"> The <span class=\"highlight\">Daily Opt-In Consent Report </span> for the schedule <span class=\"highlight\">1st August </span> is now available for you. <br><br> <a href=\"\" class=\"cta-link\">Download Report: Click Here</a> <br><br> <strong>Access Control:</strong> Restricted to authorized recipients only. <div class=\"note\"> <strong>Note:</strong> This is an automated email. Please do not reply to this message. For any queries or support, contact <a href=\"mailto:team-CMS@hdfcbank.com\">team-CMS@hdfcbank.com</a> and <a href=\"mailto:Dataprivacyoffice@hdfcbank.com\">Dataprivacyoffice@hdfcbank.com</a>. </div> </div> <div class=\"footer\"> Warm Regards,<br> <strong>Consent Management Team</strong><br> Powered by Data Office<br> HDFC Bank Limited </div> </div> </body> </html>"
+			},
+			"skip":false,
+			"subTitle":"Gmail",
+			"title":"Send email",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":118661,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":28
+}
