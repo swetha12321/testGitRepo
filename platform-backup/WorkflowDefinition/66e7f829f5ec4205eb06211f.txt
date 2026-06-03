@@ -1,0 +1,86 @@
+{
+	"appsUsed":[
+		"postgres"
+	],
+	"createdTime":1726478377357,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"HHy1s",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"MjPxD",
+			"type":"next"
+		}
+	],
+	"id":"66e7f829f5ec4205eb06211f",
+	"lastModifiedBy":0,
+	"lcName":"test",
+	"modifiedTime":1780496149370,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":59,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"mB4Fx-1",
+			"id":"HHy1s",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"HTTP Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"postgres",
+				"resourceVersion":2078,
+				"connectionId":"66e80edab9bdcd022a987671",
+				"resourceName":"postgres_insert_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"mB4Fx-1",
+			"id":"MjPxD",
+			"index":0,
+			"inputs":{
+				"schema":"public",
+				"record":{
+					"first_name":"first_name example -1 ",
+					"last_name":"last_name example -2"
+				},
+				"table":"public.customer"
+			},
+			"skip":false,
+			"subTitle":"Postgres",
+			"title":"Insert record",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":7
+}
