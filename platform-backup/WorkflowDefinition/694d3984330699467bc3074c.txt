@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1766668676556,
+	"deleted":false,
+	"description":"description",
+	"edges":[
+		{
+			"fromNodeId":"_LUVIg",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_oYLmw",
+			"type":"next"
+		}
+	],
+	"id":"694d3984330699467bc3074c",
+	"lastModifiedBy":-1,
+	"lcName":"condition box|string input - not in 21766666883114",
+	"modifiedTime":1780492411371,
+	"name":"Condition Box|String Input - Not in 21766666883114",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_LUVIg-1",
+			"id":"_LUVIg",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_LUVIg-1",
+			"id":"_oYLmw",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
