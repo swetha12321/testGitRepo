@@ -1,0 +1,228 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1754910845858,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_jytyb",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_fMb6t",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_fMb6t",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_r4lIZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_r4lIZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_FBX2P",
+			"type":"next"
+		}
+	],
+	"id":"6899d07dd5c75103ae42ca92",
+	"lastModifiedBy":-1,
+	"lcName":"test",
+	"modifiedTime":1780492419299,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":802,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Pv13G-1",
+			"id":"n_jytyb",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":806,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Pv13G-1",
+			"id":"n_fMb6t",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"headers":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Headers"
+						},
+						"mockData":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"id":{
+										"type":"string",
+										"title":"Id"
+									},
+									"actionDefId":{
+										"type":"string",
+										"title":"Action Def Id"
+									},
+									"type":{
+										"type":"string",
+										"title":"Type"
+									}
+								},
+								"additionalProperties":false,
+								"required":[
+									"id",
+									"actionDefId",
+									"type"
+								]
+							},
+							"title":"Mock Data"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"headers",
+						"mockData"
+					]
+				},
+				"compile_static":false,
+				"code":"def mp = [:]\nmp[\"headers\"] = [\"id\", \"type\", \"actionDefId\"]\nmp[\"mockData\"] = [\n    [id: \"0\", type: \"ACTION\",  actionDefId: \"6713526644b0\"],\n    [id: \"1\", type: \"LOOP\",    actionDefId: \"6713526644b1\"],\n    [id: \"2\", type: \"LOOP\",    actionDefId: \"6713526644b2\"],\n    [id: \"3\", type: \"LOOP\",    actionDefId: \"6713526644b3\"],\n    [id: \"4\", type: \"LOOP\",    actionDefId: \"6713526644b4\"],\n    [id: \"5\", type: \"TRIGGER\", actionDefId: \"6713526644b5\"],\n    [id: \"6\", type: \"ACTION\",  actionDefId: \"6713526644b6\"],\n    [id: \"7\", type: \"TRIGGER\", actionDefId: \"6713526644b7\"],\n    [id: \"8\", type: \"ACTION\",  actionDefId: \"6713526644b8\"],\n    [id: \"9\", type: \"ACTION\",  actionDefId: \"6713526644b9\"],\n    [id: \"10\", type: \"ACTION\", actionDefId: \"6713526644ba\"]\n]\nreturn mp\n"
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"csv_by_unifyapps",
+				"resourceVersion":734,
+				"resourceName":"csv_by_unifyapps_list_to_csv_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Pv13G-1",
+			"id":"n_r4lIZ",
+			"index":3,
+			"inputs":{
+				"fileName":"testingCSV1",
+				"delimiter":",",
+				"staticHeaders":[
+					{
+						"key":"id",
+						"value":"{{ n_fMb6t.outputs.result.mockData[0].id }}"
+					},
+					{
+						"key":"type",
+						"value":"{{ n_fMb6t.outputs.result.mockData[0].type }}"
+					},
+					{
+						"key":"actionDefId",
+						"value":"{{ n_fMb6t.outputs.result.mockData[0].actionDefId }}"
+					}
+				],
+				"skipHeaderRow":false,
+				"headerType":"STATIC",
+				"encoding":"UTF-8",
+				"keepExactFileName":true,
+				"dataSource":"{{ n_fMb6t.outputs.result.mockData[0] }}",
+				"fileType":"csv"
+			},
+			"skip":false,
+			"subTitle":"CSV by UnifyApps",
+			"title":"Write data to CSV file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"csv_by_unifyapps",
+				"resourceVersion":1,
+				"resourceName":"csv_by_unifyapps_append_list_to_csv_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Pv13G-1",
+			"id":"n_FBX2P",
+			"index":4,
+			"inputs":{
+				"fileDetails":"{{ n_r4lIZ.outputs.fileDetails }}",
+				"delimiter":",",
+				"staticHeaders":[
+					{
+						"key":"id",
+						"value":"{{ n_fMb6t.outputs.result.mockData[0].id }}"
+					},
+					{
+						"key":"type",
+						"value":"{{ n_fMb6t.outputs.result.mockData[0].type }}"
+					},
+					{
+						"key":"actionDefId",
+						"value":"{{ n_fMb6t.outputs.result.mockData[0].actionDefId }}"
+					}
+				],
+				"skipHeaderRow":false,
+				"headerType":"STATIC",
+				"encoding":"UTF-8",
+				"dataSource":"{{ n_fMb6t.outputs.result.mockData }}"
+			},
+			"skip":false,
+			"subTitle":"CSV by UnifyApps",
+			"title":"Append data to CSV file",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":15,
+	"schemaReferences":[
+		"entity|e_code_snippet|e_675ab04d4993fb5b822f33c8"
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":7
+}
