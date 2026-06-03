@@ -6,46 +6,121 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_XsBTR",
+			"fromNodeId":"n_8O5os",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_pBHoU",
+			"toNodeId":"n_6tncO",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_6tncO",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_BV2PK",
 			"type":"next"
 		}
 	],
 	"id":"6a200ca806b2ad6157a23144",
 	"lastModifiedBy":175325,
 	"lcName":"mergepdffilespdflocalveoigbexvk",
-	"modifiedTime":1780485288639,
+	"modifiedTime":1780485320706,
 	"name":"MergePDFFilesPDFLocalvEoIGBeXVk",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":4081,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_XsBTR-1",
-			"id":"_XsBTR",
-			"index":0,
+			"id":"n_8O5os",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"r":{
+							"type":"string",
+							"title":"r"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"a":{
+							"type":"string",
+							"title":"a"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"pdf_by_unifyapps",
+				"resourceVersion":1376,
+				"resourceName":"pdf_by_unifyapps_merge_pdfs",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_XsBTR-1",
-			"id":"_pBHoU",
-			"index":0,
+			"id":"n_6tncO",
+			"index":2,
+			"inputs":{
+				"combinedFileName":"mergedpdf",
+				"fileList":[
+					"https://pdfobject.com/pdf/sample.pdf",
+					"https://arxiv.org/pdf/2603.11044"
+				]
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"PDF by UnifyApps",
+			"title":"Merge PDF Files",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":4118,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_XsBTR-1",
+			"id":"n_BV2PK",
+			"index":3,
+			"inputs":{
+				"result":{
+					"r":"{{ n_6tncO.outputs.mergedFile }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":175325,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -56,5 +131,5 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"version":1
 }
