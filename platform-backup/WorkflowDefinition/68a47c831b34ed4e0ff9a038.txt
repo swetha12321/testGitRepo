@@ -1,0 +1,70 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1755610243873,
+	"deleted":false,
+	"deployedVersion":2,
+	"deploymentState":{
+		"deployedAt":1755610619983,
+		"deployedBy":426,
+		"deployedDefinitionId":"68a47dfb1b34ed4e0ff9b84e",
+		"deploymentTag":"asdfvbv",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":4
+	},
+	"edges":[
+		
+	],
+	"id":"68a47c831b34ed4e0ff9a038",
+	"lastModifiedBy":-1,
+	"lcName":"hellodaksbeersingh",
+	"modifiedTime":1780492418788,
+	"name":"hellodaksbeersingh",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":803,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_SGePz-1",
+			"id":"n_joDlb",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":426,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":7
+}
