@@ -1,0 +1,66 @@
+{
+	"appsUsed":[
+		"jira_service_management"
+	],
+	"createdTime":1754293920057,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1754294130288,
+		"deployedBy":3546,
+		"deployedDefinitionId":"68906770f85dafc40094f32b",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		
+	],
+	"id":"689066a0856432a9dc9e03cf",
+	"lastModifiedBy":-1,
+	"lcName":"gweyifgu",
+	"modifiedTime":1780492419479,
+	"name":"gweyifgu",
+	"nodes":[
+		{
+			"context":{
+				"appName":"jira_service_management",
+				"resourceVersion":69,
+				"connectionId":"6890675942ccd3df11d8084c",
+				"resourceName":"jira_service_management_on_new_or_updated_comment"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_resfG-1",
+			"id":"n_csekc",
+			"index":1,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Jira Service Management",
+			"title":"New or updated comment",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":3546,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
