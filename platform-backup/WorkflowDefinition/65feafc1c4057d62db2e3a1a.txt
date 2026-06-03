@@ -1,0 +1,52 @@
+{
+	"appsUsed":[
+		"servicenow"
+	],
+	"createdTime":1711189953326,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65feafc1c4057d62db2e3a1a",
+	"lastModifiedBy":7,
+	"lcName":"untitled",
+	"modifiedTime":1711191266937,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"servicenow"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"HspE6-1",
+			"id":"HspE6",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":7,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
