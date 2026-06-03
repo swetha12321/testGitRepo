@@ -24,7 +24,7 @@
 	},
 	"id":"app-level-module",
 	"lastModifiedBy":188280,
-	"modifiedTime":1780514424077,
+	"modifiedTime":1780514527579,
 	"ownerUserId":188280,
 	"properties":{
 		"standard":false,
@@ -43,6 +43,17 @@
 				"_moduleCount":1,
 				"_templateComponentCount":0
 			}
+		},
+		"publicPageIds":[],
+		"manifest":{
+			"type":"WEB"
+		},
+		"pagePermissions":{
+			"e_6a207e78fe4ba85bacb114d2":{}
+		},
+		"type":"application",
+		"locale":{
+			"defaultLocale":"en-US"
 		},
 		"navigation":{
 			"secondary":[],
@@ -202,10 +213,8 @@
 			"primary":[]
 		},
 		"interfacePageIdVsSlugMap":{
+			"e_6a207e78fe4ba85bacb114d2":"e_6a207e78fe4ba85bacb114d2",
 			"e_6a207e4a81afb649d0dc354d":"homepage"
-		},
-		"manifest":{
-			"type":"WEB"
 		},
 		"paths":{
 			"f_root":{
@@ -221,11 +230,12 @@
 		"theme":{
 			"defaultThemeId":"UNIFYAPPS_DEFAULT_THEME"
 		},
-		"type":"application",
-		"locale":{
-			"defaultLocale":"en-US"
-		},
 		"entityDetailsMap":{
+			"e_6a207e78fe4ba85bacb114d2":{
+				"slug":"e_6a207e78fe4ba85bacb114d2",
+				"isPublic":false,
+				"type":"PAGE"
+			},
 			"e_6a207e4a81afb649d0dc354d":{
 				"slug":"homepage",
 				"isPublic":false,
@@ -237,5 +247,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":11
 }
