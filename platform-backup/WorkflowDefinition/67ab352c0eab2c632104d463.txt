@@ -1,0 +1,92 @@
+{
+	"appsUsed":[
+		"quaderno"
+	],
+	"createdTime":1739273516917,
+	"deleted":false,
+	"deployedVersion":3,
+	"deploymentState":{
+		"deployedAt":1739276210657,
+		"deployedBy":46209,
+		"deployedDefinitionId":"67ab3fb2d5518d406febba5a",
+		"status":"DEPLOYED",
+		"version":3,
+		"workflowVersion":3
+	},
+	"edges":[
+		{
+			"fromNodeId":"06ck3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"f8F0j",
+			"type":"next"
+		}
+	],
+	"id":"67ab352c0eab2c632104d463",
+	"lastModifiedBy":0,
+	"lcName":"cvbj",
+	"modifiedTime":1780493719996,
+	"name":"cvbj",
+	"nodes":[
+		{
+			"context":{
+				"appName":"quaderno",
+				"resourceVersion":10,
+				"connectionId":"67a99a7658770b7ae79bca3b",
+				"resourceName":"quaderno_on_new_contact"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"jzkaH-1",
+			"id":"06ck3",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Quaderno",
+			"title":"New contact",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":2252,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"jzkaH-1",
+			"id":"f8F0j",
+			"index":0,
+			"inputs":{
+				"object_type":"dnsjdhjshdn",
+				"record":{
+					"name":"{{ 06ck3.outputs.data.object.first_name }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create record",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":46209,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":5
+}
