@@ -45,7 +45,7 @@
 	"id":"6a207b96e01793339f0415da",
 	"lastModifiedBy":43523,
 	"lcName":"populate vector data",
-	"modifiedTime":1780514618986,
+	"modifiedTime":1780514649391,
 	"name":"populate vector data",
 	"nodes":[
 		{
@@ -74,6 +74,11 @@
 			"type":"START"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
 			"context":{
 				"appName":"code_by_unifyapps",
 				"resourceVersion":0,
@@ -90,21 +95,18 @@
 				"output":{
 					"type":"object",
 					"additionalProperties":false,
-					"required":[
-						"vector"
-					],
 					"properties":{
-						"vector":{
+						"vectors":{
 							"type":"array",
 							"items":{
-								"type":"number"
+								"type":"array"
 							},
-							"title":"Vector"
+							"title":"vectors"
 						}
 					}
 				},
 				"configurationMode":"DEFAULT",
-				"code":"import random\nimport math\n\n# ===== CONFIG =====\nMODE = \"identical\"   # \"identical\" = Pass 1 (dups), \"unique\" = Pass 2\nN    = 20            # generate enough; loop's limit controls how many get inserted\nDIM  = 3072\nSEED = 42\n# ==================\n\nrng = random.Random(SEED)\n\ndef unit_vector(r):\n    v = [r.gauss(0, 1) for _ in range(DIM)]\n    norm = math.sqrt(sum(x * x for x in v)) or 1.0\n    return [x / norm for x in v]\n\nbase = unit_vector(rng)\n\nvectors = []\nif MODE == \"identical\":\n    for _ in range(N):\n        vectors.append(list(base))\nelse:\n    for i in range(N):\n        scale = 0.20 + 0.04 * i\n        v = [b + rng.gauss(0, 1) * scale for b in base]\n        norm = math.sqrt(sum(x * x for x in v)) or 1.0\n        vectors.append([x / norm for x in v])\n\nresult = {\"vectors\": vectors}",
+				"code":"import random\nimport math\n\n# ===== CONFIG =====\nMODE = \"identical\"   # \"identical\" = Pass 1 (dups), \"unique\" = Pass 2\nN    = 1            # generate enough; loop's limit controls how many get inserted\nDIM  = 3072\nSEED = 42\n# ==================\n\nrng = random.Random(SEED)\n\ndef unit_vector(r):\n    v = [r.gauss(0, 1) for _ in range(DIM)]\n    norm = math.sqrt(sum(x * x for x in v)) or 1.0\n    return [x / norm for x in v]\n\nbase = unit_vector(rng)\n\nvectors = []\nif MODE == \"identical\":\n    for _ in range(N):\n        vectors.append(list(base))\nelse:\n    for i in range(N):\n        scale = 0.20 + 0.04 * i\n        v = [b + rng.gauss(0, 1) * scale for b in base]\n        norm = math.sqrt(sum(x * x for x in v)) or 1.0\n        vectors.append([x / norm for x in v])\n\nresult = {\"vectors\": vectors}",
 				"isAsync":false,
 				"python_version":"3.12",
 				"outputFilesGlob":"*",
@@ -130,7 +132,7 @@
 			"index":3,
 			"inputs":{
 				"repeatMode":"SINGLE",
-				"listSource":"{{ n_e1QOm.outputs.result.vector }}",
+				"listSource":"{{ n_e1QOm.outputs.result.vectors }}",
 				"captureIterations":false
 			},
 			"skip":false,
@@ -168,9 +170,9 @@
 					"text":"abcd",
 					"uniqueEntityId":"testknowledge12345",
 					"embeddings":{
-						"source":"{{ n_e1QOm.outputs.result.vector }}",
+						"source":"{{ n_iFpqm.outputs.item }}",
 						"ua:type":"mappedArray",
-						"items":"{{ n_e1QOm.outputs.result.vector[0] }}"
+						"items":"{{ n_iFpqm.outputs.item[0] }}"
 					}
 				},
 				"useUuid":false
@@ -248,5 +250,5 @@
 		}
 	},
 	"standard":false,
-	"version":6
+	"version":7
 }
