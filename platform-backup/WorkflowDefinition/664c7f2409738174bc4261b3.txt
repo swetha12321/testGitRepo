@@ -1,0 +1,53 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1716289316965,
+	"deleted":true,
+	"description":"",
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"664c7f2409738174bc4261b3",
+	"lastModifiedBy":206,
+	"lcName":"anuj test ",
+	"modifiedTime":1716290332038,
+	"name":"anuj test ",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"bInaG-1",
+			"id":"bInaG",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":206,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
