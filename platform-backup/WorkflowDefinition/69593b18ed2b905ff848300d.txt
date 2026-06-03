@@ -1,0 +1,109 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767455512501,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_9fmDS",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_etg8e",
+			"type":"next"
+		}
+	],
+	"id":"69593b18ed2b905ff848300d",
+	"lastModifiedBy":-1,
+	"lcName":"ererbt",
+	"modifiedTime":1780492410601,
+	"name":"ererbt",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":834,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_8qXW2-1",
+			"id":"n_9fmDS",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.records.items.intf2",
+					"root.records.items.stringf"
+				]
+			},
+			"context":{
+				"appName":"mdm_by_unifyapps",
+				"resourceVersion":935,
+				"resourceName":"mdm_by_unifyapps_create_staging_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_8qXW2-1",
+			"id":"n_etg8e",
+			"index":2,
+			"inputs":{
+				"sourceId":"68b691171ac19c4cea4a5dfd",
+				"modelId":"69593bb6744429617bcb5c01",
+				"records":[
+					{
+						"intf2":1,
+						"stringf":"string 1"
+					},
+					{
+						"intf2":2,
+						"stringf":"string 2"
+					},
+					{
+						"intf2":3,
+						"stringf":"string 3"
+					}
+				],
+				"unifiedEntityId":"basic_audit_qa"
+			},
+			"skip":false,
+			"subTitle":"UDM by UnifyApps",
+			"title":"Create Staging Records",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":3546,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":4
+}
