@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1754393052470,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_klqML",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_U9j3E",
+			"type":"next"
+		}
+	],
+	"id":"6891e9dccb93f2e6de355bc2",
+	"lastModifiedBy":-1,
+	"lcName":"sanity_test",
+	"modifiedTime":1780492419437,
+	"name":"sanity_test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_klqML-1",
+			"id":"_klqML",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_klqML-1",
+			"id":"_U9j3E",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":132116,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
