@@ -1,0 +1,84 @@
+{
+	"appsUsed":[
+		"gdocs"
+	],
+	"createdTime":1743945162205,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"Glbs0",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Lvzvt",
+			"type":"next"
+		}
+	],
+	"id":"67f27dca6b7c807b28ea26cd",
+	"lastModifiedBy":-1,
+	"lcName":"test",
+	"modifiedTime":1780492435674,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":475,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"MksgO-1",
+			"id":"Glbs0",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"gdocs",
+				"resourceVersion":397,
+				"connectionId":"67f28055f134985b869bba21",
+				"resourceName":"gdocs_list_folders",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"MksgO-1",
+			"id":"Lvzvt",
+			"index":0,
+			"inputs":{
+				"fields":"files(id,name,createdTime,modifiedTime,owners)"
+			},
+			"skip":false,
+			"subTitle":"Google Docs",
+			"title":"List folders",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":2621,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
