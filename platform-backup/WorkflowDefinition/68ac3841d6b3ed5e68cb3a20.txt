@@ -1,0 +1,100 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1756117057145,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1756117091459,
+		"deployedBy":49915,
+		"deployedDefinitionId":"68ac3863d6b3ed5e68cb3b89",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_fQMC9",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_h5lhC",
+			"type":"next"
+		}
+	],
+	"id":"68ac3841d6b3ed5e68cb3a20",
+	"lastModifiedBy":-1,
+	"lcName":"empty test",
+	"modifiedTime":1780492418639,
+	"name":"empty test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":803,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_3pwJ5-1",
+			"id":"n_fQMC9",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":284,
+				"resourceName":"analytics_by_unifyapps_export_sql",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_3pwJ5-1",
+			"id":"n_h5lhC",
+			"index":2,
+			"inputs":{
+				"sheetName":"Sheet_0",
+				"query":"select * from WORKFLOW_EXECUTION LIMIT 0;",
+				"keepExactFileName":false,
+				"fileType":"CSV",
+				"group":"PLATFORM"
+			},
+			"skip":false,
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Export SQL Query Result",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":49915,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":4
+}
