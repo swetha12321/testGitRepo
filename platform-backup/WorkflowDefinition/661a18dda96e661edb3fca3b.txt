@@ -1,0 +1,52 @@
+{
+	"appsUsed":[
+		"shiprocket"
+	],
+	"createdTime":1712986333021,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"661a18dda96e661edb3fca3b",
+	"lastModifiedBy":7,
+	"lcName":"untitled",
+	"modifiedTime":1712986384053,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"shiprocket"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"3xLHj-1",
+			"id":"3xLHj",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":7,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
