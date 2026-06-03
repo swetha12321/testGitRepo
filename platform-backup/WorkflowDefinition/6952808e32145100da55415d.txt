@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767014542988,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_GHryO",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_oULEc",
+			"type":"next"
+		}
+	],
+	"id":"6952808e32145100da55415d",
+	"lastModifiedBy":-1,
+	"lcName":"audit_abhishek",
+	"modifiedTime":1780492410973,
+	"name":"audit_abhishek",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_GHryO-1",
+			"id":"_GHryO",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_GHryO-1",
+			"id":"_oULEc",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":33430,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
