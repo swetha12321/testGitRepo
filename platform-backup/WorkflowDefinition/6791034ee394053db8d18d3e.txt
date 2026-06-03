@@ -1,0 +1,146 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1737556814105,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1737556985575,
+		"deployedBy":311,
+		"deployedDefinitionId":"679103f9e394053db8d18e4d",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		{
+			"fromNodeId":"p0tcP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"nD7l5",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"nD7l5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"OgXoy",
+			"type":"next"
+		}
+	],
+	"id":"6791034ee394053db8d18d3e",
+	"lastModifiedBy":0,
+	"lcName":"repeat failure",
+	"modifiedTime":1780495207892,
+	"name":"repeat failure",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":195,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"3LhiW-1",
+			"id":"p0tcP",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"s":{
+							"type":"string",
+							"title":"S"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"s"
+					]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"runId":{
+							"type":"string",
+							"title":"Run Id"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"runId"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"platform_by_unifyapps",
+				"resourceVersion":127,
+				"resourceName":"platform_by_unifyapps_repeat_run",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"3LhiW-1",
+			"id":"nD7l5",
+			"index":0,
+			"inputs":{
+				"automationId":"6784c156a57752420884b82d",
+				"runId":"{{ p0tcP.outputs.runId }}"
+			},
+			"skip":false,
+			"subTitle":"Platform by UnifyApps",
+			"title":"Repeat run",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":183,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"3LhiW-1",
+			"id":"OgXoy",
+			"index":0,
+			"inputs":{
+				"result":{
+					"s":"s"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":311,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
