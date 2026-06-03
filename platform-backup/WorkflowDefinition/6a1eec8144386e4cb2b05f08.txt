@@ -92,7 +92,7 @@
 	"id":"6a1eec8144386e4cb2b05f08",
 	"lastModifiedBy":44096,
 	"lcName":"knowledge downloader | sharepoint | parent entity",
-	"modifiedTime":1780506638366,
+	"modifiedTime":1780506650038,
 	"name":"Knowledge Downloader | Sharepoint | Parent Entity",
 	"nodes":[
 		{
@@ -175,7 +175,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_EW8wg-1",
 			"id":"n_EMJ1N",
@@ -206,7 +206,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_EW8wg-1",
 			"id":"n_ZdfBK",
@@ -629,5 +629,5 @@
 		}
 	},
 	"standard":false,
-	"version":31
+	"version":32
 }
