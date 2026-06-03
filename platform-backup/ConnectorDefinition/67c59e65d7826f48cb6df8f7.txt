@@ -1,0 +1,36 @@
+{
+	"auths":[
+		{
+			"createdTime":1741004398399,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					}
+				}
+			},
+			"name":"Teams Oauth",
+			"type":"OAUTH",
+			"updatedTime":1741004686643
+		}
+	],
+	"baseUrl":"https://graph.microsoft.com",
+	"createdTime":1741004389580,
+	"deleted":false,
+	"enabled":true,
+	"id":"67c59e65d7826f48cb6df8f7",
+	"lastModifiedBy":687,
+	"lcName":"teams connector v5",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1741178871943,
+	"name":"Teams Connector V5",
+	"ownerUserId":34802,
+	"standard":false,
+	"standardApp":false,
+	"version":14
+}
