@@ -1,0 +1,90 @@
+{
+	"appsUsed":[
+		"google_ads"
+	],
+	"createdTime":1737359636536,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"YJzMV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"fExxV",
+			"type":"next"
+		}
+	],
+	"id":"678e0114241cf66f422c7e56",
+	"lastModifiedBy":0,
+	"lcName":"test",
+	"modifiedTime":1780495208309,
+	"name":"TEST",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":216,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"nA2u4-1",
+			"id":"YJzMV",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"google_ads",
+				"resourceVersion":3003,
+				"connectionId":"678965a5bfac831d484dad49",
+				"resourceName":"google_ads_create_campaign_budget",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"nA2u4-1",
+			"id":"fExxV",
+			"index":0,
+			"inputs":{
+				"campaignBudget":{
+					"name":"hello world",
+					"deliveryMethod":"STANDARD",
+					"type":"STANDARD",
+					"amountMicros":"30000"
+				},
+				"responseContentType":"MUTABLE_RESOURCE"
+			},
+			"skip":false,
+			"subTitle":"Google Ads",
+			"title":"Create campaign budget",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":6
+}
