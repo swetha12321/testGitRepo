@@ -1,0 +1,92 @@
+{
+	"appsUsed":[
+		"openai"
+	],
+	"createdTime":1767943400845,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_CABpl",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_dnCJy",
+			"type":"next"
+		}
+	],
+	"id":"6960ace80565de41dded7740",
+	"lastModifiedBy":-1,
+	"lcName":"test",
+	"modifiedTime":1780492410447,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":834,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_4ShiF-1",
+			"id":"n_CABpl",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"openai",
+				"resourceVersion":1674,
+				"connectionId":"693d3de3bd2efc473dea9e06",
+				"resourceName":"openai_text_to_speech",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_4ShiF-1",
+			"id":"n_dnCJy",
+			"index":2,
+			"inputs":{
+				"voice":"alloy",
+				"input":"heyy hi",
+				"instructions":"something new",
+				"response_format":"mp3",
+				"model":"gpt-4o-mini-tts"
+			},
+			"skip":false,
+			"subTitle":"OpenAI",
+			"title":"Text to speech",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":2621,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":5
+}
