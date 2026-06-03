@@ -1,0 +1,81 @@
+{
+	"appsUsed":[
+		"67a45af9505b2236eec59f3f"
+	],
+	"createdTime":1738824441385,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"NQSNd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"UPn4C",
+			"type":"next"
+		}
+	],
+	"id":"67a45af97a90e0199c2dc85c",
+	"lastModifiedBy":0,
+	"lcName":"jnm ",
+	"modifiedTime":1780493847810,
+	"name":"jnm ",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":278,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"YC8w5-1",
+			"id":"NQSNd",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"67a45af9505b2236eec59f3f",
+				"resourceVersion":0,
+				"connectionId":"67a45ffeb91d9f25321f89bd",
+				"resourceName":"67a45af9505b2236eec59f3f:67a45b32505b2236eec59f46",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"YC8w5-1",
+			"id":"UPn4C",
+			"index":0,
+			"skip":false,
+			"subTitle":"testAsana",
+			"title":"testAction",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":39712,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":6
+}
