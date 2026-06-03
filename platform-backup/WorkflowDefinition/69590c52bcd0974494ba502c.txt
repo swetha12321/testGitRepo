@@ -1,0 +1,90 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767443538521,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_ZV2Cv",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_SJU0k",
+			"type":"next"
+		}
+	],
+	"id":"69590c52bcd0974494ba502c",
+	"lastModifiedBy":-1,
+	"lcName":"testt",
+	"modifiedTime":1780492410605,
+	"name":"testt",
+	"nodes":[
+		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":841,
+				"resourceName":"schedule_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_BPSJB-1",
+			"id":"n_ZV2Cv",
+			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":15,
+				"frequency":"MINUTES"
+			},
+			"skip":false,
+			"subTitle":"Schedule",
+			"title":"New recurring event",
+			"trigger":{
+				"type":"SCHEDULED"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"ai_agents_by_unifyapps",
+				"resourceVersion":587,
+				"resourceName":"ai_agents_by_unifyapps_invoke_agent",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_BPSJB-1",
+			"id":"n_SJU0k",
+			"index":2,
+			"inputs":{
+				"callableInterfaceId":"__ua__invoke_ai_agent_by_unifyapps",
+				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
+				"defaultFallbackWorkflowId":"68050ca67df58855654804a0"
+			},
+			"skip":false,
+			"subTitle":"AI Agents by UnifyApps",
+			"title":"Invoke Agent",
+			"type":"CALL_INTERFACE_WORKFLOW"
+		}
+	],
+	"ownerUserId":557,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
