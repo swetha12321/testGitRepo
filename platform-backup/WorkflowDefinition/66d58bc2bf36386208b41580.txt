@@ -1,0 +1,81 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725270978690,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"AO2I3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"UV4rf",
+			"type":"next"
+		}
+	],
+	"id":"66d58bc2bf36386208b41580",
+	"lastModifiedBy":0,
+	"lcName":"eger",
+	"modifiedTime":1780496151538,
+	"name":"eger",
+	"nodes":[
+		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":48,
+				"resourceName":"schedule_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"2RSId-1",
+			"id":"AO2I3",
+			"index":0,
+			"inputs":{
+				"cron":"INTERVAL",
+				"interval":15,
+				"frequency":"MINUTES"
+			},
+			"skip":false,
+			"subTitle":"Schedule",
+			"title":"New recurring event",
+			"trigger":{
+				"type":"SCHEDULED"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":18,
+				"resourceName":"analytics_by_unifyapps_execute_query",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"2RSId-1",
+			"id":"UV4rf",
+			"index":0,
+			"inputs":{
+				"query":"SELECT R_1.id AS ID,R_1.payload AS PAYLOAD,R_1.timestamp AS TIMESTAMP FROM (SELECT payload,id,timestamp FROM WORKFLOW_VARIABLE AS WORKFLOW_VARIABLE WHERE  (  (  (  id = '66acc0b3ec403b20c9ba5f0c/66acc0b3ec403b20c9ba5f0c/0zIYh/inputs'  AND  timestamp = '2024-08-02 11:19:15'  ) OR  (  id =  '66acc0b3ec403b20c9ba5f0c/66acc0b3ec403b20c9ba5f0c/5hKhT/outputs'  AND timestamp = '2024-08-02 11:19:15'  ) ) )) AS R_1",
+				"group":"PLATFORM"
+			},
+			"skip":false,
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Execute Analytics SQL Query",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":12
+}
