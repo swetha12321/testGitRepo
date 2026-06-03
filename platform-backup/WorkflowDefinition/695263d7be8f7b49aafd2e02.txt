@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767007191365,
+	"deleted":false,
+	"description":"description",
+	"edges":[
+		{
+			"fromNodeId":"_UpcTX",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_7yh2x",
+			"type":"next"
+		}
+	],
+	"id":"695263d7be8f7b49aafd2e02",
+	"lastModifiedBy":-1,
+	"lcName":"automation_zoomdelete21767003729628",
+	"modifiedTime":1780492411039,
+	"name":"Automation_ZoomDelete21767003729628",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_UpcTX-1",
+			"id":"_UpcTX",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_UpcTX-1",
+			"id":"_7yh2x",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
