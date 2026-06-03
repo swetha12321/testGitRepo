@@ -45,7 +45,7 @@
 	"id":"6a207b96e01793339f0415da",
 	"lastModifiedBy":43523,
 	"lcName":"populate vector data",
-	"modifiedTime":1780514126028,
+	"modifiedTime":1780514618986,
 	"name":"populate vector data",
 	"nodes":[
 		{
@@ -55,7 +55,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MDDyf-1",
 			"id":"n_XOKWA",
@@ -81,7 +81,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MDDyf-1",
 			"id":"n_e1QOm",
@@ -104,7 +104,7 @@
 					}
 				},
 				"configurationMode":"DEFAULT",
-				"code":"result = {\"vector\":[10.1,1.2]}",
+				"code":"import random\nimport math\n\n# ===== CONFIG =====\nMODE = \"identical\"   # \"identical\" = Pass 1 (dups), \"unique\" = Pass 2\nN    = 20            # generate enough; loop's limit controls how many get inserted\nDIM  = 3072\nSEED = 42\n# ==================\n\nrng = random.Random(SEED)\n\ndef unit_vector(r):\n    v = [r.gauss(0, 1) for _ in range(DIM)]\n    norm = math.sqrt(sum(x * x for x in v)) or 1.0\n    return [x / norm for x in v]\n\nbase = unit_vector(rng)\n\nvectors = []\nif MODE == \"identical\":\n    for _ in range(N):\n        vectors.append(list(base))\nelse:\n    for i in range(N):\n        scale = 0.20 + 0.04 * i\n        v = [b + rng.gauss(0, 1) * scale for b in base]\n        norm = math.sqrt(sum(x * x for x in v)) or 1.0\n        vectors.append([x / norm for x in v])\n\nresult = {\"vectors\": vectors}",
 				"isAsync":false,
 				"python_version":"3.12",
 				"outputFilesGlob":"*",
@@ -118,25 +118,24 @@
 		{
 			"context":{
 				"appName":"loop",
-				"resourceVersion":111,
-				"resourceName":"loop_for",
+				"resourceVersion":946,
+				"resourceName":"loop_for_each",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MDDyf-1",
 			"id":"n_iFpqm",
 			"index":3,
 			"inputs":{
-				"start":0,
-				"limit":50,
-				"step":1,
+				"repeatMode":"SINGLE",
+				"listSource":"{{ n_e1QOm.outputs.result.vector }}",
 				"captureIterations":false
 			},
 			"skip":false,
 			"subTitle":"Loop",
-			"title":"For loop",
+			"title":"For each loop",
 			"type":"LOOP"
 		},
 		{
@@ -249,5 +248,5 @@
 		}
 	},
 	"standard":false,
-	"version":5
+	"version":6
 }
