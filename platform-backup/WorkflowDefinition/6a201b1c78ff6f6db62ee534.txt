@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780488988443,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_1u7Pa",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_k7wvx",
+			"type":"next"
+		}
+	],
+	"id":"6a201b1c78ff6f6db62ee534",
+	"lastModifiedBy":132116,
+	"lcName":"reds",
+	"modifiedTime":1780488988443,
+	"name":"reds",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_1u7Pa-1",
+			"id":"_1u7Pa",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_1u7Pa-1",
+			"id":"_k7wvx",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":132116,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
