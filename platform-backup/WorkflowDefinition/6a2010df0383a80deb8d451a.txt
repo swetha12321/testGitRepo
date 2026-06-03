@@ -4,6 +4,15 @@
 	],
 	"createdTime":1780486367235,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1780486692535,
+		"deployedBy":195870,
+		"deployedDefinitionId":"6a2012230383a80deb8d5a1c",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
 	"edges":[
 		{
 			"fromNodeId":"h77A8",
@@ -97,7 +106,7 @@
 	"id":"6a2010df0383a80deb8d451a",
 	"lastModifiedBy":195870,
 	"lcName":"ai agent(slack deployment)",
-	"modifiedTime":1780486488736,
+	"modifiedTime":1780486695229,
 	"name":"AI Agent(Slack Deployment)",
 	"nodes":[
 		{
@@ -108,7 +117,7 @@
 				"resourceName":"slack_on_new_message"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"WXTwJ-1",
 			"id":"h77A8",
@@ -503,5 +512,5 @@
 	"tags":[
 		"AI Agent Deployment"
 	],
-	"version":2
+	"version":3
 }
