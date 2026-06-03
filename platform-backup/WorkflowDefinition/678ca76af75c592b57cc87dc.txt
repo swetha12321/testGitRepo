@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1737271146569,
+	"deleted":false,
+	"deployedVersion":2,
+	"deploymentState":{
+		"deployedAt":1737274971976,
+		"deployedBy":520,
+		"deployedDefinitionId":"678cb65ba2be0a1604938948",
+		"status":"PAUSED",
+		"version":2,
+		"workflowVersion":2
+	},
+	"edges":[
+		
+	],
+	"id":"678ca76af75c592b57cc87dc",
+	"lastModifiedBy":0,
+	"lcName":"test",
+	"modifiedTime":1780495208334,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":175,
+				"resourceName":"schedule_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"LOmGm-1",
+			"id":"MITL3",
+			"index":0,
+			"inputs":{
+				"cron":"INTERVAL",
+				"interval":1,
+				"frequency":"MINUTES"
+			},
+			"skip":false,
+			"subTitle":"Schedule",
+			"title":"New recurring event",
+			"trigger":{
+				"type":"SCHEDULED"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
