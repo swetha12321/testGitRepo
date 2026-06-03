@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1754052257514,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_DAacf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_BILWw",
+			"type":"next"
+		}
+	],
+	"id":"688cb6a1f0f51b2d3d389bbb",
+	"lastModifiedBy":-1,
+	"lcName":"eded",
+	"modifiedTime":1780492419588,
+	"name":"eded",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_DAacf-1",
+			"id":"_DAacf",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_DAacf-1",
+			"id":"_BILWw",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":45010,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
