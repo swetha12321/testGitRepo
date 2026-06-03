@@ -24,7 +24,7 @@
 	},
 	"id":"uygyug",
 	"lastModifiedBy":45512,
-	"modifiedTime":1780514165507,
+	"modifiedTime":1780514168195,
 	"ownerUserId":45512,
 	"properties":{
 		"standard":false,
@@ -202,7 +202,8 @@
 			"primary":[]
 		},
 		"interfacePageIdVsSlugMap":{
-			"e_6a207d75fe4ba85bacb114c9":"homepage"
+			"e_6a207d75fe4ba85bacb114c9":"homepage",
+			"e_global_uygyug":"global-page-of-uygyug"
 		},
 		"manifest":{
 			"type":"WEB"
@@ -230,6 +231,11 @@
 				"slug":"homepage",
 				"isPublic":false,
 				"type":"PAGE"
+			},
+			"e_global_uygyug":{
+				"slug":"global-page-of-uygyug",
+				"isPublic":false,
+				"type":"PAGE"
 			}
 		}
 	},
@@ -237,5 +243,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
