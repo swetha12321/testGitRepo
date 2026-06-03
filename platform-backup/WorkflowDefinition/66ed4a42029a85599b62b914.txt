@@ -1,0 +1,108 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1726827074071,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"E0qFb",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"bBMYl",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"bBMYl",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"hdQR0",
+			"type":"next"
+		}
+	],
+	"id":"66ed4a42029a85599b62b914",
+	"lastModifiedBy":0,
+	"lcName":"asdf",
+	"modifiedTime":1780496147511,
+	"name":"asdf",
+	"nodes":[
+		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":48,
+				"resourceName":"schedule_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"74Upi-1",
+			"id":"E0qFb",
+			"index":0,
+			"inputs":{
+				"cron":"INTERVAL",
+				"interval":15,
+				"frequency":"MINUTES"
+			},
+			"skip":false,
+			"subTitle":"Schedule",
+			"title":"New recurring event",
+			"trigger":{
+				"type":"SCHEDULED"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"files_by_unifyapps",
+				"resourceVersion":7,
+				"resourceName":"files_by_unifyapps_create_temp_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"74Upi-1",
+			"id":"bBMYl",
+			"index":0,
+			"inputs":{
+				"fileType":"txt"
+			},
+			"skip":false,
+			"subTitle":"File by UnifyApps",
+			"title":"Create a temporary file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":15,
+				"resourceName":"utility_by_unifyapps_generate_public_url",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"74Upi-1",
+			"id":"hdQR0",
+			"index":0,
+			"inputs":{
+				"file":"{{ bBMYl.outputs.fileDetails }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Generate public file URL",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
