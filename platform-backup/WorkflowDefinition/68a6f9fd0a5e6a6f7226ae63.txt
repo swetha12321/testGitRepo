@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1755773437392,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_QyFn0",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_xqB82",
+			"type":"next"
+		}
+	],
+	"id":"68a6f9fd0a5e6a6f7226ae63",
+	"lastModifiedBy":-1,
+	"lcName":"kadsc",
+	"modifiedTime":1780492418739,
+	"name":"kadsc",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_QyFn0-1",
+			"id":"_QyFn0",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_QyFn0-1",
+			"id":"_xqB82",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":32341,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
