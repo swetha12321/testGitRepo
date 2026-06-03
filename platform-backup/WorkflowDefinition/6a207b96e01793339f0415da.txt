@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780513686995,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_MDDyf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_sfbUS",
+			"type":"next"
+		}
+	],
+	"id":"6a207b96e01793339f0415da",
+	"lastModifiedBy":43523,
+	"lcName":"populate vector data",
+	"modifiedTime":1780513686995,
+	"name":"populate vector data",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_MDDyf-1",
+			"id":"_MDDyf",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_MDDyf-1",
+			"id":"_sfbUS",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":43523,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
