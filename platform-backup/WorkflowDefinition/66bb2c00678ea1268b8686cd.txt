@@ -1,0 +1,198 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725259017549,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1725259017636,
+		"deployedBy":520,
+		"deployedDefinitionId":"66d55d09d3f02a7f562272a5",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":5
+	},
+	"edges":[
+		{
+			"fromNodeId":"8HyRD",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"1N0ta",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"1N0ta",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"xhnO3",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"xhnO3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"TddS5",
+			"type":"next"
+		}
+	],
+	"id":"66bb2c00678ea1268b8686cd",
+	"lastModifiedBy":0,
+	"lcName":"add target winners (ecom campaign)",
+	"modifiedTime":1780496151578,
+	"name":"Add Target Winners (Ecom Campaign)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"GFdTF-1",
+			"id":"8HyRD",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"result":{
+							"type":"string",
+							"title":"Result"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"campaign_id":{
+							"type":"string",
+							"title":"Campaign Id"
+						},
+						"user_id":{
+							"type":"string",
+							"title":"User Id"
+						},
+						"payout":{
+							"type":"string",
+							"title":"Payout"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"analytics_by_unifyapps_query_reports",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"GFdTF-1",
+			"id":"1N0ta",
+			"index":0,
+			"inputs":{
+				"projections":[
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_campaign_user=::=name"
+					}
+				],
+				"filter":{
+					"filters":[
+						{
+							"property":"ENTITY_campaign_user=::=user_id",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ 8HyRD.outputs.user_id }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"entityType":"ENTITY_campaign_user",
+				"group":"ENTITY_REPORTING"
+			},
+			"skip":false,
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Analytics Query",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":342,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"GFdTF-1",
+			"id":"xhnO3",
+			"index":0,
+			"inputs":{
+				"object_type":"campaign_target_winners",
+				"record":{
+					"campaign_id":"{{ 8HyRD.outputs.campaign_id }}",
+					"user_id":"{{ 8HyRD.outputs.user_id }}",
+					"user_name":"{{ 1N0ta.outputs.objects[0].columns.ENTITY_campaign_user=::=name }}",
+					"winner":"{{ 8HyRD.outputs.winner }}",
+					"payout":"{{ 8HyRD.outputs.payout }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"GFdTF-1",
+			"id":"TddS5",
+			"index":0,
+			"inputs":{
+				"result":{
+					"result":"200"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":6
+}
