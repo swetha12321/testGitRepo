@@ -1,0 +1,82 @@
+{
+	"appsUsed":[
+		"jira_service_management"
+	],
+	"createdTime":1754462976562,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_CGvQZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_dta8I",
+			"type":"next"
+		}
+	],
+	"id":"6892fb00ea2ef5e69ec4021b",
+	"lastModifiedBy":-1,
+	"lcName":"test",
+	"modifiedTime":1780492419410,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":802,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_6hrvX-1",
+			"id":"n_CGvQZ",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"jira_service_management",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_6hrvX-1",
+			"id":"n_dta8I",
+			"index":2,
+			"skip":false,
+			"subTitle":"Jira Service Management",
+			"title":"Select an action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":45518,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
