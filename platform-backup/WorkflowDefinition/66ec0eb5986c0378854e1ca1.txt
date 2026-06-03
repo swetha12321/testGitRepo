@@ -1,0 +1,68 @@
+{
+	"appsUsed":[
+		"gsheets"
+	],
+	"createdTime":1726746293125,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"5pXIv",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"NH2IP",
+			"type":"next"
+		}
+	],
+	"id":"66ec0eb5986c0378854e1ca1",
+	"lastModifiedBy":0,
+	"lcName":"test",
+	"modifiedTime":1780496147798,
+	"name":"test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"5pXIv-1",
+			"id":"5pXIv",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"gsheets",
+				"resourceVersion":2274,
+				"connectionId":"66ec0193e3899d21c9e97e63",
+				"resourceName":"gsheets_add_row",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"5pXIv-1",
+			"id":"NH2IP",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Google Sheets",
+			"title":"Add a row",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
