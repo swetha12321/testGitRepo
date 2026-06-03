@@ -1,0 +1,207 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725259015206,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1725259015280,
+		"deployedBy":520,
+		"deployedDefinitionId":"66d55d07d3f02a7f56227274",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":12
+	},
+	"edges":[
+		{
+			"fromNodeId":"MShUE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"z8T8R",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"z8T8R",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"PkFLA",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"PkFLA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"rogEB",
+			"type":"next"
+		}
+	],
+	"id":"66b52edf92ebe03e5716509d",
+	"lastModifiedBy":0,
+	"lcName":"campaign detail 2 - mobile (ecom campaign)",
+	"modifiedTime":1780496151597,
+	"name":"Campaign Detail 2 - Mobile (Ecom Campaign)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"W2ogf-1",
+			"id":"MShUE",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"potential_earnings":{
+							"type":"string",
+							"title":"Potential Earnings"
+						},
+						"campaign_details":{
+							"type":"string",
+							"title":"Campaign Details"
+						},
+						"currentDate":{
+							"type":"string",
+							"title":"Current Date"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"campaign_id":{
+							"type":"string",
+							"title":"Campaign Id"
+						},
+						"user_id":{
+							"type":"string",
+							"title":"User Id"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":270,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"W2ogf-1",
+			"id":"z8T8R",
+			"index":0,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_campaignId",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ MShUE.outputs.campaign_id }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"campaign_details",
+				"page":{
+					"limit":20,
+					"offset":0
+				},
+				"numberOfRecordsToFetch":"SINGLE",
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"W2ogf-1",
+			"id":"PkFLA",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"currentDate":{
+							"type":"string",
+							"title":"Current Date"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"code":"import java.time.LocalDate\nLocalDate currentDate = LocalDate.now()",
+				"isAsync":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"W2ogf-1",
+			"id":"rogEB",
+			"index":0,
+			"inputs":{
+				"result":{
+					"campaign_details":"{{ z8T8R.outputs.properties.campaign_description_and_rules }}",
+					"potential_earnings":"{{ z8T8R.outputs.properties.potential_earnings }}",
+					"currentDate":"{{ PkFLA.outputs.result }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Return data to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":13
+}
