@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1755849015886,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_UjXTE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_IsEr8",
+			"type":"next"
+		}
+	],
+	"id":"68a8213774eaf06377cf1abd",
+	"lastModifiedBy":-1,
+	"lcName":"rfdews",
+	"modifiedTime":1780492418708,
+	"name":"rfdews",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_UjXTE-1",
+			"id":"_UjXTE",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_UjXTE-1",
+			"id":"_IsEr8",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":39712,
+	"projectId":1994,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
