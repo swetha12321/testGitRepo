@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1755869618301,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_4DHDi",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_tgwMG",
+			"type":"next"
+		}
+	],
+	"id":"68a871b2fcb21f61c923f141",
+	"lastModifiedBy":-1,
+	"lcName":"fillconv",
+	"modifiedTime":1780492418690,
+	"name":"fillConv",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_4DHDi-1",
+			"id":"_4DHDi",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_4DHDi-1",
+			"id":"_tgwMG",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":45771,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
