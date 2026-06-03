@@ -1,0 +1,52 @@
+{
+	"appsUsed":[
+		"sprinklr"
+	],
+	"createdTime":1714670529421,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6633cbc177cc84511d01b704",
+	"lastModifiedBy":32,
+	"lcName":"untitled",
+	"modifiedTime":1714670543729,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"sprinklr"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"IGo8M-1",
+			"id":"IGo8M",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":32,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
