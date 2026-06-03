@@ -1,0 +1,281 @@
+{
+	"appsUsed":[
+		"amazon_bedrock"
+	],
+	"createdTime":1725864367535,
+	"deleted":false,
+	"deployedVersion":2,
+	"deploymentState":{
+		"deployedAt":1725871386643,
+		"deployedBy":1866,
+		"deployedDefinitionId":"66deb51acbf3361c5858dc1e",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":5
+	},
+	"edges":[
+		{
+			"fromNodeId":"i9xDq",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"x8f59",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"x8f59",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"AEBGZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"AEBGZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"JXc6J",
+			"type":"next"
+		}
+	],
+	"id":"66de99af34cd63476df75932",
+	"lastModifiedBy":0,
+	"lcName":"test prompt",
+	"modifiedTime":1780496150241,
+	"name":"test prompt",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":59,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ls8dh-1",
+			"id":"i9xDq",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json",
+					"queryParams":{
+						"type":"object",
+						"properties":{
+							"caseId":{
+								"type":"string",
+								"title":"Case Id"
+							},
+							"userQuery":{
+								"type":"string",
+								"title":"User Query"
+							}
+						},
+						"additionalProperties":false,
+						"required":[]
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"HTTP Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":58,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ls8dh-1",
+			"id":"x8f59",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"topics":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"name":{
+										"type":"string",
+										"title":"Name"
+									},
+									"description":{
+										"type":"string",
+										"title":"Description"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"Topics",
+							"required":[]
+						},
+						"conversation":{
+							"type":"string",
+							"title":"Conversation"
+						},
+						"userQuery":{
+							"type":"string",
+							"title":"User Query"
+						},
+						"currentTopic":{
+							"type":"string",
+							"title":"Current Topic"
+						},
+						"currentTopicFlows":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"name":{
+										"type":"string",
+										"title":"Name"
+									},
+									"description":{
+										"type":"string",
+										"title":"Description"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"Current Topic Flows",
+							"required":[]
+						},
+						"currentInstructions":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Current Instructions"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"userQuery":{
+							"type":"string",
+							"title":"User Query"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"code":"def topics = []\ndef book = [\"name\":\"book a ticket\", \"description\":\"This topic is related to all queries related to booking a ticket\"]\ntopics.add(book)\ndef refund = [\"name\":\"Refund Realted Enquiry\", \"description\":\"This topic is related to all queries related to refund\"]\ntopics.add(refund)\n\ndef conversation = \"\"\ndef query = \"can you book a ticket\"\nif(binding.hasVariable('userQuery')){\n    query = userQuery\n}\ndef currentFlows = [[\"name\":\"book a ticket from source to dest\", \"description\": \"book a ticket from a particular source to specific destination\"], [\"name\":\"list of available flights\", \"description\":\"this will show me the list of available flights\"]]\nreturn [\"topics\":topics, \"conversation\": conversation, \"userQuery\": query, \"currentTopic\":\"book a ticket\", \n\"currentFlows\":currentFlows, \"currentInstructions\":[\"first ask whats the source\", \"then ask whats the destination\"]]",
+				"isAsync":false,
+				"parameters":{
+					"userQuery":"{{ i9xDq.outputs.queryParams.userQuery }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"template_by_unifyapps",
+				"resourceVersion":83,
+				"resourceName":"template_by_unifyapps_compile_template",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ls8dh-1",
+			"id":"AEBGZ",
+			"index":0,
+			"inputs":{
+				"input_schema":{
+					"available_topics":{
+						"source":"{{ x8f59.outputs.result.topics }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"name":"{{ x8f59.outputs.result.topics[0].name }}",
+							"description":"{{ x8f59.outputs.result.topics[0].description }}"
+						}
+					},
+					"user_message":"{{ x8f59.outputs.result.userQuery }}",
+					"current_conversation":"{{ x8f59.outputs.result.conversation }}",
+					"current_topic":"{{ x8f59.outputs.result.currentTopic }}",
+					"available_flows":{
+						"source":"{{ x8f59.outputs.result.currentTopicFlows }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"name":"{{ x8f59.outputs.result.currentTopicFlows[0].name }}",
+							"description":"{{ x8f59.outputs.result.currentTopicFlows[0].description }}"
+						}
+					},
+					"current_topic_instructions":{
+						"source":"{{ x8f59.outputs.result.currentInstructions }}",
+						"ua:type":"mappedArray",
+						"items":"{{ x8f59.outputs.result.currentInstructions[0] }}"
+					}
+				},
+				"template_id":"e_66d020d72dd4b85ca27c9672"
+			},
+			"skip":false,
+			"subTitle":"Template by UnifyApps",
+			"title":"Compile template",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"amazon_bedrock",
+				"resourceVersion":1438,
+				"connectionId":"66ccbcd010dbaf55e4203afb",
+				"resourceName":"amazon_bedrock_send_message",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ls8dh-1",
+			"id":"JXc6J",
+			"index":0,
+			"inputs":{
+				"max_tokens":1024,
+				"messages":{
+					"items":{
+						"content":{
+							"items":{
+								"type":"text",
+								"text":"{{ AEBGZ.outputs.output }}"
+							},
+							"ua:type":"mappedArray"
+						},
+						"role":"user"
+					},
+					"ua:type":"mappedArray"
+				},
+				"model":"anthropic.claude-3-5-sonnet-20240620-v1:0",
+				"anthropic_version":"bedrock-2023-05-31"
+			},
+			"skip":false,
+			"subTitle":"Amazon Bedrock",
+			"title":"Send message",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":1866,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":10
+}
