@@ -1,0 +1,97 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1737457030221,
+	"deleted":false,
+	"deployedVersion":2,
+	"deploymentState":{
+		"deployedAt":1737461888532,
+		"deployedBy":522,
+		"deployedDefinitionId":"678f90804a762011ccfae6d0",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":4
+	},
+	"edges":[
+		{
+			"fromNodeId":"77JKF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"l1AvU",
+			"type":"next"
+		}
+	],
+	"id":"678f7d869c3556103d3264c2",
+	"lastModifiedBy":0,
+	"lcName":"vfv",
+	"modifiedTime":1780495208116,
+	"name":"vfv",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":216,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"shQy2-1",
+			"id":"77JKF",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"decision_table_by_unifyapps",
+				"resourceVersion":136,
+				"resourceName":"decision_table_by_unifyapps_execute_table",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"shQy2-1",
+			"id":"l1AvU",
+			"index":0,
+			"inputs":{
+				"responseType":"FINAL_MATCH",
+				"data":{
+					"isActive":true,
+					"b":true
+				},
+				"entityId":"e_678f902c5e5e3068661de3e5"
+			},
+			"skip":false,
+			"subTitle":"Decision Table by UnifyApps",
+			"title":"Execute a Decision Table",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":522,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":6
+}
