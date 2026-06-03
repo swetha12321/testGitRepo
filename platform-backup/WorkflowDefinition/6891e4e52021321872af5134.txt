@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1754391781835,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_RX4sO",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_UxfY8",
+			"type":"next"
+		}
+	],
+	"id":"6891e4e52021321872af5134",
+	"lastModifiedBy":-1,
+	"lcName":"sql",
+	"modifiedTime":1780492419439,
+	"name":"SQL",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_RX4sO-1",
+			"id":"_RX4sO",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_RX4sO-1",
+			"id":"_UxfY8",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":34455,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
