@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725262325352,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"tFYu2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"DFHeS",
+			"type":"next"
+		}
+	],
+	"id":"66d569f57b497908434895c8",
+	"lastModifiedBy":0,
+	"lcName":"tushar ai test",
+	"modifiedTime":1780496151557,
+	"name":"tushar ai test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"tFYu2-1",
+			"id":"tFYu2",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"tFYu2-1",
+			"id":"DFHeS",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":32,
+	"projectId":119,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
