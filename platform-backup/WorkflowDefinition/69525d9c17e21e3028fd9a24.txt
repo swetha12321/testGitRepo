@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767005596167,
+	"deleted":false,
+	"description":"description",
+	"edges":[
+		{
+			"fromNodeId":"_nqiOX",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_D7mmN",
+			"type":"next"
+		}
+	],
+	"id":"69525d9c17e21e3028fd9a24",
+	"lastModifiedBy":-1,
+	"lcName":"customhttpworkflow2_4_217670037006920",
+	"modifiedTime":1780492411142,
+	"name":"customHTTPWorkflow2_4_217670037006920",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_nqiOX-1",
+			"id":"_nqiOX",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_nqiOX-1",
+			"id":"_D7mmN",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":false,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
