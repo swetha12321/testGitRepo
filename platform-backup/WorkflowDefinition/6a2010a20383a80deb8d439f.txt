@@ -3,7 +3,7 @@
 		"slack"
 	],
 	"createdTime":1780486306339,
-	"deleted":false,
+	"deleted":true,
 	"edges":[
 		{
 			"fromNodeId":"h77A8",
@@ -97,7 +97,7 @@
 	"id":"6a2010a20383a80deb8d439f",
 	"lastModifiedBy":195870,
 	"lcName":"ai agent(slack deployment)",
-	"modifiedTime":1780486306404,
+	"modifiedTime":1780486342076,
 	"name":"AI Agent(Slack Deployment)",
 	"nodes":[
 		{
@@ -217,6 +217,7 @@
 				"timestamp":"{{ h77A8.outputs.event.event_ts }}"
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -298,6 +299,7 @@
 				"replyWithEmoji":true
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -503,5 +505,5 @@
 	"tags":[
 		"AI Agent Deployment"
 	],
-	"version":1
+	"version":2
 }
