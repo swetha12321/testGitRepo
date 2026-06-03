@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1753939711073,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_qqJUj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_vYIJa",
+			"type":"next"
+		}
+	],
+	"id":"688afeffe81f724f111f1b88",
+	"lastModifiedBy":-1,
+	"lcName":"git",
+	"modifiedTime":1780492419637,
+	"name":"git",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_qqJUj-1",
+			"id":"_qqJUj",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_qqJUj-1",
+			"id":"_vYIJa",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":34,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
