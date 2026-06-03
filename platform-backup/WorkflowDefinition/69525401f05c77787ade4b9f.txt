@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767003137232,
+	"deleted":false,
+	"description":"description",
+	"edges":[
+		{
+			"fromNodeId":"_AXl5o",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_OBWqj",
+			"type":"next"
+		}
+	],
+	"id":"69525401f05c77787ade4b9f",
+	"lastModifiedBy":-1,
+	"lcName":"cutloopnodeandpaste217670031263910",
+	"modifiedTime":1780492411277,
+	"name":"cutLoopNodeAndPaste217670031263910",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_AXl5o-1",
+			"id":"_AXl5o",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_AXl5o-1",
+			"id":"_OBWqj",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":false,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
