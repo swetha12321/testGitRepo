@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780485288639,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_XsBTR",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_pBHoU",
+			"type":"next"
+		}
+	],
+	"id":"6a200ca806b2ad6157a23144",
+	"lastModifiedBy":175325,
+	"lcName":"mergepdffilespdflocalveoigbexvk",
+	"modifiedTime":1780485288639,
+	"name":"MergePDFFilesPDFLocalvEoIGBeXVk",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XsBTR-1",
+			"id":"_XsBTR",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XsBTR-1",
+			"id":"_pBHoU",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
