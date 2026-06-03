@@ -1,0 +1,301 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1755012399529,
+	"deleted":false,
+	"deployedVersion":4,
+	"deploymentState":{
+		"deployedAt":1755013951244,
+		"deployedBy":48069,
+		"deployedDefinitionId":"689b633f5d5006147d5f825c",
+		"status":"PAUSED",
+		"version":4,
+		"workflowVersion":14
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_hXXKu",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ocvvY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ocvvY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_jafUU",
+			"type":"next"
+		}
+	],
+	"id":"687a4ad08deae81af851ff01",
+	"lastModifiedBy":-1,
+	"lcName":"[new] filters",
+	"modifiedTime":1780492419225,
+	"name":"[NEW] Filters",
+	"nodes":[
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":132,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_HtFN5-1",
+			"id":"n_hXXKu",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"aggregationFields":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"filterable":{
+										"type":"boolean",
+										"title":"filterable"
+									},
+									"lookup":{
+										"type":"string",
+										"title":"lookup"
+									},
+									"skippedFromReporting":{
+										"type":"boolean",
+										"title":"skippedFromReporting"
+									},
+									"displayName":{
+										"type":"string",
+										"title":"displayName"
+									},
+									"entityType":{
+										"type":"string",
+										"title":"entityType"
+									},
+									"format":{
+										"type":"string",
+										"title":"format"
+									},
+									"nameField":{
+										"type":"boolean",
+										"title":"nameField"
+									},
+									"sortable":{
+										"type":"boolean",
+										"title":"sortable"
+									},
+									"searchable":{
+										"type":"boolean",
+										"title":"searchable"
+									},
+									"aggregationFieldType":{
+										"type":"string",
+										"title":"aggregationFieldType"
+									},
+									"field":{
+										"type":"string",
+										"title":"field"
+									},
+									"array":{
+										"type":"boolean",
+										"title":"array"
+									},
+									"lookupOptions":{
+										"type":"object",
+										"properties":{
+											"title":{
+												"type":"string",
+												"title":"title"
+											},
+											"staticOptions":{
+												"type":"array",
+												"items":{
+													"type":"object",
+													"properties":{
+														"const":{
+															"type":"string",
+															"title":"const"
+														},
+														"title":{
+															"type":"string",
+															"title":"title"
+														}
+													},
+													"additionalProperties":false
+												},
+												"title":"staticOptions"
+											}
+										},
+										"title":"lookupOptions",
+										"additionalProperties":false
+									},
+									"name":{
+										"type":"string",
+										"title":"name"
+									},
+									"updatable":{
+										"type":"boolean",
+										"title":"updatable"
+									},
+									"fieldType":{
+										"type":"string",
+										"title":"fieldType"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"aggregationFields"
+						}
+					},
+					"additionalProperties":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":772,
+				"resourceName":"utility_by_unifyapps_export_unifyapps_pages_to_pdf",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_HtFN5-1",
+			"id":"n_ocvvY",
+			"index":2,
+			"inputs":{
+				"pdfPages":[
+					{
+						"url":"https://testaman-qa.matrix-qa.unifyapps.com/homepage"
+					}
+				],
+				"exportType":"ZIP",
+				"page":{
+					"scale":1,
+					"timeout":5000,
+					"format":"a4",
+					"layout":"portrait"
+				}
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Export UnifyApps pages to PDF",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.result.aggregationFields.source",
+					"root.result.aggregationFields.ua:type",
+					"root.result.aggregationFields.items.filterable",
+					"root.result.aggregationFields.items.lookup",
+					"root.result.aggregationFields.items.skippedFromReporting",
+					"root.result.aggregationFields.items.displayName",
+					"root.result.aggregationFields.items.entityType",
+					"root.result.aggregationFields.items.format",
+					"root.result.aggregationFields.items.nameField",
+					"root.result.aggregationFields.items.sortable",
+					"root.result.aggregationFields.items.searchable",
+					"root.result.aggregationFields.items.aggregationFieldType",
+					"root.result.aggregationFields.items.field",
+					"root.result.aggregationFields.items.array",
+					"root.result.aggregationFields.items.lookupOptions.title",
+					"root.result.aggregationFields.items.lookupOptions.staticOptions.source",
+					"root.result.aggregationFields.items.lookupOptions.staticOptions.ua:type",
+					"root.result.aggregationFields.items.lookupOptions.staticOptions.items.const",
+					"root.result.aggregationFields.items.lookupOptions.staticOptions.items.title",
+					"root.result.aggregationFields.items.name",
+					"root.result.aggregationFields.items.updatable",
+					"root.result.aggregationFields.items.fieldType"
+				]
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":135,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_HtFN5-1",
+			"id":"n_jafUU",
+			"index":3,
+			"inputs":{
+				"result":{
+					"aggregationFields":{
+						"source":"{{ n_EuKpq.outputs.result.aggregationFields }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"filterable":"{{ n_EuKpq.outputs.result.aggregationFields[0].filterable }}",
+							"lookup":"{{ n_EuKpq.outputs.result.aggregationFields[0].lookup }}",
+							"skippedFromReporting":"{{ n_EuKpq.outputs.result.aggregationFields[0].skippedFromReporting }}",
+							"displayName":"{{ n_EuKpq.outputs.result.aggregationFields[0].displayName }}",
+							"entityType":"{{ n_EuKpq.outputs.result.aggregationFields[0].entityType }}",
+							"format":"{{ n_EuKpq.outputs.result.aggregationFields[0].format }}",
+							"nameField":"{{ n_EuKpq.outputs.result.aggregationFields[0].nameField }}",
+							"sortable":"{{ n_EuKpq.outputs.result.aggregationFields[0].sortable }}",
+							"searchable":"{{ n_EuKpq.outputs.result.aggregationFields[0].searchable }}",
+							"aggregationFieldType":"{{ n_EuKpq.outputs.result.aggregationFields[0].aggregationFieldType }}",
+							"field":"{{ n_EuKpq.outputs.result.aggregationFields[0].field }}",
+							"array":"{{ n_EuKpq.outputs.result.aggregationFields[0].array }}",
+							"lookupOptions":{
+								"title":"{{ n_EuKpq.outputs.result.aggregationFields[0].lookupOptions.title }}",
+								"staticOptions":{
+									"source":"{{ n_EuKpq.outputs.result.aggregationFields[0].lookupOptions.staticOptions }}",
+									"ua:type":"mappedArray",
+									"items":{
+										"const":"{{ n_EuKpq.outputs.result.aggregationFields[0].lookupOptions.staticOptions[0].const }}",
+										"title":"{{ n_EuKpq.outputs.result.aggregationFields[0].lookupOptions.staticOptions[0].title }}"
+									}
+								}
+							},
+							"name":"{{ n_EuKpq.outputs.result.aggregationFields[0].name }}",
+							"updatable":"{{ n_EuKpq.outputs.result.aggregationFields[0].updatable }}",
+							"fieldType":"{{ n_EuKpq.outputs.result.aggregationFields[0].fieldType }}"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":48069,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":15
+}
