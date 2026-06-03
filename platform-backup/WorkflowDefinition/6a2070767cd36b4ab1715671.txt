@@ -15,7 +15,7 @@
 	},
 	"edges":[
 		{
-			"fromNodeId":"n_1SW7U",
+			"fromNodeId":"n_OXi8s",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_9t8kU",
@@ -110,34 +110,54 @@
 	"id":"6a2070767cd36b4ab1715671",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-parent-rechecker",
-	"modifiedTime":1780512448361,
+	"modifiedTime":1780512516099,
 	"name":"credit-calculation-parent-rechecker",
 	"nodes":[
 		{
 			"context":{
-				"appName":"schedule",
-				"resourceVersion":919,
-				"resourceName":"schedule_default"
+				"appName":"callables",
+				"resourceVersion":4066,
+				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
-			"id":"n_1SW7U",
+			"id":"n_OXi8s",
 			"index":1,
 			"inputs":{
-				"cron":"EXPRESSION",
-				"expression":"30 6 * * *",
-				"sequential":false,
-				"timezone":"Asia/Calcutta",
-				"interval":15,
-				"frequency":"MINUTES"
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"completed":{
+							"type":"string",
+							"title":"Completed"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"date":{
+							"type":"string",
+							"title":"Date"
+						},
+						"backtrack":{
+							"type":"boolean",
+							"title":"Backtrack"
+						}
+					}
+				}
 			},
 			"skip":false,
-			"subTitle":"Schedule",
-			"title":"New recurring event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"SCHEDULED"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -1196,5 +1216,5 @@
 		}
 	},
 	"standard":false,
-	"version":6
+	"version":7
 }
