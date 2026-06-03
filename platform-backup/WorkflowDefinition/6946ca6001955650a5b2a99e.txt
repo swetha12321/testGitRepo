@@ -1,0 +1,75 @@
+{
+	"appsUsed":[
+		"gmail"
+	],
+	"createdTime":1766247008889,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1766247087095,
+		"deployedBy":39712,
+		"deployedDefinitionId":"6946caad057245432ca4462c",
+		"status":"PAUSED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		
+	],
+	"id":"6946ca6001955650a5b2a99e",
+	"lastModifiedBy":-1,
+	"lcName":"test",
+	"modifiedTime":1780492412553,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"gmail",
+				"resourceVersion":5844,
+				"connectionId":"6946ca8e50ddc57537a817eb",
+				"resourceName":"gmail_on_new_email_polling"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_zCpxL-1",
+			"id":"n_8XQXh",
+			"index":1,
+			"inputs":{
+				"intervalType":"minutes",
+				"maxConsumedIdsStorageLimit":50,
+				"numberOfPages":1,
+				"fetchAllMails":false,
+				"pageSize":1,
+				"interval":1,
+				"from":"2025-12-19",
+				"batchSize":1
+			},
+			"skip":false,
+			"subTitle":"Gmail",
+			"title":"New email",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":39712,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
