@@ -1,0 +1,121 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1754037972829,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_uk4Wj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_1lari",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_1lari",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_MdYsM",
+			"type":"next"
+		}
+	],
+	"id":"688c7ed4b9f9a74b8d7f264c",
+	"lastModifiedBy":-1,
+	"lcName":"pdftothumbnal",
+	"modifiedTime":1780492419597,
+	"name":"pdftothumbnal",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":801,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Ia8H5-1",
+			"id":"n_uk4Wj",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"files_by_unifyapps",
+				"resourceVersion":766,
+				"resourceName":"files_by_unifyapps_upload_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Ia8H5-1",
+			"id":"n_1lari",
+			"index":2,
+			"inputs":{
+				"base64Content":"JVBERi0xLjcKJeLjz9MKNSAwIG9iago8PC9GaWx0ZXIvRmxhdGVEZWNvZGUvTGVuZ3RoIDU4Pj5zdHJlYW0KeJwr5HIK4dJ3M1QwNFIISeMyNlMwtzTVMzdRCEnh0kjNVsjLTkvNLk5LBSPNkCwu1xCuQC4AaH4OPQplbmRzdHJlYW0KZW5kb2JqCjQgMCBvYmoKPDwvQ29udGVudHMgNSAwIFIvTWVkaWFCb3hbMCAwIDU5NSA4NDJdL1BhcmVudCAyIDAgUi9SZXNvdXJjZXM8PC9Gb250PDwvRjEgNiAwIFI+Pj4+L1RyaW1Cb3hbMCAwIDU5NSA4NDJdL1R5cGUvUGFnZT4+CmVuZG9iagoxIDAgb2JqCjw8L1BhZ2VzIDIgMCBSL1R5cGUvQ2F0YWxvZz4+CmVuZG9iagozIDAgb2JqCjw8L0NyZWF0aW9uRGF0ZShEOjIwMjUwODAyMTAwOTAwWikvTW9kRGF0ZShEOjIwMjUwODAyMTAwOTAwWikvUHJvZHVjZXIoaVRleHSuIHBkZkhUTUwgNi4wLjAgXChBR1BMIHZlcnNpb25cKSCpMjAwMC0yMDI0IEFwcnlzZSBHcm91cCBOVik+PgplbmRvYmoKNiAwIG9iago8PC9CYXNlRm9udC9UaW1lcy1Sb21hbi9FbmNvZGluZy9XaW5BbnNpRW5jb2RpbmcvU3VidHlwZS9UeXBlMS9UeXBlL0ZvbnQ+PgplbmRvYmoKMiAwIG9iago8PC9Db3VudCAxL0tpZHNbNCAwIFJdL1R5cGUvUGFnZXM+PgplbmRvYmoKeHJlZgowIDcKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMjcyIDAwMDAwIG4gCjAwMDAwMDA1NjEgMDAwMDAgbiAKMDAwMDAwMDMxNyAwMDAwMCBuIAowMDAwMDAwMTM5IDAwMDAwIG4gCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDQ3MSAwMDAwMCBuIAp0cmFpbGVyCjw8L0lEIFs8NTcwMmUxNjI2MDJiMWFiZTM0ODYyODY3OGVkNzBmZGYzZjZiMTI3YTgzNzczYmQ1NmQ2MTJhM2Y3ZTJjMDljZjNjZDFiZDIyMGQ0OGRhMTg2Mjk5NjA3M2Q2Mzg1MWI5YjU3MWQ2N2M5MThlY2Y3NTE1MTc2NmJlZWI1MjhlYTg+PDU3MDJlMTYyNjAyYjFhYmUzNDg2Mjg2NzhlZDcwZmRmM2Y2YjEyN2E4Mzc3M2JkNTZkNjEyYTNmN2UyYzA5Y2YzY2QxYmQyMjBkNDhkYTE4NjI5OTYwNzNkNjM4NTFiOWI1NzFkNjdjOTE4ZWNmNzUxNTE3NjZiZWViNTI4ZWE4Pl0vSW5mbyAzIDAgUi9Sb290IDEgMCBSL1NpemUgNz4+CiVpVGV4dC1wZGZIVE1MLTYuMC4wCnN0YXJ0eHJlZgo2MTIKJSVFT0YK",
+				"fileName":"wfsefsefefes",
+				"url":" https://aiagentdev.qa.unifyapps.com/api/file/download/__UNIFY_ENCR_AWS__V0__AQICAHj7St2E8TETOQAaUc00zU9k6R5xpOrdHIapHG2qb6VVDQGubmxWynK6RXws0IYpnd1vAAAAyjCBxwYJKoZIhvcNAQcGoIG5MIG2AgEAMIGwBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDHns%2FJ852NYxCm%2F46wIBEICBgpYusjOg2XuPH7LeGnr3McJEviMW1kY3jyK3VuzQ%2Bqu8JYXpHtEFb6j6JgQS5rsfTM9psZUepsNv7hwxL734LN0t1pGGMbbBfSOhw2WrQTTnsKlau3SxyysvInQy4lVUK5BhJ3g14RfK7z9lwSIeTXM0ZUghi4XbtKrg%2FCOayPloV%2Fc%3D",
+				"option":"base64Content"
+			},
+			"skip":false,
+			"subTitle":"Files by UnifyApps",
+			"title":"Upload file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":658,
+				"resourceName":"utility_by_unifyapps_extract_thumbnail_from_pdf",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Ia8H5-1",
+			"id":"n_MdYsM",
+			"index":3,
+			"inputs":{
+				"pageNumber":0,
+				"fileDetails":"{{ n_1lari.outputs.fileDetails }}",
+				"width":1,
+				"height":1
+			},
+			"skip":false,
+			"subTitle":"Utility",
+			"title":"Extract thumbnail from PDF",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":155543,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":14
+}
