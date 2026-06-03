@@ -1,0 +1,52 @@
+{
+	"appsUsed":[
+		"schedule"
+	],
+	"createdTime":1714393523437,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"662f91b39bd6854d0a967a68",
+	"lastModifiedBy":7,
+	"lcName":"untitled",
+	"modifiedTime":1714393545960,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"schedule"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"twNXr-1",
+			"id":"twNXr",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"SCHEDULED"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":7,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
