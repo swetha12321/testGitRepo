@@ -1,0 +1,75 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767088308256,
+	"deleted":false,
+	"description":"description",
+	"edges":[
+		
+	],
+	"id":"6953a0b46cb9394e8d832acc",
+	"lastModifiedBy":-1,
+	"lcName":"newversionpopup-deletedchangesintestruns-21767088298658",
+	"modifiedTime":1780492410918,
+	"name":"newVersionPopUp-deletedChangesInTestRuns-21767088298658",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_hhxZU-1",
+			"id":"n_XyYtr",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json",
+					"body":{
+						"type":"object",
+						"properties":{
+							"input":{
+								"type":"string",
+								"title":"input"
+							}
+						},
+						"additionalProperties":false,
+						"required":[
+							"input"
+						]
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":175325,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":false,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":4
+}
