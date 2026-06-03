@@ -1,0 +1,120 @@
+{
+	"appsUsed":[
+		"microsoft_sharepoint",
+		"slack"
+	],
+	"createdTime":1755600692412,
+	"deleted":false,
+	"deployedVersion":2,
+	"deploymentState":{
+		"deployedAt":1755600974660,
+		"deployedBy":3952,
+		"deployedDefinitionId":"68a4584ee0fcd13db08f3b4f",
+		"status":"PAUSED",
+		"version":2,
+		"workflowVersion":3
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_SUvlc",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_x5OsI",
+			"type":"next"
+		}
+	],
+	"id":"68a45734a8151b433542a83d",
+	"lastModifiedBy":-1,
+	"lcName":"sharepoint sarthak",
+	"modifiedTime":1780492418801,
+	"name":"sharepoint sarthak",
+	"nodes":[
+		{
+			"context":{
+				"appName":"microsoft_sharepoint",
+				"resourceVersion":4,
+				"connectionId":"688dee94785392afd0975584",
+				"resourceName":"microsoft_sharepoint_on_new_file_or_updated_file_polling"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_kUIVg-1",
+			"id":"n_SUvlc",
+			"index":1,
+			"inputs":{
+				"site_name":"site123",
+				"interval":1,
+				"from":"2025-08-19T10:51:49Z",
+				"folder_path":{
+					"id":"Shared%20Documents/folder123/folder1234",
+					"context":[
+						{
+							"id":"Shared%20Documents",
+							"name":"Shared Documents"
+						},
+						{
+							"id":"folder123",
+							"name":"folder123"
+						},
+						{
+							"id":"folder1234",
+							"name":"folder1234"
+						}
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Microsoft SharePoint",
+			"title":"New or Updated file",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"slack",
+				"resourceVersion":5838,
+				"connectionId":"67f66fb7a5433d27335a6381",
+				"resourceName":"slack_post_message_in_channel",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_kUIVg-1",
+			"id":"n_x5OsI",
+			"index":2,
+			"inputs":{
+				"link_names":true,
+				"messageType":"text",
+				"channel":"C08QSP11GKV",
+				"text":"{{ n_SUvlc.outputs.Name }}",
+				"mrkdwn":true
+			},
+			"skip":false,
+			"subTitle":"Slack",
+			"title":"Post message",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":3952,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":4
+}
