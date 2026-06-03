@@ -24,7 +24,7 @@
 	},
 	"id":"retest-4",
 	"lastModifiedBy":196401,
-	"modifiedTime":1780513528977,
+	"modifiedTime":1780513531537,
 	"ownerUserId":196401,
 	"properties":{
 		"standard":false,
@@ -202,7 +202,8 @@
 			"primary":[]
 		},
 		"interfacePageIdVsSlugMap":{
-			"e_6a207af8fe4ba85bacb11371":"homepage"
+			"e_6a207af8fe4ba85bacb11371":"homepage",
+			"e_global_retest-4":"global-page-of-retest-4"
 		},
 		"manifest":{
 			"type":"WEB"
@@ -230,6 +231,11 @@
 				"slug":"homepage",
 				"isPublic":false,
 				"type":"PAGE"
+			},
+			"e_global_retest-4":{
+				"slug":"global-page-of-retest-4",
+				"isPublic":false,
+				"type":"PAGE"
 			}
 		}
 	},
@@ -237,5 +243,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
