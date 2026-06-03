@@ -16,7 +16,7 @@
 	"id":"6a1749c6ffe72e13e4436d8e",
 	"lastModifiedBy":199850,
 	"lcName":"learning-platform",
-	"modifiedTime":1780470333160,
+	"modifiedTime":1780487122185,
 	"name":"learning-platform",
 	"nodes":[
 		{
@@ -48,18 +48,40 @@
 	"ownerUserId":199850,
 	"settings":{
 		"circuitBreakerConfiguration":{
-			"enabled":true
+			"automaticTransitionFromOpenToHalfOpen":true,
+			"enabled":true,
+			"failureRateThreshold":1.0,
+			"maxWaitDurationInHalfOpenState":6,
+			"minimumNumberOfCalls":7,
+			"permittedNumberOfCallsInHalfOpenState":5,
+			"slidingWindowSize":4,
+			"slidingWindowType":"COUNT_BASED",
+			"slowCallDurationThresholdMillis":3,
+			"slowCallRateThreshold":2.0,
+			"waitDurationInOpenState":8
 		},
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
 		"enableVariableLogging":false,
+		"nodeLogLevel":"INFO",
 		"route":{
 			"default":false,
-			"headerValueTierMap":{},
+			"headerKey":"123",
+			"headerValueTierMap":{
+				"123":"global",
+				"456":"loadtesting",
+				"789":"test"
+			},
 			"tierName":"global"
 		},
-		"workflowTimeoutInMillis":12
+		"telemetryConfig":{
+			"enableTelemetry":true,
+			"metricConfigs":[
+				
+			]
+		},
+		"workflowTimeoutInMillis":15
 	},
 	"standard":false,
-	"version":9
+	"version":11
 }
