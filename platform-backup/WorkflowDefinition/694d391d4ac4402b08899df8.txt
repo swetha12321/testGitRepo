@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1766668573431,
+	"deleted":false,
+	"description":"description",
+	"edges":[
+		{
+			"fromNodeId":"_4Ewxo",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_n8hKg",
+			"type":"next"
+		}
+	],
+	"id":"694d391d4ac4402b08899df8",
+	"lastModifiedBy":-1,
+	"lcName":"automation_custom databasedelete21766666881300",
+	"modifiedTime":1780492411381,
+	"name":"Automation_Custom databaseDelete21766666881300",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_4Ewxo-1",
+			"id":"_4Ewxo",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_4Ewxo-1",
+			"id":"_n8hKg",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
