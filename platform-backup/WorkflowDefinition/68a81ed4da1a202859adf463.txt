@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1755848404228,
+	"deleted":false,
+	"description":"Testing practice",
+	"edges":[
+		{
+			"fromNodeId":"_zhOre",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_tA6Ec",
+			"type":"next"
+		}
+	],
+	"id":"68a81ed4da1a202859adf463",
+	"lastModifiedBy":-1,
+	"lcName":"test_practice",
+	"modifiedTime":1780492418708,
+	"name":"Test_practice",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_zhOre-1",
+			"id":"_zhOre",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_zhOre-1",
+			"id":"_tA6Ec",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175401,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
