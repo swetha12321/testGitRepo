@@ -1,0 +1,193 @@
+{
+	"appsUsed":[
+		"sftp"
+	],
+	"createdTime":1726054878536,
+	"deleted":false,
+	"deployedVersion":4,
+	"deploymentState":{
+		"deployedAt":1726063238130,
+		"deployedBy":520,
+		"deployedDefinitionId":"66e1a2868fc01c0d4a5e08bc",
+		"status":"PAUSED",
+		"version":4,
+		"workflowVersion":12
+	},
+	"edges":[
+		{
+			"fromNodeId":"jL9er",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"osjhu",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"osjhu",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"uLHIy",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"osjhu",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Zr6e8",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"uLHIy",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"wQEdJ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Zr6e8",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"wQEdJ",
+			"type":"next"
+		}
+	],
+	"id":"66e181dea7411b5868d958f5",
+	"lastModifiedBy":0,
+	"lcName":"nsdl flow",
+	"modifiedTime":1780496150116,
+	"name":"NSDL flow",
+	"nodes":[
+		{
+			"context":{
+				"appName":"sftp",
+				"resourceVersion":1951,
+				"connectionId":"66e192746e12d83309007547",
+				"resourceName":"sftp_on_new_or_updated_csv_file"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"UjAN8-1",
+			"id":"jL9er",
+			"index":0,
+			"inputs":{
+				"path":"/test",
+				"headerRow":true,
+				"columns":[
+					"ISIN",
+					"PAN Number",
+					"Customer Name",
+					"Pledge Type",
+					"Pledge Creation Date",
+					"Pledge Quantity",
+					"Pledge Status",
+					"Pledge Expiry Date",
+					"Pledgee PAN"
+				],
+				"delimiter":",",
+				"batch":true,
+				"encoding":"UTF-8",
+				"batchSize":1000,
+				"recursive":false,
+				"concurrency":1
+			},
+			"skip":false,
+			"subTitle":"SFTP",
+			"title":"On new or updated csv file",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":50,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"UjAN8-1",
+			"id":"osjhu",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"streams_by_unifyapps",
+				"resourceVersion":710,
+				"resourceName":"streams_by_unifyapps_publish_event",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"osjhu@UjAN8-1@y",
+			"id":"uLHIy",
+			"index":0,
+			"inputs":{
+				"streamId":"e_66e19005b9af645703f4d796",
+				"event":{}
+			},
+			"skip":false,
+			"subTitle":"Streams by UnifyApps",
+			"title":"Publish event to stream",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"streams_by_unifyapps",
+				"resourceVersion":710,
+				"resourceName":"streams_by_unifyapps_publish_event",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"osjhu@UjAN8-1@n",
+			"id":"Zr6e8",
+			"index":0,
+			"inputs":{
+				"streamId":"e_66e19012b9af645703f4d797",
+				"event":{}
+			},
+			"skip":false,
+			"subTitle":"Streams by UnifyApps",
+			"title":"Publish event to stream",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"UjAN8-1",
+			"id":"wQEdJ",
+			"index":0,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":13
+}
