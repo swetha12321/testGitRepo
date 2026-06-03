@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1755755405690,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_VcpsA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_0wSeq",
+			"type":"next"
+		}
+	],
+	"id":"68a6b38d4729367ce9184455",
+	"lastModifiedBy":-1,
+	"lcName":"reportingpro",
+	"modifiedTime":1780492418750,
+	"name":"reportingPro",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_VcpsA-1",
+			"id":"_VcpsA",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_VcpsA-1",
+			"id":"_0wSeq",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":678,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
