@@ -6,46 +6,85 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_IUYIS",
+			"fromNodeId":"n_TV2xF",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_C9tVl",
+			"toNodeId":"n_D4TV3",
 			"type":"next"
 		}
 	],
 	"id":"6a208716e01793339f043313",
 	"lastModifiedBy":517,
 	"lcName":"kafka topics cleanup",
-	"modifiedTime":1780516630310,
+	"modifiedTime":1780516739701,
 	"name":"Kafka Topics Cleanup",
 	"nodes":[
 		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":919,
+				"resourceName":"schedule_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_IUYIS-1",
-			"id":"_IUYIS",
-			"index":0,
+			"id":"n_TV2xF",
+			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"timezone":"Asia/Calcutta",
+				"interval":1,
+				"frequency":"DAYS"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":2174,
+				"resourceName":"custom_http_endpoint_execute_multipart",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_IUYIS-1",
-			"id":"_C9tVl",
-			"index":0,
+			"id":"n_D4TV3",
+			"index":2,
+			"inputs":{
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"httpMethod":"GET",
+				"connectionType":"DIRECT",
+				"sslVerify":false,
+				"path":"/list-topics/kafka-1",
+				"baseUrl":"https://internal-global-svc.unifyapps.svc.cluster.local:80/internal/kafka",
+				"httpVersion":"HTTP_2",
+				"responseContentType":"application/json",
+				"followRedirects":"NORMAL",
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST multipart request",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":517,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -56,5 +95,5 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"version":1
 }
