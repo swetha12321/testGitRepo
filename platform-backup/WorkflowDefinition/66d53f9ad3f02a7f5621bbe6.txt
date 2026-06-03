@@ -1,0 +1,59 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725251482250,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"1OmrV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"oJCJV",
+			"type":"next"
+		}
+	],
+	"id":"66d53f9ad3f02a7f5621bbe6",
+	"lastModifiedBy":0,
+	"lcName":"etst",
+	"modifiedTime":1780496151637,
+	"name":"etst",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1OmrV-1",
+			"id":"1OmrV",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1OmrV-1",
+			"id":"oJCJV",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
