@@ -1,0 +1,83 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1743525324934,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"Kec2L",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"uMpJw",
+			"type":"next"
+		}
+	],
+	"id":"67ec15ccd1de45664850cc67",
+	"lastModifiedBy":-1,
+	"lcName":"autfinalnew",
+	"modifiedTime":1780492436683,
+	"name":"autFinalNew",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":453,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"gFZ2q-1",
+			"id":"Kec2L",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"mdm_by_unifyapps",
+				"resourceVersion":152,
+				"resourceName":"mdm_by_unifyapps_fetch_staging_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"gFZ2q-1",
+			"id":"uMpJw",
+			"index":0,
+			"inputs":{
+				"modelId":"67ec1494422f694df67b9624"
+			},
+			"skip":false,
+			"subTitle":"MDM by UnifyApps",
+			"title":"Fetch Staging Records",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":687,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
