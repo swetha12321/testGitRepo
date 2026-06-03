@@ -1,0 +1,17 @@
+{
+	"baseUrl":"http://burpcollaborator.net/zgjZCdeP",
+	"createdTime":1741334769467,
+	"deleted":false,
+	"description":"qvaqcL",
+	"enabled":false,
+	"id":"67caa8f1b8a3852f709fe3b2",
+	"lastModifiedBy":22743,
+	"lcName":"hsudcq|echo 56983ug4br ucs0sqg788||a #' |echo 56983ug4br ucs0sqg788||a #|\" |echo 56983ug4br ucs0sqg788||a #",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1741334769467,
+	"name":"hsuDcq|echo 56983ug4br ucs0sqg788||a #' |echo 56983ug4br ucs0sqg788||a #|\" |echo 56983ug4br ucs0sqg788||a #",
+	"ownerUserId":22743,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
