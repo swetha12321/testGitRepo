@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767091393531,
+	"deleted":false,
+	"description":"description",
+	"edges":[
+		{
+			"fromNodeId":"_YAHKM",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_BvLfy",
+			"type":"next"
+		}
+	],
+	"id":"6953acc1e4122670ee92ef24",
+	"lastModifiedBy":-1,
+	"lcName":"newversionzoombuttons-zoom out-latest-version-21767091387294",
+	"modifiedTime":1780492410739,
+	"name":"newVersionZoomButtons-Zoom Out-latest-version-21767091387294",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_YAHKM-1",
+			"id":"_YAHKM",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_YAHKM-1",
+			"id":"_BvLfy",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":false,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
