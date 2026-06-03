@@ -1,0 +1,46 @@
+{
+	"auths":[
+		{
+			"createdTime":1740995107091,
+			"input":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":false
+					},
+					"properties":{
+						"username":{
+							"type":"string",
+							"title":"username"
+						},
+						"password":{
+							"type":"string",
+							"title":"password"
+						}
+					},
+					"required":[]
+				}
+			},
+			"name":"Teams Basic Auth",
+			"type":"BASIC",
+			"updatedTime":1740995324461
+		}
+	],
+	"createdTime":1740994304316,
+	"deleted":false,
+	"enabled":false,
+	"id":"67c57700b545407b2faad78c",
+	"lastModifiedBy":34802,
+	"lcName":"teams custom connector",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1740995324462,
+	"name":"Teams custom connector",
+	"ownerUserId":34802,
+	"standard":false,
+	"standardApp":false,
+	"version":7
+}
