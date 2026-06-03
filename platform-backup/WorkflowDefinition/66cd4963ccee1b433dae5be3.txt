@@ -1,0 +1,86 @@
+{
+	"appsUsed":[
+		"jira_service_management"
+	],
+	"createdTime":1724729699877,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"cCuUV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"84J2D",
+			"type":"next"
+		}
+	],
+	"id":"66cd4963ccee1b433dae5be3",
+	"lastModifiedBy":0,
+	"lcName":"cxjzjxc",
+	"modifiedTime":1780496151944,
+	"name":"cxjzjxc",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":56,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1dBK2-1",
+			"id":"cCuUV",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"HTTP Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"jira_service_management",
+				"resourceVersion":55,
+				"connectionId":"66cd484a10dbaf55e4208c8f",
+				"resourceName":"jira_service_management_create_customer_request",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1dBK2-1",
+			"id":"84J2D",
+			"index":0,
+			"inputs":{
+				"serviceDeskId":"1",
+				"requestTypeId":"1",
+				"requestFieldValues":{
+					"summary":"This is a demo data",
+					"description":"Descriptions are mentioned"
+				}
+			},
+			"skip":false,
+			"subTitle":"Jira Service Management",
+			"title":"Create customer request",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":174,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
