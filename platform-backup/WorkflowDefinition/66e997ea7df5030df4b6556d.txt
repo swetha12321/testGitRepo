@@ -1,0 +1,723 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1726584810113,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"Y0mb9",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"zgKYs",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"zgKYs",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Okxqf",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Okxqf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"UjoZZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"UjoZZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"U9yEx",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"U9yEx",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"tNp44",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"tNp44",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"ZbMyH",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"ZbMyH",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"zqteC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"zqteC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"gBtSm",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"gBtSm",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"sQa9N",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"sQa9N",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"0SCv4",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"0SCv4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"cuEcN",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"cuEcN",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"vZqKW",
+			"type":"next"
+		}
+	],
+	"id":"66e997ea7df5030df4b6556d",
+	"lastModifiedBy":0,
+	"lcName":"nsdl tes",
+	"modifiedTime":1780496148012,
+	"name":"nsdl tes",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":52,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1lO4e-1",
+			"id":"Y0mb9",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"j":{
+							"type":"string",
+							"title":"J"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"record":{
+							"type":"object",
+							"properties":{
+								"Record Type":{
+									"type":"string",
+									"title":"Record Type"
+								},
+								"Client ID":{
+									"type":"string",
+									"title":"Client ID"
+								},
+								"Margin Pledge/Re-pledge Indicator":{
+									"type":"string",
+									"title":"Margin Pledge/Re-pledge Indicator"
+								},
+								"Agreement No_":{
+									"type":"string",
+									"title":"Agreement No_"
+								},
+								"UCC CODE":{
+									"type":"string",
+									"title":"UCC CODE"
+								},
+								"Channel Indicator":{
+									"type":"string",
+									"title":"Channel Indicator"
+								},
+								"CP Code":{
+									"type":"string",
+									"title":"CP Code"
+								},
+								"Segment":{
+									"type":"string",
+									"title":"Segment"
+								},
+								"Closure Date":{
+									"type":"string",
+									"title":"Closure Date"
+								},
+								"Priority Flag":{
+									"type":"string",
+									"title":"Priority Flag"
+								},
+								"Lock-in Reason Code":{
+									"type":"string",
+									"title":"Lock-in Reason Code"
+								},
+								"Batch Number":{
+									"type":"string",
+									"title":"Batch Number"
+								},
+								"Sender Reference Number 1":{
+									"type":"string",
+									"title":"Sender Reference Number 1"
+								},
+								"Sender Reference Number 2":{
+									"type":"string",
+									"title":"Sender Reference Number 2"
+								},
+								"Transaction Flag":{
+									"type":"string",
+									"title":"Transaction Flag"
+								},
+								"Exchange Code":{
+									"type":"string",
+									"title":"Exchange Code"
+								},
+								"Execution Date":{
+									"type":"string",
+									"title":"Execution Date"
+								},
+								"Transaction Type":{
+									"type":"string",
+									"title":"Transaction Type"
+								},
+								"Quantity":{
+									"type":"string",
+									"title":"Quantity"
+								},
+								"Original Order – BPDP ID":{
+									"type":"string",
+									"title":"Original Order – BPDP ID"
+								},
+								"ISIN":{
+									"type":"string",
+									"title":"ISIN"
+								},
+								"Line Number":{
+									"type":"string",
+									"title":"Line Number"
+								},
+								"Other DP ID":{
+									"type":"string",
+									"title":"Other DP ID"
+								},
+								"Lock-in Release Date":{
+									"type":"string",
+									"title":"Lock-in Release Date"
+								},
+								"Other Client ID":{
+									"type":"string",
+									"title":"Other Client ID"
+								},
+								"Source DP ID":{
+									"type":"string",
+									"title":"Source DP ID"
+								},
+								"Internal Reference":{
+									"type":"string",
+									"title":"Internal Reference"
+								}
+							},
+							"title":"record",
+							"additionalProperties":false
+						}
+					},
+					"additionalProperties":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":58,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1lO4e-1",
+			"id":"zgKYs",
+			"index":0,
+			"inputs":{
+				"input":{
+					"type":"object",
+					"properties":{
+						"record":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Record"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"code":"def validateField(value, type, size, mandatory, regex = null) {\n    // ... (unchanged)\n}\n\ndef validateRecord(record, businessDate, fileType) {\n    def isValid = true\n    def errors = []\n\n    // Detail record blank check\n    if (record.isEmpty()) {\n        isValid = false\n        errors << \"CER142\"\n    }\n\n    // Batch_Number_Validation\n    def batchNumber = record[\"Batch_Number\"] ?: \"\"\n    if (batchNumber.isEmpty() || !batchNumber.matches(/[0-9]{1,8}/)) {\n        isValid = false\n        errors << \"DIH00005\"\n    }\n\n    // Record_Type_Validation\n    def recordType = record[\"Record_Type\"] ?: \"\"\n    if (recordType != '02' || recordType.length() != 2) {\n        isValid = false\n        errors << \"ADD001\"\n    }\n\n    // Line_Number_Validation\n    def lineNumber = record[\"Line_Number\"] ?: \"\"\n    if (lineNumber.isEmpty() || !lineNumber.matches(/[0-9]{1,6}/)) {\n        isValid = false\n        errors << \"DIH00019\"\n    }\n\n    // Transaction_Type_Validation\n    def transactionType = record[\"Transaction_Type\"] ?: \"\"\n    if (transactionType.isEmpty() || transactionType.length() != 3 || !transactionType.matches(/[0-9]+/) || transactionType != fileType) {\n        isValid = false\n        errors << \"AT0049\"\n    }\n\n    // Transaction_Flag_Validation\n    def transactionFlag = record[\"Transaction_Flag\"] ?: \"\"\n    if (transactionFlag != 'A') {\n        isValid = false\n        errors << \"FV0018\"\n    }\n\n    // Client_ID_Validation\n    def clientID = record[\"Client_ID\"] ?: \"\"\n    if (clientID.isEmpty() || !clientID.matches(/[0-9]{8}/)) {\n        isValid = false\n        errors << \"SX0033\"\n    }\n\n    // ISIN_Validation\n    def isin = record[\"ISIN\"] ?: \"\"\n    if (isin.isEmpty() || !isin.matches(/[A-Z0-9]{12}/)) {\n        isValid = false\n        errors << \"CERR21\"\n    }\n\n    // Quantity_Validation\n    def quantity = record[\"Quantity\"] ?: \"\"\n    if (quantity.isEmpty() || !quantity.matches(/\\d+(\\.\\d+)?/) || quantity.length() != 18) {\n        isValid = false\n        errors << \"CER116\"\n    }\n\n    // Lockin_Reason_Code_Validation\n    def lockinReasonCode = record[\"Lock-in_Reason_Code\"] ?: \"\"\n    if (lockinReasonCode == \"00\") {\n        isValid = false\n        errors << \"CERR26\"\n    }\n\n    // Lockin_Release_Date_Validation\n    def lockinReleaseDate = record[\"Lock-in_Release_Date\"] ?: \"\"\n    if (!lockinReleaseDate.isEmpty() && !lockinReleaseDate.matches(/\\d{8}/)) {\n        isValid = false\n        errors << \"PL0061\"\n    }\n\n    // Execution_Date_Validation\n    def executionDate = record[\"Execution_Date\"] ?: \"\"\n    if (executionDate.isEmpty() || executionDate < businessDate) {\n        isValid = false\n        errors << \"PL0036\"\n    }\n\n    // Other_DP_ID_Validation\n    def otherDPID = record[\"Other_DP_ID\"] ?: \"\"\n    if (otherDPID.isEmpty() || !otherDPID.matches(/[A-Z]{2}[0-9]{6}/)) {\n        isValid = false\n        errors << \"DIH00003\"\n    }\n\n    // Other_Client_ID_Validation\n    def otherClientID = record[\"Other_Client_ID\"] ?: \"\"\n    if (otherClientID.isEmpty() || !otherClientID.matches(/[0-9]{8}/)) {\n        isValid = false\n        errors << \"SX0033\"\n    }\n\n    // Closure_Date_Validation\n    def closureDate = record[\"Closure_Date\"] ?: \"\"\n    if (!closureDate.isEmpty() && (!closureDate.matches(/\\d{8}/) || closureDate < businessDate)) {\n        isValid = false\n        errors << \"PL0021\"\n    }\n\n    // Internal_Reference_Number_Validation\n    def internalReference = record[\"Internal_Reference\"] ?: \"\"\n    if (!internalReference.isEmpty() && internalReference.length() > 35) {\n        isValid = false\n        errors << \"CERR23\"\n    }\n\n    // Sender_Reference_Numbers_Validation\n    def senderRef1 = record[\"Sender_Reference_Number_1\"] ?: \"\"\n    def senderRef2 = record[\"Sender_Reference_Number_2\"] ?: \"\"\n    if ((!senderRef1.isEmpty() && senderRef1.length() > 50) || (!senderRef2.isEmpty() && senderRef2.length() > 50)) {\n        isValid = false\n        errors << \"CERR24\"\n    }\n\n    // Agreement_Number_Validation\n    def agreementNo = record[\"Agreement_No.\"] ?: \"\"\n    if (!agreementNo.isEmpty() && agreementNo.length() > 20) {\n        isValid = false\n        errors << \"CERR28\"\n    }\n\n    // Priority_Flag_Validation\n    def priorityFlag = record[\"Priority_Flag\"] ?: \"\"\n    if (priorityFlag.isEmpty() || !priorityFlag.matches(/[01]/)) {\n        isValid = false\n        errors << \"CERR25\"\n    }\n\n    // Source_DP_ID_Validation\n    def sourceDPID = record[\"Source_DP_ID\"] ?: \"\"\n    if (!sourceDPID.isEmpty() && !sourceDPID.matches(/[A-Z]{2}[0-9]{6}/)) {\n        isValid = false\n        errors << \"DIH00003\"\n    }\n\n    // Margin_Pledge_Re-pledge_Indicator_Validation\n    def marginPledgeIndicator = record[\"Margin_Pledge_Re-pledge_Indicator\"] ?: \"\"\n    if (marginPledgeIndicator.isEmpty() || !marginPledgeIndicator.matches(/01|02|03/)) {\n        isValid = false\n        errors << \"CERR27\"\n    }\n\n    // UCC_Code_Validation\n    def uccCode = record[\"UCC_CODE\"] ?: \"\"\n    if (uccCode.isEmpty() || uccCode.length() != 10) {\n        isValid = false\n        errors << \"CERR29\"\n    }\n\n    // Exchange_Code_Validation\n    def exchangeCode = record[\"Exchange_Code\"] ?: \"\"\n    if (exchangeCode.isEmpty() || !exchangeCode.matches(/01|02|03|04|05|06/)) {\n        isValid = false\n        errors << \"CERR19\"\n    }\n\n    // Segment_ID_Validation\n    def segment = record[\"Segment\"] ?: \"\"\n    if (segment.isEmpty() || !segment.matches(/01|02|03|04|05|06|07/)) {\n        isValid = false\n        errors << \"CERR20\"\n    }\n\n    // CP_Code_Validation\n    def cpCode = record[\"CP_Code\"] ?: \"\"\n    if (!cpCode.isEmpty() && cpCode.length() != 12) {\n        isValid = false\n        errors << \"CERR15\"\n    }\n\n    // Channel_Indicator_Validation\n    def channelIndicator = record[\"Channel_Indicator\"] ?: \"\"\n    if (channelIndicator.isEmpty() || channelIndicator != \"23\") {\n        isValid = false\n        errors << \"PL0070\"\n    }\n\n    // Original_Order_BPDP_ID_Validation\n    def originalDPID = record[\"Original_Order_BPDP_ID\"] ?: \"\"\n    if (!originalDPID.isEmpty() && !originalDPID.matches(/[A-Z]{2}[0-9]{6}/)) {\n        isValid = false\n        errors << \"CER102\"\n    }\n\n    // Return final result\n    return [isValid: isValid, errors: errors]\n}\n\ndef businessDate = \"20240917\"\ndef fileType = \"908\"\ndef validationResult = validateRecord(record, businessDate, fileType)\n\nreturn validationResult\n",
+				"isAsync":false,
+				"parameters":{
+					"record":"{{ Y0mb9.outputs.record }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":120,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1lO4e-1",
+			"id":"Okxqf",
+			"index":0,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"test":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Test"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"test":"{\n  \"header\" : {\n\"Batch_Number\": \"12345678\",\n    \"Record_Type\": \"11\",\n    \"Branch_Code\": \"ABC123\",\n    \"DP_ID\": \"AB123456\",\n    \"DP_Role\": \"06\",\n    \"Total_number of Detail Records\": \"000100\",\n    \"Sender_Date\": \"20220914\",\n    \"Sender_User_ID\": \"User001111\",\n    \"Entity_ID\": \"ENT12345\",\n    \"Filler\": \"  \"\n}\n}"
+			},
+			"outputSchema":{
+				"type":"SCHEMA",
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"test":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Test"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":18,
+				"resourceName":"utility_by_unifyapps_to_json_object",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1lO4e-1",
+			"id":"UjoZZ",
+			"index":0,
+			"inputs":{
+				"jsonSchema":{
+					"type":"object",
+					"properties":{
+						"header":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Header"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"jsonString":"{{ Okxqf.outputs.test }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Deserialise string to JSON object",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":58,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1lO4e-1",
+			"id":"U9yEx",
+			"index":0,
+			"inputs":{
+				"input":{
+					"type":"object",
+					"properties":{
+						"header":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Header"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"code":"def validateField(value, type, size, mandatory) {\n    if (!mandatory && value.isEmpty()) return true\n\n    if (type == 'Integer') {\n        return value.length() == size && value.every { it.isDigit() }\n    } else if (type == 'Character' || type == 'Date') {\n        return value.length() == size\n    }\n    return false\n}\n\ndef validateHeader(header) {\n    def isValid = true\n    def errors = []\n\n    // Batch Number validation\n    def batchNumber = header['Batch_Number']\n    if (!batchNumber) {\n        errors << 'CERR69' // Batch number cannot be blank\n        isValid = false\n    } else if (batchNumber.length() > 8) {\n        errors << 'CERR69' // Invalid length of Batch number\n        isValid = false\n    }\n\n    // Record Type validation\n    def recordType = header['Record_Type']\n    if (!recordType) {\n        errors << 'CERR66' // Empty Record type\n        isValid = false\n    } else if (recordType.length() != 2) {\n        errors << 'CERR67' // Invalid length of Record type\n        isValid = false\n    } else if (!recordType.matches('1[1]')) {\n        errors << 'CERR68' // Invalid pattern of record type\n        isValid = false\n    }\n\n    // Branch Code validation\n    def branchCode = header['Branch_Code']\n    if (!branchCode) {\n        errors << 'CERR84' // Empty Branch code\n        isValid = false\n    } else if (!branchCode.matches('[0-9A-Za-z]+')) {\n        errors << 'CERR86' // Invalid pattern of Branch code\n        isValid = false\n    } else if (branchCode.length() != 6) {\n        errors << 'CERR85' // Invalid length of Branch code\n        isValid = false\n    }\n\n    // DP ID validation\n    def dpId = header['DP_ID']\n    if (!dpId) {\n        errors << 'CERR62' // Empty DP ID\n        isValid = false\n    } else if (dpId.length() != 8) {\n        errors << 'CERR63' // Invalid length of DP ID\n        isValid = false\n    } else if (!dpId.matches('[A-Z]{2}[0-9]{6}')) {\n        errors << 'CERR64' // Invalid pattern of DP ID\n        isValid = false\n    }\n\n    // Role validation\n    def dpRole = header['DP_Role']\n    if (!dpRole) {\n        errors << 'CERR80' // Empty DP Role\n        isValid = false\n    } else if (dpRole.length() != 2) {\n        errors << 'CERR81' // Invalid length of DP Role\n        isValid = false\n    } else if (!dpRole.matches('[0-9]+')) {\n        errors << 'CERR82' // Invalid pattern of DP Role\n        isValid = false\n    }\n\n    // Total number of Detail Records validation\n    def totalRecords = header['Total_number of Detail Records']\n    if (totalRecords.length() != 6) {\n        errors << 'CERR73' // Invalid length of Total number of Detail Records\n        isValid = false\n    }\n\n    // Sender Date validation\n    def senderDate = header['Sender_Date']\n    if (!senderDate) {\n        errors << 'CERR76' // Empty Sender date\n        isValid = false\n    } else if (!senderDate.matches('\\\\d{8}')) {\n        errors << 'RPT004' // The Date is not valid\n        isValid = false\n    }\n\n    // Sender User ID validation\n    def senderUserId = header['Sender_User_ID']\n    if (senderUserId && senderUserId.length() > 8) {\n        errors << 'CERR63' // Invalid length of Sender User ID\n        isValid = false\n    }\n\n    // Entity ID validation\n    def entityId = header['Entity_ID']\n    if (entityId && (entityId.length() > 8 || entityId == '00000000')) {\n        errors << 'CERR59' // Invalid Entity ID\n        isValid = false\n    }\n\n    // Filler validation\n    def filler = header['Filler']\n    if (filler && (!filler.matches('[A-Za-z\\\\s]+') || filler.length() > 2)) {\n        errors << 'CERR87' // Invalid pattern or length of Filler\n        isValid = false\n    }\n\n    return [isValid: isValid, errors: errors]\n}\n\ndef validationResult = validateHeader(header)\nreturn validationResult\n",
+				"isAsync":false,
+				"parameters":{
+					"header":"{{ UjoZZ.outputs.result.header }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":120,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1lO4e-1",
+			"id":"tNp44",
+			"index":0,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"etst":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Etst"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"etst":"{\n\"trailerRecord\": {\n\"Batch_Number\": \"00119125\",\n    \"Record_Type\": \"99\",\n    \"Branch_Code\": \"000000\",\n    \"Demat_Instruction\": \"000000000000000000\",\n    \"Remat_Reconversion_of_units_into_SOA\": \"000000000000000000\",\n    \"Filler\": \"000000000000000000000000000000\",\n    \"DFP_Instruction_Total_Qty\": \"000000000000000000\",\n    \"RFP_Instruction_Total_Qty\": \"000000000000000000\",\n    \"Delivery_Out_Instruction_Total_Qty\": \"000000000000000000\",\n    \"Inter_Settlement_Instruction_Total_Qty\": \"000000000000000000\",\n    \"Pledge_Instruction_Total_Qty\": \"000000000000030000\",\n    \"Hypothecation_Instruction_Total_Qty\": \"000000000000000000\",\n    \"Pledge_Invocation_Instruction_Total_Qty\": \"000000000000000000\",\n    \"Pledge_Closure_Instruction_Total_Qty\": \"000000000000000000\",\n    \"Irreversible_Delivery_Out_Total_Qty\": \"000000000000000000\",\n    \"Pool_Pool_Account_Transfer_Total_Qty\": \"000000000000000000\",\n    \"Inter_Depository_Delivery_Qty\": \"000000000000000000\",\n    \"Inter_Depository_Receipt_Qty\": \"000000000000000000\",\n    \"CM_pool_Delivery_Qty\": \"000000000000000000\",\n    \"CM_pool_Receipt_Qty\": \"000000000000000000\",\n    \"Qty_For_future_use\": \"000000000000000000\",\n    \"Repurchase_MF_Instruction\": \"000000000000000000\",\n    \"Freeze_Instruction_Total_Qty\": \"000000000000000000\",\n    \"Unfreeze_Instruction_Total_Qty\": \"000000000000000000\",\n    \"Pledge_Confirmation_Total_Qty\": \"000000000000000000\",\n    \"Hypothecation_Invocation_Confirmation_Total_Qty\": \"000000000000000000\",\n    \"Pledge_Closure_Confirmation_Total_Qty\": \"000000000000000000\",\n    \"Grand_Total_Quantity_and_Amount\": \"000000000000045000\"\n}\n}"
+			},
+			"outputSchema":{
+				"type":"SCHEMA",
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"etst":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Etst"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":18,
+				"resourceName":"utility_by_unifyapps_to_json_object",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1lO4e-1",
+			"id":"ZbMyH",
+			"index":0,
+			"inputs":{
+				"jsonSchema":{
+					"type":"object",
+					"properties":{
+						"trailerRecord":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Trailer Record"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"jsonString":"{{ tNp44.outputs.etst }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Deserialise string to JSON object",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":58,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1lO4e-1",
+			"id":"zqteC",
+			"index":0,
+			"inputs":{
+				"input":{
+					"type":"object",
+					"properties":{
+						"batchNumber":{
+							"type":"string",
+							"title":"Batch Number"
+						},
+						"trailerRecord":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Trailer Record"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"code":"def validateField(value, type, size, mandatory) {\n    // Null and empty check\n    if (value == null || (!mandatory && value.isEmpty())) return true\n\n    if (type == 'Integer') {\n        return value.length() == size && value.every { it >= '0' && it <= '9' }\n    } else if (type == 'Decimal') {\n        return value.contains('.') && value.length() == size + 1 &&\n                value.replace('.', '').every { it >= '0' && it <= '9' }\n    } else if (type == 'Character') {\n        return value.length() == size\n    }\n\n    return false\n}\n\ndef validateRecord(record, headerBatchNumber) {\n    def validations = [\n        [\"Batch_Number\", \"Integer\", 8, true, 'CERR34'],  // Error code for batch number mismatch\n        [\"Record_Type\", \"Integer\", 2, true, 'CERR67'],  // Error code for invalid record type length\n        [\"Branch_Code\", \"Character\", 6, true, 'CERR85'],  // Error code for invalid branch code length\n        [\"Demat_Instruction_Conversion_of_Units\", \"Decimal\", 18, false, 'CERR93'],  // Generic error code for decimal fields\n        [\"Grand Total_Quantity_and_Amount\", \"Decimal\", 18, true, 'CERR93']  // Error code for grand total mismatch\n    ]\n\n    def isValid = true\n    def errors = []\n\n    // Validate that trailer record is not null or empty\n    if (record == null || record.isEmpty()) {\n        errors << 'CERR61'  // Invalid or empty trailer\n        isValid = false\n    }\n\n    // Validate Batch Number against header (check if both fields are null-safe)\n    def batchNumber = record?.get('Batch_Number') ?: \"\"\n    if (batchNumber != headerBatchNumber) {\n        errors << 'CERR34'  // Mismatch in batch number\n        isValid = false\n    }\n\n    // Validate Record Type (null check)\n    def recordType = record?.get('Record_Type') ?: \"\"\n    if (!recordType) {\n        errors << 'CERR66'  // Empty Record type\n        isValid = false\n    } else if (!recordType.matches('9[9]')) {\n        errors << 'CERR68'  // Invalid pattern of record type\n        isValid = false\n    } else if (recordType.length() != 2) {\n        errors << 'CERR67'  // Invalid length of record type\n        isValid = false\n    }\n\n    // Validate Branch Code (null check)\n    def branchCode = record?.get('Branch_Code') ?: \"\"\n    if (!branchCode) {\n        errors << 'CERR84'  // Empty Branch code\n        isValid = false\n    } else if (!branchCode.matches('[0-9A-Za-z]+')) {\n        errors << 'CERR86'  // Invalid pattern of Branch code\n        isValid = false\n    } else if (branchCode.length() != 6) {\n        errors << 'CERR85'  // Invalid length of Branch code\n        isValid = false\n    }\n\n    // Validate Grand Total Quantity and Amount (null check)\n    def grandTotal = record?.get('Grand Total_Quantity_and_Amount') ?: \"\"\n    if (!grandTotal) {\n        errors << 'CERR93'  // Total quantity mismatch\n        isValid = false\n    }\n\n    // Apply field-specific validations\n    validations.each { field ->\n        def fieldName = field[0]\n        def fieldType = field[1]\n        def fieldSize = field[2]\n        def mandatory = field[3]\n        def errorCode = field[4]\n\n        // Null-safe field value retrieval\n        def fieldValue = record?.get(fieldName) ?: \"\"\n\n        if (!validateField(fieldValue, fieldType, fieldSize, mandatory)) {\n            isValid = false\n            errors << errorCode  // Only append the error code, not the field name or value\n        }\n    }\n\n    return [isValid: isValid, errors: errors]\n}\n\ndef validationResult = validateRecord(trailerRecord, batchNumber)\nreturn [\"validation\": validationResult]\n",
+				"isAsync":false,
+				"parameters":{
+					"batchNumber":"test",
+					"trailerRecord":"{{ ZbMyH.outputs.result.trailerRecord }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":58,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1lO4e-1",
+			"id":"gBtSm",
+			"index":0,
+			"inputs":{
+				"input":{
+					"type":"object",
+					"properties":{
+						"header":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Header"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"code":"def createOneLineHeader(header) {\n    def stringBuilder = new StringBuilder()\n\n    // Helper to append the field values or spaces if empty\n    def appendField = { value, size ->\n        if (!value || value.isEmpty()) {\n            // If the value is missing, append spaces equal to the size\n            stringBuilder << ' ' * size\n        } else {\n            // Append the value, padded to the required length\n            stringBuilder << value.padRight(size)\n        }\n    }\n\n    // Append each field in order, ensuring the correct size\n    appendField(header['Batch_Number'], 8)\n    appendField(header['Record_Type'], 2)\n    appendField(header['Branch_Code'], 6)\n    appendField(header['DP_ID'], 8)\n    appendField(header['DP_Role'], 2)\n    appendField(header['Total_number of Detail Records'], 6)\n    appendField(header['Sender_Date'], 8)\n    appendField(header['Sender_User_ID'], 8)\n    appendField(header['Entity_ID'], 8)\n    appendField(header['Filler'], 2)\n\n    return stringBuilder.toString()\n}\n\ndef oneLineHeader = createOneLineHeader(header)\nreturn [\"header\" : oneLineHeader]\n",
+				"isAsync":false,
+				"parameters":{
+					"header":"{{ UjoZZ.outputs.result.header }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"header oneline",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":58,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1lO4e-1",
+			"id":"sQa9N",
+			"index":0,
+			"inputs":{
+				"input":{
+					"type":"object",
+					"properties":{
+						"record":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Record"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"code":"def generateRecordString(record) {\n    def output = \"\"\n    def fieldSpecs = [\n        [\"Batch_Number\", 8, 'M'],\n        [\"Record_Type\", 2, 'M'],\n        [\"Line_Number\", 6, 'M'],\n        [\"Transaction_Type\", 3, 'M'],\n        [\"Transaction_Flag\", 1, 'M'],\n        [\"Original_Order_BPDP_ID\", 14, 'O'],\n        [\"Client_ID\", 8, 'M'],\n        [\"ISIN\", 12, 'M'],\n        [\"Quantity\", 18, 'M'],\n        [\"Lock-in_Reason_Code\", 2, 'O'],\n        [\"Lock-in_Release_Date\", 8, 'O'],\n        [\"Filler_1\", 16, 'O'],\n        [\"Execution_Date\", 8, 'M'],\n        [\"Filler_2\", 6, 'O'],\n        [\"Other_DP_ID\", 8, 'M'],\n        [\"Other_Client_ID\", 8, 'M'],\n        [\"Filler_3\", 2, 'O'],\n        [\"Closure_Date\", 8, 'MO'],\n        [\"Filler_4\", 17, 'O'],\n        [\"Internal_Reference\", 35, 'O'],\n        [\"Sender_Reference_Number_1\", 50, 'O'],\n        [\"Sender_Reference_Number_2\", 50, 'O'],\n        [\"Agreement_No_\", 20, 'MO'],\n        [\"Filler_5\", 15, 'O'],\n        [\"Priority_Flag\", 1, 'M'],\n        [\"Filler_6\", 16, 'O'],\n        [\"Source_DP_ID\", 8, 'O'],\n        [\"Margin_Pledge_Re-pledge_Indicator\", 2, 'M'],\n        [\"TM_ID\", 8, 'O'],\n        [\"CM_ID\", 8, 'O'],\n        [\"CC_ID\", 8, 'O'],\n        [\"UCC_CODE\", 10, 'M'],\n        [\"Exchange_Code\", 2, 'M'],\n        [\"Segment\", 2, 'M'],\n        [\"CP_Code\", 12, 'O'],\n        [\"Channel_Indicator\", 2, 'M'],\n        [\"Original_Order_BPDP_ID\", 8, 'O'],\n        [\"Filler_7\", 338, 'M']\n    ]\n\n    fieldSpecs.each { spec ->\n        def fieldName = spec[0]\n        def fieldLength = spec[1]\n        def fieldMandatory = spec[2]\n\n        def fieldValue = record[fieldName] ?: \"\"\n        if (fieldValue.isEmpty() && fieldMandatory == 'M') {\n            output += \" \" * fieldLength // Add spaces for mandatory fields if empty\n        } else {\n            fieldValue = fieldValue.padRight(fieldLength, ' ').take(fieldLength)\n            output += fieldValue\n        }\n    }\n\n    return output\n}\n\ndef result = generateRecordString(record)\nreturn [\"record\": result]\n",
+				"isAsync":false,
+				"parameters":{
+					"record":"{{ Y0mb9.outputs.record }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"record oneline",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":58,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1lO4e-1",
+			"id":"0SCv4",
+			"index":0,
+			"inputs":{
+				"input":{
+					"type":"object",
+					"properties":{
+						"trailerRecord":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Trailer Record"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"code":"def generateTrailerRecordString(trailerRecord) {\n    def output = \"\"\n\n    // Fields and their corresponding lengths, mandatory/optional status\n    def fieldSpecs = [\n        [\"Batch_Number\", 8, 'M'],\n        [\"Record_Type\", 2, 'M'],\n        [\"Branch_Code\", 6, 'M'],\n        [\"Demat_Instruction\", 18, 'O'],\n        [\"Remat_Reconversion_of_units_into_SOA\", 18, 'O'],\n        [\"Filler_1\", 15, 'O'],\n        [\"DFP_Instruction_Total_Qty\", 18, 'O'],\n        [\"RFP_Instruction_Total_Qty\", 18, 'O'],\n        [\"Delivery_Out_Instruction_Total_Qty\", 18, 'O'],\n        [\"Inter_Settlement_Instruction_Total_Qty\", 18, 'O'],\n        [\"Pledge_Instruction_Total_Qty\", 18, 'O'],\n        [\"Hypothecation_Instruction_Total_Qty\", 18, 'O'],\n        [\"Pledge_Invocation_Instruction_Total_Qty\", 18, 'O'],\n        [\"Pledge_Closure_Instruction_Total_Qty\", 18, 'O'],\n        [\"Irreversible_Delivery_Out_Total_Qty\", 18, 'O'],\n        [\"Pool_Pool_Account_Transfer_Total_Qty\", 18, 'O'],\n        [\"Inter_Depository_Delivery_Qty\", 18, 'O'],\n        [\"Inter_Depository_Receipt_Qty\", 18, 'O'],\n        [\"CM_pool_Delivery_Qty\", 18, 'O'],\n        [\"CM_pool_Receipt_Qty\", 18, 'O'],\n        [\"Qty_For_future_use\", 18, 'O'],\n        [\"Repurchase_MF_Instruction\", 18, 'O'],\n        [\"Freeze_Instruction_Total_Qty\", 18, 'O'],\n        [\"Unfreeze_Instruction_Total_Qty\", 18, 'O'],\n        [\"Pledge_Confirmation_Total_Qty\", 18, 'O'],\n        [\"Hypothecation_Invocation_Confirmation_Total_Qty\", 18, 'O'],\n        [\"Pledge_Closure_Confirmation_Total_Qty\", 18, 'O'],\n        [\"Filler_2\", 30, 'O'],\n        [\"Grand_Total_Quantity_and_Amount\", 18, 'M']\n    ]\n\n    // Iterate over the field specifications and build the output\n    fieldSpecs.each { spec ->\n        def fieldName = spec[0]\n        def fieldLength = spec[1]\n        def fieldMandatory = spec[2]\n\n        def fieldValue = trailerRecord[fieldName] ?: \"\"\n        if (fieldValue.isEmpty() && fieldMandatory == 'M') {\n            output += \" \" * fieldLength // Add spaces for mandatory fields if empty\n        } else {\n            fieldValue = fieldValue.padRight(fieldLength, ' ').take(fieldLength)\n            output += fieldValue\n        }\n    }\n\n    return output\n}\n\ndef result = generateTrailerRecordString(trailerRecord)\nreturn [\"trailer\": result]\n",
+				"isAsync":false,
+				"parameters":{
+					"trailerRecord":"{{ ZbMyH.outputs.result.trailerRecord }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"trailer oneline",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":59,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1lO4e-1",
+			"id":"cuEcN",
+			"index":0,
+			"inputs":{
+				"code":"def generateRecordString(record, errors = \"\") {\n    def output = \"\"\n    def fieldSpecs = [\n        [\"Batch_Number\", 8, 'M'],\n        [\"Record_Type\", 2, 'M'],\n        [\"Line_Number\", 6, 'M'],\n        [\"Transaction_Type\", 3, 'M'],\n        [\"Transaction_Flag\", 1, 'M'],\n        [\"Original_Order_BPDP_ID\", 14, 'O'],\n        [\"Client_ID\", 8, 'M'],\n        [\"ISIN\", 12, 'M'],\n        [\"Quantity\", 18, 'M'],\n        [\"Lock-in_Reason_Code\", 2, 'O'],\n        [\"Lock-in_Release_Date\", 8, 'O'],\n        [\"Filler_1\", 16, 'O'],\n        [\"Execution_Date\", 8, 'M'],\n        [\"Filler_2\", 6, 'O'],\n        [\"Other_DP_ID\", 8, 'M'],\n        [\"Other_Client_ID\", 8, 'M'],\n        [\"Filler_3\", 2, 'O'],\n        [\"Closure_Date\", 8, 'MO'],\n        [\"Filler_4\", 17, 'O'],\n        [\"Internal_Reference\", 35, 'O'],\n        [\"Sender_Reference_Number_1\", 50, 'O'],\n        [\"Sender_Reference_Number_2\", 50, 'O'],\n        [\"Agreement_No_\", 20, 'MO'],\n        [\"Filler_5\", 15, 'O'],\n        [\"Priority_Flag\", 1, 'M'],\n        [\"Filler_6\", 16, 'O'],\n        [\"Source_DP_ID\", 8, 'O'],\n        [\"Margin_Pledge_Re-pledge_Indicator\", 2, 'M'],\n        [\"TM_ID\", 8, 'O'],\n        [\"CM_ID\", 8, 'O'],\n        [\"CC_ID\", 8, 'O'],\n        [\"UCC_CODE\", 10, 'M'],\n        [\"Exchange_Code\", 2, 'M'],\n        [\"Segment\", 2, 'M'],\n        [\"CP_Code\", 12, 'O'],\n        [\"Channel_Indicator\", 2, 'M'],\n        [\"Original_Order_BPDP_ID\", 8, 'O'],\n        [\"Filler_7\", 338, 'M']\n    ]\n\n    fieldSpecs.each { spec ->\n        def fieldName = spec[0]\n        def fieldLength = spec[1]\n        def fieldMandatory = spec[2]\n\n        def fieldValue = record[fieldName] ?: \"\"\n        if (fieldValue.isEmpty() && fieldMandatory == 'M') {\n            output += \" \" * fieldLength // Add spaces for mandatory fields if empty\n        } else {\n            fieldValue = fieldValue.padRight(fieldLength, ' ').take(fieldLength)\n            output += fieldValue\n        }\n    }\n\n    if (errors != null && !errors.isEmpty()) {\n        output += \"|\" + errors\n    }\n\n    return output\n}\n\ndef processRecord(record, errors = \"\") {\n    def recordString = generateRecordString(record, errors)\n    return recordString\n}\n",
+				"isAsync":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":48,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1lO4e-1",
+			"id":"vZqKW",
+			"index":0,
+			"inputs":{
+				"result":{
+					"j":"j"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":17,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":21
+}
