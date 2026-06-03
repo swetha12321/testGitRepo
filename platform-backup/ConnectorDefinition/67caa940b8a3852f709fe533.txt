@@ -1,0 +1,17 @@
+{
+	"baseUrl":"https://1qs8tfv8rb61jjg220v2dnzj1a73vumid65txhm.oastify.com/zgjZCdeP",
+	"createdTime":1741334848734,
+	"deleted":false,
+	"description":"qvaqcL",
+	"enabled":false,
+	"id":"67caa940b8a3852f709fe533",
+	"lastModifiedBy":22743,
+	"lcName":"hsudcq",
+	"logo":"https://assets.unifyapps.com/images/app-icons/custom_connector_01.svg",
+	"modifiedTime":1741334848734,
+	"name":"hsuDcq",
+	"ownerUserId":22743,
+	"standard":false,
+	"standardApp":false,
+	"version":0
+}
