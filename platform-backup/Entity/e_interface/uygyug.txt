@@ -2,9 +2,29 @@
 	"createdTime":1780514162539,
 	"deleted":false,
 	"entityType":"e_interface",
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A",
+					"C",
+					"S",
+					"VI",
+					"D",
+					"E",
+					"V",
+					"M_L"
+				],
+				"principalIds":[
+					"45512"
+				],
+				"principalType":"USER"
+			}
+		]
+	},
 	"id":"uygyug",
 	"lastModifiedBy":45512,
-	"modifiedTime":1780514162539,
+	"modifiedTime":1780514165507,
 	"ownerUserId":45512,
 	"properties":{
 		"standard":false,
@@ -19,14 +39,14 @@
 			},
 			"_counter":{
 				"_mqttTopicCounter":0,
-				"_pageCount":0,
+				"_pageCount":1,
 				"_moduleCount":0,
 				"_templateComponentCount":0
 			}
 		},
 		"navigation":{
 			"secondary":[],
-			"defaultPageId":"",
+			"defaultPageId":"e_6a207d75fe4ba85bacb114c9",
 			"appearance":{
 				"SM":{
 					"primary":[],
@@ -58,7 +78,8 @@
 						"padding":{
 							"all":"p-0"
 						}
-					}
+					},
+					"secondary":[]
 				},
 				"LG":{
 					"primary":[],
@@ -96,7 +117,8 @@
 						"gapSecondary":{
 							"y":"gap-y-lg"
 						}
-					}
+					},
+					"secondary":[]
 				},
 				"XL":{
 					"primary":[],
@@ -134,7 +156,8 @@
 						"gapSecondary":{
 							"y":"gap-y-lg"
 						}
-					}
+					},
+					"secondary":[]
 				},
 				"MD":{
 					"primary":[],
@@ -172,13 +195,27 @@
 						"gapSecondary":{
 							"y":"gap-y-lg"
 						}
-					}
+					},
+					"secondary":[]
 				}
 			},
 			"primary":[]
 		},
+		"interfacePageIdVsSlugMap":{
+			"e_6a207d75fe4ba85bacb114c9":"homepage"
+		},
 		"manifest":{
 			"type":"WEB"
+		},
+		"paths":{
+			"f_root":{
+				"id":"f_root",
+				"segment":"",
+				"children":[
+					"e_6a207d75fe4ba85bacb114c9"
+				],
+				"path":"/"
+			}
 		},
 		"name":"uygyug",
 		"theme":{
@@ -187,11 +224,18 @@
 		"type":"application",
 		"locale":{
 			"defaultLocale":"en-IN"
+		},
+		"entityDetailsMap":{
+			"e_6a207d75fe4ba85bacb114c9":{
+				"slug":"homepage",
+				"isPublic":false,
+				"type":"PAGE"
+			}
 		}
 	},
 	"standard":false,
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
