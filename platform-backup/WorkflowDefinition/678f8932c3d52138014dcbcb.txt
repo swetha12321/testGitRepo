@@ -1,0 +1,99 @@
+{
+	"appsUsed":[
+		"oracledb"
+	],
+	"createdTime":1737460018954,
+	"deleted":false,
+	"deployedVersion":5,
+	"deploymentState":{
+		"deployedAt":1737461797493,
+		"deployedBy":520,
+		"deployedDefinitionId":"678f901fa4e199312d05417a",
+		"status":"DEPLOYED",
+		"version":5,
+		"workflowVersion":15
+	},
+	"edges":[
+		{
+			"fromNodeId":"2yT5s",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"YAzYc",
+			"type":"next"
+		}
+	],
+	"id":"678f8932c3d52138014dcbcb",
+	"lastModifiedBy":0,
+	"lcName":"automation last checkpoint deploy options",
+	"modifiedTime":1780495208107,
+	"name":"Automation Last Checkpoint Deploy Options",
+	"nodes":[
+		{
+			"context":{
+				"appName":"oracledb",
+				"resourceVersion":505,
+				"connectionId":"676aa2736594d743b8850da1",
+				"resourceName":"oracledb_on_new_or_update_event"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"rHkod-1",
+			"id":"2yT5s",
+			"index":0,
+			"inputs":{
+				"loadType":"HISTORIC_LIVE",
+				"startWithCheckpoint":true,
+				"objectSourceResourceName":"oracledb_fetch_columns_information",
+				"batchSize":20,
+				"enableBatching":false,
+				"objectId":"MPHASIS.FILTERQA_CUSTOMERS",
+				"operationTypes":[
+					"INSERT",
+					"UPDATE"
+				],
+				"flushIntervalMs":5000
+			},
+			"skip":false,
+			"subTitle":"Oracle DB",
+			"title":"New/Update row",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":158,
+				"resourceName":"code_by_unifyapps_python",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"rHkod-1",
+			"id":"YAzYc",
+			"index":0,
+			"inputs":{
+				"code":"print(\"Yo - RD 1\")",
+				"isAsync":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Python script",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":47186,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":16
+}
