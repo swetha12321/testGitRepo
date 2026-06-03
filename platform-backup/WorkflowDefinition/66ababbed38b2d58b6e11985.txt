@@ -1,0 +1,280 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725259010323,
+	"deleted":false,
+	"deployedVersion":2,
+	"deploymentState":{
+		"deployedAt":1725259013390,
+		"deployedBy":520,
+		"deployedDefinitionId":"66d55d05d3f02a7f56227250",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":11
+	},
+	"edges":[
+		{
+			"fromNodeId":"X3r1j",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"DgAxM",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"DgAxM",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Q8QLS",
+			"type":"next"
+		}
+	],
+	"id":"66ababbed38b2d58b6e11985",
+	"lastModifiedBy":0,
+	"lcName":"fetching upcoming campaigns (ecom campaign)",
+	"modifiedTime":1780496151620,
+	"name":"Fetching Upcoming Campaigns (Ecom Campaign)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"0lpZa-1",
+			"id":"X3r1j",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"campaigns":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"campaign":{
+										"type":"object",
+										"properties":{
+											"name":{
+												"type":"string",
+												"title":"Name"
+											},
+											"start_date":{
+												"type":"string",
+												"title":"Start Date"
+											},
+											"end_date":{
+												"type":"string",
+												"title":"End Date"
+											},
+											"tag_1":{
+												"type":"string",
+												"title":"Tag 1"
+											},
+											"tag_2":{
+												"type":"string",
+												"title":"Tag 2"
+											},
+											"kpi_type":{
+												"type":"string",
+												"title":"Kpi Type"
+											},
+											"kpi_current":{
+												"type":"string",
+												"title":"Kpi Current"
+											},
+											"kpi_goal":{
+												"type":"string",
+												"title":"Kpi Goal"
+											},
+											"image_url":{
+												"type":"string",
+												"title":"Image Url"
+											},
+											"campaign_id":{
+												"type":"string",
+												"title":"Campaign Id"
+											}
+										},
+										"additionalProperties":false,
+										"title":"Campaign",
+										"required":[]
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"Campaigns",
+							"required":[]
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"username":{
+							"type":"string",
+							"title":"Username"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"analytics_by_unifyapps_query_reports",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"0lpZa-1",
+			"id":"DgAxM",
+			"index":0,
+			"inputs":{
+				"projections":[
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_campaign_details=::=campaignId"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_campaign_details=::=campaign_name"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_user_campaign_mapping=::=kpi_current"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_campaign_details=::=kpi_goal"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_campaign_details=::=kpi_type"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_campaign_details=::=tag_1"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_campaign_details=::=tag_2"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_campaign_details=::=start_date"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_campaign_details=::=end_date"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_campaign_details=::=image_url"
+					}
+				],
+				"filter":{
+					"filters":[
+						{
+							"property":"ENTITY_campaign_leaderboard=::=user_id",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ X3r1j.outputs.username }}"
+							}
+						},
+						{
+							"property":"ENTITY_user_campaign_mapping=::=active",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"false"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"entityType":"ENTITY_user_campaign_mapping",
+				"group":"ENTITY_REPORTING"
+			},
+			"skip":false,
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Analytics Query",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"0lpZa-1",
+			"id":"Q8QLS",
+			"index":0,
+			"inputs":{
+				"result":{
+					"campaignId":"{{ DgAxM.outputs.objects[0].columns.ENTITY_campaign_details=::=campaignId }}",
+					"campaigns":{
+						"source":"{{ DgAxM.outputs.objects }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"campaign":{
+								"name":"{{ DgAxM.outputs.objects[0].columns.ENTITY_campaign_details=::=campaign_name }}",
+								"start_date":"{{ DgAxM.outputs.objects[0].columns.ENTITY_campaign_details=::=start_date }}",
+								"end_date":"{{ DgAxM.outputs.objects[0].columns.ENTITY_campaign_details=::=end_date }}",
+								"tag_1":"{{ DgAxM.outputs.objects[0].columns.ENTITY_campaign_details=::=tag_1 }}",
+								"tag_2":"{{ DgAxM.outputs.objects[0].columns.ENTITY_campaign_details=::=tag_2 }}",
+								"kpi_type":"{{ DgAxM.outputs.objects[0].columns.ENTITY_campaign_details=::=kpi_type }}",
+								"kpi_current":"{{ DgAxM.outputs.objects[0].columns.ENTITY_user_campaign_mapping=::=kpi_current }}",
+								"kpi_goal":"{{ DgAxM.outputs.objects[0].columns.ENTITY_campaign_details=::=kpi_goal }}",
+								"image_url":"{{ DgAxM.outputs.objects[0].columns.ENTITY_campaign_details=::=image_url }}",
+								"campaign_id":"{{ DgAxM.outputs.objects[0].columns.ENTITY_campaign_details=::=campaignId }}"
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Return data to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":12
+}
