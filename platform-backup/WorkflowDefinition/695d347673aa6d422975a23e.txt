@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767715958729,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_3TzMz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_zlPG5",
+			"type":"next"
+		}
+	],
+	"id":"695d347673aa6d422975a23e",
+	"lastModifiedBy":-1,
+	"lcName":"rdfcwedsz",
+	"modifiedTime":1780492410521,
+	"name":"rdfcwedsz",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_3TzMz-1",
+			"id":"_3TzMz",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_3TzMz-1",
+			"id":"_zlPG5",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":33453,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
