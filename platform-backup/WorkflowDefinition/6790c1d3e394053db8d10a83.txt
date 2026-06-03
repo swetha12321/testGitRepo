@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1737540051294,
+	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1737540069977,
+		"deployedBy":520,
+		"deployedDefinitionId":"6790c1e5e394053db8d10a8e",
+		"status":"PAUSED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"edges":[
+		
+	],
+	"id":"6790c1d3e394053db8d10a83",
+	"lastModifiedBy":0,
+	"lcName":"schedule-it",
+	"modifiedTime":1780495207913,
+	"name":"schedule-it",
+	"nodes":[
+		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":175,
+				"resourceName":"schedule_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"H1J0I-1",
+			"id":"thcPm",
+			"index":0,
+			"inputs":{
+				"cron":"INTERVAL",
+				"interval":1,
+				"frequency":"MINUTES"
+			},
+			"skip":false,
+			"subTitle":"Schedule",
+			"title":"New recurring event",
+			"trigger":{
+				"type":"SCHEDULED"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
