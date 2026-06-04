@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780552380470,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_rP90i",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_NBICK",
+			"type":"next"
+		}
+	],
+	"id":"6a2112bcbe10f5154a41435a",
+	"lastModifiedBy":46030,
+	"lcName":"spendingpermissiontest",
+	"modifiedTime":1780552380470,
+	"name":"spendingPermissionTest",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_rP90i-1",
+			"id":"_rP90i",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_rP90i-1",
+			"id":"_NBICK",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":46030,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
