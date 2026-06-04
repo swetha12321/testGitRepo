@@ -4,25 +4,25 @@
 	],
 	"createdTime":1780146712029,
 	"deleted":false,
-	"deployedVersion":4,
+	"deployedVersion":5,
 	"deploymentState":{
-		"deployedAt":1780556505780,
+		"deployedAt":1780556701328,
 		"deployedBy":193867,
-		"deployedDefinitionId":"6a2122cf5774f52fd59d87a9",
+		"deployedDefinitionId":"6a21239ce928ec0a83ac300d",
 		"status":"DEPLOYED",
-		"version":4,
-		"workflowVersion":11
+		"version":5,
+		"workflowVersion":13
 	},
 	"edges":[
 		{
 			"fromNodeId":"n_xPlhL",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_AESay",
+			"toNodeId":"n_0IrJB",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_AESay",
+			"fromNodeId":"n_0IrJB",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_xSqRC",
@@ -39,7 +39,7 @@
 	"id":"6a1ae218b0071c016c3948dd",
 	"lastModifiedBy":193867,
 	"lcName":"test_follow_error_path",
-	"modifiedTime":1780556698181,
+	"modifiedTime":1780556812707,
 	"name":"test_follow_error_path",
 	"nodes":[
 		{
@@ -104,33 +104,21 @@
 		},
 		{
 			"context":{
-				"appName":"custom_http_endpoint",
-				"resourceVersion":2278,
-				"resourceName":"custom_http_endpoint_execute",
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"CONTINUE",
 			"groupId":"_5WCFI-1",
-			"id":"n_AESay",
+			"id":"n_0IrJB",
 			"index":2,
 			"inputs":{
-				"isAsync":false,
-				"enableProxy":false,
-				"requestTimeoutInSecs":-1,
-				"httpMethod":"PUT",
-				"connectionType":"DIRECT",
-				"sslVerify":false,
-				"path":"/parties",
-				"baseUrl":"https://salesprocessengine.x1.cl.t-mobile.at/salesProcessEngine/v2",
-				"httpVersion":"HTTP_2",
-				"responseContentType":"HEADER_BASED",
-				"followRedirects":"NORMAL",
-				"authType":"CUSTOM",
-				"requestContentType":"application/json",
-				"ignoreTrailingSlashes":false,
-				"certificateType":"CERT_STRING"
+				"code":"// Access user information\ndef name = {{ __USER__.outputs.name }} ?: 'world'\n\n// You can write any Groovy code here\n// Return a map with the result\nreturn [\"output\": \"Hello \" + name]",
+				"compile_static":false,
+				"captureStdOutput":false
 			},
 			"options":{
 				"bulkheadConfig":{
@@ -187,8 +175,8 @@
 				}
 			},
 			"skip":false,
-			"subTitle":"Custom HTTP Endpoint",
-			"title":"Execute REST request",
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
 			"type":"ACTION"
 		},
 		{
@@ -199,7 +187,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"CONTINUE",
 			"groupId":"_5WCFI-1",
 			"id":"n_xSqRC",
@@ -276,7 +264,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_5WCFI-1",
 			"id":"n_jXvjU",
@@ -307,5 +295,5 @@
 		}
 	},
 	"standard":false,
-	"version":13
+	"version":14
 }
