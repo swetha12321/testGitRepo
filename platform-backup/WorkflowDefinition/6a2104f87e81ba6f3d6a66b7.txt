@@ -25,7 +25,7 @@
 	"id":"6a2104f87e81ba6f3d6a66b7",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2cnpg3xx3rwh0",
-	"modifiedTime":1780548856405,
+	"modifiedTime":1780549023923,
 	"name":"changeSetQA2CNpG3xX3RwH0",
 	"nodes":[
 		{
@@ -35,7 +35,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"5stgo-1",
 			"id":"7pKsG",
@@ -89,14 +89,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"5stgo-1",
 			"id":"mGr1K",
 			"index":0,
 			"inputs":{
 				"result":{
-					"c":"=SUM({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
+					"c":"=PRODUCT({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
 				}
 			},
 			"skip":false,
@@ -118,5 +118,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
