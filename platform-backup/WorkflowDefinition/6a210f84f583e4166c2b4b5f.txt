@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780551556224,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_Lss0V",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_KLtEd",
+			"type":"next"
+		}
+	],
+	"id":"6a210f84f583e4166c2b4b5f",
+	"lastModifiedBy":175325,
+	"lcName":"excelfilelocalnmoecipgfh",
+	"modifiedTime":1780551556224,
+	"name":"ExcelFileLocalNmoECIpgfH",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Lss0V-1",
+			"id":"_Lss0V",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Lss0V-1",
+			"id":"_KLtEd",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
