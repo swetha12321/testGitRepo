@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780550660078,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_dhq15",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_qG2S3",
+			"type":"next"
+		}
+	],
+	"id":"6a210c047e81ba6f3d6ac03b",
+	"lastModifiedBy":175325,
+	"lcName":"splitpdffilepdflocalckmgpyekab",
+	"modifiedTime":1780550660078,
+	"name":"SplitPDFFilePDFLocalCkMGPyEKaB",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_dhq15-1",
+			"id":"_dhq15",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_dhq15-1",
+			"id":"_qG2S3",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
