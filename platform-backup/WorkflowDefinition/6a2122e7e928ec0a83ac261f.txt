@@ -1,0 +1,90 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780556519532,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_S8fyj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_u1tta",
+			"type":"next"
+		}
+	],
+	"id":"6a2122e7e928ec0a83ac261f",
+	"lastModifiedBy":188280,
+	"lcName":"across project agent call",
+	"modifiedTime":1780556788129,
+	"name":"Across project agent call",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":905,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_TFJ7k-1",
+			"id":"n_S8fyj",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"ai_agents_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"ai_agents_by_unifyapps_invoke_agent",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_TFJ7k-1",
+			"id":"n_u1tta",
+			"index":2,
+			"inputs":{
+				"callableInterfaceId":"__ua__invoke_ai_agent_by_unifyapps",
+				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
+				"defaultFallbackWorkflowId":"68050ca67df58855654804a0",
+				"parameters":{
+					"aiAgentId":"e_6a21229d4e9ba94867d71b9c",
+					"userQuery":"what is 1+2"
+				}
+			},
+			"skip":false,
+			"subTitle":"AI Agents by UnifyApps",
+			"title":"Invoke Agent",
+			"type":"CALL_INTERFACE_WORKFLOW"
+		}
+	],
+	"ownerUserId":188280,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":1
+}
