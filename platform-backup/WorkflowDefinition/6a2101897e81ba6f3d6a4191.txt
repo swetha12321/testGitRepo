@@ -4,27 +4,119 @@
 	],
 	"createdTime":1780547977841,
 	"deleted":false,
+	"deployedVersion":2,
+	"deploymentState":{
+		"deployedAt":1780547979768,
+		"deployedBy":175325,
+		"deployedDefinitionId":"6a21018b7e81ba6f3d6a419c",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":2
+	},
 	"edges":[
-		
+		{
+			"fromNodeId":"7pKsG",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"mGr1K",
+			"type":"next"
+		}
 	],
 	"id":"6a2101897e81ba6f3d6a4191",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2xtetyzwq1xrr",
-	"modifiedTime":1780547977841,
+	"modifiedTime":1780547980227,
 	"name":"changeSetQA2XtETYzwq1xrr",
 	"nodes":[
-		
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":127,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"5stgo-1",
+			"id":"7pKsG",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"c":{
+							"type":"integer",
+							"title":"c"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"c"
+					]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"a":{
+							"type":"integer",
+							"title":"a"
+						},
+						"b":{
+							"type":"integer",
+							"title":"b"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"a",
+						"b"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":116,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"5stgo-1",
+			"id":"mGr1K",
+			"index":0,
+			"inputs":{
+				"result":{
+					"c":"= MIN({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
 	],
 	"ownerUserId":175325,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
-		"enableVariableLogging":true,
-		"route":{
-			"default":false,
-			"tierName":"global"
-		}
+		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":0
+	"tags":[
+		
+	],
+	"version":3
 }
