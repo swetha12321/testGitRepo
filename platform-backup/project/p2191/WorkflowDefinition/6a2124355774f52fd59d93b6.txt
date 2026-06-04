@@ -6,47 +6,77 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_diMpd",
+			"fromNodeId":"n_R5k3x",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_FztIB",
+			"toNodeId":"n_u1tta",
 			"type":"next"
 		}
 	],
 	"id":"6a2124355774f52fd59d93b6",
 	"lastModifiedBy":188280,
 	"lcName":"sdaf",
-	"modifiedTime":1780556853928,
+	"modifiedTime":1780556861842,
 	"name":"sdaf",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":905,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_diMpd-1",
-			"id":"_diMpd",
-			"index":0,
+			"id":"n_R5k3x",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"ai_agents_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"ai_agents_by_unifyapps_invoke_agent",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_diMpd-1",
-			"id":"_FztIB",
-			"index":0,
+			"id":"n_u1tta",
+			"index":2,
+			"inputs":{
+				"callableInterfaceId":"__ua__invoke_ai_agent_by_unifyapps",
+				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
+				"defaultFallbackWorkflowId":"68050ca67df58855654804a0",
+				"parameters":{
+					"aiAgentId":"e_6a21229d4e9ba94867d71b9c",
+					"userQuery":"what is 1+2"
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"AI Agents by UnifyApps",
+			"title":"Invoke Agent",
+			"type":"CALL_INTERFACE_WORKFLOW"
 		}
 	],
 	"ownerUserId":188280,
 	"projectId":2191,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -57,5 +87,5 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"version":1
 }
