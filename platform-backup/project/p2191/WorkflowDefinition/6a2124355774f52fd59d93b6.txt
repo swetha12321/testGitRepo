@@ -1,0 +1,61 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780556853928,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_diMpd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_FztIB",
+			"type":"next"
+		}
+	],
+	"id":"6a2124355774f52fd59d93b6",
+	"lastModifiedBy":188280,
+	"lcName":"sdaf",
+	"modifiedTime":1780556853928,
+	"name":"sdaf",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_diMpd-1",
+			"id":"_diMpd",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_diMpd-1",
+			"id":"_FztIB",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":188280,
+	"projectId":2191,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
