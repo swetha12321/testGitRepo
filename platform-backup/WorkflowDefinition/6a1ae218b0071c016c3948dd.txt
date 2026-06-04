@@ -27,12 +27,19 @@
 			"skip":false,
 			"toNodeId":"n_xSqRC",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_xSqRC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_jXvjU",
+			"type":"next"
 		}
 	],
 	"id":"6a1ae218b0071c016c3948dd",
 	"lastModifiedBy":193867,
 	"lcName":"test_follow_error_path",
-	"modifiedTime":1780556679254,
+	"modifiedTime":1780556698181,
 	"name":"test_follow_error_path",
 	"nodes":[
 		{
@@ -103,7 +110,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"CONTINUE",
 			"groupId":"_5WCFI-1",
 			"id":"n_AESay",
@@ -260,6 +267,30 @@
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":4162,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_5WCFI-1",
+			"id":"n_jXvjU",
+			"index":4,
+			"inputs":{
+				"streamingCompleted":true,
+				"htmlBody":"working",
+				"responseName":"200_undefined",
+				"status":200
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to API request",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":193867,
@@ -276,5 +307,5 @@
 		}
 	},
 	"standard":false,
-	"version":12
+	"version":13
 }
