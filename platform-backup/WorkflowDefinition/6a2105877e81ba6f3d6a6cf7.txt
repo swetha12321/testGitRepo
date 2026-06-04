@@ -4,6 +4,15 @@
 	],
 	"createdTime":1780548999363,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1780549000724,
+		"deployedBy":175325,
+		"deployedDefinitionId":"6a2105887e81ba6f3d6a6cfe",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"PUGnb",
@@ -23,7 +32,7 @@
 	"id":"6a2105877e81ba6f3d6a6cf7",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa29853495692",
-	"modifiedTime":1780548999827,
+	"modifiedTime":1780549000725,
 	"name":"changeSetQA29853495692",
 	"nodes":[
 		{
@@ -87,7 +96,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"sVZXP-1",
 			"id":"4Adky",
