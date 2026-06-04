@@ -94,7 +94,7 @@
 	"id":"6a211138f583e4166c2b529b",
 	"lastModifiedBy":195904,
 	"lcName":"file_import_details_preview_clone",
-	"modifiedTime":1780553764278,
+	"modifiedTime":1780553834471,
 	"name":"File_Import_Details_Preview_Clone",
 	"nodes":[
 		{
@@ -541,7 +541,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_M1pZU-1",
 			"id":"n_eLZF0",
@@ -556,7 +556,7 @@
 					"ua:type":"mappedArray",
 					"items":"{{ n_WWI09.outputs.headers }}"
 				},
-				"batch":false,
+				"batch":true,
 				"encoding":"UTF-8",
 				"batchSize":100
 			},
@@ -796,5 +796,5 @@
 	"tags":[
 		"DO NOT TOUCH"
 	],
-	"version":8
+	"version":9
 }
