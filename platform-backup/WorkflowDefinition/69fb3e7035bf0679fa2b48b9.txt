@@ -4,14 +4,14 @@
 	],
 	"createdTime":1778073200128,
 	"deleted":false,
-	"deployedVersion":87,
+	"deployedVersion":88,
 	"deploymentState":{
-		"deployedAt":1780549920845,
+		"deployedAt":1780550247460,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a2109207e81ba6f3d6a9f88",
+		"deployedDefinitionId":"6a210a677e81ba6f3d6aaf84",
 		"status":"DEPLOYED",
-		"version":87,
-		"workflowVersion":262
+		"version":88,
+		"workflowVersion":263
 	},
 	"edges":[
 		{
@@ -160,7 +160,7 @@
 	"id":"69fb3e7035bf0679fa2b48b9",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-parent",
-	"modifiedTime":1780550238963,
+	"modifiedTime":1780550255836,
 	"name":"credit-calculation-parent",
 	"nodes":[
 		{
@@ -804,7 +804,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_5a67w@_KzyGt-1@l",
 			"id":"n_uJCdc",
@@ -1376,7 +1376,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_5a67w@_KzyGt-1@l",
 			"id":"n_GV9K8",
@@ -1436,7 +1436,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_52rnD",
@@ -1553,7 +1553,7 @@
 				"rateLimitConfig":{
 					"duration":"1",
 					"enabled":true,
-					"threshold":"50",
+					"threshold":"1000",
 					"unit":"MINUTES",
 					"waitForNextWindow":false
 				},
@@ -1631,5 +1631,5 @@
 		}
 	},
 	"standard":false,
-	"version":263
+	"version":264
 }
