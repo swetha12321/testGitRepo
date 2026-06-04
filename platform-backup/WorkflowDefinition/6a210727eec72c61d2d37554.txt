@@ -1,6 +1,15 @@
 {
 	"createdTime":1780549674797,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1780549675072,
+		"deployedBy":175325,
+		"deployedDefinitionId":"6a21082b7e81ba6f3d6a96fb",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":5
+	},
 	"edges":[
 		{
 			"fromNodeId":"lZXRK",
@@ -10,10 +19,34 @@
 			"type":"next"
 		}
 	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"EXPORT_AS_TEMPLATE",
+					"A",
+					"C",
+					"S",
+					"VI",
+					"D",
+					"TEST",
+					"VIEW_RUNS",
+					"E",
+					"V",
+					"VS",
+					"DEP"
+				],
+				"principalIds":[
+					"169044"
+				],
+				"principalType":"USER"
+			}
+		]
+	},
 	"id":"6a210727eec72c61d2d37554",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2autoufupmhrrfe",
-	"modifiedTime":1780549674797,
+	"modifiedTime":1780549686486,
 	"name":"changeSetQA2autouFupMHRRfE",
 	"nodes":[
 		{
@@ -104,5 +137,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
