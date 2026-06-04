@@ -56,6 +56,13 @@
 		},
 		{
 			"fromNodeId":"n_zTKue",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_pipAN",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_pipAN",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -87,7 +94,7 @@
 	"id":"6a211138f583e4166c2b529b",
 	"lastModifiedBy":195904,
 	"lcName":"file_import_details_preview_clone",
-	"modifiedTime":1780552941228,
+	"modifiedTime":1780553744689,
 	"name":"File_Import_Details_Preview_Clone",
 	"nodes":[
 		{
@@ -495,7 +502,6 @@
 				"ua:list_type":"OBJECT"
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -590,6 +596,25 @@
 		},
 		{
 			"context":{
+				"appName":"break",
+				"resourceVersion":892,
+				"resourceName":"break",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_eLZF0@_M1pZU-1@l",
+			"id":"n_pipAN",
+			"index":9,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Break",
+			"title":"Break",
+			"type":"BREAK"
+		},
+		{
+			"context":{
 				"appName":"code_by_unifyapps",
 				"resourceVersion":2285,
 				"resourceName":"code_by_unifyapps_python",
@@ -600,7 +625,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_M1pZU-1",
 			"id":"n_a6uxe",
-			"index":9,
+			"index":10,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -670,7 +695,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_M1pZU-1",
 			"id":"n_ygo0e",
-			"index":10,
+			"index":11,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -740,7 +765,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_M1pZU-1",
 			"id":"n_bIW7g",
-			"index":11,
+			"index":12,
 			"inputs":{
 				"result":{
 					"result":"{{ n_DNlA9.outputs.items }}"
@@ -769,5 +794,5 @@
 	"tags":[
 		"DO NOT TOUCH"
 	],
-	"version":5
+	"version":6
 }
