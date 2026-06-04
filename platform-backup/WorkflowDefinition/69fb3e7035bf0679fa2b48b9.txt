@@ -4,14 +4,14 @@
 	],
 	"createdTime":1778073200128,
 	"deleted":false,
-	"deployedVersion":88,
+	"deployedVersion":91,
 	"deploymentState":{
-		"deployedAt":1780550247460,
+		"deployedAt":1780551376635,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a210a677e81ba6f3d6aaf84",
+		"deployedDefinitionId":"6a210ed0be10f5154a4114d9",
 		"status":"DEPLOYED",
-		"version":88,
-		"workflowVersion":263
+		"version":91,
+		"workflowVersion":267
 	},
 	"edges":[
 		{
@@ -44,13 +44,6 @@
 		},
 		{
 			"fromNodeId":"n_9t8kU",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_yLkcY",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_yLkcY",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_Dufa2",
@@ -160,7 +153,7 @@
 	"id":"69fb3e7035bf0679fa2b48b9",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-parent",
-	"modifiedTime":1780550255836,
+	"modifiedTime":1780551613185,
 	"name":"credit-calculation-parent",
 	"nodes":[
 		{
@@ -686,27 +679,6 @@
 		},
 		{
 			"context":{
-				"appName":"utility_by_unifyapps",
-				"resourceVersion":4795,
-				"resourceName":"utility_by_unifyapps_epoch_to_date",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_KzyGt-1",
-			"id":"n_yLkcY",
-			"index":6,
-			"inputs":{
-				"epochUnit":"milliseconds"
-			},
-			"skip":false,
-			"subTitle":"Utility by UnifyApps",
-			"title":"Epoch to Date",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"code_by_unifyapps",
 				"resourceVersion":0,
 				"resourceName":"code_by_unifyapps_groovy",
@@ -717,7 +689,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_Dufa2",
-			"index":7,
+			"index":6,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -768,7 +740,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_5a67w",
-			"index":8,
+			"index":7,
 			"inputs":{
 				"condition":{
 					"filters":[
@@ -808,7 +780,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_5a67w@_KzyGt-1@l",
 			"id":"n_uJCdc",
-			"index":9,
+			"index":8,
 			"inputs":{
 				"projections":[
 					{
@@ -838,7 +810,7 @@
 				"includeTotalHits":true,
 				"page":{
 					"offset":"{{ n_bTato.outputs.page }}",
-					"limit":25
+					"limit":10
 				},
 				"sorts":[
 					{
@@ -870,7 +842,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_5a67w@_KzyGt-1@l",
 			"id":"n_3zOkb",
-			"index":10,
+			"index":9,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -1128,7 +1100,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_5a67w@_KzyGt-1@l",
 			"id":"n_5Imaj",
-			"index":11,
+			"index":10,
 			"inputs":{
 				"projections":[
 					{
@@ -1209,7 +1181,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_5a67w@_KzyGt-1@l",
 			"id":"n_wZ3Nh",
-			"index":12,
+			"index":11,
 			"inputs":{
 				"output":{
 					"type":"array",
@@ -1335,7 +1307,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_5a67w@_KzyGt-1@l",
 			"id":"n_QpfCY",
-			"index":13,
+			"index":12,
 			"inputs":{
 				"itemToAdd":{
 					"customer_id":"{{ n_JGp28.outputs.properties.customer_id }}",
@@ -1380,7 +1352,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_5a67w@_KzyGt-1@l",
 			"id":"n_GV9K8",
-			"index":14,
+			"index":13,
 			"inputs":{
 				"variables":[
 					{
@@ -1389,7 +1361,7 @@
 					},
 					{
 						"source":"{{ n_bTato.outputs.page }}",
-						"value":"={{ n_bTato.outputs.page }}+25"
+						"value":"={{ n_bTato.outputs.page }}+10"
 					}
 				]
 			},
@@ -1410,7 +1382,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_3cSug",
-			"index":15,
+			"index":14,
 			"inputs":{
 				"variables":[
 					{
@@ -1440,12 +1412,12 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_52rnD",
-			"index":16,
+			"index":15,
 			"inputs":{
 				"repeatMode":"BATCH",
 				"listSource":"{{ n_BucVj.outputs.items }}",
 				"captureIterations":false,
-				"batchSize":5
+				"batchSize":25
 			},
 			"skip":false,
 			"subTitle":"Loop",
@@ -1477,11 +1449,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"CONTINUE",
 			"groupId":"n_52rnD@_KzyGt-1@l",
 			"id":"n_O14wA",
-			"index":17,
+			"index":16,
 			"inputs":{
 				"automationId":"69f863a40eedcf52f9640aa6",
 				"runtimeConnections":{},
@@ -1590,7 +1562,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_aqKnm",
-			"index":18,
+			"index":17,
 			"inputs":{
 				"result":{
 					"completed":"true"
@@ -1610,7 +1582,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_fBO9h",
-			"index":19,
+			"index":18,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -1631,5 +1603,5 @@
 		}
 	},
 	"standard":false,
-	"version":264
+	"version":268
 }
