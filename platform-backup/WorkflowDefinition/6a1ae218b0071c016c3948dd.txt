@@ -39,6 +39,22 @@
 		},
 		{
 			"fromNodeId":"n_BGfGj",
+			"name":"error",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_b5RAh",
+			"type":"error"
+		},
+		{
+			"fromNodeId":"n_BGfGj",
+			"name":"success",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_xlmQr",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_b5RAh",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_xlmQr",
@@ -86,7 +102,7 @@
 	"id":"6a1ae218b0071c016c3948dd",
 	"lastModifiedBy":193867,
 	"lcName":"test_follow_error_path",
-	"modifiedTime":1780556154962,
+	"modifiedTime":1780556182744,
 	"name":"test_follow_error_path",
 	"nodes":[
 		{
@@ -274,7 +290,7 @@
 			},
 			"debug":false,
 			"dirty":true,
-			"fallbackMode":"STOP",
+			"fallbackMode":"MANUAL",
 			"groupId":"n_AESay@_5WCFI-1@error",
 			"id":"n_BGfGj",
 			"index":4,
@@ -283,10 +299,90 @@
 				"compile_static":false,
 				"captureStdOutput":false
 			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"maxLeaseTimeUnit":"SECONDS",
+					"maxWaitDurationUnit":"SECONDS"
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"MANUAL",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				},
+				"timeoutConfig":{
+					"enabled":false
+				}
+			},
 			"skip":false,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":4162,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_BGfGj@n_AESay@_5WCFI-1@error@error",
+			"id":"n_b5RAh",
+			"index":5,
+			"inputs":{
+				"streamingCompleted":true,
+				"responseName":"400_undefined",
+				"body":{
+					"check":"on error"
+				},
+				"status":400
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to API request",
+			"type":"STOP"
 		},
 		{
 			"context":{
@@ -298,7 +394,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_AESay@_5WCFI-1@error",
 			"id":"n_xlmQr",
-			"index":5,
+			"index":6,
 			"inputs":{
 				"branches":[
 					{
@@ -359,7 +455,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_xlmQr@n_AESay@_5WCFI-1@error@1",
 			"id":"n_xlmQr@1",
-			"index":6,
+			"index":7,
 			"inputs":{
 				"name":"Branch 1",
 				"conditions":{
@@ -391,7 +487,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_xlmQr@n_AESay@_5WCFI-1@error@1",
 			"id":"n_zf1AG",
-			"index":7,
+			"index":8,
 			"inputs":{
 				"streamingCompleted":true,
 				"htmlBody":"200",
@@ -418,7 +514,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_xlmQr@n_AESay@_5WCFI-1@error@2",
 			"id":"n_xlmQr@2",
-			"index":8,
+			"index":9,
 			"inputs":{
 				"name":"Branch 2",
 				"conditions":{
@@ -450,7 +546,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_xlmQr@n_AESay@_5WCFI-1@error@2",
 			"id":"n_RPJK3",
-			"index":9,
+			"index":10,
 			"inputs":{
 				"streamingCompleted":true,
 				"responseName":"400_undefined",
@@ -476,7 +572,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_xlmQr@n_AESay@_5WCFI-1@error@default",
 			"id":"n_8d9lD",
-			"index":10,
+			"index":11,
 			"inputs":{
 				"streamingCompleted":true,
 				"htmlBody":"false",
@@ -506,5 +602,5 @@
 		}
 	},
 	"standard":false,
-	"version":5
+	"version":6
 }
