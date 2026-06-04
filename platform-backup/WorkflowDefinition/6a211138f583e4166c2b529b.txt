@@ -94,7 +94,7 @@
 	"id":"6a211138f583e4166c2b529b",
 	"lastModifiedBy":195904,
 	"lcName":"file_import_details_preview_clone",
-	"modifiedTime":1780553744689,
+	"modifiedTime":1780553759316,
 	"name":"File_Import_Details_Preview_Clone",
 	"nodes":[
 		{
@@ -607,7 +607,9 @@
 			"groupId":"n_eLZF0@_M1pZU-1@l",
 			"id":"n_pipAN",
 			"index":9,
-			"inputs":{},
+			"inputs":{
+				"loop":"n_eLZF0"
+			},
 			"skip":false,
 			"subTitle":"Break",
 			"title":"Break",
@@ -794,5 +796,5 @@
 	"tags":[
 		"DO NOT TOUCH"
 	],
-	"version":6
+	"version":7
 }
