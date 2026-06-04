@@ -4,14 +4,14 @@
 	],
 	"createdTime":1778073200128,
 	"deleted":false,
-	"deployedVersion":84,
+	"deployedVersion":85,
 	"deploymentState":{
-		"deployedAt":1780549633907,
+		"deployedAt":1780549650758,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a2108017e81ba6f3d6a858d",
+		"deployedDefinitionId":"6a2108127e81ba6f3d6a9640",
 		"status":"DEPLOYED",
-		"version":84,
-		"workflowVersion":257
+		"version":85,
+		"workflowVersion":258
 	},
 	"edges":[
 		{
@@ -160,7 +160,7 @@
 	"id":"69fb3e7035bf0679fa2b48b9",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-parent",
-	"modifiedTime":1780549642854,
+	"modifiedTime":1780549652794,
 	"name":"credit-calculation-parent",
 	"nodes":[
 		{
@@ -1436,7 +1436,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_52rnD",
@@ -1445,7 +1445,7 @@
 				"repeatMode":"BATCH",
 				"listSource":"{{ n_BucVj.outputs.items }}",
 				"captureIterations":false,
-				"batchSize":20
+				"batchSize":10
 			},
 			"skip":false,
 			"subTitle":"Loop",
@@ -1477,7 +1477,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"CONTINUE",
 			"groupId":"n_52rnD@_KzyGt-1@l",
 			"id":"n_O14wA",
@@ -1628,5 +1628,5 @@
 		}
 	},
 	"standard":false,
-	"version":258
+	"version":259
 }
