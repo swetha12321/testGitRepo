@@ -37,7 +37,7 @@
 	"id":"6a19647e254b0f087eb6db3b",
 	"lastModifiedBy":195445,
 	"lcName":"test - code",
-	"modifiedTime":1780555140348,
+	"modifiedTime":1780555532554,
 	"name":"test - code",
 	"nodes":[
 		{
@@ -73,27 +73,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Gtibw-1",
 			"id":"n_pXyJQ",
 			"index":2,
 			"inputs":{
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"name"
-					],
-					"properties":{
-						"name":{
-							"type":"string",
-							"title":"Name"
-						}
-					}
-				},
-				"code":"def temp = name + 'world';",
-				"compile_static":true,
+				"code":"def temp = {{ __USER__.outputs.name }} + ' world';",
+				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
 					"name":"{{ __USER__.outputs.name }}"
@@ -189,5 +176,5 @@
 		}
 	},
 	"standard":false,
-	"version":11
+	"version":12
 }
