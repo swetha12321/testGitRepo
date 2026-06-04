@@ -4,6 +4,16 @@
 	],
 	"createdTime":1780554928069,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1780555205645,
+		"deployedBy":199983,
+		"deployedDefinitionId":"6a211dc55774f52fd59d6b33",
+		"deploymentTag":"v",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":3
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_z4JkM",
@@ -52,7 +62,7 @@
 	"id":"6a211cb05774f52fd59d64ca",
 	"lastModifiedBy":199983,
 	"lcName":"testt",
-	"modifiedTime":1780555201275,
+	"modifiedTime":1780555290738,
 	"name":"testt",
 	"nodes":[
 		{
@@ -361,13 +371,13 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RnUhC-1",
 			"id":"n_tblje",
 			"index":4,
 			"inputs":{
-				"file":"{{ n_kKCMD.outputs }}",
+				"file":"{{ n_gWNSz.outputs }}",
 				"useCustomHeaders":false,
 				"usePlaywright":false
 			},
@@ -434,5 +444,5 @@
 		}
 	},
 	"standard":false,
-	"version":3
+	"version":4
 }
