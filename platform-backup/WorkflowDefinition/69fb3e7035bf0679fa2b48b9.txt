@@ -4,14 +4,14 @@
 	],
 	"createdTime":1778073200128,
 	"deleted":false,
-	"deployedVersion":92,
+	"deployedVersion":93,
 	"deploymentState":{
-		"deployedAt":1780551614680,
+		"deployedAt":1780552428592,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a210fbef583e4166c2b4d1e",
+		"deployedDefinitionId":"6a2112ec969fcb05e4819cc6",
 		"status":"DEPLOYED",
-		"version":92,
-		"workflowVersion":268
+		"version":93,
+		"workflowVersion":269
 	},
 	"edges":[
 		{
@@ -153,7 +153,7 @@
 	"id":"69fb3e7035bf0679fa2b48b9",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-parent",
-	"modifiedTime":1780552425178,
+	"modifiedTime":1780552428596,
 	"name":"credit-calculation-parent",
 	"nodes":[
 		{
@@ -488,6 +488,7 @@
 				"ua:list_type":"OBJECT"
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -633,6 +634,7 @@
 				"page":0
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -1068,6 +1070,7 @@
 				"ua:list_type":"STRING"
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -1449,7 +1452,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"CONTINUE",
 			"groupId":"n_52rnD@_KzyGt-1@l",
 			"id":"n_O14wA",
