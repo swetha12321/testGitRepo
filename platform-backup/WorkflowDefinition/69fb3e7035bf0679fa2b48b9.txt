@@ -160,7 +160,7 @@
 	"id":"69fb3e7035bf0679fa2b48b9",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-parent",
-	"modifiedTime":1780548987683,
+	"modifiedTime":1780549019610,
 	"name":"credit-calculation-parent",
 	"nodes":[
 		{
@@ -804,7 +804,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_5a67w@_KzyGt-1@l",
 			"id":"n_uJCdc",
@@ -838,7 +838,7 @@
 				"includeTotalHits":true,
 				"page":{
 					"offset":"{{ n_bTato.outputs.page }}",
-					"limit":40
+					"limit":25
 				},
 				"sorts":[
 					{
@@ -1376,7 +1376,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_5a67w@_KzyGt-1@l",
 			"id":"n_GV9K8",
@@ -1389,7 +1389,7 @@
 					},
 					{
 						"source":"{{ n_bTato.outputs.page }}",
-						"value":"={{ n_bTato.outputs.page }}+40"
+						"value":"={{ n_bTato.outputs.page }}+25"
 					}
 				]
 			},
@@ -1622,5 +1622,5 @@
 		}
 	},
 	"standard":false,
-	"version":252
+	"version":253
 }
