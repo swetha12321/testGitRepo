@@ -4,14 +4,14 @@
 	],
 	"createdTime":1778073200128,
 	"deleted":false,
-	"deployedVersion":82,
+	"deployedVersion":83,
 	"deploymentState":{
-		"deployedAt":1780549301819,
+		"deployedAt":1780549308561,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a2106b57e81ba6f3d6a7935",
+		"deployedDefinitionId":"6a2106bc7e81ba6f3d6a7adb",
 		"status":"DEPLOYED",
-		"version":82,
-		"workflowVersion":255
+		"version":83,
+		"workflowVersion":256
 	},
 	"edges":[
 		{
@@ -160,7 +160,7 @@
 	"id":"69fb3e7035bf0679fa2b48b9",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-parent",
-	"modifiedTime":1780549306755,
+	"modifiedTime":1780549631091,
 	"name":"credit-calculation-parent",
 	"nodes":[
 		{
@@ -804,7 +804,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_5a67w@_KzyGt-1@l",
 			"id":"n_uJCdc",
@@ -838,7 +838,7 @@
 				"includeTotalHits":true,
 				"page":{
 					"offset":"{{ n_bTato.outputs.page }}",
-					"limit":25
+					"limit":50
 				},
 				"sorts":[
 					{
@@ -1376,7 +1376,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_5a67w@_KzyGt-1@l",
 			"id":"n_GV9K8",
@@ -1389,7 +1389,7 @@
 					},
 					{
 						"source":"{{ n_bTato.outputs.page }}",
-						"value":"={{ n_bTato.outputs.page }}+25"
+						"value":"={{ n_bTato.outputs.page }}+50"
 					}
 				]
 			},
@@ -1436,7 +1436,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_52rnD",
@@ -1445,7 +1445,7 @@
 				"repeatMode":"BATCH",
 				"listSource":"{{ n_BucVj.outputs.items }}",
 				"captureIterations":false,
-				"batchSize":10
+				"batchSize":20
 			},
 			"skip":false,
 			"subTitle":"Loop",
@@ -1628,5 +1628,5 @@
 		}
 	},
 	"standard":false,
-	"version":256
+	"version":257
 }
