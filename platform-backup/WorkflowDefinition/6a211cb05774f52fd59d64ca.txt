@@ -45,14 +45,14 @@
 			"fromNodeId":"n_tblje",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_EO1PN",
+			"toNodeId":"n_9X5BQ",
 			"type":"next"
 		}
 	],
 	"id":"6a211cb05774f52fd59d64ca",
 	"lastModifiedBy":199983,
 	"lcName":"testt",
-	"modifiedTime":1780555155381,
+	"modifiedTime":1780555189169,
 	"name":"testt",
 	"nodes":[
 		{
@@ -62,7 +62,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_RnUhC-1",
 			"id":"n_z4JkM",
@@ -84,7 +84,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_RnUhC-1",
 			"id":"n_kKCMD",
@@ -106,7 +106,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_RnUhC-1",
 			"id":"n_gWNSz",
@@ -367,6 +367,7 @@
 			"id":"n_tblje",
 			"index":4,
 			"inputs":{
+				"file":"{{ n_kKCMD.outputs }}",
 				"useCustomHeaders":false,
 				"usePlaywright":false
 			},
@@ -389,6 +390,7 @@
 			"id":"n_LfHhb",
 			"index":5,
 			"inputs":{
+				"itemToAdd":"{{ n_tblje.outputs }}",
 				"insertLocation":"END",
 				"captureAddedItem":false,
 				"listName":"{{ n_gWNSz.outputs.items[0] }}"
@@ -401,18 +403,21 @@
 		{
 			"context":{
 				"appName":"callables",
+				"resourceVersion":4120,
+				"resourceName":"callables_return_to_automation",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RnUhC-1",
-			"id":"n_EO1PN",
+			"id":"n_9X5BQ",
 			"index":6,
+			"inputs":{},
 			"skip":false,
 			"subTitle":"Callable",
-			"title":"Select an action",
-			"type":"CALL_WORKFLOW"
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":199983,
@@ -429,5 +434,5 @@
 		}
 	},
 	"standard":false,
-	"version":1
+	"version":2
 }
