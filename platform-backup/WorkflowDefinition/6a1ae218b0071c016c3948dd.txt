@@ -102,7 +102,7 @@
 	"id":"6a1ae218b0071c016c3948dd",
 	"lastModifiedBy":193867,
 	"lcName":"test_follow_error_path",
-	"modifiedTime":1780556229844,
+	"modifiedTime":1780556237000,
 	"name":"test_follow_error_path",
 	"nodes":[
 		{
@@ -295,7 +295,7 @@
 			"id":"n_BGfGj",
 			"index":4,
 			"inputs":{
-				"code":"",
+				"code":"return result",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -602,5 +602,5 @@
 		}
 	},
 	"standard":false,
-	"version":10
+	"version":11
 }
