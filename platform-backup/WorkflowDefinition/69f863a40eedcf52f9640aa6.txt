@@ -4,14 +4,14 @@
 	],
 	"createdTime":1777886116411,
 	"deleted":false,
-	"deployedVersion":113,
+	"deployedVersion":116,
 	"deploymentState":{
-		"deployedAt":1780417531568,
+		"deployedAt":1780506157870,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a1f03fbebe1c452c3c9d7c8",
+		"deployedDefinitionId":"6a205e2df1619c2a4c67ea01",
 		"status":"DEPLOYED",
-		"version":113,
-		"workflowVersion":515
+		"version":116,
+		"workflowVersion":523
 	},
 	"edges":[
 		{
@@ -102,22 +102,8 @@
 			"fromNodeId":"n_kFM9R",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_Npjdv",
-			"type":"loop"
-		},
-		{
-			"fromNodeId":"n_Npjdv",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_qBg1l",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_qBg1l",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_Jtypi",
-			"type":"next"
+			"type":"loop"
 		},
 		{
 			"fromNodeId":"n_Jtypi",
@@ -359,7 +345,7 @@
 	"id":"69f863a40eedcf52f9640aa6",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation",
-	"modifiedTime":1780417531569,
+	"modifiedTime":1780549541971,
 	"name":"credit-calculation",
 	"nodes":[
 		{
@@ -1321,7 +1307,6 @@
 				"ua:list_type":"OBJECT"
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -1941,143 +1926,6 @@
 			"type":"LOOP"
 		},
 		{
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":8646,
-				"resourceName":"storage_by_unifyapps_fetch_records",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"CONTINUE",
-			"groupId":"n_kFM9R@_XucEf-1@l",
-			"id":"n_Npjdv",
-			"index":14,
-			"inputs":{
-				"triggerInputCondition":{
-					"filters":[
-						{
-							"property":"properties_timeAndIdentification_automationId",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"{{ n_kFM9R.outputs.item.automationId }}"
-							}
-						},
-						{
-							"property":"properties_timeAndIdentification_date",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"{{ n_HCRE2.outputs.date }}"
-							}
-						}
-					],
-					"operator":"AND"
-				},
-				"shouldSearchInAnalyticsStore":false,
-				"object_type":"automation_cred_usage",
-				"includeRoleMappings":false,
-				"includeCurrentUserPermissions":false,
-				"translationsOption":"DEFAULT",
-				"page":{
-					"paginateBy":"OFFSET",
-					"limit":20
-				},
-				"numberOfRecordsToFetch":"SINGLE",
-				"readThroughSessionVariables":false,
-				"includeTotalCount":false
-			},
-			"options":{
-				"bulkheadConfig":{
-					"enabled":false,
-					"maxLeaseTimeUnit":"SECONDS",
-					"maxWaitDurationUnit":"SECONDS"
-				},
-				"businessHoursConfig":{
-					"enabled":false,
-					"waitForNextWindow":false
-				},
-				"cacheConfig":{
-					"enabled":false,
-					"usagePolicy":"ALWAYS"
-				},
-				"circuitBreakerConfig":{
-					"enabled":false
-				},
-				"disableLogging":false,
-				"enabledForReExecution":false,
-				"hookConfig":{
-					"enabled":false,
-					"postHooks":[
-						
-					],
-					"preHooks":[
-						
-					]
-				},
-				"logConfig":{
-					"enabled":false,
-					"logPolicies":[
-						
-					]
-				},
-				"rateLimitConfig":{
-					"enabled":false,
-					"waitForNextWindow":false
-				},
-				"retryConfig":{
-					"backOffFactor":null,
-					"captureRetries":false,
-					"enabled":false
-				},
-				"stepError":"CONTINUE",
-				"telemetryConfig":{
-					"enableTelemetry":false,
-					"metricConfigs":[
-						
-					]
-				},
-				"timeoutConfig":{
-					"enabled":false
-				}
-			},
-			"skip":false,
-			"subTitle":"Storage by UnifyApps",
-			"title":"Fetch records",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"continue",
-				"resourceVersion":864,
-				"resourceName":"continue",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_kFM9R@_XucEf-1@l",
-			"id":"n_qBg1l",
-			"index":15,
-			"inputs":{
-				"loop":"n_kFM9R",
-				"conditions":{
-					"filters":[
-						{
-							"property":"{{ n_Npjdv.outputs.id }}",
-							"filter":{
-								"operator":"EXISTS"
-							}
-						}
-					],
-					"operator":"AND"
-				}
-			},
-			"skip":false,
-			"subTitle":"Continue",
-			"title":"Continue",
-			"type":"CONTINUE"
-		},
-		{
 			"additional":{
 				"xsdSchemaConfig":{}
 			},
@@ -2092,7 +1940,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_Jtypi",
-			"index":16,
+			"index":14,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2168,7 +2016,6 @@
 				"totalCredsApp":0
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -2243,7 +2090,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_aPkKC",
-			"index":17,
+			"index":15,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -2291,7 +2138,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_uhbce",
-			"index":18,
+			"index":16,
 			"inputs":{
 				"filter":{
 					"filters":[
@@ -2335,7 +2182,7 @@
 			"fallbackMode":"MANUAL",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_6dSlY",
-			"index":19,
+			"index":17,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -2548,7 +2395,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_6dSlY@n_kFM9R@_XucEf-1@l@success",
 			"id":"n_VG7pp",
-			"index":20,
+			"index":18,
 			"inputs":{
 				"filter":{
 					"filters":[
@@ -2594,7 +2441,7 @@
 			"fallbackMode":"MANUAL",
 			"groupId":"n_6dSlY@n_kFM9R@_XucEf-1@l@success",
 			"id":"n_2ReQu",
-			"index":21,
+			"index":19,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -2780,7 +2627,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_2ReQu@n_6dSlY@n_kFM9R@_XucEf-1@l@success@success",
 			"id":"n_rMVAa",
-			"index":22,
+			"index":20,
 			"inputs":{
 				"variables":[
 					{
@@ -2812,7 +2659,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_2ReQu@n_6dSlY@n_kFM9R@_XucEf-1@l@success@success",
 			"id":"n_NIXaO",
-			"index":23,
+			"index":21,
 			"inputs":{
 				"variables":[
 					{
@@ -2847,7 +2694,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_2ReQu@n_6dSlY@n_kFM9R@_XucEf-1@l@success@success",
 			"id":"n_ce2Y1",
-			"index":24,
+			"index":22,
 			"inputs":{
 				"variables":[
 					{
@@ -2879,7 +2726,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_bTato",
-			"index":25,
+			"index":23,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2905,7 +2752,6 @@
 				"page":0
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -2940,7 +2786,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_rgl7p",
-			"index":26,
+			"index":24,
 			"inputs":{
 				"condition":{
 					"filters":[
@@ -2980,7 +2826,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_rgl7p@n_kFM9R@_XucEf-1@l@l",
 			"id":"n_YU1pM",
-			"index":27,
+			"index":25,
 			"inputs":{
 				"projections":[
 					{
@@ -3043,7 +2889,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_rgl7p@n_kFM9R@_XucEf-1@l@l",
 			"id":"n_aEPZW",
-			"index":28,
+			"index":26,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -3161,7 +3007,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_rgl7p@n_kFM9R@_XucEf-1@l@l",
 			"id":"n_zohEF",
-			"index":29,
+			"index":27,
 			"inputs":{
 				"variables":[
 					{
@@ -3187,7 +3033,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_rgl7p@n_kFM9R@_XucEf-1@l@l",
 			"id":"n_8t3Bu",
-			"index":30,
+			"index":28,
 			"inputs":{
 				"variables":[
 					{
@@ -3213,7 +3059,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_rgl7p@n_kFM9R@_XucEf-1@l@l",
 			"id":"n_VobTj",
-			"index":31,
+			"index":29,
 			"inputs":{
 				"variables":[
 					{
@@ -3239,7 +3085,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_rgl7p@n_kFM9R@_XucEf-1@l@l",
 			"id":"n_yN9iP",
-			"index":32,
+			"index":30,
 			"inputs":{
 				"variables":[
 					{
@@ -3269,7 +3115,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_WBi7P",
-			"index":33,
+			"index":31,
 			"inputs":{
 				"filters":[
 					{
@@ -3299,7 +3145,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_WBi7P@n_kFM9R@_XucEf-1@l@y",
 			"id":"n_CcKuc",
-			"index":34,
+			"index":32,
 			"inputs":{
 				"variables":[
 					{
@@ -3325,7 +3171,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_E2hgC",
-			"index":35,
+			"index":33,
 			"inputs":{
 				"filters":[
 					{
@@ -3355,7 +3201,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_E2hgC@n_kFM9R@_XucEf-1@l@y",
 			"id":"n_JdUAz",
-			"index":36,
+			"index":34,
 			"inputs":{
 				"variables":[
 					{
@@ -3381,7 +3227,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_vGtWK",
-			"index":37,
+			"index":35,
 			"inputs":{
 				"filters":[
 					{
@@ -3411,7 +3257,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_vGtWK@n_kFM9R@_XucEf-1@l@y",
 			"id":"n_yBAdM",
-			"index":38,
+			"index":36,
 			"inputs":{
 				"variables":[
 					{
@@ -3454,7 +3300,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_kFM9R@_XucEf-1@l",
 			"id":"n_GJhWm",
-			"index":39,
+			"index":37,
 			"inputs":{
 				"itemToAdd":{
 					"nodeExecutionStatus":{
@@ -3472,8 +3318,8 @@
 						"totalCredsInternal":"{{ n_Jtypi.outputs.totalCredsInternal }}",
 						"totalCredsConsumed":"={{ n_Jtypi.outputs.totalCredsInternal }}+{{ n_Jtypi.outputs.totalCredsHelper }}+{{ n_Jtypi.outputs.totalCredsApp }}",
 						"totalCredsHelper":"{{ n_Jtypi.outputs.totalCredsHelper }}",
-						"internalNodeExecutionPerCredit":"{{ n_Npjdv.outputs.properties.creditsTracking.internalNodeExecutionPerCredit }}",
-						"helperNodeExecutionPerCredit":"{{ n_Npjdv.outputs.properties.creditsTracking.helperNodeExecutionPerCredit }}",
+						"internalNodeExecutionPerCredit":"{{ n_kFM9R.outputs.item.internalNodeExecutionPerCredit }}",
+						"helperNodeExecutionPerCredit":"{{ n_kFM9R.outputs.item.helperNodeExecutionPerCredit }}",
 						"applicationNodeExecutionPerCredit":"{{ n_kFM9R.outputs.item.applicationNodeExecutionPerCredit }}",
 						"totalCredsApp":"{{ n_Jtypi.outputs.totalCredsApp }}"
 					},
@@ -3515,23 +3361,7 @@
 					"root.records.items.creditsTracking.totalCredsConsumed",
 					"root.records.items.creditsTracking.totalCredsHelper",
 					"root.records.items.creditsTracking.totalCredsApp",
-					"root.records.source",
-					"root.records.ua:type",
-					"root.records.items.timeAndIdentification.date",
-					"root.records.items.timeAndIdentification.startEpochTime",
-					"root.records.items.timeAndIdentification.endEpochTime",
-					"root.records.items.timeAndIdentification.automationId",
-					"root.records.items.nodeExecutionStatus.applicationNodeExecutionSuccess",
-					"root.records.items.nodeExecutionStatus.internalNodeExecutionSuccess",
-					"root.records.items.nodeExecutionStatus.helperNodeExecutionSuccess",
-					"root.records.items.nodeExecutionStatus.applicationNodeExecutionFail",
-					"root.records.items.nodeExecutionStatus.internalNodeExecutionFail",
-					"root.records.items.creditsTracking.applicationNodeExecutionPerCredit",
-					"root.records.items.creditsTracking.internalNodeExecutionPerCredit",
-					"root.records.items.creditsTracking.helperNodeExecutionPerCredit",
-					"root.records.items.creditsTracking.totalCredsConsumed",
-					"root.records.items.creditsTracking.totalCredsHelper",
-					"root.records.items.creditsTracking.totalCredsApp"
+					"root.records.items.record_id"
 				]
 			},
 			"context":{
@@ -3545,7 +3375,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_XucEf-1",
 			"id":"n_NAklR",
-			"index":40,
+			"index":38,
 			"inputs":{
 				"useRawPayload":false,
 				"object_type":"automation_cred_usage",
@@ -3577,7 +3407,8 @@
 							"totalCredsHelper":"{{ n_BjxDJ.outputs.items[0].creditsTracking.totalCredsHelper }}",
 							"totalCredsApp":"{{ n_BjxDJ.outputs.items[0].creditsTracking.totalCredsApp }}",
 							"totalCredsInternal":"{{ n_BjxDJ.outputs.items[0].creditsTracking.totalCredsInternal }}"
-						}
+						},
+						"record_id":"{{ n_BjxDJ.outputs.items[0].timeAndIdentification.date }}_{{ n_BjxDJ.outputs.items[0].timeAndIdentification.automationId }}"
 					}
 				}
 			},
@@ -3598,7 +3429,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_XucEf-1",
 			"id":"n_GokFy",
-			"index":41,
+			"index":39,
 			"inputs":{
 				"result":{
 					"success":"True"
@@ -3627,5 +3458,5 @@
 	"tags":[
 		"Revolut"
 	],
-	"version":515
+	"version":529
 }
