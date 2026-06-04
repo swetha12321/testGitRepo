@@ -4,14 +4,14 @@
 	],
 	"createdTime":1780376888829,
 	"deleted":false,
-	"deployedVersion":2,
+	"deployedVersion":3,
 	"deploymentState":{
-		"deployedAt":1780382753561,
+		"deployedAt":1780512782285,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a1e7c205bb5ce450acd806e",
+		"deployedDefinitionId":"6a20780e7cd36b4ab171691e",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":9
+		"version":3,
+		"workflowVersion":12
 	},
 	"edges":[
 		{
@@ -39,7 +39,7 @@
 	"id":"6a1e65385bb5ce450acd0443",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-trigger",
-	"modifiedTime":1780512780464,
+	"modifiedTime":1780550883992,
 	"name":"credit-calculation-trigger",
 	"nodes":[
 		{
@@ -167,7 +167,11 @@
 				"runtimeConnections":{},
 				"cancel_existing":true,
 				"version":"-1",
-				"schedule_name":"rechecker_automation"
+				"schedule_name":"rechecker_automation",
+				"parameters":{
+					"date":"{{ n_oovH5.outputs.result.date }}",
+					"backtrack":false
+				}
 			},
 			"skip":false,
 			"subTitle":"Callable",
@@ -189,5 +193,5 @@
 		}
 	},
 	"standard":false,
-	"version":12
+	"version":13
 }
