@@ -9,6 +9,13 @@
 			"fromNodeId":"n_jLYpF",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_QbaM0",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_QbaM0",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_RKUWD",
 			"type":"next"
 		},
@@ -37,7 +44,7 @@
 	"id":"6a209e1c7e81ba6f3d66871c",
 	"lastModifiedBy":199779,
 	"lcName":"jira_test",
-	"modifiedTime":1780555420297,
+	"modifiedTime":1780555805698,
 	"name":"jira_test",
 	"nodes":[
 		{
@@ -67,6 +74,29 @@
 		},
 		{
 			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":0,
+				"resourceName":"standard_entities_fetch_user",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_6ci4l-1",
+			"id":"n_QbaM0",
+			"index":2,
+			"inputs":{
+				"fetchBy":"id",
+				"applicationId":"",
+				"user":"199779"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Fetch User",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"jira",
 				"resourceVersion":3,
 				"connectionId":"69f05600455b431045a50600",
@@ -78,9 +108,9 @@
 			"fallbackMode":"STOP",
 			"groupId":"_6ci4l-1",
 			"id":"n_RKUWD",
-			"index":2,
+			"index":3,
 			"inputs":{
-				"accountId":"5b10ac8d82e05b22cc7d4ef5"
+				"accountId":"{{ n_QbaM0.outputs.id }}"
 			},
 			"skip":false,
 			"subTitle":"Jira",
@@ -100,9 +130,9 @@
 			"fallbackMode":"STOP",
 			"groupId":"_6ci4l-1",
 			"id":"n_kqUxU",
-			"index":3,
+			"index":4,
 			"inputs":{
-				"id":"10000"
+				"id":"{{ n_RKUWD[0].outputs.groupId }}"
 			},
 			"skip":false,
 			"subTitle":"Jira",
@@ -122,7 +152,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_6ci4l-1",
 			"id":"n_IZmAp",
-			"index":4,
+			"index":5,
 			"inputs":{},
 			"skip":false,
 			"subTitle":"Jira",
@@ -142,7 +172,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_6ci4l-1",
 			"id":"n_pgjHP",
-			"index":5,
+			"index":6,
 			"inputs":{},
 			"skip":false,
 			"subTitle":"Jira",
@@ -164,5 +194,5 @@
 		}
 	},
 	"standard":false,
-	"version":1
+	"version":3
 }
