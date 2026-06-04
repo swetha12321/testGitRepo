@@ -1,8 +1,53 @@
 {
-	"columnCounts":0,
+	"columnCounts":2,
 	"createdTime":1780548320877,
 	"deleted":false,
 	"id":"testing_obj_obj_obj",
+	"input":{
+		"type":"SCHEMA_AND_LAYOUT",
+		"dynamic":false,
+		"layout":{
+			"ui:order":[
+				"key",
+				"keys"
+			]
+		},
+		"schema":{
+			"additionalProperties":false,
+			"type":"object",
+			"properties":{
+				"key":{
+					"type":"string",
+					"title":"Key",
+					"searchable":false,
+					"sortable":false,
+					"filterable":false,
+					"primaryKey":false,
+					"uniqueKey":false,
+					"nameField":false
+				},
+				"keys":{
+					"type":"array",
+					"items":{
+						"type":"object",
+						"properties":{},
+						"additionalProperties":false
+					},
+					"title":"Keys",
+					"searchable":false,
+					"sortable":false,
+					"filterable":false,
+					"primaryKey":false,
+					"uniqueKey":false,
+					"nameField":false
+				}
+			},
+			"required":[
+				"key",
+				"keys"
+			]
+		}
+	},
 	"lastModifiedBy":195517,
 	"lcName":"testing obj obj obj",
 	"metadata":{
@@ -41,10 +86,6 @@
 		"referenceKeys":[
 			
 		],
-		"retentionConfig":{
-			"duration":0,
-			"unit":"DAYS"
-		},
 		"scdType2Enabled":false,
 		"schemaValidationEnabled":true,
 		"searchableFields":[
@@ -79,14 +120,49 @@
 		],
 		"versioningEnabled":false
 	},
-	"modifiedTime":1780548320877,
+	"modifiedTime":1780548345257,
 	"name":"testing obj obj obj",
 	"ownerUserId":195517,
 	"packaged":false,
 	"pluralName":"testing obj obj obj",
+	"schema":{
+		"dynamic":false,
+		"schema":{
+			"additionalProperties":false,
+			"type":"object",
+			"properties":{
+				"key":{
+					"type":"string",
+					"title":"Key",
+					"searchable":false,
+					"sortable":false,
+					"filterable":false,
+					"primaryKey":false,
+					"uniqueKey":false,
+					"nameField":false
+				},
+				"keys":{
+					"type":"array",
+					"items":{
+						"type":"object",
+						"properties":{},
+						"additionalProperties":false
+					},
+					"title":"Keys",
+					"searchable":false,
+					"sortable":false,
+					"filterable":false,
+					"primaryKey":false,
+					"uniqueKey":false,
+					"nameField":false
+				}
+			},
+			"required":[]
+		}
+	},
 	"standard":false,
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
