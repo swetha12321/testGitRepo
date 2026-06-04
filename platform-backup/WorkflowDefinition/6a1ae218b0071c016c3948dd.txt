@@ -4,14 +4,14 @@
 	],
 	"createdTime":1780146712029,
 	"deleted":false,
-	"deployedVersion":6,
+	"deployedVersion":7,
 	"deploymentState":{
-		"deployedAt":1780556814757,
+		"deployedAt":1780556901266,
 		"deployedBy":193867,
-		"deployedDefinitionId":"6a21240e5774f52fd59d9199",
+		"deployedDefinitionId":"6a2124655774f52fd59d954c",
 		"status":"DEPLOYED",
-		"version":6,
-		"workflowVersion":14
+		"version":7,
+		"workflowVersion":15
 	},
 	"edges":[
 		{
@@ -39,7 +39,7 @@
 	"id":"6a1ae218b0071c016c3948dd",
 	"lastModifiedBy":193867,
 	"lcName":"test_follow_error_path",
-	"modifiedTime":1780556899651,
+	"modifiedTime":1780556926365,
 	"name":"test_follow_error_path",
 	"nodes":[
 		{
@@ -111,7 +111,7 @@
 			},
 			"debug":false,
 			"dirty":true,
-			"fallbackMode":"CONTINUE",
+			"fallbackMode":"STOP",
 			"groupId":"_5WCFI-1",
 			"id":"n_0IrJB",
 			"index":2,
@@ -163,7 +163,7 @@
 					"captureRetries":false,
 					"enabled":false
 				},
-				"stepError":"CONTINUE",
+				"stepError":"STOP",
 				"telemetryConfig":{
 					"enableTelemetry":false,
 					"metricConfigs":[
@@ -295,5 +295,5 @@
 		}
 	},
 	"standard":false,
-	"version":15
+	"version":16
 }
