@@ -102,7 +102,7 @@
 	"id":"6a1ae218b0071c016c3948dd",
 	"lastModifiedBy":193867,
 	"lcName":"test_follow_error_path",
-	"modifiedTime":1780556188638,
+	"modifiedTime":1780556189568,
 	"name":"test_follow_error_path",
 	"nodes":[
 		{
@@ -289,7 +289,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"MANUAL",
 			"groupId":"n_AESay@_5WCFI-1@error",
 			"id":"n_BGfGj",
@@ -602,5 +602,5 @@
 		}
 	},
 	"standard":false,
-	"version":7
+	"version":8
 }
