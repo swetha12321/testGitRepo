@@ -4,14 +4,14 @@
 	],
 	"createdTime":1778073200128,
 	"deleted":false,
-	"deployedVersion":85,
+	"deployedVersion":87,
 	"deploymentState":{
-		"deployedAt":1780549650758,
+		"deployedAt":1780549920845,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a2108127e81ba6f3d6a9640",
+		"deployedDefinitionId":"6a2109207e81ba6f3d6a9f88",
 		"status":"DEPLOYED",
-		"version":85,
-		"workflowVersion":258
+		"version":87,
+		"workflowVersion":262
 	},
 	"edges":[
 		{
@@ -160,7 +160,7 @@
 	"id":"69fb3e7035bf0679fa2b48b9",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-parent",
-	"modifiedTime":1780549652794,
+	"modifiedTime":1780549920846,
 	"name":"credit-calculation-parent",
 	"nodes":[
 		{
@@ -495,6 +495,7 @@
 				"ua:list_type":"OBJECT"
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -640,6 +641,7 @@
 				"page":0
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -838,7 +840,7 @@
 				"includeTotalHits":true,
 				"page":{
 					"offset":"{{ n_bTato.outputs.page }}",
-					"limit":50
+					"limit":20
 				},
 				"sorts":[
 					{
@@ -1096,6 +1098,7 @@
 				"ua:list_type":"STRING"
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -1389,7 +1392,7 @@
 					},
 					{
 						"source":"{{ n_bTato.outputs.page }}",
-						"value":"={{ n_bTato.outputs.page }}+50"
+						"value":"={{ n_bTato.outputs.page }}+20"
 					}
 				]
 			},
@@ -1436,7 +1439,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_52rnD",
@@ -1445,7 +1448,7 @@
 				"repeatMode":"BATCH",
 				"listSource":"{{ n_BucVj.outputs.items }}",
 				"captureIterations":false,
-				"batchSize":10
+				"batchSize":50
 			},
 			"skip":false,
 			"subTitle":"Loop",
@@ -1551,7 +1554,10 @@
 					]
 				},
 				"rateLimitConfig":{
-					"enabled":false,
+					"duration":"1",
+					"enabled":true,
+					"threshold":"50",
+					"unit":"MINUTES",
 					"waitForNextWindow":false
 				},
 				"retryConfig":{
@@ -1628,5 +1634,5 @@
 		}
 	},
 	"standard":false,
-	"version":259
+	"version":262
 }
