@@ -51,7 +51,7 @@
 	"id":"6a209e1c7e81ba6f3d66871c",
 	"lastModifiedBy":199779,
 	"lcName":"jira_test",
-	"modifiedTime":1780556101751,
+	"modifiedTime":1780556121817,
 	"name":"jira_test",
 	"nodes":[
 		{
@@ -111,7 +111,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_6ci4l-1",
 			"id":"n_gIhNZ",
@@ -136,13 +136,13 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_6ci4l-1",
 			"id":"n_RKUWD",
 			"index":4,
 			"inputs":{
-				"accountId":"{{ n_QbaM0.outputs.id }}"
+				"accountId":"{{ n_gIhNZ.outputs.accountId }}"
 			},
 			"skip":false,
 			"subTitle":"Jira",
@@ -226,5 +226,5 @@
 		}
 	},
 	"standard":false,
-	"version":5
+	"version":6
 }
