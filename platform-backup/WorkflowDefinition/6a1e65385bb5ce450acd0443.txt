@@ -4,14 +4,14 @@
 	],
 	"createdTime":1780376888829,
 	"deleted":false,
-	"deployedVersion":3,
+	"deployedVersion":4,
 	"deploymentState":{
-		"deployedAt":1780512782285,
+		"deployedAt":1780550885885,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a20780e7cd36b4ab171691e",
+		"deployedDefinitionId":"6a210ce5be10f5154a4101a3",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":12
+		"version":4,
+		"workflowVersion":13
 	},
 	"edges":[
 		{
@@ -23,6 +23,13 @@
 		},
 		{
 			"fromNodeId":"n_oovH5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_A42NK",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_A42NK",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_0MDjb",
@@ -39,7 +46,7 @@
 	"id":"6a1e65385bb5ce450acd0443",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-trigger",
-	"modifiedTime":1780550883992,
+	"modifiedTime":1780553128911,
 	"name":"credit-calculation-trigger",
 	"nodes":[
 		{
@@ -115,6 +122,90 @@
 		{
 			"context":{
 				"appName":"callables",
+				"resourceVersion":4148,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_y81dO-1",
+			"id":"n_A42NK",
+			"index":3,
+			"inputs":{
+				"automationId":"6a211113f583e4166c2b5196",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{}
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"maxLeaseTimeUnit":"SECONDS",
+					"maxWaitDurationUnit":"SECONDS"
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"cacheKey":"{{ n_oovH5.outputs.result.date }}",
+					"enabled":true,
+					"timeToLive":"3600",
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":2.0,
+					"captureRetries":true,
+					"count":1,
+					"enabled":true,
+					"initialDelay":1000,
+					"maxDelay":10000
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				},
+				"timeoutConfig":{
+					"enabled":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
 				"resourceVersion":4132,
 				"resourceName":"callables_call_automation",
 				"type":"APPLICATION"
@@ -124,7 +215,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_y81dO-1",
 			"id":"n_0MDjb",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"automationId":"69fb3e7035bf0679fa2b48b9",
 				"runtimeConnections":{},
@@ -152,7 +243,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_y81dO-1",
 			"id":"n_Gy9nd",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"automation_id":"6a2070767cd36b4ab1715671",
 				"schedule_method":{
@@ -193,5 +284,5 @@
 		}
 	},
 	"standard":false,
-	"version":13
+	"version":14
 }
