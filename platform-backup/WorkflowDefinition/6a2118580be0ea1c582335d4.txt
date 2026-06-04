@@ -6,46 +6,147 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_lguCC",
+			"fromNodeId":"n_DCKel",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_I9Qtr",
+			"toNodeId":"n_Q1ETU",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Q1ETU",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ctjLV",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ctjLV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_XobA6",
 			"type":"next"
 		}
 	],
 	"id":"6a2118580be0ea1c582335d4",
 	"lastModifiedBy":175325,
 	"lcName":"utilitybyunifyappslocalocjlkhvzrd",
-	"modifiedTime":1780553816565,
+	"modifiedTime":1780553900884,
 	"name":"UtilityByUnifyAppsLocalocJLkHVzRd",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":4082,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_lguCC-1",
-			"id":"_lguCC",
-			"index":0,
+			"id":"n_DCKel",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"r":{
+							"type":"string",
+							"title":"r"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"a":{
+							"type":"string",
+							"title":"a"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"files_by_unifyapps",
+				"resourceVersion":2273,
+				"resourceName":"files_by_unifyapps_upload_file",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_lguCC-1",
-			"id":"_I9Qtr",
-			"index":0,
+			"id":"n_Q1ETU",
+			"index":2,
+			"inputs":{
+				"fileName":"test",
+				"url":"https://arxiv.org/pdf/2407.02987",
+				"option":"url"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Files by UnifyApps",
+			"title":"Upload file",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":5577,
+				"resourceName":"utility_by_unifyapps_create_unifyapps_path_for_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_lguCC-1",
+			"id":"n_ctjLV",
+			"index":3,
+			"inputs":{
+				"file":"{{ n_Q1ETU.outputs.fileDetails }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Create UnifyApps path for file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":4120,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_lguCC-1",
+			"id":"n_XobA6",
+			"index":4,
+			"inputs":{
+				"result":{
+					"r":"{{ n_ctjLV.outputs.path }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":175325,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -56,5 +157,5 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"version":1
 }
