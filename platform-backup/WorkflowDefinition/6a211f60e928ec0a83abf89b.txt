@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780555616726,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_Cl44R",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_y4Fs6",
+			"type":"next"
+		}
+	],
+	"id":"6a211f60e928ec0a83abf89b",
+	"lastModifiedBy":175325,
+	"lcName":"readtextfrompdffilepdflocalother than pdf urlbjwmxumhoq",
+	"modifiedTime":1780555616726,
+	"name":"ReadTextFromPDFFilePDFLocalOther than PDF URLbjWMxUMhoQ",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Cl44R-1",
+			"id":"_Cl44R",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Cl44R-1",
+			"id":"_y4Fs6",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
