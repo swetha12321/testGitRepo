@@ -4,14 +4,14 @@
 	],
 	"createdTime":1780146712029,
 	"deleted":false,
-	"deployedVersion":5,
+	"deployedVersion":6,
 	"deploymentState":{
-		"deployedAt":1780556701328,
+		"deployedAt":1780556814757,
 		"deployedBy":193867,
-		"deployedDefinitionId":"6a21239ce928ec0a83ac300d",
+		"deployedDefinitionId":"6a21240e5774f52fd59d9199",
 		"status":"DEPLOYED",
-		"version":5,
-		"workflowVersion":13
+		"version":6,
+		"workflowVersion":14
 	},
 	"edges":[
 		{
@@ -39,7 +39,7 @@
 	"id":"6a1ae218b0071c016c3948dd",
 	"lastModifiedBy":193867,
 	"lcName":"test_follow_error_path",
-	"modifiedTime":1780556812707,
+	"modifiedTime":1780556899651,
 	"name":"test_follow_error_path",
 	"nodes":[
 		{
@@ -116,7 +116,7 @@
 			"id":"n_0IrJB",
 			"index":2,
 			"inputs":{
-				"code":"// Access user information\ndef name = {{ __USER__.outputs.name }} ?: 'world'\n\n// You can write any Groovy code here\n// Return a map with the result\nreturn [\"output\": \"Hello \" + name]",
+				"code":"// Access user information\nreturn result",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -295,5 +295,5 @@
 		}
 	},
 	"standard":false,
-	"version":14
+	"version":15
 }
