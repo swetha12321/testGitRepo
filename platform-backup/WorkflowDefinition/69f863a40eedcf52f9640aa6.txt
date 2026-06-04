@@ -4,14 +4,14 @@
 	],
 	"createdTime":1777886116411,
 	"deleted":false,
-	"deployedVersion":116,
+	"deployedVersion":117,
 	"deploymentState":{
-		"deployedAt":1780506157870,
+		"deployedAt":1780549543967,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a205e2df1619c2a4c67ea01",
+		"deployedDefinitionId":"6a2107a77e81ba6f3d6a826a",
 		"status":"DEPLOYED",
-		"version":116,
-		"workflowVersion":523
+		"version":117,
+		"workflowVersion":529
 	},
 	"edges":[
 		{
@@ -345,7 +345,7 @@
 	"id":"69f863a40eedcf52f9640aa6",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation",
-	"modifiedTime":1780549541971,
+	"modifiedTime":1780549568915,
 	"name":"credit-calculation",
 	"nodes":[
 		{
@@ -457,7 +457,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_XucEf-1",
 			"id":"n_21uxV",
@@ -511,9 +511,12 @@
 					"waitForNextWindow":false
 				},
 				"retryConfig":{
-					"backOffFactor":null,
+					"backOffFactor":2.0,
 					"captureRetries":false,
-					"enabled":false
+					"count":2,
+					"enabled":true,
+					"initialDelay":1000,
+					"maxDelay":10000
 				},
 				"stepError":"STOP",
 				"telemetryConfig":{
@@ -3458,5 +3461,5 @@
 	"tags":[
 		"Revolut"
 	],
-	"version":529
+	"version":530
 }
