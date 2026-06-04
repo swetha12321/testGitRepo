@@ -16,6 +16,13 @@
 			"fromNodeId":"n_QbaM0",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_gIhNZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_gIhNZ",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_RKUWD",
 			"type":"next"
 		},
@@ -44,7 +51,7 @@
 	"id":"6a209e1c7e81ba6f3d66871c",
 	"lastModifiedBy":199779,
 	"lcName":"jira_test",
-	"modifiedTime":1780555834179,
+	"modifiedTime":1780556101751,
 	"name":"jira_test",
 	"nodes":[
 		{
@@ -98,6 +105,31 @@
 		{
 			"context":{
 				"appName":"jira",
+				"resourceVersion":9549,
+				"connectionId":"69f05600455b431045a50600",
+				"resourceName":"jira_create_user",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_6ci4l-1",
+			"id":"n_gIhNZ",
+			"index":3,
+			"inputs":{
+				"emailAddress":"rohan.gothwal@unifyapps.com",
+				"products":[
+					"jira-software"
+				]
+			},
+			"skip":false,
+			"subTitle":"Jira",
+			"title":"Create user",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"jira",
 				"resourceVersion":3,
 				"connectionId":"69f05600455b431045a50600",
 				"resourceName":"jira_get_user_groups",
@@ -108,7 +140,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_6ci4l-1",
 			"id":"n_RKUWD",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"accountId":"{{ n_QbaM0.outputs.id }}"
 			},
@@ -126,11 +158,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_6ci4l-1",
 			"id":"n_kqUxU",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"id":"10020"
 			},
@@ -152,7 +184,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_6ci4l-1",
 			"id":"n_IZmAp",
-			"index":5,
+			"index":6,
 			"inputs":{},
 			"skip":false,
 			"subTitle":"Jira",
@@ -172,7 +204,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_6ci4l-1",
 			"id":"n_pgjHP",
-			"index":6,
+			"index":7,
 			"inputs":{},
 			"skip":false,
 			"subTitle":"Jira",
@@ -194,5 +226,5 @@
 		}
 	},
 	"standard":false,
-	"version":4
+	"version":5
 }
