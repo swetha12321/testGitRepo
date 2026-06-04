@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		
+		"slack"
 	],
 	"createdTime":1780552333360,
 	"deleted":false,
@@ -9,14 +9,14 @@
 			"fromNodeId":"_rZ8zD",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_RzYeb",
+			"toNodeId":"n_OvRFo",
 			"type":"next"
 		}
 	],
 	"id":"6a21128df583e4166c2b55bc",
 	"lastModifiedBy":67744,
 	"lcName":"tesing slack",
-	"modifiedTime":1780552333360,
+	"modifiedTime":1780555773760,
 	"name":"tesing slack",
 	"nodes":[
 		{
@@ -25,7 +25,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_rZ8zD-1",
 			"id":"_rZ8zD",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -34,18 +34,28 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"slack",
+				"resourceVersion":3092,
+				"resourceName":"slack_get_conversation",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_rZ8zD-1",
-			"id":"_RzYeb",
-			"index":0,
+			"id":"n_OvRFo",
+			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Slack",
+			"title":"Get conversation",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":67744,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -56,5 +66,5 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"version":1
 }
