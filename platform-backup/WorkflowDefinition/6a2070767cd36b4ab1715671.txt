@@ -4,14 +4,14 @@
 	],
 	"createdTime":1780510838469,
 	"deleted":false,
-	"deployedVersion":1,
+	"deployedVersion":2,
 	"deploymentState":{
-		"deployedAt":1780511298228,
+		"deployedAt":1780512518874,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a2072427cd36b4ab1715a5f",
+		"deployedDefinitionId":"6a20770649552748da4a995e",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":5
+		"version":2,
+		"workflowVersion":7
 	},
 	"edges":[
 		{
@@ -44,6 +44,13 @@
 		},
 		{
 			"fromNodeId":"n_PaNY3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_JGp28",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_JGp28",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_X3O8O",
@@ -110,7 +117,7 @@
 	"id":"6a2070767cd36b4ab1715671",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-parent-rechecker",
-	"modifiedTime":1780512516099,
+	"modifiedTime":1780548917294,
 	"name":"credit-calculation-parent-rechecker",
 	"nodes":[
 		{
@@ -120,7 +127,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_OXi8s",
@@ -261,7 +268,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_PaNY3",
@@ -513,6 +520,38 @@
 		},
 		{
 			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":8253,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_KzyGt-1",
+			"id":"n_JGp28",
+			"index":6,
+			"inputs":{
+				"shouldSearchInAnalyticsStore":false,
+				"object_type":"credit_usage_schema_entry",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"translationsOption":"DEFAULT",
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":20
+				},
+				"numberOfRecordsToFetch":"SINGLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"analytics_by_unifyapps",
 				"resourceVersion":2297,
 				"resourceName":"analytics_by_unifyapps_query_reports",
@@ -523,7 +562,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_X3O8O",
-			"index":6,
+			"index":7,
 			"inputs":{
 				"projections":[
 					{
@@ -577,7 +616,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_i14Ya",
-			"index":7,
+			"index":8,
 			"inputs":{
 				"repeatMode":"BATCH",
 				"listSource":"{{ n_X3O8O.outputs.objects }}",
@@ -601,7 +640,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_i14Ya@_KzyGt-1@l",
 			"id":"n_2yo7v",
-			"index":8,
+			"index":9,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -859,7 +898,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_i14Ya@_KzyGt-1@l",
 			"id":"n_YAhAP",
-			"index":9,
+			"index":10,
 			"inputs":{
 				"projections":[
 					{
@@ -940,7 +979,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_i14Ya@_KzyGt-1@l",
 			"id":"n_wXcRb",
-			"index":10,
+			"index":11,
 			"inputs":{
 				"output":{
 					"type":"array",
@@ -1067,11 +1106,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"CONTINUE",
 			"groupId":"n_i14Ya@_KzyGt-1@l",
 			"id":"n_kQmB8",
-			"index":11,
+			"index":12,
 			"inputs":{
 				"automationId":"69f863a40eedcf52f9640aa6",
 				"runtimeConnections":{},
@@ -1175,7 +1214,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_aqKnm",
-			"index":12,
+			"index":13,
 			"inputs":{
 				"result":{
 					"completed":"true"
@@ -1195,7 +1234,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_fBO9h",
-			"index":13,
+			"index":14,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -1216,5 +1255,5 @@
 		}
 	},
 	"standard":false,
-	"version":7
+	"version":8
 }
