@@ -43,9 +43,7 @@
 					"nameField":false
 				}
 			},
-			"required":[
-				"arrays"
-			]
+			"required":[]
 		}
 	},
 	"lastModifiedBy":195517,
@@ -124,7 +122,7 @@
 		],
 		"versioningEnabled":false
 	},
-	"modifiedTime":1780514175037,
+	"modifiedTime":1780548252847,
 	"name":"test object vibhor 999",
 	"ownerUserId":195517,
 	"packaged":false,
@@ -170,5 +168,5 @@
 		"you",
 		"tag1"
 	],
-	"version":37
+	"version":40
 }
