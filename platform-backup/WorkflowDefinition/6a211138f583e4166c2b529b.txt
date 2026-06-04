@@ -23,6 +23,13 @@
 			"fromNodeId":"n_A5N5F",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_sqAmz",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_sqAmz",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_WWI09",
 			"type":"next"
 		},
@@ -80,7 +87,7 @@
 	"id":"6a211138f583e4166c2b529b",
 	"lastModifiedBy":195904,
 	"lcName":"file_import_details_preview_clone",
-	"modifiedTime":1780552572290,
+	"modifiedTime":1780552772857,
 	"name":"File_Import_Details_Preview_Clone",
 	"nodes":[
 		{
@@ -188,7 +195,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_M1pZU-1",
 			"id":"n_A5N5F",
@@ -197,9 +204,30 @@
 				"file":"{{ n_wt9yw.outputs.properties.errorFile.source }}",
 				"encoding":"utf8"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Utility by UnifyApps",
 			"title":"Download file as string",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":5451,
+				"resourceName":"utility_by_unifyapps_create_unifyapps_file_from_url",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_M1pZU-1",
+			"id":"n_sqAmz",
+			"index":4,
+			"inputs":{
+				"url":"{{ n_wt9yw.outputs.properties.errorFile.source }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Create UnifyApps file from url",
 			"type":"ACTION"
 		},
 		{
@@ -210,13 +238,13 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_M1pZU-1",
 			"id":"n_WWI09",
-			"index":4,
+			"index":5,
 			"inputs":{
-				"fileDetails":"{{ n_wt9yw.outputs.properties.errorFile }}",
+				"fileDetails":"{{ n_sqAmz.outputs.file }}",
 				"delimiter":","
 			},
 			"skip":false,
@@ -236,7 +264,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_M1pZU-1",
 			"id":"n_DNlA9",
-			"index":5,
+			"index":6,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -515,14 +543,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_M1pZU-1",
 			"id":"n_eLZF0",
-			"index":6,
+			"index":7,
 			"inputs":{
 				"startFromRow":1,
-				"file":"{{ n_wt9yw.outputs.properties.errorFile }}",
+				"file":"{{ n_sqAmz.outputs.file }}",
 				"headerRow":true,
 				"delimiter":",",
 				"columns":{
@@ -551,7 +579,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_eLZF0@_M1pZU-1@l",
 			"id":"n_zTKue",
-			"index":7,
+			"index":8,
 			"inputs":{
 				"captureAddedItems":false,
 				"insertLocation":"END",
@@ -584,7 +612,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_M1pZU-1",
 			"id":"n_a6uxe",
-			"index":8,
+			"index":9,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -650,11 +678,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_M1pZU-1",
 			"id":"n_ygo0e",
-			"index":9,
+			"index":10,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -724,7 +752,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_M1pZU-1",
 			"id":"n_bIW7g",
-			"index":10,
+			"index":11,
 			"inputs":{
 				"result":{
 					"result":{
@@ -757,5 +785,5 @@
 	"tags":[
 		"DO NOT TOUCH"
 	],
-	"version":2
+	"version":3
 }
