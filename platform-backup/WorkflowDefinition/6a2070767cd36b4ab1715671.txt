@@ -4,14 +4,14 @@
 	],
 	"createdTime":1780510838469,
 	"deleted":false,
-	"deployedVersion":2,
+	"deployedVersion":3,
 	"deploymentState":{
-		"deployedAt":1780512518874,
+		"deployedAt":1780548923228,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a20770649552748da4a995e",
+		"deployedDefinitionId":"6a21053b7e81ba6f3d6a68b1",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":7
+		"version":3,
+		"workflowVersion":9
 	},
 	"edges":[
 		{
@@ -117,7 +117,7 @@
 	"id":"6a2070767cd36b4ab1715671",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-parent-rechecker",
-	"modifiedTime":1780548921395,
+	"modifiedTime":1780548923229,
 	"name":"credit-calculation-parent-rechecker",
 	"nodes":[
 		{
@@ -498,6 +498,7 @@
 				"ua:list_type":"STRING"
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -866,6 +867,7 @@
 				"ua:list_type":"STRING"
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -1106,7 +1108,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"CONTINUE",
 			"groupId":"n_i14Ya@_KzyGt-1@l",
 			"id":"n_kQmB8",
