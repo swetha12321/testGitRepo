@@ -1,0 +1,193 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780049022773,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_gseJu",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_pXyJQ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_pXyJQ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_nE8sE",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_nE8sE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_bpEqZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_bpEqZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_cUqLM",
+			"type":"next"
+		}
+	],
+	"id":"6a19647e254b0f087eb6db3b",
+	"lastModifiedBy":195445,
+	"lcName":"test - code",
+	"modifiedTime":1780555140348,
+	"name":"test - code",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":901,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Gtibw-1",
+			"id":"n_gseJu",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":2251,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Gtibw-1",
+			"id":"n_pXyJQ",
+			"index":2,
+			"inputs":{
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"name"
+					],
+					"properties":{
+						"name":{
+							"type":"string",
+							"title":"Name"
+						}
+					}
+				},
+				"code":"def temp = name + 'world';",
+				"compile_static":true,
+				"captureStdOutput":false,
+				"parameters":{
+					"name":"{{ __USER__.outputs.name }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":2227,
+				"resourceName":"code_by_unifyapps_java",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Gtibw-1",
+			"id":"n_nE8sE",
+			"index":3,
+			"inputs":{
+				"code":"return 20;",
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Java code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":2178,
+				"resourceName":"code_by_unifyapps_javascript",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Gtibw-1",
+			"id":"n_bpEqZ",
+			"index":4,
+			"inputs":{
+				"code":"// Access information\nconst input = 'world';\n\n// You can write any JavaScript code here\n// Return an object with the result\nresult = {\n  output : 'Hello ' + input,\n}",
+				"isAsync":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Javascript",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":2219,
+				"resourceName":"code_by_unifyapps_python",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Gtibw-1",
+			"id":"n_cUqLM",
+			"index":5,
+			"inputs":{
+				"configurationMode":"DEFAULT",
+				"code":"return 20;",
+				"isAsync":false,
+				"python_version":"3.12",
+				"outputFilesGlob":"*",
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Python script",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":195445,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":11
+}
