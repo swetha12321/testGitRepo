@@ -4,14 +4,14 @@
 	],
 	"createdTime":1780146712029,
 	"deleted":false,
-	"deployedVersion":3,
+	"deployedVersion":4,
 	"deploymentState":{
-		"deployedAt":1780556195259,
+		"deployedAt":1780556505780,
 		"deployedBy":193867,
-		"deployedDefinitionId":"6a2121a35774f52fd59d8144",
+		"deployedDefinitionId":"6a2122cf5774f52fd59d87a9",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":9
+		"version":4,
+		"workflowVersion":11
 	},
 	"edges":[
 		{
@@ -23,86 +23,16 @@
 		},
 		{
 			"fromNodeId":"n_AESay",
-			"name":"success",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_K60r6",
+			"toNodeId":"n_xSqRC",
 			"type":"next"
-		},
-		{
-			"fromNodeId":"n_AESay",
-			"name":"error",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_BGfGj",
-			"type":"error"
-		},
-		{
-			"fromNodeId":"n_BGfGj",
-			"name":"error",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_b5RAh",
-			"type":"error"
-		},
-		{
-			"fromNodeId":"n_BGfGj",
-			"name":"success",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_xlmQr",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_b5RAh",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_xlmQr",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_xlmQr",
-			"name":"1",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_xlmQr@1",
-			"type":"branch"
-		},
-		{
-			"fromNodeId":"n_xlmQr@1",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_zf1AG",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_xlmQr",
-			"name":"2",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_xlmQr@2",
-			"type":"branch"
-		},
-		{
-			"fromNodeId":"n_xlmQr@2",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_RPJK3",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_xlmQr",
-			"name":"default",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_8d9lD",
-			"type":"branch"
 		}
 	],
 	"id":"6a1ae218b0071c016c3948dd",
 	"lastModifiedBy":193867,
 	"lcName":"test_follow_error_path",
-	"modifiedTime":1780556237000,
+	"modifiedTime":1780556679254,
 	"name":"test_follow_error_path",
 	"nodes":[
 		{
@@ -173,8 +103,8 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
-			"fallbackMode":"MANUAL",
+			"dirty":true,
+			"fallbackMode":"CONTINUE",
 			"groupId":"_5WCFI-1",
 			"id":"n_AESay",
 			"index":2,
@@ -238,7 +168,7 @@
 					"captureRetries":false,
 					"enabled":false
 				},
-				"stepError":"MANUAL",
+				"stepError":"CONTINUE",
 				"telemetryConfig":{
 					"enableTelemetry":false,
 					"metricConfigs":[
@@ -256,33 +186,6 @@
 		},
 		{
 			"context":{
-				"appName":"callables",
-				"resourceVersion":4111,
-				"resourceName":"callables_return_response_to_api",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_AESay@_5WCFI-1@success",
-			"id":"n_K60r6",
-			"index":3,
-			"inputs":{
-				"streamingCompleted":true,
-				"htmlBody":"ok",
-				"responseName":"200_undefined",
-				"body":{
-					"check":"true"
-				},
-				"status":200
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Respond to API request",
-			"type":"STOP"
-		},
-		{
-			"context":{
 				"appName":"code_by_unifyapps",
 				"resourceVersion":0,
 				"resourceName":"code_by_unifyapps_groovy",
@@ -290,12 +193,12 @@
 			},
 			"debug":false,
 			"dirty":true,
-			"fallbackMode":"MANUAL",
-			"groupId":"n_AESay@_5WCFI-1@error",
-			"id":"n_BGfGj",
-			"index":4,
+			"fallbackMode":"CONTINUE",
+			"groupId":"_5WCFI-1",
+			"id":"n_xSqRC",
+			"index":3,
 			"inputs":{
-				"code":"return result",
+				"code":"// Access user information\ndef name = {{ __USER__.outputs.name }} ?: 'world'\n\n// You can write any Groovy code here\n// Return a map with the result\nreturn [\"output\": \"Hello \" + name]",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -342,7 +245,7 @@
 					"captureRetries":false,
 					"enabled":false
 				},
-				"stepError":"MANUAL",
+				"stepError":"CONTINUE",
 				"telemetryConfig":{
 					"enableTelemetry":false,
 					"metricConfigs":[
@@ -357,235 +260,6 @@
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":4162,
-				"resourceName":"callables_return_response_to_api",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_BGfGj@n_AESay@_5WCFI-1@error@error",
-			"id":"n_b5RAh",
-			"index":5,
-			"inputs":{
-				"streamingCompleted":true,
-				"responseName":"400_undefined",
-				"body":{
-					"check":"on error"
-				},
-				"status":400
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Respond to API request",
-			"type":"STOP"
-		},
-		{
-			"context":{
-				"appName":"branch",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_AESay@_5WCFI-1@error",
-			"id":"n_xlmQr",
-			"index":6,
-			"inputs":{
-				"branches":[
-					{
-						"id":"1",
-						"inputs":{
-							"name":"Branch 1",
-							"conditions":{
-								"filters":[
-									{
-										"property":"{{ n_AESay.outputs.status }}",
-										"filter":{
-											"operator":"EQUAL",
-											"value":"400"
-										}
-									}
-								],
-								"operator":"AND"
-							}
-						}
-					},
-					{
-						"id":"2",
-						"inputs":{
-							"name":"Branch 2",
-							"conditions":{
-								"filters":[
-									{
-										"property":"{{ n_AESay.outputs.status }}",
-										"filter":{
-											"operator":"EQUAL",
-											"value":"500"
-										}
-									}
-								],
-								"operator":"AND"
-							}
-						}
-					},
-					{
-						"id":"default"
-					}
-				]
-			},
-			"skip":false,
-			"subTitle":"Branch",
-			"title":"",
-			"type":"BRANCH"
-		},
-		{
-			"context":{
-				"appName":"branch_condition",
-				"resourceVersion":0,
-				"resourceName":"branch_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_xlmQr@n_AESay@_5WCFI-1@error@1",
-			"id":"n_xlmQr@1",
-			"index":7,
-			"inputs":{
-				"name":"Branch 1",
-				"conditions":{
-					"filters":[
-						{
-							"property":"{{ n_AESay.outputs.status }}",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"400"
-							}
-						}
-					],
-					"operator":"AND"
-				}
-			},
-			"skip":false,
-			"title":"",
-			"type":"BRANCH_CONDITION"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":4111,
-				"resourceName":"callables_return_response_to_api",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_xlmQr@n_AESay@_5WCFI-1@error@1",
-			"id":"n_zf1AG",
-			"index":8,
-			"inputs":{
-				"streamingCompleted":true,
-				"htmlBody":"200",
-				"responseName":"200_undefined",
-				"body":{
-					"check":"true"
-				},
-				"status":200
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Respond to API request",
-			"type":"STOP"
-		},
-		{
-			"context":{
-				"appName":"branch_condition",
-				"resourceVersion":0,
-				"resourceName":"branch_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_xlmQr@n_AESay@_5WCFI-1@error@2",
-			"id":"n_xlmQr@2",
-			"index":9,
-			"inputs":{
-				"name":"Branch 2",
-				"conditions":{
-					"filters":[
-						{
-							"property":"{{ n_AESay.outputs.status }}",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"500"
-							}
-						}
-					],
-					"operator":"AND"
-				}
-			},
-			"skip":false,
-			"title":"",
-			"type":"BRANCH_CONDITION"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":4111,
-				"resourceName":"callables_return_response_to_api",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_xlmQr@n_AESay@_5WCFI-1@error@2",
-			"id":"n_RPJK3",
-			"index":10,
-			"inputs":{
-				"streamingCompleted":true,
-				"responseName":"400_undefined",
-				"body":{
-					"check":"true"
-				},
-				"status":400
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Respond to API request",
-			"type":"STOP"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":4111,
-				"resourceName":"callables_return_response_to_api",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_xlmQr@n_AESay@_5WCFI-1@error@default",
-			"id":"n_8d9lD",
-			"index":11,
-			"inputs":{
-				"streamingCompleted":true,
-				"htmlBody":"false",
-				"responseName":"200_undefined",
-				"body":{
-					"check":"true"
-				},
-				"status":200
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Respond to API request",
-			"type":"STOP"
 		}
 	],
 	"ownerUserId":193867,
@@ -602,5 +276,5 @@
 		}
 	},
 	"standard":false,
-	"version":11
+	"version":12
 }
