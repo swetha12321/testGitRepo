@@ -4,14 +4,14 @@
 	],
 	"createdTime":1780376888829,
 	"deleted":false,
-	"deployedVersion":4,
+	"deployedVersion":5,
 	"deploymentState":{
-		"deployedAt":1780550885885,
+		"deployedAt":1780553131178,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a210ce5be10f5154a4101a3",
+		"deployedDefinitionId":"6a2115ab969fcb05e481cb14",
 		"status":"DEPLOYED",
-		"version":4,
-		"workflowVersion":13
+		"version":5,
+		"workflowVersion":14
 	},
 	"edges":[
 		{
@@ -46,7 +46,7 @@
 	"id":"6a1e65385bb5ce450acd0443",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-trigger",
-	"modifiedTime":1780553128911,
+	"modifiedTime":1780553131179,
 	"name":"credit-calculation-trigger",
 	"nodes":[
 		{
@@ -127,7 +127,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_y81dO-1",
 			"id":"n_A42NK",
@@ -239,7 +239,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_y81dO-1",
 			"id":"n_Gy9nd",
