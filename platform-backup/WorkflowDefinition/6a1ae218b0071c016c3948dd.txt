@@ -4,14 +4,14 @@
 	],
 	"createdTime":1780146712029,
 	"deleted":false,
-	"deployedVersion":2,
+	"deployedVersion":3,
 	"deploymentState":{
-		"deployedAt":1780147274584,
-		"deployedBy":195886,
-		"deployedDefinitionId":"6a1ae44adabb861f3f58c7e1",
+		"deployedAt":1780556195259,
+		"deployedBy":193867,
+		"deployedDefinitionId":"6a2121a35774f52fd59d8144",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":2
+		"version":3,
+		"workflowVersion":9
 	},
 	"edges":[
 		{
@@ -102,7 +102,7 @@
 	"id":"6a1ae218b0071c016c3948dd",
 	"lastModifiedBy":193867,
 	"lcName":"test_follow_error_path",
-	"modifiedTime":1780556189568,
+	"modifiedTime":1780556229844,
 	"name":"test_follow_error_path",
 	"nodes":[
 		{
@@ -289,13 +289,13 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"MANUAL",
 			"groupId":"n_AESay@_5WCFI-1@error",
 			"id":"n_BGfGj",
 			"index":4,
 			"inputs":{
-				"code":"// Access user information\ndef name = {{ __USER__.outputs.name }} ?: 'world'\n\n// You can write any Groovy code here\n// Return a map with the result\nreturn [\"output\": \"Hello \" + name]",
+				"code":"",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -602,5 +602,5 @@
 		}
 	},
 	"standard":false,
-	"version":8
+	"version":10
 }
