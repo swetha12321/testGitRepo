@@ -4,6 +4,15 @@
 	],
 	"createdTime":1780548889558,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1780548889952,
+		"deployedBy":175325,
+		"deployedDefinitionId":"6a2105197e81ba6f3d6a67b6",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"tXkEy",
@@ -16,7 +25,7 @@
 	"id":"6a2105197e81ba6f3d6a67a2",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2yuhbvx8ml9rj",
-	"modifiedTime":1780548889849,
+	"modifiedTime":1780548890605,
 	"name":"changeSetQA2yuHbVX8Ml9rJ",
 	"nodes":[
 		{
@@ -26,7 +35,7 @@
 				"resourceName":"callables_from_api"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"5H3QG-1",
 			"id":"tXkEy",
@@ -90,7 +99,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"5H3QG-1",
 			"id":"wvhNY",
@@ -99,7 +108,7 @@
 				"responseName":"200_undefined",
 				"set_cookies":[],
 				"body":{
-					"c":"= SUM({{ tXkEy.outputs.body.a }},{{ tXkEy.outputs.body.b }})"
+					"c":"= PRODUCT({{ tXkEy.outputs.body.a }},{{ tXkEy.outputs.body.b }})"
 				},
 				"status":200
 			},
@@ -122,5 +131,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
