@@ -4,14 +4,14 @@
 	],
 	"createdTime":1761644094929,
 	"deleted":false,
-	"deployedVersion":312,
+	"deployedVersion":313,
 	"deploymentState":{
-		"deployedAt":1780465707602,
+		"deployedAt":1780537860608,
 		"deployedBy":175325,
-		"deployedDefinitionId":"6a1fc02bc678a03485aeee3c",
+		"deployedDefinitionId":"6a20da047e81ba6f3d68a8ce",
 		"status":"DEPLOYED",
-		"version":312,
-		"workflowVersion":370
+		"version":313,
+		"workflowVersion":372
 	},
 	"edges":[
 		{
@@ -32,7 +32,7 @@
 	"id":"6729e8409b232e5cdbe656e3",
 	"lastModifiedBy":175325,
 	"lcName":"dnt_workflow_application_failure",
-	"modifiedTime":1780537860545,
+	"modifiedTime":1780537860610,
 	"name":"DNT_Workflow_Application_Failure",
 	"nodes":[
 		{
