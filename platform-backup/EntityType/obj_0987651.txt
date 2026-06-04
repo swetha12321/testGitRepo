@@ -1,8 +1,48 @@
 {
-	"columnCounts":0,
+	"columnCounts":2,
 	"createdTime":1780553099057,
 	"deleted":false,
 	"id":"obj_0987651",
+	"input":{
+		"type":"SCHEMA_AND_LAYOUT",
+		"dynamic":false,
+		"layout":{
+			"ui:order":[
+				"name",
+				"age"
+			]
+		},
+		"schema":{
+			"additionalProperties":false,
+			"type":"object",
+			"properties":{
+				"name":{
+					"type":"string",
+					"title":"name",
+					"searchable":false,
+					"sortable":false,
+					"filterable":false,
+					"primaryKey":false,
+					"uniqueKey":false,
+					"nameField":false
+				},
+				"age":{
+					"type":"integer",
+					"title":"age",
+					"searchable":false,
+					"sortable":false,
+					"filterable":false,
+					"primaryKey":false,
+					"uniqueKey":false,
+					"nameField":false
+				}
+			},
+			"required":[
+				"name",
+				"age"
+			]
+		}
+	},
 	"lastModifiedBy":175325,
 	"lcName":"obj0987651",
 	"metadata":{
@@ -41,10 +81,6 @@
 		"referenceKeys":[
 			
 		],
-		"retentionConfig":{
-			"duration":0,
-			"unit":"DAYS"
-		},
 		"scdType2Enabled":false,
 		"schemaValidationEnabled":true,
 		"searchableFields":[
@@ -82,14 +118,47 @@
 		],
 		"versioningEnabled":false
 	},
-	"modifiedTime":1780553099057,
+	"modifiedTime":1780553110964,
 	"name":"obj0987651",
 	"ownerUserId":175325,
 	"packaged":false,
 	"pluralName":"obj0987651",
+	"schema":{
+		"dynamic":false,
+		"schema":{
+			"additionalProperties":false,
+			"type":"object",
+			"properties":{
+				"name":{
+					"type":"string",
+					"title":"name",
+					"searchable":false,
+					"sortable":false,
+					"filterable":false,
+					"primaryKey":false,
+					"uniqueKey":false,
+					"nameField":false
+				},
+				"age":{
+					"type":"integer",
+					"title":"age",
+					"searchable":false,
+					"sortable":false,
+					"filterable":false,
+					"primaryKey":false,
+					"uniqueKey":false,
+					"nameField":false
+				}
+			},
+			"required":[
+				"name",
+				"age"
+			]
+		}
+	},
 	"standard":false,
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
