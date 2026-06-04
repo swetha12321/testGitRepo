@@ -4,6 +4,15 @@
 	],
 	"createdTime":1780553475612,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1780553579520,
+		"deployedBy":44108,
+		"deployedDefinitionId":"6a21176b0be0ea1c58231eac",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":3
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_C1oQh",
@@ -186,7 +195,7 @@
 	"id":"6a2117030be0ea1c58231711",
 	"lastModifiedBy":44108,
 	"lcName":"test loop opt",
-	"modifiedTime":1780553577544,
+	"modifiedTime":1780553635668,
 	"name":"test loop opt",
 	"nodes":[
 		{
@@ -531,7 +540,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_grhTR-1",
 			"id":"n_QN4NV",
@@ -646,14 +655,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_ghjzK@_grhTR-1@1",
 			"id":"n_AzAbQ",
 			"index":7,
 			"inputs":{
 				"start":0,
-				"limit":10,
+				"limit":5,
 				"step":1,
 				"captureIterations":true
 			},
@@ -703,14 +712,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_AzAbQ@n_ghjzK@_grhTR-1@1@l",
 			"id":"n_uFOBz",
 			"index":9,
 			"inputs":{
 				"start":0,
-				"limit":10,
+				"limit":5,
 				"step":1,
 				"captureIterations":true
 			},
@@ -861,14 +870,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_ghjzK@_grhTR-1@2",
 			"id":"n_IO56e",
 			"index":13,
 			"inputs":{
 				"start":0,
-				"limit":10,
+				"limit":5,
 				"step":1,
 				"captureIterations":true
 			},
@@ -918,14 +927,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_IO56e@n_ghjzK@_grhTR-1@2@l",
 			"id":"n_5LBqm",
 			"index":15,
 			"inputs":{
 				"start":0,
-				"limit":10,
+				"limit":5,
 				"step":1,
 				"captureIterations":true
 			},
@@ -1066,5 +1075,5 @@
 		}
 	},
 	"standard":false,
-	"version":3
+	"version":4
 }
