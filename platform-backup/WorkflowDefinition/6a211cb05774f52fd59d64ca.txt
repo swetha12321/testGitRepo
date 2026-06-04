@@ -4,15 +4,15 @@
 	],
 	"createdTime":1780554928069,
 	"deleted":false,
-	"deployedVersion":2,
+	"deployedVersion":3,
 	"deploymentState":{
-		"deployedAt":1780555294675,
+		"deployedAt":1780555330835,
 		"deployedBy":199983,
-		"deployedDefinitionId":"6a211e1e5774f52fd59d6e60",
+		"deployedDefinitionId":"6a211e42e928ec0a83abe102",
 		"deploymentTag":"v",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":4
+		"version":3,
+		"workflowVersion":5
 	},
 	"edges":[
 		{
@@ -62,7 +62,7 @@
 	"id":"6a211cb05774f52fd59d64ca",
 	"lastModifiedBy":199983,
 	"lcName":"testt",
-	"modifiedTime":1780555325784,
+	"modifiedTime":1780555330836,
 	"name":"testt",
 	"nodes":[
 		{
@@ -343,6 +343,7 @@
 				"ua:list_type":"STRING"
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -371,7 +372,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_RnUhC-1",
 			"id":"n_tblje",
