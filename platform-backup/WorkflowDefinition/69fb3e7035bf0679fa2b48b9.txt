@@ -4,14 +4,14 @@
 	],
 	"createdTime":1778073200128,
 	"deleted":false,
-	"deployedVersion":91,
+	"deployedVersion":92,
 	"deploymentState":{
-		"deployedAt":1780551376635,
+		"deployedAt":1780551614680,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a210ed0be10f5154a4114d9",
+		"deployedDefinitionId":"6a210fbef583e4166c2b4d1e",
 		"status":"DEPLOYED",
-		"version":91,
-		"workflowVersion":267
+		"version":92,
+		"workflowVersion":268
 	},
 	"edges":[
 		{
@@ -153,7 +153,7 @@
 	"id":"69fb3e7035bf0679fa2b48b9",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-parent",
-	"modifiedTime":1780551613185,
+	"modifiedTime":1780551614681,
 	"name":"credit-calculation-parent",
 	"nodes":[
 		{
@@ -488,6 +488,7 @@
 				"ua:list_type":"OBJECT"
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -633,6 +634,7 @@
 				"page":0
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -1068,6 +1070,7 @@
 				"ua:list_type":"STRING"
 			},
 			"outputSchema":{
+				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
