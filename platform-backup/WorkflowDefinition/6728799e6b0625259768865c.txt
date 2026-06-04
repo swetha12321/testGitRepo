@@ -4,14 +4,14 @@
 	],
 	"createdTime":1761644094580,
 	"deleted":false,
-	"deployedVersion":311,
+	"deployedVersion":312,
 	"deploymentState":{
-		"deployedAt":1780465707488,
+		"deployedAt":1780537860287,
 		"deployedBy":175325,
-		"deployedDefinitionId":"6a1fc02b1c99d624dcb7fae7",
+		"deployedDefinitionId":"6a20da047e81ba6f3d68a8cc",
 		"status":"DEPLOYED",
-		"version":311,
-		"workflowVersion":370
+		"version":312,
+		"workflowVersion":372
 	},
 	"edges":[
 		{
@@ -25,7 +25,7 @@
 	"id":"6728799e6b0625259768865c",
 	"lastModifiedBy":175325,
 	"lcName":"dnt_delete_application_automation",
-	"modifiedTime":1780537859943,
+	"modifiedTime":1780537860290,
 	"name":"DNT_DELETE_APPLICATION_AUTOMATION",
 	"nodes":[
 		{
