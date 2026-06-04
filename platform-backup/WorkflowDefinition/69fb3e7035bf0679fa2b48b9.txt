@@ -4,14 +4,14 @@
 	],
 	"createdTime":1778073200128,
 	"deleted":false,
-	"deployedVersion":81,
+	"deployedVersion":82,
 	"deploymentState":{
-		"deployedAt":1780549295411,
+		"deployedAt":1780549301819,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a2106af7e81ba6f3d6a7793",
+		"deployedDefinitionId":"6a2106b57e81ba6f3d6a7935",
 		"status":"DEPLOYED",
-		"version":81,
-		"workflowVersion":254
+		"version":82,
+		"workflowVersion":255
 	},
 	"edges":[
 		{
@@ -160,7 +160,7 @@
 	"id":"69fb3e7035bf0679fa2b48b9",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-parent",
-	"modifiedTime":1780549299923,
+	"modifiedTime":1780549306755,
 	"name":"credit-calculation-parent",
 	"nodes":[
 		{
@@ -1436,7 +1436,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_KzyGt-1",
 			"id":"n_52rnD",
@@ -1477,8 +1477,8 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
+			"dirty":true,
+			"fallbackMode":"CONTINUE",
 			"groupId":"n_52rnD@_KzyGt-1@l",
 			"id":"n_O14wA",
 			"index":17,
@@ -1515,6 +1515,60 @@
 					}
 				},
 				"version":"-1"
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"maxLeaseTimeUnit":"SECONDS",
+					"maxWaitDurationUnit":"SECONDS"
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"CONTINUE",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				},
+				"timeoutConfig":{
+					"enabled":false
+				}
 			},
 			"skip":false,
 			"subTitle":"Callable",
@@ -1574,5 +1628,5 @@
 		}
 	},
 	"standard":false,
-	"version":255
+	"version":256
 }
