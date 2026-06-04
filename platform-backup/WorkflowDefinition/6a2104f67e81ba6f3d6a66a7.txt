@@ -4,6 +4,15 @@
 	],
 	"createdTime":1780548854541,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1780548855534,
+		"deployedBy":175325,
+		"deployedDefinitionId":"6a2104f77e81ba6f3d6a66ab",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"lZXRK",
@@ -16,7 +25,7 @@
 	"id":"6a2104f67e81ba6f3d6a66a7",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2autofqbqbcpxuu",
-	"modifiedTime":1780548855429,
+	"modifiedTime":1780548855535,
 	"name":"changeSetQA2autoFQbqbCpXUu",
 	"nodes":[
 		{
@@ -26,7 +35,7 @@
 				"resourceName":"callables_from_interface"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"3tFTv-1",
 			"id":"lZXRK",
@@ -74,7 +83,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"3tFTv-1",
 			"id":"CPBFM",
