@@ -30,28 +30,35 @@
 			"fromNodeId":"n_RKUWD",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_kqUxU",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_kqUxU",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_IZmAp",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_IZmAp",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_pgjHP",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_pgjHP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_bIopy",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_bIopy",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_OC9pA",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_OC9pA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_wq16Y",
 			"type":"next"
 		}
 	],
 	"id":"6a209e1c7e81ba6f3d66871c",
 	"lastModifiedBy":199779,
 	"lcName":"jira_test",
-	"modifiedTime":1780556121817,
+	"modifiedTime":1780556706177,
 	"name":"jira_test",
 	"nodes":[
 		{
@@ -136,7 +143,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_6ci4l-1",
 			"id":"n_RKUWD",
@@ -152,48 +159,6 @@
 		{
 			"context":{
 				"appName":"jira",
-				"resourceVersion":14,
-				"connectionId":"69f05600455b431045a50600",
-				"resourceName":"jira_get_filter",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_6ci4l-1",
-			"id":"n_kqUxU",
-			"index":5,
-			"inputs":{
-				"id":"10020"
-			},
-			"skip":false,
-			"subTitle":"Jira",
-			"title":"Get filter details",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"jira",
-				"resourceVersion":0,
-				"connectionId":"69f05600455b431045a50600",
-				"resourceName":"jira_search_filters",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_6ci4l-1",
-			"id":"n_IZmAp",
-			"index":6,
-			"inputs":{},
-			"skip":false,
-			"subTitle":"Jira",
-			"title":"Search for filters",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"jira",
 				"resourceVersion":3,
 				"connectionId":"69f05600455b431045a50600",
 				"resourceName":"jira_get_issue_security_schemes",
@@ -204,11 +169,76 @@
 			"fallbackMode":"STOP",
 			"groupId":"_6ci4l-1",
 			"id":"n_pgjHP",
-			"index":7,
+			"index":5,
 			"inputs":{},
 			"skip":false,
 			"subTitle":"Jira",
 			"title":"Get issue security schemes",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"jira",
+				"resourceVersion":5519,
+				"connectionId":"69f05600455b431045a50600",
+				"resourceName":"jira_get_my_filters",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_6ci4l-1",
+			"id":"n_bIopy",
+			"index":6,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Jira",
+			"title":"Get my filters",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"jira",
+				"resourceVersion":14,
+				"connectionId":"69f05600455b431045a50600",
+				"resourceName":"jira_get_filter",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_6ci4l-1",
+			"id":"n_OC9pA",
+			"index":7,
+			"inputs":{
+				"overrideSharePermissions":true,
+				"id":"{{ n_bIopy.outputs.records[0].id }}"
+			},
+			"skip":false,
+			"subTitle":"Jira",
+			"title":"Get filter details",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"jira",
+				"resourceVersion":9,
+				"connectionId":"69f05600455b431045a50600",
+				"resourceName":"jira_search_filters",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_6ci4l-1",
+			"id":"n_wq16Y",
+			"index":8,
+			"inputs":{
+				"filterName":"o"
+			},
+			"skip":false,
+			"subTitle":"Jira",
+			"title":"Search for filters",
 			"type":"ACTION"
 		}
 	],
@@ -226,5 +256,5 @@
 		}
 	},
 	"standard":false,
-	"version":6
+	"version":8
 }
