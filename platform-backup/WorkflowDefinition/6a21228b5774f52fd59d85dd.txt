@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1780556427459,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_lmGQ8",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_bdpkM",
+			"type":"next"
+		}
+	],
+	"id":"6a21228b5774f52fd59d85dd",
+	"lastModifiedBy":33,
+	"lcName":"test slakc ",
+	"modifiedTime":1780556427459,
+	"name":"test slakc ",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_lmGQ8-1",
+			"id":"_lmGQ8",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_lmGQ8-1",
+			"id":"_bdpkM",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":33,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
