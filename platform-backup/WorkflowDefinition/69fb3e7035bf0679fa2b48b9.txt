@@ -4,14 +4,14 @@
 	],
 	"createdTime":1778073200128,
 	"deleted":false,
-	"deployedVersion":93,
+	"deployedVersion":94,
 	"deploymentState":{
-		"deployedAt":1780552428592,
+		"deployedAt":1780553632634,
 		"deployedBy":161875,
-		"deployedDefinitionId":"6a2112ec969fcb05e4819cc6",
+		"deployedDefinitionId":"6a2117a00be0ea1c582321f4",
 		"status":"DEPLOYED",
-		"version":93,
-		"workflowVersion":269
+		"version":94,
+		"workflowVersion":270
 	},
 	"edges":[
 		{
@@ -153,7 +153,7 @@
 	"id":"69fb3e7035bf0679fa2b48b9",
 	"lastModifiedBy":161875,
 	"lcName":"credit-calculation-parent",
-	"modifiedTime":1780553630663,
+	"modifiedTime":1780553768159,
 	"name":"credit-calculation-parent",
 	"nodes":[
 		{
@@ -1457,7 +1457,7 @@
 			"inputs":{
 				"automationId":"69f863a40eedcf52f9640aa6",
 				"runtimeConnections":{},
-				"synchronous":true,
+				"synchronous":false,
 				"triggerWorkflowWithRuntimeType":"DEFAULT",
 				"distributeWorkflowLoad":true,
 				"parametersList":{
@@ -1603,5 +1603,5 @@
 		}
 	},
 	"standard":false,
-	"version":270
+	"version":271
 }
