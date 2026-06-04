@@ -4,6 +4,15 @@
 	],
 	"createdTime":1780549287495,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1780549288481,
+		"deployedBy":175325,
+		"deployedDefinitionId":"6a2106a87e81ba6f3d6a75d3",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"Ew0OA",
@@ -16,7 +25,7 @@
 	"id":"6a2106a77e81ba6f3d6a7592",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2lrl8iutsmuib",
-	"modifiedTime":1780549287981,
+	"modifiedTime":1780549288482,
 	"name":"changeSetQA2LrL8iUtsMuib",
 	"nodes":[
 		{
@@ -95,7 +104,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"oVNXT-1",
 			"id":"S1FDY",
