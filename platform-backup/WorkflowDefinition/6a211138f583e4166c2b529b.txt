@@ -87,7 +87,7 @@
 	"id":"6a211138f583e4166c2b529b",
 	"lastModifiedBy":195904,
 	"lcName":"file_import_details_preview_clone",
-	"modifiedTime":1780552772857,
+	"modifiedTime":1780552935622,
 	"name":"File_Import_Details_Preview_Clone",
 	"nodes":[
 		{
@@ -97,7 +97,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_M1pZU-1",
 			"id":"n_cdqY7",
@@ -111,12 +111,9 @@
 					],
 					"properties":{
 						"result":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{},
-								"additionalProperties":false
-							},
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
 							"title":"Result"
 						}
 					}
@@ -151,7 +148,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_M1pZU-1",
 			"id":"n_wt9yw",
@@ -260,7 +257,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_M1pZU-1",
 			"id":"n_DNlA9",
@@ -475,12 +472,9 @@
 									],
 									"properties":{
 										"errors":{
-											"type":"array",
-											"items":{
-												"type":"object",
-												"properties":{},
-												"additionalProperties":false
-											},
+											"type":"object",
+											"properties":{},
+											"additionalProperties":false,
 											"title":"Errors"
 										}
 									},
@@ -513,12 +507,9 @@
 								"type":"object",
 								"properties":{
 									"errors":{
-										"type":"array",
-										"items":{
-											"type":"object",
-											"properties":{},
-											"additionalProperties":false
-										},
+										"type":"object",
+										"properties":{},
+										"additionalProperties":false,
 										"title":"Errors"
 									}
 								},
@@ -575,7 +566,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_eLZF0@_M1pZU-1@l",
 			"id":"n_zTKue",
@@ -586,11 +577,7 @@
 				"itemsToAdd":{
 					"ua:type":"mappedArray",
 					"items":{
-						"errors":{
-							"source":"{{ n_eLZF0.outputs.item }}",
-							"ua:type":"mappedArray",
-							"items":"{{ n_eLZF0.outputs.item }}"
-						}
+						"errors":"{{ n_eLZF0.outputs.item }}"
 					}
 				},
 				"listName":"{{ n_DNlA9.outputs.items[0] }}"
@@ -608,7 +595,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_M1pZU-1",
 			"id":"n_a6uxe",
@@ -678,7 +665,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_M1pZU-1",
 			"id":"n_ygo0e",
@@ -735,7 +722,7 @@
 					"csv_text":"{{ n_A5N5F.outputs.fileContent }}"
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Python script",
 			"type":"ACTION"
@@ -748,18 +735,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_M1pZU-1",
 			"id":"n_bIW7g",
 			"index":11,
 			"inputs":{
 				"result":{
-					"result":{
-						"source":"{{ n_ygo0e.outputs.result.errors }}",
-						"ua:type":"mappedArray",
-						"items":"{{ n_ygo0e.outputs.result.errors[0] }}"
-					}
+					"result":"{{ n_DNlA9.outputs.items }}"
 				}
 			},
 			"skip":false,
@@ -785,5 +768,5 @@
 	"tags":[
 		"DO NOT TOUCH"
 	],
-	"version":3
+	"version":4
 }
