@@ -1,6 +1,15 @@
 {
 	"createdTime":1780549649197,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1780549649270,
+		"deployedBy":175325,
+		"deployedDefinitionId":"6a2108117e81ba6f3d6a963b",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":3
+	},
 	"edges":[
 		{
 			"fromNodeId":"lZXRK",
@@ -13,7 +22,7 @@
 	"id":"6a210721eec72c61d2d37518",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2autogcpvvpubha",
-	"modifiedTime":1780549649197,
+	"modifiedTime":1780549649271,
 	"name":"changeSetQA2autogCpvVpUBhA",
 	"nodes":[
 		{
